@@ -1,2 +1,6 @@
 template:
   package: rogtemplate
+
+reference:
+- title: All functions
+  - starts_with("rog")
