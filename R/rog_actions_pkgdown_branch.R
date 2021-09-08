@@ -10,7 +10,7 @@
 #'
 #' @inheritParams ros_actions_pkgdown_docs
 #'
-ros_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
+rog_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
   # Check destdir
 
   destdir <- file.path(pkg, ".github", "workflows")
