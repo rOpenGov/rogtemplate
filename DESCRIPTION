@@ -13,7 +13,7 @@ License: MIT + file LICENSE
 Depends: 
     R (>= 3.6)
 Imports: 
-    pkgdown (> 1.1.0),
+    pkgdown (> 1.6.1),
     usethis (>= 2.0.0)
 Remotes:
     r-lib/pkgdown

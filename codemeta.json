@@ -50,7 +50,7 @@
       "@type": "SoftwareApplication",
       "identifier": "pkgdown",
       "name": "pkgdown",
-      "version": "> 1.1.0",
+      "version": "> 1.6.1",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -75,5 +75,5 @@
     "SystemRequirements": null
   },
   "isPartOf": "http://ropengov.org/",
-  "fileSize": "11.588KB"
+  "fileSize": "12.215KB"
 }

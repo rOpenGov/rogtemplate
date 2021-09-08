@@ -1,2 +1,4 @@
 *.rds
 *.Rds
+*.html
+R-version

@@ -8,7 +8,8 @@
 #' @seealso [rog_build()]
 #' @export
 #'
-#' @inheritParams ros_actions_pkgdown_docs
+#' @param pkg Path to package.
+#' @param overwrite Overwrite the action if it was already present.
 #'
 rog_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
   # Check destdir
@@ -24,9 +25,9 @@ rog_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
 
 
   # Check gitignore
-  use_git_ignore("*.html", directory = ".github")
-  use_git_ignore("R-version", directory = ".github")
-  use_git_ignore("*.Rds", directory = ".github")
+  usethis::use_git_ignore("*.html", directory = ".github")
+  usethis::use_git_ignore("R-version", directory = ".github")
+  usethis::use_git_ignore("*.Rds", directory = ".github")
 
 
   # Get action file
