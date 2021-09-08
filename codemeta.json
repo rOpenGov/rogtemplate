@@ -1,0 +1,79 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "rogtemplate",
+  "description": "This is a private template for use by core rOpenGov packages.\n    Please don’t use for your own code.",
+  "name": "rogtemplate: 'pkgdown' Template for 'rOpenGov' Packages",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.0.1.9000",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 4.1.1 (2021-08-10)",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Diego",
+      "familyName": "Hernangómez",
+      "email": "diego.hernangomezherrero@gmail.com",
+      "@id": "https://orcid.org/0000-0001-8457-4658"
+    }
+  ],
+  "copyrightHolder": [
+    {
+      "@type": "Person",
+      "givenName": "Diego",
+      "familyName": "Hernangómez",
+      "email": "diego.hernangomezherrero@gmail.com",
+      "@id": "https://orcid.org/0000-0001-8457-4658"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Diego",
+      "familyName": "Hernangómez",
+      "email": "diego.hernangomezherrero@gmail.com",
+      "@id": "https://orcid.org/0000-0001-8457-4658"
+    }
+  ],
+  "softwareRequirements": {
+    "1": {
+      "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": ">= 3.6"
+    },
+    "2": {
+      "@type": "SoftwareApplication",
+      "identifier": "pkgdown",
+      "name": "pkgdown",
+      "version": "> 1.1.0",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://github.com/r-lib/pkgdown"
+    },
+    "3": {
+      "@type": "SoftwareApplication",
+      "identifier": "usethis",
+      "name": "usethis",
+      "version": ">= 2.0.0",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=usethis"
+    },
+    "SystemRequirements": null
+  },
+  "isPartOf": "http://ropengov.org/",
+  "fileSize": "8.823KB"
+}

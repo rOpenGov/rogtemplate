@@ -24,7 +24,7 @@ rog_build <- function(pkg = ".", ...) {
 
   usethis::use_build_ignore(".github")
   usethis::use_build_ignore("._pkgdown.yml")
-  
+
 
   sel <-
     menu(c("Yes", "No"),

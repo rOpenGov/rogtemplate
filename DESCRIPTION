@@ -7,8 +7,8 @@ Authors@R:
            role = c("aut", "cre", "cph"),
            email = "diego.hernangomezherrero@gmail.com",
            comment = c(ORCID = "0000-0001-8457-4658"))
-Description: This is a private template for use by core rOpenGov
-    packages.  Please don’t use for your own code.
+Description: This is a private template for use by core rOpenGov packages.
+    Please don’t use for your own code.
 License: MIT + file LICENSE
 Depends: 
     R (>= 3.6)
@@ -19,5 +19,5 @@ Remotes:
     r-lib/pkgdown
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 X-schema.org-isPartOf: http://ropengov.org/
