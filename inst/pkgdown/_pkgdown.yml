@@ -1,0 +1,10 @@
+navbar:
+  type: dark
+  bg: dark
+
+template:
+  bootstrap: 4
+  bslib:
+    enable-responsive-font-sizes: true
+    twitter:
+      card: summary_large_image

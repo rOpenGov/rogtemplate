@@ -1,0 +1,23 @@
+Package: rogtemplate
+Title: 'pkgdown' Template for 'rOpenGov' Packages
+Version: 0.0.1.9000
+Authors@R: 
+    person(given = "Diego",
+           family = "Hernangómez",
+           role = c("aut", "cre", "cph"),
+           email = "diego.hernangomezherrero@gmail.com",
+           comment = c(ORCID = "0000-0001-8457-4658"))
+Description: This is a private template for use by core rOpenGov
+    packages.  Please don’t use for your own code.
+License: MIT + file LICENSE
+Depends: 
+    R (>= 3.6)
+Imports: 
+    pkgdown (> 1.1.0),
+    usethis (>= 2.0.0)
+Remotes:
+    r-lib/pkgdown
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+X-schema.org-isPartOf: http://ropengov.org/
