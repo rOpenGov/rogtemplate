@@ -44,16 +44,6 @@ img[src$='#floatright'] {
 /*********************************/
 /*********************************/
 
-
-.pkg-logo {
-  float: right;
-  width: 100px;
-  margin-left: 30px;
-  margin-top: 25px;
-}
-
-
-
 /* Mono fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=B612+Mono&display=swap');
