@@ -4,6 +4,9 @@
   "identifier": "rogtemplate",
   "description": "This is a private template for use by core rOpenGov packages.\n    Please don’t use for your own code.",
   "name": "rogtemplate: 'pkgdown' Template for 'rOpenGov' Packages",
+  "codeRepository": "https://github.com/dieghernan/rogtemplate",
+  "relatedLink": "https://dieghernan.github.io/rogtemplate/",
+  "issueTracker": "https://github.com/dieghernan/rogtemplate/issues",
   "license": "https://spdx.org/licenses/MIT",
   "version": "0.0.1.9000",
   "programmingLanguage": {
@@ -75,5 +78,5 @@
     "SystemRequirements": null
   },
   "isPartOf": "http://ropengov.org/",
-  "fileSize": "14.12KB"
+  "fileSize": "14.504KB"
 }

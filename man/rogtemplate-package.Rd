@@ -9,6 +9,15 @@
 This is a private template for use by core rOpenGov packages.
     Please don’t use for your own code.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://dieghernan.github.io/rogtemplate/}
+  \item \url{https://github.com/dieghernan/rogtemplate}
+  \item Report bugs at \url{https://github.com/dieghernan/rogtemplate/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Diego Hernangómez \email{diego.hernangomezherrero@gmail.com} (\href{https://orcid.org/0000-0001-8457-4658}{ORCID}) [copyright holder]
 
