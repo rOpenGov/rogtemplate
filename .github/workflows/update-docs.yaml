@@ -35,7 +35,7 @@ jobs:
             rcmdcheck
             dieghernan/pkgdev
             dieghernan/rogtemplate
-
+            r-lib/pkgdown
           needs: website
 
 
@@ -73,6 +73,14 @@ jobs:
         with:
           name: ${{ runner.os }}-r${{ matrix.config.r }}-results
           path: check
+          
+      - name: pkgdown version
+        run: |
+          library("pkgdown")
+          
+          sessionInfo()
+          
+        shell: Rscript {0}
 
       - name: Deploy package
         run: |
