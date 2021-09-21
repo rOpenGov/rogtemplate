@@ -5,11 +5,10 @@
 
 <!-- badges: start -->
 
+[![rOG-badge](https://dieghernan.github.io/rogtemplate/reference/figures/ropengov-badge.svg)](http://ropengov.org/)
 [![R build
 status](https://github.com/dieghernan/rogtemplate/workflows/R-CMD-check/badge.svg)](https://github.com/dieghernan/rogtemplate/actions)
 [![lifecycle](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
-[![rOG-badge](https://dieghernan.github.io/rogtemplate/reference/figures/ropengov-badge.svg)](http://ropengov.org/)
-
 <!-- badges: end -->
 
 This package is a `pkgdown` template adapted to
