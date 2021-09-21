@@ -14,6 +14,13 @@ jobs:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
+      
+      # ubuntu-20.04 or later
+      - name: Install V8
+        if: runner.os == 'Linux'
+        run: |
+          sudo apt-get install -y libv8-dev
+
 
       - uses: r-lib/actions/setup-pandoc@v1
 
@@ -23,6 +30,7 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v1
         with:
+          cache-version: 2
           extra-packages: |
             rcmdcheck
             dieghernan/pkgdev
