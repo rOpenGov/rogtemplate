@@ -1,5 +1,10 @@
+# -----------------------------------------------------------
+# CITATION file created with {cffr} R package, v0.0.1.9003
+# See also: https://dieghernan.github.io/cffr/
+# -----------------------------------------------------------
+ 
 cff-version: 1.2.0
-message: 'To cite package rogtemplate in publications use:'
+message: 'To cite package "rogtemplate" in publications use:'
 type: software
 license: MIT
 title: 'rogtemplate: ''pkgdown'' Template for ''rOpenGov'' Packages'
@@ -11,6 +16,26 @@ authors:
   given-names: Diego
   email: diego.hernangomezherrero@gmail.com
   orcid: https://orcid.org/0000-0001-8457-4658
+preferred-citation:
+  type: manual
+  title: 'rogtemplate: ''pkgdown'' Template for ''rOpenGov'' Packages'
+  authors:
+  - family-names: Hernangómez
+    given-names: Diego
+    email: diego.hernangomezherrero@gmail.com
+    orcid: https://orcid.org/0000-0001-8457-4658
+  version: 0.0.1.9000
+  abstract: This is a private template for use by core rOpenGov packages. Please don’t
+    use for your own code.
+  repository-code: https://github.com/dieghernan/rogtemplate
+  url: https://dieghernan.github.io/rogtemplate/
+  contact:
+  - family-names: Hernangómez
+    given-names: Diego
+    email: diego.hernangomezherrero@gmail.com
+    orcid: https://orcid.org/0000-0001-8457-4658
+  license: MIT
+  year: '2021'
 repository-code: https://github.com/dieghernan/rogtemplate
 url: https://dieghernan.github.io/rogtemplate/
 contact:
