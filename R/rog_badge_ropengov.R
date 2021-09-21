@@ -1,0 +1,43 @@
+#' Add a rOpenGov badge to your `README` file
+#'
+#'
+#' @description
+#'
+#' Add an rOpenGov badge pointing to <http://ropengov.org/> on your `README`
+#' file:
+#'
+#' \ifelse{html}{\href{http://ropengov.org/}{\figure{ropengov-badge.svg}{options: alt='rOpenGov'}}}{**rOpenGov**}
+#'
+#' @export
+#'
+#' @return A markdown badge or a message with the markdown code to be pasted.
+#'
+#' @seealso [`usethis::use_badge()`]
+#'
+#' @param install TRUE/FALSE. On TRUE the badge would be installed on your
+#' README.md/.Rmd. On FALSE a message with the Rmarkdown code would be
+#' displayed.
+#'
+#' @examples
+#'
+#' rog_badge_ropengov(install = FALSE)
+rog_badge_ropengov <- function(install = TRUE) {
+  stopifnot(is.logical(install))
+
+  # Add pkg
+  badge <- "https://dieghernan.github.io/rogtemplate/reference/figures/ropengov-badge.svg"
+
+  href <- "http://ropengov.org/"
+
+  if (install) {
+    # nocov start
+    usethis::use_badge("rOG-badge", href = href, src = badge)
+    # nocov end
+  } else {
+    message(
+      "Badge URL is ", "\n",
+      "[![rOG-badge](",
+      badge, ")](", href, ")"
+    )
+  }
+}
