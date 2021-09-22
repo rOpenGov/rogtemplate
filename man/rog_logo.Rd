@@ -4,13 +4,21 @@
 \alias{rog_logo}
 \title{Creates a logo for your rOpenGov package}
 \usage{
-rog_logo(pkgname, filename = "man/figures/logo.png", favicons = TRUE)
+rog_logo(
+  pkgname,
+  filename = "man/figures/logo.png",
+  overwrite = TRUE,
+  favicons = TRUE
+)
 }
 \arguments{
 \item{pkgname}{Name of the package. If not present it would be autodetected
 by the function.}
 
 \item{filename}{filename to save sticker}
+
+\item{overwrite}{Should the current logo be overwritten? When \code{TRUE} it
+would run \code{\link[usethis:use_logo]{usethis::use_logo()}}.}
 
 \item{favicons}{Logical, do you want to create favicons with
 \code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}}?}
@@ -21,12 +29,12 @@ Creates a logo for your rOpenGov package
 \examples{
 
 tmp <- tempfile(fileext = ".png")
-rog_logo("test a package", tmp, favicons = FALSE)
+rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
 
 # Display
 logo <- magick::image_read(tmp)
 
-print(logo)
+plot(logo)
 }
 \seealso{
 \code{\link[hexSticker:sticker]{hexSticker::sticker()}}, \code{\link[usethis:use_logo]{usethis::use_logo()}},

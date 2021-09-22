@@ -45,7 +45,7 @@ It is not necessary to install `rogtemplate` itself. Just copy [this
 file](https://github.com/dieghernan/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml)
 into your `.github/workflows/` folder.
 
-The action would create your site in yhe `gh-pages` branch.
+The action would create your site in the `gh-pages` branch.
 
 ### Option B: Deploy installing `rogtemplate`
 
@@ -65,7 +65,6 @@ action.
 For building locally your package into your `docs` folder use:
 
 ``` r
-
 rog_actions_pkgdown_branch::rog_build()
 
 # or you can use also
@@ -77,4 +76,11 @@ pkgdown::build_site()
 
 Last step is commit to GitHub, wait until the GitHub action ends (in the
 case you chose to deploy in that way) and deploy the website via
-*YOUR\_GITHUB\_REPO\>Settings\>GitHub Pages*.
+*YOUR\_GITHUB\_REPO&gt;Settings&gt;GitHub Pages*.
+
+## Extras
+
+We provide also some additional extra functions for creating badges and
+logos, see
+[Extras](https://dieghernan.github.io/rogtemplate/reference/index.html)
+for more info.

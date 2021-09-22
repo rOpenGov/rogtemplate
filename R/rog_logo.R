@@ -8,6 +8,9 @@
 #' @param pkgname Name of the package. If not present it would be autodetected
 #'   by the function.
 #'
+#' @param overwrite Should the current logo be overwritten? When `TRUE` it
+#'   would run [usethis::use_logo()].
+#'
 #' @param favicons Logical, do you want to create favicons with
 #' [pkgdown::build_favicons()]?
 #'
@@ -21,13 +24,15 @@
 #' @examples
 #'
 #' tmp <- tempfile(fileext = ".png")
-#' rog_logo("test a package", tmp, favicons = FALSE)
+#' rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
 #'
 #' # Display
 #' logo <- magick::image_read(tmp)
 #'
-#' print(logo)
-rog_logo <- function(pkgname, filename = "man/figures/logo.png", favicons = TRUE) {
+#' plot(logo)
+rog_logo <- function(pkgname, filename = "man/figures/logo.png",
+                     overwrite = TRUE,
+                     favicons = TRUE) {
   if (missing(pkgname)) pkgname <- package_name()
 
   # Load B612
@@ -36,6 +41,19 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png", favicons = TRUE
 
   # Autoscaling
   p_size <- 188.46 * nchar(pkgname)**-0.934
+
+
+  if (isTRUE(overwrite)) {
+    filename <- tempfile(fileext = ".png")
+    if (file.exists("man/figures/logo.png")) {
+      d <- file.remove("man/figures/logo.png")
+    }
+  }
+
+  if (isFALSE(overwrite) && file.exists(filename)) {
+    filename <- tempfile(fileext = ".png")
+  }
+
 
 
   # Create plot
@@ -54,6 +72,13 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png", favicons = TRUE
       s_width = 0
     )
   )
+
+
+  if (overwrite) {
+    usethis::use_logo(filename)
+  } else {
+    message("Logo created on ", filename)
+  }
 
   # Favicons
 

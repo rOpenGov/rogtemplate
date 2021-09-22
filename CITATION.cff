@@ -34,6 +34,12 @@ preferred-citation:
     given-names: Diego
     email: diego.hernangomezherrero@gmail.com
     orcid: https://orcid.org/0000-0001-8457-4658
+  keywords:
+  - template
+  - r
+  - r-package
+  - github-actions
+  - pkgdown
   license: MIT
   year: '2021'
 repository-code: https://github.com/dieghernan/rogtemplate
@@ -43,3 +49,9 @@ contact:
   given-names: Diego
   email: diego.hernangomezherrero@gmail.com
   orcid: https://orcid.org/0000-0001-8457-4658
+keywords:
+- template
+- r
+- r-package
+- github-actions
+- pkgdown
