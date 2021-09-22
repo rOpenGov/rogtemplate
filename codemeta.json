@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.1.0 (2021-05-18)",
+  "runtimePlatform": "R version 4.1.1 (2021-08-10)",
   "author": [
     {
       "@type": "Person",
@@ -144,5 +144,5 @@
     "SystemRequirements": null
   },
   "isPartOf": "http://ropengov.org/",
-  "fileSize": "483.961KB"
+  "fileSize": "483.958KB"
 }
