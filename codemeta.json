@@ -45,18 +45,6 @@
   "softwareSuggestions": [
     {
       "@type": "SoftwareApplication",
-      "identifier": "magick",
-      "name": "magick",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=magick"
-    },
-    {
-      "@type": "SoftwareApplication",
       "identifier": "testthat",
       "name": "testthat",
       "version": ">= 3.0.0",
@@ -91,6 +79,19 @@
     },
     "3": {
       "@type": "SoftwareApplication",
+      "identifier": "magick",
+      "name": "magick",
+      "version": ">= 2.7.3",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=magick"
+    },
+    "4": {
+      "@type": "SoftwareApplication",
       "identifier": "pkgdown",
       "name": "pkgdown",
       "version": "> 1.6.1",
@@ -102,7 +103,7 @@
       },
       "sameAs": "https://github.com/r-lib/pkgdown"
     },
-    "4": {
+    "5": {
       "@type": "SoftwareApplication",
       "identifier": "showtext",
       "name": "showtext",
@@ -115,7 +116,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=showtext"
     },
-    "5": {
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "sysfonts",
       "name": "sysfonts",
@@ -128,7 +129,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=sysfonts"
     },
-    "6": {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "usethis",
       "name": "usethis",
@@ -145,5 +146,5 @@
   },
   "isPartOf": "http://ropengov.org/",
   "keywords": ["template", "r", "r-package", "github-actions", "pkgdown"],
-  "fileSize": "485.381KB"
+  "fileSize": "485.392KB"
 }

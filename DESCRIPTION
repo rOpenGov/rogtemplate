@@ -17,9 +17,9 @@ Depends:
     R (>= 3.6)
 Imports: 
     hexSticker (>= 0.4.9),
+    magick (>= 2.7.3),
     pkgdown (> 1.6.1),
     showtext (>= 0.9.4),
-    magick (>= 2.7.3),
     sysfonts (>= 0.8.5),
     usethis (>= 2.0.0)
 Suggests:
