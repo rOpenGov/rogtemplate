@@ -1,11 +1,11 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rogtemplate
+# rogtemplate <a href='https://dieghernan.github.io/rogtemplate/'><img src='man/figures/logo.png' align="right" height="139" /></a>
 
 <!-- badges: start -->
 
-[![rOG-badge](https://dieghernan.github.io/rogtemplate/reference/figures/ropengov-badge.svg)](http://ropengov.org/)
+[![rOG-badge](https://dieghernan.github.io/rogtemplate//reference/figures/ropengov-badge.svg)](http://ropengov.org/)
 [![R build
 status](https://github.com/dieghernan/rogtemplate/workflows/R-CMD-check/badge.svg)](https://github.com/dieghernan/rogtemplate/actions)
 [![lifecycle](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
@@ -65,7 +65,6 @@ action.
 For building locally your package into your `docs` folder use:
 
 ``` r
-
 rog_actions_pkgdown_branch::rog_build()
 
 # or you can use also
@@ -77,4 +76,4 @@ pkgdown::build_site()
 
 Last step is commit to GitHub, wait until the GitHub action ends (in the
 case you chose to deploy in that way) and deploy the website via
-*YOUR\_GITHUB\_REPO\>Settings\>GitHub Pages*.
+*YOUR\_GITHUB\_REPO&gt;Settings&gt;GitHub Pages*.

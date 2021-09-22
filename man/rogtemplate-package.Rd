@@ -6,6 +6,8 @@
 \alias{rogtemplate-package}
 \title{rogtemplate: 'pkgdown' Template for 'rOpenGov' Packages}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 This is a private template for use by core rOpenGov packages.
     Please don’t use for your own code.
 }

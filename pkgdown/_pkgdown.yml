@@ -4,6 +4,14 @@ template:
   package: rogtemplate
 
 reference:
-- title: All functions
+- title: Main functions
   contents:
-  - starts_with("rog")
+  - -has_concept("extras")
+- title: Extas
+  contents:
+  - has_concept("extras")
+- title: About the package
+  contents:
+  - rogtemplate
+
+

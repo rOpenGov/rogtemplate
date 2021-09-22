@@ -18,6 +18,8 @@
 #' README.md/.Rmd. On FALSE a message with the Rmarkdown code would be
 #' displayed.
 #'
+#' @family extras
+#'
 #' @examples
 #'
 #' rog_badge_ropengov(install = FALSE)

@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.1.1 (2021-08-10)",
+  "runtimePlatform": "R version 4.1.0 (2021-05-18)",
   "author": [
     {
       "@type": "Person",
@@ -45,6 +45,18 @@
   "softwareSuggestions": [
     {
       "@type": "SoftwareApplication",
+      "identifier": "magick",
+      "name": "magick",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=magick"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "testthat",
       "name": "testthat",
       "version": ">= 3.0.0",
@@ -66,6 +78,19 @@
     },
     "2": {
       "@type": "SoftwareApplication",
+      "identifier": "hexSticker",
+      "name": "hexSticker",
+      "version": ">= 0.4.9",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=hexSticker"
+    },
+    "3": {
+      "@type": "SoftwareApplication",
       "identifier": "pkgdown",
       "name": "pkgdown",
       "version": "> 1.6.1",
@@ -77,7 +102,33 @@
       },
       "sameAs": "https://github.com/r-lib/pkgdown"
     },
-    "3": {
+    "4": {
+      "@type": "SoftwareApplication",
+      "identifier": "showtext",
+      "name": "showtext",
+      "version": ">= 0.9.4",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=showtext"
+    },
+    "5": {
+      "@type": "SoftwareApplication",
+      "identifier": "sysfonts",
+      "name": "sysfonts",
+      "version": ">= 0.8.5",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=sysfonts"
+    },
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "usethis",
       "name": "usethis",
@@ -93,5 +144,5 @@
     "SystemRequirements": null
   },
   "isPartOf": "http://ropengov.org/",
-  "fileSize": "21.859KB"
+  "fileSize": "483.961KB"
 }

@@ -3,4 +3,5 @@
 export(rog_actions_pkgdown_branch)
 export(rog_badge_ropengov)
 export(rog_build)
+export(rog_logo)
 importFrom(utils,menu)

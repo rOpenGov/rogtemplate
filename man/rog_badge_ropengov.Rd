@@ -27,3 +27,4 @@ rog_badge_ropengov(install = FALSE)
 \seealso{
 \code{\link[usethis:badges]{usethis::use_badge()}}
 }
+\concept{extras}
