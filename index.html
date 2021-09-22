@@ -92,7 +92,7 @@
 <h3 class="hasAnchor">
 <a href="#option-a-deploy-using-github-actions" class="anchor" aria-hidden="true"></a>Option A: Deploy using GitHub Actions</h3>
 <p>It is not necessary to install <code>rogtemplate</code> itself. Just copy <a href="https://github.com/dieghernan/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml" class="external-link">this file</a> into your <code>.github/workflows/</code> folder.</p>
-<p>The action would create your site in yhe <code>gh-pages</code> branch.</p>
+<p>The action would create your site in the <code>gh-pages</code> branch.</p>
 </div>
 <div id="option-b-deploy-installing-rogtemplate" class="section level3">
 <h3 class="hasAnchor">
@@ -106,8 +106,7 @@
 <p>You can use <code><a href="reference/rog_actions_pkgdown_branch.html">rog_actions_pkgdown_branch()</a></code> for setting up the action described before but the deployment would be still performed by a GitHub action.</p>
 <p>For building locally your package into your <code>docs</code> folder use:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R">
-<span class="fu">rog_actions_pkgdown_branch</span><span class="fu">::</span><span class="fu">rog_build</span><span class="op">(</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu">rog_actions_pkgdown_branch</span><span class="fu">::</span><span class="fu">rog_build</span><span class="op">(</span><span class="op">)</span>
 
 <span class="co"># or you can use also</span>
 
@@ -118,6 +117,11 @@
 <h2 class="hasAnchor">
 <a href="#commit-to-github-and-deploy" class="anchor" aria-hidden="true"></a>Commit to GitHub and deploy</h2>
 <p>Last step is commit to GitHub, wait until the GitHub action ends (in the case you chose to deploy in that way) and deploy the website via <em>YOUR_GITHUB_REPO&gt;Settings&gt;GitHub Pages</em>.</p>
+</div>
+<div id="extras" class="section level2">
+<h2 class="hasAnchor">
+<a href="#extras" class="anchor" aria-hidden="true"></a>Extras</h2>
+<p>We provide also some additional extra functions for creating badges and logos, see <a href="https://dieghernan.github.io/rogtemplate/reference/index.html">Extras</a> for more info.</p>
 </div>
 </div>
   </div>
