@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 1.6.1.9001
 pkgdown_sha: 6d48b48c2aec100b047114ca94a4d2e158964900
 articles: {}
-last_built: 2021-09-22T10:52Z
+last_built: 2021-09-22T10:55Z
 urls:
   reference: https://dieghernan.github.io/rogtemplate/reference
   article: https://dieghernan.github.io/rogtemplate/articles
