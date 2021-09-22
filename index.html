@@ -8,6 +8,12 @@
 <meta name="description" content="This is a private template for use by core rOpenGov packages.
     Please don’t use for your own code.">
 <title>pkgdown Template for rOpenGov Packages • rogtemplate</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="apple-touch-icon-60x60.png">
 <script src="deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="deps/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="deps/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="deps/bs3compat-0.3.0/transition.js"></script><script src="deps/bs3compat-0.3.0/tabs.js"></script><script src="deps/bs3compat-0.3.0/bs3compat.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
@@ -17,6 +23,7 @@
 <script src="pkgdown.js"></script><meta property="og:title" content="pkgdown Template for rOpenGov Packages">
 <meta property="og:description" content="This is a private template for use by core rOpenGov packages.
     Please don’t use for your own code.">
+<meta property="og:image" content="https://dieghernan.github.io/rogtemplate/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -57,9 +64,10 @@
 </nav><div class="container template-home">
 <div class="row">
   <div class="contents col-md-9">
-<div id="rogtemplate" class="section level1">
+<img src="package-logo.png" class="pkg-logo" alt="" width="120"><div id="rogtemplate-" class="section level1">
 <div class="pb-2 mt-4 mb-2 border-bottom"><h1 class="hasAnchor">
-<a href="#rogtemplate" class="anchor" aria-hidden="true"></a>rogtemplate</h1></div>
+<a href="#rogtemplate-" class="anchor" aria-hidden="true"></a>rogtemplate 
+</h1></div>
 <!-- badges: start -->
 
 <p>This package is a <code>pkgdown</code> template adapted to <a href="http://ropengov.org/" class="external-link">rOpenGov</a> site.</p>
@@ -98,8 +106,7 @@
 <p>You can use <code><a href="reference/rog_actions_pkgdown_branch.html">rog_actions_pkgdown_branch()</a></code> for setting up the action described before but the deployment would be still performed by a GitHub action.</p>
 <p>For building locally your package into your <code>docs</code> folder use:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R">
-<span class="fu">rog_actions_pkgdown_branch</span><span class="fu">::</span><span class="fu">rog_build</span><span class="op">(</span><span class="op">)</span>
+<code class="sourceCode R"><span class="fu">rog_actions_pkgdown_branch</span><span class="fu">::</span><span class="fu">rog_build</span><span class="op">(</span><span class="op">)</span>
 
 <span class="co"># or you can use also</span>
 
@@ -145,7 +152,7 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="http://ropengov.org/" class="external-link"><img src="https://dieghernan.github.io/rogtemplate/reference/figures/ropengov-badge.svg" alt="rOG-badge"></a></li>
+<li><a href="http://ropengov.org/" class="external-link"><img src="https://dieghernan.github.io/rogtemplate//reference/figures/ropengov-badge.svg" alt="rOG-badge"></a></li>
 <li><a href="https://github.com/dieghernan/rogtemplate/actions" class="external-link"><img src="https://github.com/dieghernan/rogtemplate/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg" alt="lifecycle"></a></li>
 </ul>
