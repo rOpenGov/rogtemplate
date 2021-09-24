@@ -34,11 +34,11 @@ rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
 # Display
 logo <- magick::image_read(tmp)
 
-
 logo
+
 # Plot to graphics device via legacy raster format
 raster <- as.raster(logo)
-par(ask=FALSE)
+par(ask = FALSE)
 plot(raster)
 }
 \seealso{
