@@ -18,7 +18,13 @@
 #'
 rog_add_template_pkgdown <- function() {
   # template
-  template <- list(template = list(package = "rogtemplate"))
+  template <- list(template = list(
+    package = "rogtemplate",
+    path = NULL,
+    params =
+      list(bootswatch = NULL)
+  ))
+
 
   # Detect _pkgdown.yml
 
@@ -35,9 +41,18 @@ rog_add_template_pkgdown <- function() {
   if (file_exist) {
     newfile <- yaml::read_yaml(path)
     newfile <- modifyList(newfile, template)
+
+    if (length(newfile$template$params) == 0) {
+      newfile <- modifyList(
+        newfile,
+        list(template = list(params = NULL))
+      )
+    }
   } else {
     newfile <- template
   }
+
+
 
 
   dir <- dirname(path)

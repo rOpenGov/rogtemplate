@@ -10,16 +10,18 @@ rog_build(pkg = ".", ...)
 \item{pkg}{Path to package.}
 
 \item{...}{
-  Arguments passed on to \code{\link[pkgdown:build_site]{pkgdown::build_site}}
+  Arguments passed on to \code{\link[=rog_logo]{rog_logo}}, \code{\link[pkgdown:build_site]{pkgdown::build_site}}
   \describe{
+    \item{\code{overwrite}}{Should the current logo be overwritten? When \code{TRUE} it
+would run \code{\link[usethis:use_logo]{usethis::use_logo()}}.}
+    \item{\code{favicons}}{Logical, do you want to create favicons with
+\code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}}?}
     \item{\code{examples}}{Run examples?}
     \item{\code{run_dont_run}}{Run examples that are surrounded in \\dontrun?}
     \item{\code{seed}}{Seed used to initialize so that random examples are
 reproducible.}
     \item{\code{lazy}}{If \code{TRUE}, will only rebuild articles and reference pages
 if the source is newer than the destination.}
-    \item{\code{override}}{An optional named list used to temporarily override
-values in \verb{_pkgdown.yml}}
     \item{\code{preview}}{If \code{TRUE}, or \code{is.na(preview) && interactive()}, will preview
 freshly generated section in browser.}
     \item{\code{devel}}{Use development or deployment process?
@@ -47,7 +49,8 @@ so it is available for vignettes.}
 A wrapper of \code{\link[pkgdown:build_site]{pkgdown::build_site()}}
 }
 \details{
-This function would call also \code{\link[=rog_add_template_pkgdown]{rog_add_template_pkgdown()}}.
+This function would call also \code{\link[=rog_add_template_pkgdown]{rog_add_template_pkgdown()}} and
+\code{\link[=rog_logo]{rog_logo()}}.
 }
 \seealso{
 \code{\link[pkgdown:build_site]{pkgdown::build_site()}}, \code{\link[=rog_add_template_pkgdown]{rog_add_template_pkgdown()}}.

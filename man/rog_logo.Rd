@@ -7,7 +7,7 @@
 rog_logo(
   pkgname,
   filename = "man/figures/logo.png",
-  overwrite = TRUE,
+  overwrite = FALSE,
   favicons = TRUE
 )
 }

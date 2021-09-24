@@ -31,7 +31,7 @@
 #'
 #' plot(logo)
 rog_logo <- function(pkgname, filename = "man/figures/logo.png",
-                     overwrite = TRUE,
+                     overwrite = FALSE,
                      favicons = TRUE) {
   if (missing(pkgname)) pkgname <- package_name()
 
