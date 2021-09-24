@@ -31,10 +31,10 @@
 #'
 #' logo
 #'
-#' op <- par(no.readonly = TRUE)
+#' opar <- par(no.readonly = TRUE)
 #'
 #' par(ask = FALSE, mar = c(0, 0, 0, 0))
-#' plot(raster)
+#' plot(logo)
 #' par(opar)
 rog_logo <- function(pkgname, filename = "man/figures/logo.png",
                      overwrite = FALSE,
@@ -108,3 +108,18 @@ package_name <- function() {
 
   packagename
 }
+
+#' Get package name
+#' @noRd
+package_name <- function() {
+  desc_path <- file.path(normalizePath("."), "DESCRIPTION")
+
+  if (!file.exists(desc_path)) stop("No DESCRIPTION file found ", call. = FALSE)
+
+  # Read package name
+
+  packagename <- read.dcf(desc_path, "Package")
+
+  packagename
+}
+

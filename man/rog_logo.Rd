@@ -36,10 +36,10 @@ logo <- magick::image_read(tmp)
 
 logo
 
-op <- par(no.readonly = TRUE)
+opar <- par(no.readonly = TRUE)
 
 par(ask = FALSE, mar = c(0, 0, 0, 0))
-plot(raster)
+plot(logo)
 par(opar)
 }
 \seealso{
