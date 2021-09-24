@@ -1,17 +1,10 @@
 url: https://dieghernan.github.io/rogtemplate
-
 template:
   package: rogtemplate
-
 reference:
 - title: Main functions
-  contents:
-  - -has_concept("extras")
+  contents: -has_concept("extras")
 - title: Extras
-  contents:
-  - has_concept("extras")
+  contents: has_concept("extras")
 - title: About the package
-  contents:
-  - rogtemplate
-
-
+  contents: rogtemplate

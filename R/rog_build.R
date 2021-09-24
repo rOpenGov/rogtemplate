@@ -3,11 +3,10 @@
 #' A wrapper of [`pkgdown::build_site()`]
 #'
 #' @details
-#' This function would ask for confirmation to check your `_pkgdown.yml` file
-#' and would create your pkgdown site on the `docs/` folder.
+#' This function would call also [rog_add_template_pkgdown()].
 #'
 #'
-#' @seealso [`pkgdown::build_site()`]
+#' @seealso [`pkgdown::build_site()`], [rog_add_template_pkgdown()].
 #'
 #' @export
 #'
@@ -25,14 +24,7 @@ rog_build <- function(pkg = ".", ...) {
   usethis::use_build_ignore(".github")
   usethis::use_build_ignore("._pkgdown.yml")
 
-
-  sel <-
-    menu(c("Yes", "No"),
-      title = "Have you included \n\ntemplate:\n  package: rogtemplate\n\nin your _pkgdown.yml file?"
-    )
-  if (sel != 1) {
-    stop("Execution halted")
-  }
+  rogtemplate::rog_add_template_pkgdown()
 
   pkgdown::build_site(pkg = ".", ...)
   return(invisible())

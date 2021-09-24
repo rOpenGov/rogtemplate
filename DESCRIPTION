@@ -21,7 +21,8 @@ Imports:
     pkgdown (> 1.6.1),
     showtext (>= 0.9.4),
     sysfonts (>= 0.8.5),
-    usethis (>= 2.0.0)
+    usethis (>= 2.0.0),
+    yaml
 Suggests:
     testthat (>= 3.0.0)
 Remotes:

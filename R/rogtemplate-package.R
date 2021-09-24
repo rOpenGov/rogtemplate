@@ -2,5 +2,5 @@
 "_PACKAGE"
 
 # import stuffs
-#' @importFrom utils menu
+#' @importFrom utils modifyList
 NULL

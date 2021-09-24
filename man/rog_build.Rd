@@ -47,9 +47,8 @@ so it is available for vignettes.}
 A wrapper of \code{\link[pkgdown:build_site]{pkgdown::build_site()}}
 }
 \details{
-This function would ask for confirmation to check your \verb{_pkgdown.yml} file
-and would create your pkgdown site on the \verb{docs/} folder.
+This function would call also \code{\link[=rog_add_template_pkgdown]{rog_add_template_pkgdown()}}.
 }
 \seealso{
-\code{\link[pkgdown:build_site]{pkgdown::build_site()}}
+\code{\link[pkgdown:build_site]{pkgdown::build_site()}}, \code{\link[=rog_add_template_pkgdown]{rog_add_template_pkgdown()}}.
 }
