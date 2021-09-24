@@ -74,19 +74,12 @@ would run <code><a href="https://usethis.r-lib.org/reference/use_logo.html">uset
     <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"></span>
 <span class="r-in"><span class="va">tmp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempfile</a></span><span class="op">(</span>fileext <span class="op">=</span> <span class="st">".png"</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu">rog_logo</span><span class="op">(</span><span class="st">"test a package"</span>, <span class="va">tmp</span>, overwrite <span class="op">=</span> <span class="cn">FALSE</span>, favicons <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Logo created on /tmp/RtmpUktiyR/file4cb26ab6083b.png</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Logo created on /tmp/RtmpLZhTf5/file405d594b9749.png</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Display</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://docs.ropensci.org/magick/">magick</a></span><span class="op">)</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Linking to ImageMagick 6.9.10.23</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Enabled features: fontconfig, freetype, fftw, lcms, pango, webp, x11</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Disabled features: cairo, ghostscript, heic, raw, rsvg</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Using 2 threads</span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org">ggplot2</a></span><span class="op">)</span></span>
+<span class="r-in"><span class="va">logo</span> <span class="op">&lt;-</span> <span class="fu">magick</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/magick/reference/editing.html">image_read</a></span><span class="op">(</span><span class="va">tmp</span><span class="op">)</span></span>
 <span class="r-in"></span>
-<span class="r-in"><span class="va">logo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://docs.ropensci.org/magick/reference/editing.html">image_read</a></span><span class="op">(</span><span class="va">tmp</span><span class="op">)</span></span>
-<span class="r-in"></span>
-<span class="r-in"><span class="fu"><a href="https://docs.ropensci.org/magick/reference/image_ggplot.html">image_ggplot</a></span><span class="op">(</span><span class="va">logo</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">logo</span><span class="op">)</span></span>
 <span class="r-plt"><img src="rog_logo-1.png" alt="" width="700" height="433"></span>
 </code></pre></div>
   </div>
