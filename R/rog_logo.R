@@ -31,10 +31,12 @@
 #'
 #' logo
 #'
-#' # Plot to graphics device via legacy raster format
-#' raster <- as.raster(logo)
-#' par(ask = FALSE)
+#' op <- par(no.readonly = TRUE)
+#' 
+#' par(ask=FALSE, mar = c(0,0,0,0))
 #' plot(raster)
+#' par(opar)
+
 rog_logo <- function(pkgname, filename = "man/figures/logo.png",
                      overwrite = FALSE,
                      favicons = TRUE) {

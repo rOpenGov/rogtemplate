@@ -36,10 +36,11 @@ logo <- magick::image_read(tmp)
 
 logo
 
-# Plot to graphics device via legacy raster format
-raster <- as.raster(logo)
-par(ask = FALSE)
+op <- par(no.readonly = TRUE)
+
+par(ask=FALSE, mar = c(0,0,0,0))
 plot(raster)
+par(opar)
 }
 \seealso{
 \code{\link[hexSticker:sticker]{hexSticker::sticker()}}, \code{\link[usethis:use_logo]{usethis::use_logo()}},
