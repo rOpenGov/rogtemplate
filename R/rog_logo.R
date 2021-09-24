@@ -29,7 +29,13 @@
 #' # Display
 #' logo <- magick::image_read(tmp)
 #'
-#' plot(logo)
+#' logo
+#'
+#' # Plot to graphics device via legacy raster format
+#' raster <- as.raster(logo)
+#' par(ask=FALSE)
+#' plot(raster)
+
 rog_logo <- function(pkgname, filename = "man/figures/logo.png",
                      overwrite = FALSE,
                      favicons = TRUE) {

@@ -34,7 +34,12 @@ rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
 # Display
 logo <- magick::image_read(tmp)
 
-plot(logo)
+
+logo
+# Plot to graphics device via legacy raster format
+raster <- as.raster(logo)
+par(ask=FALSE)
+plot(raster)
 }
 \seealso{
 \code{\link[hexSticker:sticker]{hexSticker::sticker()}}, \code{\link[usethis:use_logo]{usethis::use_logo()}},
