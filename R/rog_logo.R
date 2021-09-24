@@ -40,7 +40,7 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
   family <- load_font_rogtemplate()
 
   # Autoscaling
-  p_size <- 188.46 * nchar(pkgname)**-0.934
+  p_size <- 160 * nchar(pkgname)**-1
 
 
   if (isTRUE(overwrite)) {
