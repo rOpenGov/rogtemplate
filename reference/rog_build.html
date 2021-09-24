@@ -50,14 +50,16 @@
     <dl class="row" id="ref-arguments"><dt class="col-sm-3 section level2" id="pkg-arg-pkg">pkg</dt>
       <dd class="col-sm-9" id="ref-arguments desc"><p>Path to package.</p></dd>
     <dt class="col-sm-3 section level2" id="pkg-arg-...">...</dt>
-      <dd class="col-sm-9" id="ref-arguments desc"><p>Arguments passed on to <code><a href="https://pkgdown.r-lib.org/reference/build_site.html">pkgdown::build_site</a></code></p><dl><dt><code>examples</code></dt><dd><p>Run examples?</p></dd>
+      <dd class="col-sm-9" id="ref-arguments desc"><p>Arguments passed on to <code><a href="rog_logo.html">rog_logo</a></code>, <code><a href="https://pkgdown.r-lib.org/reference/build_site.html">pkgdown::build_site</a></code></p><dl><dt><code>overwrite</code></dt><dd><p>Should the current logo be overwritten? When <code>TRUE</code> it
+would run <code><a href="https://usethis.r-lib.org/reference/use_logo.html">usethis::use_logo()</a></code>.</p></dd>
+    <dt><code>favicons</code></dt><dd><p>Logical, do you want to create favicons with
+<code><a href="https://pkgdown.r-lib.org/reference/build_favicons.html">pkgdown::build_favicons()</a></code>?</p></dd>
+    <dt><code>examples</code></dt><dd><p>Run examples?</p></dd>
     <dt><code>run_dont_run</code></dt><dd><p>Run examples that are surrounded in \dontrun?</p></dd>
     <dt><code>seed</code></dt><dd><p>Seed used to initialize so that random examples are
 reproducible.</p></dd>
     <dt><code>lazy</code></dt><dd><p>If <code>TRUE</code>, will only rebuild articles and reference pages
 if the source is newer than the destination.</p></dd>
-    <dt><code>override</code></dt><dd><p>An optional named list used to temporarily override
-values in <code>_pkgdown.yml</code></p></dd>
     <dt><code>preview</code></dt><dd><p>If <code>TRUE</code>, or <code>is.na(preview) &amp;&amp; interactive()</code>, will preview
 freshly generated section in browser.</p></dd>
     <dt><code>devel</code></dt><dd><p>Use development or deployment process?If <code>TRUE</code>, uses lighter-weight process suitable for rapid
@@ -78,7 +80,8 @@ so it is available for vignettes.</p></dd>
     </dl><div class="ref-section section level2" id="section-details">
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details" aria-hidden="true"></a>Details</h2>
 
-    <p>This function would call also <code><a href="rog_add_template_pkgdown.html">rog_add_template_pkgdown()</a></code>.</p>
+    <p>This function would call also <code><a href="rog_add_template_pkgdown.html">rog_add_template_pkgdown()</a></code> and
+<code><a href="rog_logo.html">rog_logo()</a></code>.</p>
     </div>
     <div class="ref-section section level2" id="section-see-also">
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also" aria-hidden="true"></a>See also</h2>
