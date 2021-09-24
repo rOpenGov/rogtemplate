@@ -10,5 +10,4 @@ reference:
   contents: rogtemplate
 figures:
   fig.asp: 0.8695
-  fig.width: 1.1
-  dpi: 300
+  fig.width: 3.3
