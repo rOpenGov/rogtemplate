@@ -93,15 +93,17 @@
 <p>You can use <code><a href="reference/rog_actions_pkgdown_branch.html">rog_actions_pkgdown_branch()</a></code> for setting up the action described before but the deployment would be still performed by a GitHub action.</p>
 <p>For building locally your package into your <code>docs</code> folder use:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">rogtemplate</span><span class="fu">::</span><span class="fu"><a href="reference/rog_build.html">rog_build</a></span><span class="op">(</span><span class="op">)</span>
+<code class="sourceCode R">
+<span class="fu">rogtemplate</span><span class="fu">::</span><span class="fu"><a href="reference/rog_build.html">rog_build</a></span><span class="op">(</span><span class="op">)</span>
 
 <span class="co"># or you can use also</span>
 
 <span class="fu">rogtemplate</span><span class="fu">::</span><span class="fu"><a href="reference/rog_add_template_pkgdown.html">rog_add_template_pkgdown</a></span><span class="op">(</span><span class="op">)</span>
 <span class="fu">pkgdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">build_site</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
 <p>Note that <code><a href="reference/rog_add_template_pkgdown.html">rogtemplate::rog_add_template_pkgdown()</a></code> creates a <code>_pkgdown.yml</code> file (or modify an existing one) with the following lines:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">template</span><span class="kw">:</span></span>
-<span id="cb3-2"><a href="#cb3-2"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rogtemplate</span></span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="fu">template</span><span class="kw">:</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rogtemplate</span></span></code></pre></div>
 <p>These lines tells <strong>pkgdown</strong> to use <strong>rogtemplate</strong>.</p>
 </div>
 </div>
