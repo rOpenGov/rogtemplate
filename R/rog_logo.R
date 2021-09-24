@@ -122,4 +122,3 @@ package_name <- function() {
 
   packagename
 }
-
