@@ -32,11 +32,10 @@
 #' logo
 #'
 #' op <- par(no.readonly = TRUE)
-#' 
-#' par(ask=FALSE, mar = c(0,0,0,0))
+#'
+#' par(ask = FALSE, mar = c(0, 0, 0, 0))
 #' plot(raster)
 #' par(opar)
-
 rog_logo <- function(pkgname, filename = "man/figures/logo.png",
                      overwrite = FALSE,
                      favicons = TRUE) {
