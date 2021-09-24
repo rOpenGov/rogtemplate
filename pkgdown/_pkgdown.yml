@@ -8,3 +8,5 @@ reference:
   contents: has_concept("extras")
 - title: About the package
   contents: rogtemplate
+figures:
+  fig.asp: 1.1561
