@@ -1,13 +1,13 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rogtemplate <a href='https://dieghernan.github.io/rogtemplate/'><img src='man/figures/logo.png' align="right" height="139" /></a>
+# rogtemplate <a href='https://ropengov.github.io/rogtemplate/'><img src='man/figures/logo.png' align="right" height="139" /></a>
 
 <!-- badges: start -->
 
-[![rOG-badge](https://dieghernan.github.io/rogtemplate//reference/figures/ropengov-badge.svg)](http://ropengov.org/)
+[![rOG-badge](https://ropengov.github.io/rogtemplate//reference/figures/ropengov-badge.svg)](http://ropengov.org/)
 [![R build
-status](https://github.com/dieghernan/rogtemplate/workflows/R-CMD-check/badge.svg)](https://github.com/rOpenGov/rogtemplate/actions)
+status](https://github.com/ropengov/rogtemplate/workflows/R-CMD-check/badge.svg)](https://github.com/rOpenGov/rogtemplate/actions)
 [![lifecycle](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
