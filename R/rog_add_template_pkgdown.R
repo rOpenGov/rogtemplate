@@ -1,14 +1,12 @@
 #' Configure `rogtemplate` for your pkgdown site
 #'
-#' @family extras
-#'
 #' Add the corresponding configuration to your `_pkgdown.yml`. If it is not
 #' present, it would create a file on `pkgdown/_pkgdown.yml`. It would also
 #' add the corresponding lines to your .Rbuildignore
 #'
+#' @family extras
 #'
-#'
-#' @seealso `vignette("pkgdown", package = "pkgdown")`,
+#' @seealso `vignette("pkgdown", package = "pkgdown")`.
 #'
 #' @export
 #' @examples

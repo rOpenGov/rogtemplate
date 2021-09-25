@@ -1,6 +1,5 @@
 #' Creates a logo for your rOpenGov package
 #'
-#' @family extras
 #'
 #' Creates a logo automatically with [hexSticker::sticker()].
 #' Optionally, create also favicons with [pkgdown::build_favicons()].
@@ -17,6 +16,7 @@
 #' @inheritParams hexSticker::sticker
 #'
 #'
+#' @family extras
 #' @seealso [hexSticker::sticker()], [usethis::use_logo()],
 #' [pkgdown::build_favicons()].
 #'
