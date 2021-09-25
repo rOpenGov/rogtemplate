@@ -32,7 +32,6 @@
 #' logo
 #'
 #' plot(logo)
-#'
 rog_logo <- function(pkgname, filename = "man/figures/logo.png",
                      overwrite = FALSE,
                      favicons = TRUE) {
@@ -119,4 +118,3 @@ package_name <- function() {
 
   packagename
 }
-

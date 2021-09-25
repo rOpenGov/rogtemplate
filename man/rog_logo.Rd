@@ -37,7 +37,6 @@ logo <- magick::image_read(tmp)
 logo
 
 plot(logo)
-
 }
 \seealso{
 \code{\link[hexSticker:sticker]{hexSticker::sticker()}}, \code{\link[usethis:use_logo]{usethis::use_logo()}},
