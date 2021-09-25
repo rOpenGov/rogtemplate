@@ -26,5 +26,9 @@ rog_badge_ropengov(install = FALSE)
 }
 \seealso{
 \code{\link[usethis:badges]{usethis::use_badge()}}
+
+Other extras: 
+\code{\link{rog_add_template_pkgdown}()},
+\code{\link{rog_logo}()}
 }
 \concept{extras}

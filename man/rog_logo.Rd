@@ -24,7 +24,8 @@ would run \code{\link[usethis:use_logo]{usethis::use_logo()}}.}
 \code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}}?}
 }
 \description{
-Creates a logo for your rOpenGov package
+Creates a logo automatically with \code{\link[hexSticker:sticker]{hexSticker::sticker()}}.
+Optionally, create also favicons with \code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}}.
 }
 \examples{
 
@@ -41,8 +42,9 @@ plot(logo)
 \seealso{
 \code{\link[hexSticker:sticker]{hexSticker::sticker()}}, \code{\link[usethis:use_logo]{usethis::use_logo()}},
 \code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}}.
-}
-\concept{extras
 
-Creates a logo automatically with \code{\link[hexSticker:sticker]{hexSticker::sticker()}}.
-Optionally, create also favicons with \code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}}.}
+Other extras: 
+\code{\link{rog_add_template_pkgdown}()},
+\code{\link{rog_badge_ropengov}()}
+}
+\concept{extras}

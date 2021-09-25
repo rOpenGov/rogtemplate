@@ -7,7 +7,9 @@
 rog_add_template_pkgdown()
 }
 \description{
-Configure \code{rogtemplate} for your pkgdown site
+Add the corresponding configuration to your \verb{_pkgdown.yml}. If it is not
+present, it would create a file on \verb{pkgdown/_pkgdown.yml}. It would also
+add the corresponding lines to your .Rbuildignore
 }
 \examples{
 \dontrun{
@@ -16,10 +18,10 @@ rog_add_template_pkgdown()
 
 }
 \seealso{
-\code{vignette("pkgdown", package = "pkgdown")},
-}
-\concept{extras
+\code{vignette("pkgdown", package = "pkgdown")}.
 
-Add the corresponding configuration to your \verb{_pkgdown.yml}. If it is not
-present, it would create a file on \verb{pkgdown/_pkgdown.yml}. It would also
-add the corresponding lines to your .Rbuildignore}
+Other extras: 
+\code{\link{rog_badge_ropengov}()},
+\code{\link{rog_logo}()}
+}
+\concept{extras}
