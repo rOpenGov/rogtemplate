@@ -7,6 +7,6 @@ template:
   bslib:
     enable-responsive-font-sizes: true
     font-family-monospace: "B612 Mono, monospace"
-    navbar-brand-font-size: "$font-size-base * 1.15"
+    navbar-brand-font-size: "1.25rem"
   twitter:
     card: summary_large_image
