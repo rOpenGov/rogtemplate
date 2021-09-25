@@ -80,5 +80,5 @@ case you chose to deploy in that way) and deploy the website via
 
 We provide also some additional extra functions for creating badges and
 logos, see
-[Extras](https://dieghernan.github.io/rogtemplate/reference/index.html)
+[Extras](https://ropengov.github.io/rogtemplate/reference/index.html)
 for more info.
