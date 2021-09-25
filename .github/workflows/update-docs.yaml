@@ -34,7 +34,7 @@ jobs:
           extra-packages: |
             rcmdcheck
             dieghernan/pkgdev
-            dieghernan/rogtemplate
+            ropengov/rogtemplate
 
           needs: website
 
