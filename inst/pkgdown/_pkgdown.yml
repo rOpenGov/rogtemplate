@@ -7,5 +7,8 @@ template:
   bslib:
     enable-responsive-font-sizes: true
     font-family-monospace: "B612 Mono, monospace"
-  twitter:
-    card: summary_large_image
+  opengraph:
+    twitter:
+      site: "@rOpenGov"
+      card: summary_large_image
+  
