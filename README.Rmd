@@ -53,12 +53,12 @@ You can install **rogtemplate** using the
 ```{r, eval=FALSE}
 # Enable this universe
 options(repos = c(
-    ropengov = "https://ropengov.r-universe.dev",
-    CRAN = "https://cloud.r-project.org"))
+  ropengov = "https://ropengov.r-universe.dev",
+  CRAN = "https://cloud.r-project.org"
+))
 
 # Install some packages
 install.packages("rogtemplate")
-
 ```
 
 You can use also the **remotes** package:
