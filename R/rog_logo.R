@@ -44,10 +44,20 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
   # Autoscaling
   p_size <- 180.86 * nchar(pkgname)**-0.995
 
-  if (isFALSE(overwrite) && file.exists(filename)) {
+ # Remove old logos: png and svg
+ if (isTRUE(overwrite)){
+   oldlogo <- file.path("man", "figures", "logo.png") 
+   if (file.exists(oldlogo)) file.remove(oldlogo)
+   
+   oldlogo <- file.path("man", "figures", "logo.svg") 
+   if (file.exists(oldlogo)) file.remove(oldlogo)
+ 
+ }
+ 
+ if (isFALSE(overwrite) && file.exists(filename)) {
     filename <- tempfile(fileext = ".png")
+    message("Old logo detected. Use overwrite = TRUE")
   }
-
 
 
   # Create plot
@@ -72,7 +82,9 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
 
   # Favicons
 
-  if (isTRUE(favicons)) pkgdown::build_favicons(overwrite = TRUE)
+  if (isTRUE(favicons) && filename == "man/figures/logo.png") {
+  pkgdown::build_favicons(overwrite = TRUE)
+  }
 }
 
 
