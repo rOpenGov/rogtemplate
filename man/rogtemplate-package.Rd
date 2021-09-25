@@ -14,9 +14,9 @@ This is a private template for use by core rOpenGov packages.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://dieghernan.github.io/rogtemplate/}
-  \item \url{https://github.com/dieghernan/rogtemplate}
-  \item Report bugs at \url{https://github.com/dieghernan/rogtemplate/issues}
+  \item \url{https://ropengov.github.io/rogtemplate/}
+  \item \url{https://github.com/ropengov/rogtemplate}
+  \item Report bugs at \url{https://github.com/ropengov/rogtemplate/issues}
 }
 
 }

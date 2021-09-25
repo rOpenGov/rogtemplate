@@ -7,7 +7,7 @@
 
 [![rOG-badge](https://dieghernan.github.io/rogtemplate//reference/figures/ropengov-badge.svg)](http://ropengov.org/)
 [![R build
-status](https://github.com/dieghernan/rogtemplate/workflows/R-CMD-check/badge.svg)](https://github.com/dieghernan/rogtemplate/actions)
+status](https://github.com/dieghernan/rogtemplate/workflows/R-CMD-check/badge.svg)](https://github.com/rOpenGov/rogtemplate/actions)
 [![lifecycle](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
@@ -26,7 +26,7 @@ control but it is not automatic.
 ### Option A: Deploy using GitHub Actions
 
 It is not necessary to install **rogtemplate** itself. Just copy [this
-file](https://github.com/dieghernan/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml)
+file](https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml)
 into your `.github/workflows/` folder.
 
 The action would create your site in the `gh-pages` branch.
