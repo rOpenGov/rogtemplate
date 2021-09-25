@@ -48,13 +48,6 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
   # Autoscaling
   p_size <- 180.86 * nchar(pkgname)**-0.995
 
-  if (isTRUE(overwrite)) {
-    filename <- tempfile(fileext = ".png")
-    if (file.exists("man/figures/logo.png")) {
-      d <- file.remove("man/figures/logo.png")
-    }
-  }
-
   if (isFALSE(overwrite) && file.exists(filename)) {
     filename <- tempfile(fileext = ".png")
   }
@@ -78,12 +71,8 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
     )
   )
 
+  message("Logo created on ", filename)
 
-  if (overwrite) {
-    usethis::use_logo(filename)
-  } else {
-    message("Logo created on ", filename)
-  }
 
   # Favicons
 
