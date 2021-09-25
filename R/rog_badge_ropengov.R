@@ -27,7 +27,7 @@ rog_badge_ropengov <- function(install = TRUE) {
   stopifnot(is.logical(install))
 
   # Add pkg
-  badge <- "https://dieghernan.github.io/rogtemplate/reference/figures/ropengov-badge.svg"
+  badge <- "https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge.svg"
 
   href <- "http://ropengov.org/"
 
