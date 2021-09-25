@@ -8,6 +8,7 @@
 [![rOG-badge](https://ropengov.github.io/rogtemplate//reference/figures/ropengov-badge.svg)](http://ropengov.org/)
 [![R build
 status](https://github.com/ropengov/rogtemplate/workflows/R-CMD-check/badge.svg)](https://github.com/rOpenGov/rogtemplate/actions)
+[![r-universe](https://ropengov.r-universe.dev/badges/rogtemplate)](https://ropengov.r-universe.dev/)
 [![lifecycle](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
