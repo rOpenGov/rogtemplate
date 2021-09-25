@@ -47,8 +47,7 @@ img[src$='#floatright'] {
 /* Mono fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=B612+Mono&display=swap');
-pre,
-code,
+
 .navbar-brand {
   font-family: 'B612 Mono', monospace;
   letter-spacing: 2px;
