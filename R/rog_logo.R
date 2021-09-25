@@ -46,8 +46,7 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
   family <- load_font_rogtemplate()
 
   # Autoscaling
-  p_size <- 160 * nchar(pkgname)**-1
-
+  p_size <- 180.86 * nchar(pkgname)**-0.995
 
   if (isTRUE(overwrite)) {
     filename <- tempfile(fileext = ".png")
