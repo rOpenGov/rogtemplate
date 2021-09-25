@@ -158,5 +158,9 @@
   },
   "isPartOf": "http://ropengov.org/",
   "keywords": ["template", "r", "r-package", "github-actions", "pkgdown"],
-  "fileSize": "576.329KB"
+<<<<<  "fileSize": "576.329KB"
+>>>>>>>-main
+==
+  "fileSize": "586.569KB"
+>>>>>>> origin/merge
 }
