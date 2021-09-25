@@ -46,14 +46,27 @@ The action would create your site in the `gh-pages` branch.
 
 ### Option B: Deploy installing rogtemplate
 
-Install the package from the GitHub repo. 
+
+You can install **rogtemplate** using the
+[r-universe](https://ropengov.r-universe.dev/ui):
+
+```{r, eval=FALSE}
+# Enable this universe
+options(repos = c(
+    ropengov = "https://ropengov.r-universe.dev",
+    CRAN = "https://cloud.r-project.org"))
+
+# Install some packages
+install.packages("rogtemplate")
+
+```
+
+You can use also the **remotes** package:
 
 ``` r
 library(remotes)
-install_github("dieghernan/rogtemplate", dependencies = TRUE)
+install_github("ropengov/rogtemplate", dependencies = TRUE)
 ```
-
-**TODO: Include r-universe instructions.**
 
 You can use `rog_actions_pkgdown_branch()`
 for setting up the action described before but the deployment would be still
