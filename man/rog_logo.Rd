@@ -36,11 +36,8 @@ logo <- magick::image_read(tmp)
 
 logo
 
-opar <- par(no.readonly = TRUE)
-
-par(ask = FALSE, mar = c(0, 0, 0, 0))
 plot(logo)
-par(opar)
+
 }
 \seealso{
 \code{\link[hexSticker:sticker]{hexSticker::sticker()}}, \code{\link[usethis:use_logo]{usethis::use_logo()}},

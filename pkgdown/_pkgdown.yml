@@ -8,6 +8,3 @@ reference:
   contents: has_concept("extras")
 - title: About the package
   contents: rogtemplate
-figures:
-  fig.asp: 0.8695
-  fig.width: 3.3

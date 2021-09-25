@@ -31,11 +31,8 @@
 #'
 #' logo
 #'
-#' opar <- par(no.readonly = TRUE)
-#'
-#' par(ask = FALSE, mar = c(0, 0, 0, 0))
 #' plot(logo)
-#' par(opar)
+#'
 rog_logo <- function(pkgname, filename = "man/figures/logo.png",
                      overwrite = FALSE,
                      favicons = TRUE) {
