@@ -11,8 +11,8 @@ Description: This is a private template for use by core rOpenGov packages.
     Please don’t use for your own code.
 License: MIT + file LICENSE
 URL: https://ropengov.github.io/rogtemplate/,
-    https://github.com/ropengov/rogtemplate
-BugReports: https://github.com/ropengov/rogtemplate/issues
+    https://github.com/rOpenGov/rogtemplate
+BugReports: https://github.com/rOpenGov/rogtemplate/issues
 Depends: 
     R (>= 3.6)
 Imports: 

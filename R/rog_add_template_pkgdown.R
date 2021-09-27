@@ -25,7 +25,7 @@ rog_add_template_pkgdown <- function() {
   pkgname <- package_name()
 
   pkgurl <- paste0("https://ropengov.github.io/", pkgname, "/")
-  repo <- paste0("https://github.com/ropengov/", pkgname)
+  repo <- paste0("https://github.com/rOpenGov/", pkgname)
 
 
   # Add auto linking to description
@@ -39,11 +39,11 @@ rog_add_template_pkgdown <- function() {
   issues <- paste0(repo, "/issues")
 
   # Add url if no present
-  if (isFALSE(pkgurl %in% tolower(urls))) urls <- c(urls, pkgurl)
+  if (isFALSE(tolower(pkgurl) %in% tolower(urls))) urls <- c(urls, pkgurl)
 
   # Add repo if no present
 
-  if (isFALSE(repo %in% tolower(urls))) urls <- c(urls, repo)
+  if (isFALSE(tolower(repo) %in% tolower(urls))) urls <- c(urls, repo)
 
   pkg$set_urls(urls)
 
