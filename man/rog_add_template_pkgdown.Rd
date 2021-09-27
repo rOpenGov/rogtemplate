@@ -22,6 +22,7 @@ rog_add_template_pkgdown()
 
 Other extras: 
 \code{\link{rog_badge_ropengov}()},
+\code{\link{rog_load_font}()},
 \code{\link{rog_logo}()}
 }
 \concept{extras}

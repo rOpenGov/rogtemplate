@@ -29,6 +29,7 @@ rog_badge_ropengov(install = FALSE)
 
 Other extras: 
 \code{\link{rog_add_template_pkgdown}()},
+\code{\link{rog_load_font}()},
 \code{\link{rog_logo}()}
 }
 \concept{extras}

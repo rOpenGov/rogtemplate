@@ -39,10 +39,10 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
 
   # Load B612
 
-  family <- load_font_rogtemplate()
+  family <- rog_load_font()
 
   # Autoscaling
-  p_size <- 180.86 * nchar(pkgname)**-0.995
+  p_size <- 202.6 * nchar(pkgname)**-1.008
 
   # Remove old logos: png and svg
   if (isTRUE(overwrite)) {
@@ -59,20 +59,29 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
   }
 
 
+
   # Create plot
   suppressWarnings(
     hexSticker::sticker(
-      subplot = system.file("figures/cat.png", package = "hexSticker"),
+      subplot = system.file("assets/partof.png", package = "rogtemplate"),
       package = pkgname,
+      # No display subplot
+      s_width = 0,
       h_fill = "#343a40",
       h_color = "#ff6600",
-      p_family = "B612",
+      p_family = family,
       p_x = 1,
       p_y = 1,
       p_size = p_size,
+      p_color = "#ffffff",
       filename = filename,
-      # No display of subplot
-      s_width = 0
+      url = "Part of rOpenGov",
+      u_color = "#ffffff",
+      u_angle = 0,
+      u_family = family,
+      u_size = 6,
+      u_x = 0.6,
+      u_y = 0.4
     )
   )
 
@@ -116,4 +125,39 @@ package_name <- function() {
   packagename <- read.dcf(desc_path, "Package")
 
   packagename
+}
+
+
+#' Load rogtemplate fonts
+#'
+#' Load the current font in use for rOpenGov,
+#' [B612 Mono](https://fonts.google.com/specimen/B612+Mono)
+#'
+#' @family extras
+#'
+#' @export
+#' @examples
+#' rog_load_font()
+rog_load_font <- function() {
+  family <- "B612 Mono"
+  fonts <- list.files(system.file("fonts", package = "rogtemplate"),
+    pattern = "ttf$", recursive = TRUE,
+    full.names = TRUE
+  )
+
+
+
+  sysfonts::font_add(family,
+    regular = as.character(fonts[4]),
+    bold = as.character(fonts[1]),
+    italic = as.character(fonts[3]),
+    bolditalic = as.character(fonts[2])
+  )
+
+
+  showtext::showtext_auto()
+
+  message(paste(family, "font loaded"))
+
+  return(family)
 }
