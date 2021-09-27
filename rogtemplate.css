@@ -128,13 +128,3 @@ footer a:focus {
     margin-left: 10rem;
   }
 }
-
-
-/* pkgdown hack */
-
-pre .r-plt img {
-  background-color: #fff;
-  margin: 5px 0;
-  display: block;
-  height: auto;
-}
