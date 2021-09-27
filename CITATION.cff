@@ -27,7 +27,7 @@ preferred-citation:
   version: 0.0.1.9001
   abstract: This is a private template for use by core rOpenGov packages. Please don’t
     use for your own code.
-  repository-code: https://github.com/ropengov/rogtemplate
+  repository-code: https://github.com/rOpenGov/rogtemplate
   url: https://ropengov.github.io/rogtemplate/
   contact:
   - family-names: Hernangómez
@@ -43,7 +43,7 @@ preferred-citation:
   - pkgdown
   license: MIT
   year: '2021'
-repository-code: https://github.com/ropengov/rogtemplate
+repository-code: https://github.com/rOpenGov/rogtemplate
 url: https://ropengov.github.io/rogtemplate/
 contact:
 - family-names: Hernangómez
