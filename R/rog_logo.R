@@ -58,15 +58,24 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
     message("Old logo detected. Use overwrite = TRUE")
   }
 
+  # Subplot
+  img <- magick::image_read(system.file("assets/partof.png", package = "rogtemplate"))
+  g <- grid::rasterGrob(img, interpolate = TRUE)
+
+  p <- ggplot2::ggplot() +
+    ggplot2::annotation_custom(g, xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf) +
+    ggplot2::theme_void()
 
 
   # Create plot
   suppressWarnings(
     hexSticker::sticker(
-      subplot = system.file("assets/partof.png", package = "rogtemplate"),
+      p,
       package = pkgname,
       # No display subplot
-      s_width = 0,
+      s_width = 1,
+      s_y = 0.45,
+      s_x = 1,
       h_fill = "#343a40",
       h_color = "#ff6600",
       p_family = family,
@@ -74,14 +83,7 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
       p_y = 1,
       p_size = p_size,
       p_color = "#ffffff",
-      filename = filename,
-      url = "Part of rOpenGov",
-      u_color = "#ffffff",
-      u_angle = 0,
-      u_family = family,
-      u_size = 6,
-      u_x = 0.6,
-      u_y = 0.4
+      filename = filename
     )
   )
 
@@ -98,20 +100,6 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
 
 
 
-
-#' Get package name
-#' @noRd
-package_name <- function() {
-  desc_path <- file.path(normalizePath("."), "DESCRIPTION")
-
-  if (!file.exists(desc_path)) stop("No DESCRIPTION file found ", call. = FALSE)
-
-  # Read package name
-
-  packagename <- read.dcf(desc_path, "Package")
-
-  packagename
-}
 
 #' Get package name
 #' @noRd

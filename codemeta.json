@@ -79,6 +79,24 @@
     },
     "3": {
       "@type": "SoftwareApplication",
+      "identifier": "ggplot2",
+      "name": "ggplot2",
+      "version": ">= 3.3.5",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ggplot2"
+    },
+    "4": {
+      "@type": "SoftwareApplication",
+      "identifier": "grid",
+      "name": "grid"
+    },
+    "5": {
+      "@type": "SoftwareApplication",
       "identifier": "hexSticker",
       "name": "hexSticker",
       "version": ">= 0.4.9",
@@ -90,7 +108,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=hexSticker"
     },
-    "4": {
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "magick",
       "name": "magick",
@@ -103,7 +121,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=magick"
     },
-    "5": {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "pkgdown",
       "name": "pkgdown",
@@ -116,7 +134,7 @@
       },
       "sameAs": "https://github.com/r-lib/pkgdown"
     },
-    "6": {
+    "8": {
       "@type": "SoftwareApplication",
       "identifier": "showtext",
       "name": "showtext",
@@ -129,7 +147,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=showtext"
     },
-    "7": {
+    "9": {
       "@type": "SoftwareApplication",
       "identifier": "sysfonts",
       "name": "sysfonts",
@@ -142,7 +160,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=sysfonts"
     },
-    "8": {
+    "10": {
       "@type": "SoftwareApplication",
       "identifier": "usethis",
       "name": "usethis",
@@ -155,7 +173,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=usethis"
     },
-    "9": {
+    "11": {
       "@type": "SoftwareApplication",
       "identifier": "yaml",
       "name": "yaml",
@@ -172,5 +190,5 @@
   },
   "isPartOf": "http://ropengov.org/",
   "keywords": ["ropengov", "template", "r", "r-package", "github-actions", "pkgdown"],
-  "fileSize": "614.941KB"
+  "fileSize": "618.261KB"
 }

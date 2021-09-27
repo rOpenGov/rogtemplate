@@ -17,6 +17,8 @@ Depends:
     R (>= 3.6)
 Imports: 
     desc (>= 1.3.0),
+    ggplot2 (>= 3.3.5),
+    grid,
     hexSticker (>= 0.4.9),
     magick (>= 2.7.3),
     pkgdown (> 1.6.1),
