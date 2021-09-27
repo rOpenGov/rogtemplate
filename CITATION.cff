@@ -8,7 +8,7 @@ message: 'To cite package "rogtemplate" in publications use:'
 type: software
 license: MIT
 title: 'rogtemplate: ''pkgdown'' Template for ''rOpenGov'' Packages'
-version: 0.0.1.9000
+version: 0.0.1.9001
 abstract: This is a private template for use by core rOpenGov packages. Please don’t
   use for your own code.
 authors:
@@ -24,7 +24,7 @@ preferred-citation:
     given-names: Diego
     email: diego.hernangomezherrero@gmail.com
     orcid: https://orcid.org/0000-0001-8457-4658
-  version: 0.0.1.9000
+  version: 0.0.1.9001
   abstract: This is a private template for use by core rOpenGov packages. Please don’t
     use for your own code.
   repository-code: https://github.com/ropengov/rogtemplate

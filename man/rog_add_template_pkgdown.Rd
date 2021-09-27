@@ -9,7 +9,15 @@ rog_add_template_pkgdown()
 \description{
 Add the corresponding configuration to your \verb{_pkgdown.yml}. If it is not
 present, it would create a file on \verb{pkgdown/_pkgdown.yml}. It would also
-add the corresponding lines to your .Rbuildignore
+add the corresponding lines to your .Rbuildignore.
+}
+\details{
+It also adds the corresponding urls to the \verb{_pkgdown.yml} file and the
+DESCRIPTION file if not present:
+\itemize{
+\item https://ropengov.github.io/pkgname/
+\item https://github.com/ropengov/pkgname
+}
 }
 \examples{
 \dontrun{
@@ -18,7 +26,9 @@ rog_add_template_pkgdown()
 
 }
 \seealso{
-\code{vignette("pkgdown", package = "pkgdown")}.
+\code{vignette("pkgdown", package = "pkgdown")},
+\code{vignette("linking", package = "pkgdown")},
+\code{\link[usethis:tidyverse]{usethis::use_tidy_description()}}.
 
 Other extras: 
 \code{\link{rog_badge_ropengov}()},
