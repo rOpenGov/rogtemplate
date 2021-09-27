@@ -25,28 +25,44 @@ rog_add_template_pkgdown <- function() {
   pkgname <- package_name()
 
   pkgurl <- paste0("https://ropengov.github.io/", pkgname, "/")
+  repo <- paste0("https://github.com/ropengov/", pkgname)
 
 
   # Add auto linking to description
   desc_path <- file.path(normalizePath("."), "DESCRIPTION")
 
-  desc <- read.dcf(desc_path)
 
-  urls <- gsub("\n", "", desc[, "URL"])
 
-  urls <- unlist(strsplit(urls, split = ","))
+  pkg <- desc::desc_normalize(desc_path)
+
+  urls <- pkg$get_urls()
+  issues <- paste0(repo, "/issues")
 
   # Add url if no present
   if (isFALSE(pkgurl %in% tolower(urls))) urls <- c(urls, pkgurl)
 
   # Add repo if no present
-  repo <- paste0("https://github.com/ropengov/", pkgname)
+
   if (isFALSE(repo %in% tolower(urls))) urls <- c(urls, repo)
 
-  # Regenerate DESCRIPTION
-  desc[, "URL"] <- paste(urls, collapse = ", ")
+  pkg$set_urls(urls)
 
-  write.dcf(desc, desc_path)
+
+  pkg$set("BugReports", issues)
+  pkg$set("X-schema.org-isPartOf", "http://ropengov.org/")
+
+  # Add keywords
+  key <- pkg$get("X-schema.org-keywords")
+  key <- unique(c("ropengov", unlist(strsplit(key, ","))))
+  key <- paste(key, collapse = ", ")
+  pkg$set("X-schema.org-keywords", key)
+
+
+  pkg$normalize()
+
+  pkg$write(desc_path)
+
+
   usethis::use_tidy_description()
 
   # template

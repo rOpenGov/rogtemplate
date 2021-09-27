@@ -16,13 +16,14 @@ BugReports: https://github.com/ropengov/rogtemplate/issues
 Depends: 
     R (>= 3.6)
 Imports: 
+    desc (>= 1.3.0),
     hexSticker (>= 0.4.9),
     magick (>= 2.7.3),
     pkgdown (> 1.6.1),
     showtext (>= 0.9.4),
     sysfonts (>= 0.8.5),
     usethis (>= 2.0.0),
-    yaml
+    yaml (>= 2.2.1)
 Suggests: 
     testthat (>= 3.0.0)
 Remotes: 
@@ -32,4 +33,5 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 X-schema.org-isPartOf: http://ropengov.org/
-X-schema.org-keywords: template, r, r-package, github-actions, pkgdown
+X-schema.org-keywords: ropengov, template, r, r-package, github-actions,
+    pkgdown
