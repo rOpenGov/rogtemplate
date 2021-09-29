@@ -54,16 +54,11 @@ rog_add_template_pkgdown <- function() {
   # Add keywords
   key <- pkg$get("X-schema.org-keywords")
   key <- unique(c("ropengov", unlist(strsplit(key, ","))))
+  key <- key[!is.na(key)]
   key <- paste(key, collapse = ", ")
   pkg$set("X-schema.org-keywords", key)
 
-
-  pkg$normalize()
-
   pkg$write(desc_path)
-
-
-  usethis::use_tidy_description()
 
   # template
   template <- list(
@@ -103,7 +98,10 @@ rog_add_template_pkgdown <- function() {
       )
     }
   } else {
-    newfile <- template
+    template_blank <- template
+    template_blank$template$path <- NULL
+    template_blank$template$params <- NULL
+    newfile <- template_blank
   }
 
 

@@ -2,10 +2,7 @@ Package: rogtemplate
 Title: 'pkgdown' Template for 'rOpenGov' Packages
 Version: 0.0.1.9001
 Authors@R: 
-    person(given = "Diego",
-           family = "Hernangómez",
-           role = c("aut", "cre", "cph"),
-           email = "diego.hernangomezherrero@gmail.com",
+    person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
            comment = c(ORCID = "0000-0001-8457-4658"))
 Description: This is a private template for use by core rOpenGov packages.
     Please don’t use for your own code.
@@ -35,5 +32,5 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
 X-schema.org-isPartOf: http://ropengov.org/
-X-schema.org-keywords: ropengov, template, r, r-package, github-actions,
+X-schema.org-keywords: ropengov,  template,  r,  r-package,  github-actions, 
     pkgdown
