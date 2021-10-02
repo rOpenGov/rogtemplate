@@ -1,6 +1,9 @@
 url: https://ropengov.github.io/rogtemplate/
 template:
   package: rogtemplate
+  opengraph:
+    twitter:
+      site: '@rOpenGov'
 reference:
 - title: Main functions
   contents: -has_concept("extras")
