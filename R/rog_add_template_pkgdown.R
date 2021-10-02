@@ -66,6 +66,8 @@ rog_add_template_pkgdown <- function() {
     template = list(
       package = "rogtemplate",
       path = NULL,
+      opengraph = list(twitter = 
+         list(site = "@rOpenGov")),
       params =
         list(bootswatch = NULL)
     )
