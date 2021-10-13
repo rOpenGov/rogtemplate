@@ -33,6 +33,9 @@
 #'
 #' plot(logo)
 rog_logo <- function(pkgname, filename = "man/figures/logo.png",
+p_x = 1,
+      p_y = 1,
+      p_size = 202.6 * nchar(pkgname)**-1.008,
                      overwrite = FALSE,
                      favicons = TRUE) {
   if (missing(pkgname)) pkgname <- package_name()
@@ -40,9 +43,6 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
   # Load B612
 
   family <- rog_load_font()
-
-  # Autoscaling
-  p_size <- 202.6 * nchar(pkgname)**-1.008
 
   # Remove old logos: png and svg
   if (isTRUE(overwrite)) {
@@ -72,15 +72,14 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
     hexSticker::sticker(
       p,
       package = pkgname,
-      # No display subplot
       s_width = 1,
       s_y = 0.45,
       s_x = 1,
       h_fill = "#343a40",
       h_color = "#ff6600",
       p_family = family,
-      p_x = 1,
-      p_y = 1,
+      p_x = p_x,
+      p_y = p_y,
       p_size = p_size,
       p_color = "#ffffff",
       filename = filename
