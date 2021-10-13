@@ -125,7 +125,7 @@
       "@type": "SoftwareApplication",
       "identifier": "pkgdown",
       "name": "pkgdown",
-      "version": "> 1.6.1",
+      "version": "> 1.6.5",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
