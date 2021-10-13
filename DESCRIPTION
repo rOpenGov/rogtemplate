@@ -18,7 +18,7 @@ Imports:
     grid,
     hexSticker (>= 0.4.9),
     magick (>= 2.7.3),
-    pkgdown (> 1.6.1),
+    pkgdown (> 1.6.5),
     showtext (>= 0.9.4),
     sysfonts (>= 0.8.5),
     usethis (>= 2.0.0),
