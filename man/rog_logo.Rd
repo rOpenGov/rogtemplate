@@ -7,6 +7,9 @@
 rog_logo(
   pkgname,
   filename = "man/figures/logo.png",
+  p_x = 1,
+  p_y = 1,
+  p_size = 202.6 * nchar(pkgname)^-1.008,
   overwrite = FALSE,
   favicons = TRUE
 )
@@ -16,6 +19,12 @@ rog_logo(
 by the function.}
 
 \item{filename}{filename to save sticker}
+
+\item{p_x}{x position for package name}
+
+\item{p_y}{y position for package name}
+
+\item{p_size}{font size for package name}
 
 \item{overwrite}{Should the current logo be overwritten? When \code{TRUE} it
 would run \code{\link[usethis:use_logo]{usethis::use_logo()}}.}

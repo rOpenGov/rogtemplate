@@ -16,6 +16,9 @@ rog_build(pkg = ".", ...)
 would run \code{\link[usethis:use_logo]{usethis::use_logo()}}.}
     \item{\code{favicons}}{Logical, do you want to create favicons with
 \code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}}?}
+    \item{\code{p_x}}{x position for package name}
+    \item{\code{p_y}}{y position for package name}
+    \item{\code{p_size}}{font size for package name}
     \item{\code{examples}}{Run examples?}
     \item{\code{run_dont_run}}{Run examples that are surrounded in \\dontrun?}
     \item{\code{seed}}{Seed used to initialize so that random examples are
