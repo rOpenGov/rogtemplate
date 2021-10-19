@@ -10,12 +10,12 @@
     });
 
     $('body').scrollspy({
-      target: '#toc',
-      offset: 56 // headroom height
+      target: '#pkgdown-sidebar',
+      offset: 60
     });
 
     // Activate popovers
-    $('[data-bs-toggle="popover"]').popover({
+    $('[data-toggle="popover"]').popover({
       container: 'body',
       html: true,
       trigger: 'focus',
@@ -23,7 +23,7 @@
       sanitize: false,
     });
 
-    $('[data-bs-toggle="tooltip"]').tooltip();
+    $('[data-toggle="tooltip"]').tooltip();
 
   /* Clipboard --------------------------*/
 
@@ -49,7 +49,7 @@
       // Initialize clipboard:
       var clipboard = new ClipboardJS('[data-clipboard-copy]', {
         text: function(trigger) {
-          return trigger.parentNode.textContent.replace(/\n#>[^\n]*/g, "");
+          return trigger.parentNode.textContent;
         }
       });
 
