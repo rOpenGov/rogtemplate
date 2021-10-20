@@ -3,7 +3,7 @@ navbar:
   bg: dark
 
 template:
-  bootstrap: 4
+  bootstrap: 5
   bslib:
     enable-responsive-font-sizes: true
     font-family-monospace: "B612 Mono, monospace"
@@ -11,4 +11,4 @@ template:
     twitter:
       site: "@rOpenGov"
       card: summary_large_image
-  
+
