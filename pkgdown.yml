@@ -1,8 +1,8 @@
 pandoc: 2.7.3
 pkgdown: 1.9000.9000.9000
-pkgdown_sha: 3f853ac74cbda390006a5df9b240b0b4878270e7
+pkgdown_sha: 5150236bd3e87be9abc6e43a8a804b707bf1fdf2
 articles: {}
-last_built: 2021-10-19T18:31Z
+last_built: 2021-10-20T21:29Z
 urls:
   reference: https://ropengov.github.io/rogtemplate/reference
   article: https://ropengov.github.io/rogtemplate/articles
