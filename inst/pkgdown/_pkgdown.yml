@@ -6,7 +6,7 @@ template:
   bootstrap: 5
   bslib:
     enable-responsive-font-sizes: true
-    font-family-monospace: "B612 Mono, monospace"
+    code_font: {google: "JetBrains Mono"}
   opengraph:
     twitter:
       site: "@rOpenGov"
