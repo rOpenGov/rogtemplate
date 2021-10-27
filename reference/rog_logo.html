@@ -35,10 +35,10 @@ Optionally, create also favicons with pkgdown::build_favicons()."><meta property
 </nav><div class="container template-reference-topic" id="container">
 <div class="row">
   <div class="col-md-9 contents">
-    <img src="../logo.png" class="pkg-logo" alt=""><div class="page-header pb-2 mt-4 mb-2 border-bottom toc-ignore">
-    <h1>Creates a logo for your rOpenGov package</h1>
-    <small class="dont-index">Source: <a href="https://github.com/rOpenGov/rogtemplate/blob/master/R/rog_logo.R" class="external-link"><code>R/rog_logo.R</code></a></small>
-    <div class="d-none name"><code>rog_logo.Rd</code></div>
+    <div class="page-header">
+      <img src="../logo.png" class="logo" alt=""><h1>Creates a logo for your rOpenGov package</h1>
+      <small class="dont-index">Source: <a href="https://github.com/rOpenGov/rogtemplate/blob/master/R/rog_logo.R" class="external-link"><code>R/rog_logo.R</code></a></small>
+      <div class="d-none name"><code>rog_logo.Rd</code></div>
     </div>
 
     <div class="ref-description section level2">
@@ -58,28 +58,22 @@ Optionally, create also favicons with <code><a href="https://pkgdown.r-lib.org/r
 <span class="op">)</span></code></pre>
     </div>
 
-    <div class="ref-arguments section level2">
-    <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
-    <dl><dt id="ref-argument-pkgname">pkgname</dt>
-      <dd><p>Name of the package. If not present it would be autodetected
-by the function.</p></dd>
-      <dt id="ref-argument-filename">filename</dt>
-      <dd><p>filename to save sticker</p></dd>
-      <dt id="ref-argument-p_x">p_x</dt>
-      <dd><p>x position for package name</p></dd>
-      <dt id="ref-argument-p_y">p_y</dt>
-      <dd><p>y position for package name</p></dd>
-      <dt id="ref-argument-p_size">p_size</dt>
-      <dd><p>font size for package name</p></dd>
-      <dt id="ref-argument-overwrite">overwrite</dt>
-      <dd><p>Should the current logo be overwritten? When <code>TRUE</code> it
-would run <code><a href="https://usethis.r-lib.org/reference/use_logo.html" class="external-link">usethis::use_logo()</a></code>.</p></dd>
-      <dt id="ref-argument-favicons">favicons</dt>
-      <dd><p>Logical, do you want to create favicons with
-<code><a href="https://pkgdown.r-lib.org/reference/build_favicons.html" class="external-link">pkgdown::build_favicons()</a></code>?</p></dd>
-    </dl></div>
-
     <div id="ref-sections">
+    <div class="section level2">
+    <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
+    
+
+<dl><dt>pkgname</dt><dd><p>Name of the package. If not present it would be autodetected
+by the function.</p></dd>
+</dl><dl><dt>filename</dt><dd><p>filename to save sticker</p></dd>
+</dl><dl><dt>p_x</dt><dd><p>x position for package name</p></dd>
+</dl><dl><dt>p_y</dt><dd><p>y position for package name</p></dd>
+</dl><dl><dt>p_size</dt><dd><p>font size for package name</p></dd>
+</dl><dl><dt>overwrite</dt><dd><p>Should the current logo be overwritten? When <code>TRUE</code> it
+would run <code><a href="https://usethis.r-lib.org/reference/use_logo.html" class="external-link">usethis::use_logo()</a></code>.</p></dd>
+</dl><dl><dt>favicons</dt><dd><p>Logical, do you want to create favicons with
+<code><a href="https://pkgdown.r-lib.org/reference/build_favicons.html" class="external-link">pkgdown::build_favicons()</a></code>?</p></dd>
+</dl></div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p><code><a href="https://rdrr.io/pkg/hexSticker/man/sticker.html" class="external-link">hexSticker::sticker()</a></code>, <code><a href="https://usethis.r-lib.org/reference/use_logo.html" class="external-link">usethis::use_logo()</a></code>,
@@ -97,7 +91,7 @@ would run <code><a href="https://usethis.r-lib.org/reference/use_logo.html" clas
 <span class="r-in"><span class="va">tmp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span>fileext <span class="op">=</span> <span class="st">".png"</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu">rog_logo</span><span class="op">(</span><span class="st">"test a package"</span>, <span class="va">tmp</span>, overwrite <span class="op">=</span> <span class="cn">FALSE</span>, favicons <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> B612 Mono font loaded</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Logo created on /tmp/RtmpqNKkCF/file42831f91bc10.png</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Logo created on /tmp/RtmpvOYUC1/file339975e1d2f3.png</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Display</span></span>
 <span class="r-in"><span class="va">logo</span> <span class="op">&lt;-</span> <span class="fu">magick</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/magick/reference/editing.html" class="external-link">image_read</a></span><span class="op">(</span><span class="va">tmp</span><span class="op">)</span></span>
