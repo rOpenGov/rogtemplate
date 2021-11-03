@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.1.1 (2021-08-10)",
+  "runtimePlatform": "R version 4.1.2 (2021-11-01)",
   "author": [
     {
       "@type": "Person",
@@ -132,7 +132,7 @@
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://github.com/dieghernan/pkgdown"
+      "sameAs": "https://github.com/r-lib/pkgdown"
     },
     "8": {
       "@type": "SoftwareApplication",
@@ -190,5 +190,5 @@
   },
   "isPartOf": "http://ropengov.org/",
   "keywords": ["ropengov", "template", "r", "r-package", "github-actions", "pkgdown"],
-  "fileSize": "618.386KB"
+  "fileSize": "618.381KB"
 }
