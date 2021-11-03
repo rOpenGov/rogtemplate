@@ -5,7 +5,6 @@ navbar:
 template:
   bootstrap: 5
   bslib:
-    enable-responsive-font-sizes: true
     code_font: {google: "Roboto Mono"}
   opengraph:
     twitter:
