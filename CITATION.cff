@@ -1,5 +1,5 @@
 # -----------------------------------------------------------
-# CITATION file created with {cffr} R package, v0.0.2
+# CITATION file created with {cffr} R package, v0.1.1
 # See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
  
@@ -41,6 +41,7 @@ preferred-citation:
   - r-package
   - github-actions
   - pkgdown
+  - pkgdown-template
   license: MIT
   year: '2021'
 repository-code: https://github.com/rOpenGov/rogtemplate
@@ -57,3 +58,4 @@ keywords:
 - r-package
 - github-actions
 - pkgdown
+- pkgdown-template
