@@ -125,14 +125,14 @@
       "@type": "SoftwareApplication",
       "identifier": "pkgdown",
       "name": "pkgdown",
-      "version": "> 1.6.5",
+      "version": ">= 2.0.0",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
         "name": "Comprehensive R Archive Network (CRAN)",
         "url": "https://cran.r-project.org"
       },
-      "sameAs": "https://github.com/r-lib/pkgdown"
+      "sameAs": "https://CRAN.R-project.org/package=pkgdown"
     },
     "8": {
       "@type": "SoftwareApplication",
@@ -190,5 +190,5 @@
   },
   "isPartOf": "http://ropengov.org/",
   "keywords": ["ropengov", "template", "r", "r-package", "github-actions", "pkgdown"],
-  "fileSize": "618.282KB"
+  "fileSize": "618.255KB"
 }
