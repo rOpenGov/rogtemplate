@@ -21,7 +21,6 @@ jobs:
         with:
           extra-packages: |
             ropengov/rogtemplate
-            r-lib/pkgdown
           needs: website
           
           
