@@ -43,7 +43,7 @@ preferred-citation:
   - pkgdown
   - pkgdown-template
   license: MIT
-  year: '2021'
+  year: '2022'
 repository-code: https://github.com/rOpenGov/rogtemplate
 url: https://ropengov.github.io/rogtemplate/
 contact:
