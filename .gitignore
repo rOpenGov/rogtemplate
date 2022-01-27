@@ -24,3 +24,5 @@ vignettes/*.pdf
 .Renviron
 revdep
 docs
+CRAN-SUBMISSION
+.github/pkg.lock
