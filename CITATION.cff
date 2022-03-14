@@ -86,7 +86,6 @@ references:
     given-names: Jim
     email: james.f.hester@gmail.com
   year: '2022'
-  url: https://github.com/r-lib/desc#readme
   version: '>= 1.3.0'
 - type: software
   title: ggplot2
@@ -221,6 +220,8 @@ references:
   abstract: 'yaml: Methods to Convert R Data to YAML and Back'
   notes: Imports
   authors:
+  - family-names: Garbett
+    given-names: Shawn P
   - family-names: Stephens
     given-names: Jeremy
   - family-names: Simonov
