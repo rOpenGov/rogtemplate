@@ -5,7 +5,7 @@
 
 <!-- badges: start -->
 
-[![rOG-badge](https://ropengov.github.io/rogtemplate//reference/figures/ropengov-badge.svg)](http://ropengov.org/)
+[![rOG-badge](https://ropengov.github.io/rogtemplate//reference/figures/ropengov-badge.svg)](https://ropengov.org/)
 [![R build
 status](https://github.com/ropengov/rogtemplate/workflows/R-CMD-check/badge.svg)](https://github.com/rOpenGov/rogtemplate/actions)
 [![r-universe](https://ropengov.r-universe.dev/badges/rogtemplate)](https://ropengov.r-universe.dev/)
@@ -13,7 +13,7 @@ status](https://github.com/ropengov/rogtemplate/workflows/R-CMD-check/badge.svg)
 <!-- badges: end -->
 
 This package is a **pkgdown** template adapted to
-[rOpenGov](http://ropengov.org/) site.
+[rOpenGov](https://ropengov.org/) site.
 
 This is a private template for use by core rOpenGov packages. Please
 don’t use it for your own code.

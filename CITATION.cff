@@ -1,5 +1,5 @@
 # -----------------------------------------------------------
-# CITATION file created with {cffr} R package, v0.2.1
+# CITATION file created with {cffr} R package, v0.2.2
 # See also: https://docs.ropensci.org/cffr/
 # -----------------------------------------------------------
  
@@ -8,7 +8,7 @@ message: 'To cite package "rogtemplate" in publications use:'
 type: software
 license: MIT
 title: 'rogtemplate: ''pkgdown'' Template for ''rOpenGov'' Packages'
-version: 0.0.1.9001
+version: 0.0.2
 abstract: This is a private template for use by core rOpenGov packages. Please don’t
   use for your own code.
 authors:
@@ -24,7 +24,7 @@ preferred-citation:
     given-names: Diego
     email: diego.hernangomezherrero@gmail.com
     orcid: https://orcid.org/0000-0001-8457-4658
-  version: 0.0.1.9001
+  version: 0.0.2
   abstract: This is a private template for use by core rOpenGov packages. Please don’t
     use for your own code.
   repository-code: https://github.com/rOpenGov/rogtemplate
@@ -172,6 +172,26 @@ references:
     orcid: https://orcid.org/0000-0002-2815-0399
   year: '2022'
   version: '>= 2.0.0'
+- type: software
+  title: remotes
+  abstract: 'remotes: R Package Installation from Remote Repositories, Including ''GitHub'''
+  notes: Imports
+  authors:
+  - family-names: Csárdi
+    given-names: Gábor
+    email: csardi.gabor@gmail.com
+  - family-names: Hester
+    given-names: Jim
+    email: jim.hester@rstudio.com
+  - family-names: Wickham
+    given-names: Hadley
+  - family-names: Chang
+    given-names: Winston
+  - family-names: Morgan
+    given-names: Martin
+  - family-names: Tenenbaum
+    given-names: Dan
+  year: '2022'
 - type: software
   title: showtext
   abstract: 'showtext: Using Fonts More Easily in R Graphs'

@@ -8,13 +8,13 @@
   "codeRepository": "https://github.com/rOpenGov/rogtemplate",
   "issueTracker": "https://github.com/rOpenGov/rogtemplate/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.0.1.9001",
+  "version": "0.0.2",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.1.3 (2022-03-10)",
+  "runtimePlatform": "R version 4.2.0 (2022-04-22)",
   "author": [
     {
       "@type": "Person",
@@ -136,6 +136,18 @@
     },
     "8": {
       "@type": "SoftwareApplication",
+      "identifier": "remotes",
+      "name": "remotes",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=remotes"
+    },
+    "9": {
+      "@type": "SoftwareApplication",
       "identifier": "showtext",
       "name": "showtext",
       "version": ">= 0.9.4",
@@ -147,7 +159,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=showtext"
     },
-    "9": {
+    "10": {
       "@type": "SoftwareApplication",
       "identifier": "sysfonts",
       "name": "sysfonts",
@@ -160,7 +172,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=sysfonts"
     },
-    "10": {
+    "11": {
       "@type": "SoftwareApplication",
       "identifier": "usethis",
       "name": "usethis",
@@ -173,7 +185,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=usethis"
     },
-    "11": {
+    "12": {
       "@type": "SoftwareApplication",
       "identifier": "yaml",
       "name": "yaml",
@@ -190,7 +202,7 @@
   },
   "isPartOf": "http://ropengov.org/",
   "keywords": ["ropengov", "template", "r", "r-package", "github-actions", "pkgdown", "pkgdown-template"],
-  "fileSize": "618.275KB",
+  "fileSize": "618.292KB",
   "readme": "https://github.com/rOpenGov/rogtemplate/blob/main/README.md",
   "contIntegration": "https://github.com/rOpenGov/rogtemplate/actions",
   "developmentStatus": "https://lifecycle.r-lib.org/articles/stages.html#experimental"
