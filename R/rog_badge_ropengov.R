@@ -3,10 +3,10 @@
 #'
 #' @description
 #'
-#' Add an rOpenGov badge pointing to <http://ropengov.org/> on your `README`
+#' Add an rOpenGov badge pointing to <https://ropengov.org/> on your `README`
 #' file:
 #'
-#' \ifelse{html}{\href{http://ropengov.org/}{\figure{ropengov-badge.svg}{options: alt='rOpenGov'}}}{**rOpenGov**}
+#' \ifelse{html}{\href{https://ropengov.org/}{\figure{ropengov-badge.svg}{options: alt='rOpenGov'}}}{**rOpenGov**}
 #'
 #' @export
 #'
@@ -29,7 +29,7 @@ rog_badge_ropengov <- function(install = TRUE) {
   # Add pkg
   badge <- "https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge.svg"
 
-  href <- "http://ropengov.org/"
+  href <- "https://ropengov.org/"
 
   if (install) {
     # nocov start
