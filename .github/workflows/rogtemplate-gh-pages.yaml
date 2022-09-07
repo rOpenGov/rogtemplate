@@ -5,6 +5,8 @@ on:
     branches: [main, master]
     tags: ['*']
   workflow_dispatch:
+  schedule:
+      - cron:  '30 10 * * 4'
 
 name: rogtemplate-gh-pages
 
@@ -27,6 +29,11 @@ jobs:
           extra-packages: |
             local::.
             any::magick
+            any::cranlogs
+            any::tidyverse
+            any::jsonlite
+            any::lubridate
+            any::reactable
             ropengov/rogtemplate
 
           needs: website
