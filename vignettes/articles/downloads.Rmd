@@ -28,7 +28,16 @@ library(rogtemplate)
 library(tidyverse)
 library(jsonlite)
 
-ropengov <- unlist(jsonlite::read_json("https://ropengov.r-universe.dev/packages"))
+allrepos <- jsonlite::read_json(
+  "https://api.github.com/orgs/ropengov/repos?per_page=100"
+)
+
+
+ropengov <- unlist(lapply(allrepos, function(x) {
+  x$name
+}))
+
+ropengov <- gsub("-|_", "", ropengov)
 
 dwn <- cranlogs::cran_downloads(ropengov, from = "2016-01-01")
 dwn <- dwn %>%
@@ -185,6 +194,7 @@ reactable(
   showPageSizeOptions = TRUE,
   striped = TRUE,
   paginationType = "jump",
-  elementId = "station-table"
+  elementId = "station-table",
+  defaultPageSize = length(fact)
 )
 ```
