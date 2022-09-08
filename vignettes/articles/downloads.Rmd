@@ -63,6 +63,9 @@ dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
 ggplot(dwn_m, aes(x = m)) +
   geom_col(aes(y = downloads, fill = package)) +
   theme_minimal() +
+  scale_fill_manual(values = rog_qualitative_pal(length(fact),
+    rev = TRUE, alpha = 0.75
+  )) +
   scale_y_continuous(labels = scales::label_comma()) +
   labs(
     fill = "package",
@@ -85,8 +88,8 @@ dwn_w <- dwn %>%
 dwn_w$package <- factor(dwn_w$package, levels = unique(rev(fact)))
 
 ggplot(dwn_w, aes(x = m)) +
-  geom_col(aes(y = downloads), fill = "#343a40") +
-  geom_smooth(aes(y = downloads), color = "#ff6600", se = FALSE) +
+  geom_col(aes(y = downloads), fill = rog_orange_pal(1, alpha = 0.75)) +
+  geom_smooth(aes(y = downloads), color = rog_dark_pal(1), se = FALSE) +
   facet_wrap(vars(package)) +
   scale_x_date(
     date_breaks = "3 months",

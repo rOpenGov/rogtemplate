@@ -4,17 +4,17 @@
   "identifier": "rogtemplate",
   "description": "This is a private template for use by core rOpenGov packages. Please don’t use for your own code.",
   "name": "rogtemplate: 'pkgdown' Template for 'rOpenGov' Packages",
-  "relatedLink": "https://ropengov.github.io/rogtemplate/",
   "codeRepository": "https://github.com/rOpenGov/rogtemplate",
+  "relatedLink": "https://ropengov.github.io/rogtemplate/",
   "issueTracker": "https://github.com/rOpenGov/rogtemplate/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.0.2",
+  "version": "0.0.2.9000",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.2.1 (2022-06-23)",
+  "runtimePlatform": "R version 4.1.3 (2022-03-10)",
   "author": [
     {
       "@type": "Person",
@@ -45,6 +45,18 @@
   "softwareSuggestions": [
     {
       "@type": "SoftwareApplication",
+      "identifier": "remotes",
+      "name": "remotes",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=remotes"
+    },
+    {
+      "@type": "SoftwareApplication",
       "identifier": "rmarkdown",
       "name": "rmarkdown",
       "provider": {
@@ -54,6 +66,18 @@
         "url": "https://cran.r-project.org"
       },
       "sameAs": "https://CRAN.R-project.org/package=rmarkdown"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "scales",
+      "name": "scales",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=scales"
     },
     {
       "@type": "SoftwareApplication",
@@ -148,18 +172,6 @@
     },
     "8": {
       "@type": "SoftwareApplication",
-      "identifier": "remotes",
-      "name": "remotes",
-      "provider": {
-        "@id": "https://cran.r-project.org",
-        "@type": "Organization",
-        "name": "Comprehensive R Archive Network (CRAN)",
-        "url": "https://cran.r-project.org"
-      },
-      "sameAs": "https://CRAN.R-project.org/package=remotes"
-    },
-    "9": {
-      "@type": "SoftwareApplication",
       "identifier": "showtext",
       "name": "showtext",
       "version": ">= 0.9.4",
@@ -171,7 +183,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=showtext"
     },
-    "10": {
+    "9": {
       "@type": "SoftwareApplication",
       "identifier": "sysfonts",
       "name": "sysfonts",
@@ -184,7 +196,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=sysfonts"
     },
-    "11": {
+    "10": {
       "@type": "SoftwareApplication",
       "identifier": "usethis",
       "name": "usethis",
@@ -197,7 +209,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=usethis"
     },
-    "12": {
+    "11": {
       "@type": "SoftwareApplication",
       "identifier": "yaml",
       "name": "yaml",
@@ -214,7 +226,7 @@
   },
   "isPartOf": "http://ropengov.org/",
   "keywords": ["ropengov", "template", "r", "r-package", "github-actions", "pkgdown", "pkgdown-template"],
-  "fileSize": "618.345KB",
+  "fileSize": "622.486KB",
   "readme": "https://github.com/rOpenGov/rogtemplate/blob/main/README.md",
   "contIntegration": "https://github.com/rOpenGov/rogtemplate/actions",
   "developmentStatus": "https://lifecycle.r-lib.org/articles/stages.html#experimental"

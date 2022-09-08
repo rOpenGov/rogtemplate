@@ -55,6 +55,7 @@ plot(logo)
 Other extras: 
 \code{\link{rog_add_template_pkgdown}()},
 \code{\link{rog_badge_ropengov}()},
-\code{\link{rog_load_font}()}
+\code{\link{rog_load_font}()},
+\code{\link{rog_pals}}
 }
 \concept{extras}
