@@ -62,7 +62,6 @@ action.
 For building locally your package into your `docs` folder use:
 
 ``` r
-
 rogtemplate::rog_build()
 
 # or you can use also
@@ -76,7 +75,6 @@ Note that `rogtemplate::rog_add_template_pkgdown()` creates a
 lines:
 
 ``` yaml
-
 template:
   package: rogtemplate
 ```
@@ -87,7 +85,7 @@ These lines tells **pkgdown** to use **rogtemplate**.
 
 Last step is commit to GitHub, wait until the GitHub action ends (in the
 case you chose to deploy in that way) and deploy the website via
-*YOUR_GITHUB_REPO\>Settings\>GitHub Pages*.
+*YOUR_GITHUB_REPO>Settings>GitHub Pages*.
 
 ## Extras
 
