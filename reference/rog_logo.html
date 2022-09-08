@@ -12,7 +12,7 @@ Optionally, create also favicons with pkgdown::build_favicons()."><meta property
     
     <a class="navbar-brand me-2" href="../index.html">rogtemplate</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.2</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.2.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,6 +28,9 @@ Optionally, create also favicons with pkgdown::build_favicons()."><meta property
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="../articles/downloads.html">Downloads of rOpenGov packages</a>
   </div>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
       </ul><form class="form-inline my-2 my-lg-0" role="search">
         <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off"></form>
@@ -108,7 +111,8 @@ would run <code><a href="https://usethis.r-lib.org/reference/use_logo.html" clas
 <p>Other extras: 
 <code><a href="rog_add_template_pkgdown.html">rog_add_template_pkgdown</a>()</code>,
 <code><a href="rog_badge_ropengov.html">rog_badge_ropengov</a>()</code>,
-<code><a href="rog_load_font.html">rog_load_font</a>()</code></p></div>
+<code><a href="rog_load_font.html">rog_load_font</a>()</code>,
+<code><a href="rog_pals.html">rog_pals</a></code></p></div>
     </div>
 
     <div class="section level2">
@@ -117,7 +121,7 @@ would run <code><a href="https://usethis.r-lib.org/reference/use_logo.html" clas
 <span class="r-in"><span><span class="va">tmp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span>fileext <span class="op">=</span> <span class="st">".png"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">rog_logo</span><span class="op">(</span><span class="st">"test a package"</span>, <span class="va">tmp</span>, overwrite <span class="op">=</span> <span class="cn">FALSE</span>, favicons <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> B612 Mono font loaded</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Logo created on /tmp/RtmpjNUszU/file40df182484f7.png</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> Logo created on /tmp/Rtmpz2PXVg/file34e770ce0471.png</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Display</span></span></span>
 <span class="r-in"><span><span class="va">logo</span> <span class="op">&lt;-</span> <span class="fu">magick</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/magick/reference/editing.html" class="external-link">image_read</a></span><span class="op">(</span><span class="va">tmp</span><span class="op">)</span></span></span>

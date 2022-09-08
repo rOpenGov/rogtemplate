@@ -22,6 +22,9 @@
     <loc>https://ropengov.github.io/rogtemplate/index.html</loc>
   </url>
   <url>
+    <loc>https://ropengov.github.io/rogtemplate/news/index.html</loc>
+  </url>
+  <url>
     <loc>https://ropengov.github.io/rogtemplate/reference/index.html</loc>
   </url>
   <url>
@@ -41,6 +44,9 @@
   </url>
   <url>
     <loc>https://ropengov.github.io/rogtemplate/reference/rog_logo.html</loc>
+  </url>
+  <url>
+    <loc>https://ropengov.github.io/rogtemplate/reference/rog_pals.html</loc>
   </url>
   <url>
     <loc>https://ropengov.github.io/rogtemplate/reference/rogtemplate-package.html</loc>
