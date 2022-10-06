@@ -3,7 +3,7 @@ pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   downloads: downloads.html
-last_built: 2022-09-29T10:48Z
+last_built: 2022-10-06T10:52Z
 urls:
   reference: https://ropengov.github.io/rogtemplate/reference
   article: https://ropengov.github.io/rogtemplate/articles
