@@ -30,7 +30,8 @@ It is not necessary to install **rogtemplate** itself. First copy [this
 file](https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml)
 into your `.github/workflows/` folder.
 
-Next go to *YOUR_GITHUB_REPO>Settings>GitHub Pages* and create a branch named `gh-pages`.  **rogtemplate** needs to be deployed from this branch.
+Next go to *YOUR_GITHUB_REPO>Settings>GitHub Pages* and create a branch named `gh-pages`.  
+**rogtemplate** needs to be deployed from this branch.
 
 ### Option B: Deploy installing rogtemplate
 
