@@ -104,7 +104,7 @@ Last step is commit to GitHub, wait until the GitHub action ends (in the
 case you chose to deploy in that way) and deploy the website via
 *YOUR\_GITHUB\_REPO\>Settings\>GitHub Pages*.
 
-Please note: it may take 24 hours or more before your website is updated. 
+Please note: after you commit, it may take 24 hours or more until your website is updated. 
 
 ## Extras
 
