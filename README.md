@@ -88,6 +88,8 @@ Last step is commit to GitHub, wait until the GitHub action ends (in the
 case you chose to deploy in that way) and deploy the website via
 *YOUR_GITHUB_REPO>Settings>GitHub Pages*.
 
+Please note: it may take 24 hours or more before your website is updated. 
+
 ## Extras
 
 We provide also some additional extra functions for creating badges and
