@@ -20,7 +20,6 @@
 #'
 #'
 rog_build <- function(pkg = ".", ...) {
-
   # nocov start
   # Check .Rbuildignore
 
