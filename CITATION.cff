@@ -309,6 +309,21 @@ references:
     given-names: Dana
   year: '2023'
 - type: software
+  title: styler
+  abstract: 'styler: Non-Invasive Pretty Printing of R Code'
+  notes: Suggests
+  url: https://styler.r-lib.org
+  repository: https://CRAN.R-project.org/package=styler
+  authors:
+  - family-names: Müller
+    given-names: Kirill
+    email: kirill@cynkra.com
+    orcid: https://orcid.org/0000-0002-1416-3412
+  - family-names: Walthert
+    given-names: Lorenz
+    email: lorenz.walthert@icloud.com
+  year: '2023'
+- type: software
   title: testthat
   abstract: 'testthat: Unit Testing for R'
   notes: Suggests
