@@ -26,11 +26,12 @@ control but it is not automatic.
 
 ### Option A: Deploy using GitHub Actions
 
-It is not necessary to install **rogtemplate** itself. Just copy [this
+It is not necessary to install **rogtemplate** itself. First copy [this
 file](https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml)
 into your `.github/workflows/` folder.
 
-The action would create your site in the `gh-pages` branch.
+Next go to *YOUR_GITHUB_REPO>Settings>GitHub Pages* and create a branch named `gh-pages`.  
+**rogtemplate** needs to be deployed from this branch.
 
 ### Option B: Deploy installing rogtemplate
 
@@ -86,6 +87,8 @@ These lines tells **pkgdown** to use **rogtemplate**.
 Last step is commit to GitHub, wait until the GitHub action ends (in the
 case you chose to deploy in that way) and deploy the website via
 *YOUR_GITHUB_REPO>Settings>GitHub Pages*.
+
+Please note: after you commit, it may take 24 hours or more until your website is updated. 
 
 ## Extras
 
