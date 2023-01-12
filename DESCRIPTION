@@ -2,8 +2,11 @@ Package: rogtemplate
 Title: 'pkgdown' Template for 'rOpenGov' Packages
 Version: 0.0.2.9000
 Authors@R: 
-    person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
-           comment = c(ORCID = "0000-0001-8457-4658"))
+    c(person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
+           comment = c(ORCID = "0000-0001-8457-4658")),
+           person("Steph", "Buongiorno", , "steph.buon@gmail.com", role = c("ctb"),
+           comment = c(ORCID = "0000-0002-6965-0787"))
+           )
 Description: This is a private template for use by core rOpenGov packages.
     Please don’t use for your own code.
 License: MIT + file LICENSE
