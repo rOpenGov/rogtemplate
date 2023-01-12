@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.2.1 (2022-06-23)",
+  "runtimePlatform": "R version 4.2.2 (2022-10-31)",
   "author": [
     {
       "@type": "Person",
@@ -22,6 +22,15 @@
       "familyName": "Hernangómez",
       "email": "diego.hernangomezherrero@gmail.com",
       "@id": "https://orcid.org/0000-0001-8457-4658"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Steph",
+      "familyName": "Buongiorno",
+      "email": "steph.buon@gmail.com",
+      "@id": "https://orcid.org/0000-0002-6965-0787"
     }
   ],
   "copyrightHolder": [
@@ -226,7 +235,7 @@
   },
   "isPartOf": "http://ropengov.org/",
   "keywords": ["ropengov", "template", "r", "r-package", "github-actions", "pkgdown", "pkgdown-template"],
-  "fileSize": "622.62KB",
+  "fileSize": "622.961KB",
   "releaseNotes": "https://github.com/rOpenGov/rogtemplate/blob/master/NEWS.md",
   "readme": "https://github.com/rOpenGov/rogtemplate/blob/main/README.md",
   "contIntegration": "https://github.com/rOpenGov/rogtemplate/actions",
