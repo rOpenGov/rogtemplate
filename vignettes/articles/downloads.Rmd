@@ -91,7 +91,6 @@ dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
 ## Downloads
 
 ```{r echo=FALSE}
-
 ggplot(dwn_m, aes(x = m)) +
   geom_col(aes(y = downloads, fill = package)) +
   theme_minimal() +
@@ -110,7 +109,6 @@ ggplot(dwn_m, aes(x = m)) +
 ## Weekly downloads
 
 ```{r echo=FALSE}
-
 dwn_w <- dwn %>%
   filter(date >= (Sys.Date() - years(1))) %>%
   mutate(m = lubridate::ceiling_date(date, "week")) %>%
@@ -144,7 +142,6 @@ ggplot(dwn_w, aes(x = m)) +
 ## Data
 
 ```{r datos, echo=FALSE}
-
 library(reactable)
 
 lastyear <- dwn %>%
