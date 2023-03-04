@@ -36,7 +36,7 @@ website from the `gh-pages` branch.
 ### Option B: Deploy installing rogtemplate
 
 You can install **rogtemplate** using the
-[r-universe](https://ropengov.r-universe.dev/ui):
+[r-universe](http://ropengov.r-universe.dev/ui/):
 
 ``` r
 # Enable this universe

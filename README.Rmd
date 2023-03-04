@@ -49,7 +49,7 @@ Next go to *YOUR_GITHUB_REPO>Settings>GitHub Pages* and deploy your website from
 
 
 You can install **rogtemplate** using the
-[r-universe](https://ropengov.r-universe.dev/ui):
+[r-universe](http://ropengov.r-universe.dev/ui/):
 
 ```{r, eval=FALSE}
 # Enable this universe
