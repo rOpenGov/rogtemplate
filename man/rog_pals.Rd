@@ -23,7 +23,7 @@ rog_qualitative_pal(n = 6, alpha = 0.9, rev = FALSE)
 \item{alpha}{an alpha-transparency level in the range [0,1]
     (0 means transparent and 1 means opaque), see argument
     \code{alpha} in \code{\link[grDevices]{hsv}} and \code{\link[grDevices]{hcl}}, respectively.\cr
-    Since \R 4.0.0, a \code{\link{missing}}, i.e., not explicitly specified
+    A \code{\link{missing}}, i.e., not explicitly specified
     \code{alpha} is equivalent to \code{alpha = NULL}, which does \emph{not}
     add opacity codes (\code{"FF"}) to the individual color hex codes.}
 
