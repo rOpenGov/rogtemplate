@@ -58,6 +58,11 @@
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-articles">
     <a class="dropdown-item" href="articles/downloads.html">Downloads of rOpenGov packages</a>
+    <a class="dropdown-item" href="articles/ggplot2-example.html">ggplot2-example</a>
+    <a class="dropdown-item" href="articles/bullets.html">Bullets</a>
+    <a class="dropdown-item" href="articles/code.html">Code</a>
+    <a class="dropdown-item" href="articles/headings.html">Headings</a>
+    <a class="dropdown-item" href="articles/precompute.html">Example of a precomputed vignette</a>
   </div>
 </li>
 <li class="nav-item">
@@ -90,6 +95,7 @@
 </div>
 <!-- badges: start -->
 
+<!-- badges: end -->
 <p>This package is a <strong>pkgdown</strong> template adapted to <a href="https://ropengov.org/" class="external-link">rOpenGov</a> site.</p>
 <p>This is a private template for use by core rOpenGov packages. Please don’t use it for your own code.</p>
 <div class="section level2">
@@ -105,16 +111,11 @@
 <div class="section level3">
 <h3 id="option-b-deploy-installing-rogtemplate">Option B: Deploy installing rogtemplate<a class="anchor" aria-label="anchor" href="#option-b-deploy-installing-rogtemplate"></a>
 </h3>
-<p>You can install <strong>rogtemplate</strong> using the <a href="http://ropengov.r-universe.dev/ui/" class="external-link">r-universe</a>:</p>
+<p>You can install <strong>rogtemplate</strong> using the <a href="https://ropengov.r-universe.dev/rogtemplate" class="external-link">r-universe</a>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Enable this universe</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
-<span>  ropengov <span class="op">=</span> <span class="st">"https://ropengov.r-universe.dev"</span>,</span>
-<span>  CRAN <span class="op">=</span> <span class="st">"https://cloud.r-project.org"</span></span>
-<span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="co"># Install some packages</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rogtemplate"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rogtemplate"</span>,</span>
+<span>  repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://ropengov.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span><span class="op">)</span></span>
+<span><span class="op">)</span></span></code></pre></div>
 <p>You can use also the <strong>remotes</strong> package:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://remotes.r-lib.org" class="external-link">remotes</a></span><span class="op">)</span></span>
@@ -122,8 +123,7 @@
 <p>You can use <code><a href="reference/rog_actions_pkgdown_branch.html">rog_actions_pkgdown_branch()</a></code> for setting up the action described before but the deployment would be still performed by a GitHub action.</p>
 <p>For building locally your package into your <code>docs</code> folder use:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span></span>
-<span><span class="fu">rogtemplate</span><span class="fu">::</span><span class="fu"><a href="reference/rog_build.html">rog_build</a></span><span class="op">(</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="fu">rogtemplate</span><span class="fu">::</span><span class="fu"><a href="reference/rog_build.html">rog_build</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># or you can use also</span></span>
 <span></span>
@@ -184,7 +184,7 @@
 <ul class="list-unstyled">
 <li><a href="https://ropengov.org/" class="external-link"><img src="https://ropengov.github.io/rogtemplate//reference/figures/ropengov-badge.svg" alt="rOG-badge"></a></li>
 <li><a href="https://github.com/rOpenGov/rogtemplate/actions" class="external-link"><img src="https://github.com/ropengov/rogtemplate/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
-<li><a href="https://ropengov.r-universe.dev/" class="external-link"><img src="https://ropengov.r-universe.dev/badges/rogtemplate" alt="r-universe"></a></li>
+<li><a href="https://ropengov.r-universe.dev/rogtemplate" class="external-link"><img src="https://ropengov.r-universe.dev/badges/rogtemplate" alt="r-universe"></a></li>
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg" alt="lifecycle"></a></li>
 </ul>
 </div>
