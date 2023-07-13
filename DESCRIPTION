@@ -27,11 +27,14 @@ Imports:
     usethis (>= 2.0.0),
     yaml (>= 2.2.1)
 Suggests: 
+    knitr,
     remotes,
     rmarkdown,
     scales,
     styler,
     testthat (>= 3.0.0)
+VignetteBuilder: 
+    knitr
 Config/Needs/website: magick, cranlogs, tidyverse, jsonlite, lubridate,
     reactable
 Config/testthat/edition: 3

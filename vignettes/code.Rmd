@@ -18,9 +18,6 @@ Some filler text.
 
 Some filler text.
 
-```{r setup}
-library(gitdevr)
-ruler()
 ```
 
 Some random code
