@@ -4,6 +4,7 @@ navbar:
 
 template:
   bootstrap: 5
+  theme: tango
   bslib:
     code_font: {google: "Roboto Mono"}
   opengraph:
