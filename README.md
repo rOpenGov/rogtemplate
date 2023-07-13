@@ -1,15 +1,16 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rogtemplate <a href='https://ropengov.github.io/rogtemplate/'><img src='man/figures/logo.png' align="right" height="139" /></a>
+# rogtemplate <a href='https://ropengov.github.io/rogtemplate/'><img src="man/figures/logo.png" align="right" height="139"/></a>
 
 <!-- badges: start -->
 
 [![rOG-badge](https://ropengov.github.io/rogtemplate//reference/figures/ropengov-badge.svg)](https://ropengov.org/)
 [![R build
 status](https://github.com/ropengov/rogtemplate/workflows/R-CMD-check/badge.svg)](https://github.com/rOpenGov/rogtemplate/actions)
-[![r-universe](https://ropengov.r-universe.dev/badges/rogtemplate)](https://ropengov.r-universe.dev/)
+[![r-universe](https://ropengov.r-universe.dev/badges/rogtemplate)](https://ropengov.r-universe.dev/rogtemplate)
 [![lifecycle](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+
 <!-- badges: end -->
 
 This package is a **pkgdown** template adapted to
@@ -36,17 +37,12 @@ website from the `gh-pages` branch.
 ### Option B: Deploy installing rogtemplate
 
 You can install **rogtemplate** using the
-[r-universe](http://ropengov.r-universe.dev/ui/):
+[r-universe](https://ropengov.r-universe.dev/rogtemplate):
 
 ``` r
-# Enable this universe
-options(repos = c(
-  ropengov = "https://ropengov.r-universe.dev",
-  CRAN = "https://cloud.r-project.org"
-))
-
-# Install some packages
-install.packages("rogtemplate")
+install.packages("rogtemplate",
+  repos = c("https://ropengov.r-universe.dev", "https://cloud.r-project.org")
+)
 ```
 
 You can use also the **remotes** package:
@@ -63,7 +59,6 @@ action.
 For building locally your package into your `docs` folder use:
 
 ``` r
-
 rogtemplate::rog_build()
 
 # or you can use also

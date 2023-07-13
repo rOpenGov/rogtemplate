@@ -26,3 +26,5 @@
 ^pkgdown\.yaml$
 ^pkgdown\.yml$
 ^\.imgbotconfig$
+^\.lintr$
+^vignettes/precompute\.Rmd\.orig$

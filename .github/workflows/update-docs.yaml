@@ -24,12 +24,6 @@ jobs:
             local::.
             any::pkgdown
             any::rcmdcheck
-            any::magick
-            any::cranlogs
-            any::tidyverse
-            any::jsonlite
-            any::lubridate
-            any::reactable
             ropengov/rogtemplate
             dieghernan/pkgdev
           needs: website

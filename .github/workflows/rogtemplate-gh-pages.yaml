@@ -28,12 +28,6 @@ jobs:
         with:
           extra-packages: |
             local::.
-            any::magick
-            any::cranlogs
-            any::tidyverse
-            any::jsonlite
-            any::lubridate
-            any::reactable
             ropengov/rogtemplate
 
           needs: website
