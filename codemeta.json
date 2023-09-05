@@ -8,7 +8,7 @@
   "codeRepository": "https://github.com/rOpenGov/rogtemplate",
   "issueTracker": "https://github.com/rOpenGov/rogtemplate/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.0.2.9000",
+  "version": "0.0.2.9100",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
@@ -259,7 +259,7 @@
   },
   "isPartOf": "http://ropengov.org/",
   "keywords": ["ropengov", "template", "r", "r-package", "github-actions", "pkgdown", "pkgdown-template"],
-  "fileSize": "663.962KB",
+  "fileSize": "665.169KB",
   "releaseNotes": "https://github.com/rOpenGov/rogtemplate/blob/master/NEWS.md",
   "readme": "https://github.com/rOpenGov/rogtemplate/blob/main/README.md",
   "contIntegration": "https://github.com/rOpenGov/rogtemplate/actions",

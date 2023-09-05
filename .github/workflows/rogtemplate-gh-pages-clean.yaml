@@ -5,11 +5,11 @@ name: Clean pkgdown manually
 
 jobs:
   rogtemplate-gh-pages:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - uses: r-lib/actions/setup-pandoc@v2
 
@@ -21,7 +21,6 @@ jobs:
         with:
           extra-packages: |
             local::.
-            any::magick
             any::cranlogs
             any::tidyverse
             any::jsonlite
@@ -37,3 +36,4 @@ jobs:
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           Rscript -e 'pkgdown::build_favicons(overwrite = TRUE)'
           Rscript -e 'pkgdown::deploy_to_branch(new_process = FALSE, clean = TRUE, run_dont_run = TRUE)'
+

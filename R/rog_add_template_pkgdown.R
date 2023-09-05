@@ -96,8 +96,10 @@ rog_add_template_pkgdown <- function() {
     newfile <- modifyList(newfile, template, keep.null = FALSE)
     newfile$template$path <- NULL
 
-    if (length(newfile$template$params) == 1 && "bootswatch"
-    %in% names(newfile$template$params)) {
+    if (
+      length(newfile$template$params) == 1 &&
+        "bootswatch" %in% names(newfile$template$params)
+    ) {
       newfile <- modifyList(
         newfile,
         list(template = list(params = NULL)),

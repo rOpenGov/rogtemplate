@@ -59,11 +59,16 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
   }
 
   # Subplot
-  img <- magick::image_read(system.file("assets/partof.png", package = "rogtemplate"))
+  img <- magick::image_read(system.file("assets/partof.png",
+    package = "rogtemplate"
+  ))
   g <- grid::rasterGrob(img, interpolate = TRUE)
 
   p <- ggplot2::ggplot() +
-    ggplot2::annotation_custom(g, xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf) +
+    ggplot2::annotation_custom(g,
+      xmin = -Inf, xmax = Inf,
+      ymin = -Inf, ymax = Inf
+    ) +
     ggplot2::theme_void()
 
 
