@@ -14,7 +14,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.3.1 (2023-06-16)",
+  "runtimePlatform": "R version 4.3.1 (2023-06-16 ucrt)",
   "author": [
     {
       "@type": "Person",
@@ -259,7 +259,7 @@
   },
   "isPartOf": "http://ropengov.org/",
   "keywords": ["ropengov", "template", "r", "r-package", "github-actions", "pkgdown", "pkgdown-template"],
-  "fileSize": "665.169KB",
+  "fileSize": "666.74KB",
   "releaseNotes": "https://github.com/rOpenGov/rogtemplate/blob/master/NEWS.md",
   "readme": "https://github.com/rOpenGov/rogtemplate/blob/main/README.md",
   "contIntegration": "https://github.com/rOpenGov/rogtemplate/actions",
