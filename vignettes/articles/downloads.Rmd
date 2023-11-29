@@ -17,7 +17,6 @@ knitr::opts_chunk$set(
   dpi = 300,
   out.width = "100%"
 )
-Sys.setenv("R_CRAN_WEB" = "https://cloud.r-project.org")
 ```
 
 Downloads of rOpenGov packages from CRAN.
@@ -32,9 +31,7 @@ library(jsonlite)
 allrepos <- jsonlite::read_json(
   "https://api.github.com/orgs/ropengov/repos?per_page=100"
 )
-
 crandb <- unique(tools::CRAN_package_db()$Package)
-
 ropengov <- unlist(lapply(allrepos, function(x) {
   x$name
 }))
@@ -47,8 +44,17 @@ dwn <- dwn %>%
   tidyr::drop_na() %>%
   filter(count > 0)
 
+# By month
+library(lubridate)
 
-# Primera fecha en CRAN
+
+dwn_m <- dwn %>%
+  mutate(m = lubridate::ceiling_date(dwn$date, "month") - 1) %>%
+  group_by(package, m) %>%
+  summarise(downloads = sum(count))
+
+
+# First date on CRAN
 
 first_date_on_cran <- function(pkg) {
   url <- paste0(
@@ -65,22 +71,11 @@ first_date_on_cran <- function(pkg) {
 }
 
 fechas <- lapply(unique(dwn$package), first_date_on_cran) %>%
-  bind_rows() %>%
-  arrange(date)
+  bind_rows()
 
-
-# By month
-library(lubridate)
-
-
-dwn_m <- dwn %>%
-  mutate(m = lubridate::ceiling_date(dwn$date, "month") - 1) %>%
-  group_by(package, m) %>%
-  summarise(downloads = sum(count))
-
-
-# factores por orden de inclusión en CRAN
+# factors by first date on CRAN
 fact <- fechas %>%
+  arrange(date) %>%
   pull(package) %>%
   unique() %>%
   rev()
