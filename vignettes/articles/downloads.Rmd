@@ -39,8 +39,10 @@ ropengov <- unlist(lapply(allrepos, function(x) {
 # Packages in CRAN
 ropengov <- ropengov[ropengov %in% crandb]
 
-dwn <- cranlogs::cran_downloads(ropengov, from = "2016-01-01")
+dwn <- lapply(ropengov, cranlogs::cran_downloads, from = "2016-01-01")
+
 dwn <- dwn %>%
+  bind_rows() %>%
   tidyr::drop_na() %>%
   filter(count > 0)
 
