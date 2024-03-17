@@ -35,7 +35,8 @@ Suggests:
     testthat (>= 3.0.0)
 VignetteBuilder: 
     knitr
-Config/Needs/website: cranlogs, tidyverse, jsonlite, lubridate, reactable
+Config/Needs/website: cranlogs, tidyverse, jsonlite, lubridate, reactable,
+    pkgsearch, htmltools
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
