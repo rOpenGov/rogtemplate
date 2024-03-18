@@ -209,7 +209,7 @@ reactable(
       if (!is.numeric(values)) {
         return()
       }
-      prettyNum(sum(values), big.mark = ",")
+      prettyNum(sum(values), big.mark = ".", decimal.mark = ",")
     }
   ),
   paginationType = "jump",
@@ -238,7 +238,7 @@ reactable(
       format = colFormat(separators = TRUE),
       footer = function(values) {
         p <- round(mean(values), 2)
-        prettyNum(p, big.mark = ",")
+        prettyNum(p, big.mark = ".", decimal.mark = ",")
       }
     ),
     "last day" = colDef(format = colFormat(separators = TRUE)),
@@ -311,7 +311,7 @@ reactable(
       if (!is.numeric(values)) {
         return()
       }
-      prettyNum(sum(values), big.mark = ",")
+      prettyNum(sum(values), big.mark = ".", decimal.mark = ",")
     }
   ),
   paginationType = "jump",
