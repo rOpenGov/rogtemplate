@@ -214,7 +214,6 @@ reactable(
   ),
   paginationType = "jump",
   elementId = "cran-dwn",
-  defaultPageSize = 25,
   columns <- list(
     package = colDef(
       cell = function(value) {
@@ -231,8 +230,7 @@ reactable(
       },
       align = "left",
       sticky = "left",
-      rowHeader = TRUE,
-      minWidth = 220
+      rowHeader = TRUE
     ),
     "daily avg." = colDef(
       format = colFormat(separators = TRUE),
@@ -316,7 +314,6 @@ reactable(
   ),
   paginationType = "jump",
   elementId = "posit-dwn",
-  defaultPageSize = 25,
   columns = list(
     package = colDef(
       cell = function(value) {
@@ -327,8 +324,7 @@ reactable(
       },
       align = "left",
       sticky = "left",
-      rowHeader = TRUE,
-      minWidth = 220
+      rowHeader = TRUE
     ),
     "Downloads (Last month)" = colDef(format = colFormat(separators = TRUE))
   )
