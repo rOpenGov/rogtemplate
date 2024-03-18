@@ -198,6 +198,7 @@ names(end) <- c(
 
 reactable(
   end,
+  wrap = FALSE,
   filterable = TRUE,
   searchable = TRUE,
   showPageSizeOptions = TRUE,
@@ -265,6 +266,7 @@ names(res_all) <- c(
 
 reactable(
   res_all,
+  wrap = FALSE,
   filterable = TRUE,
   searchable = TRUE,
   showPageSizeOptions = TRUE,
