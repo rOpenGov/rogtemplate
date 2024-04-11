@@ -21,8 +21,8 @@ would run \code{\link[usethis:use_logo]{usethis::use_logo()}}.}
     \item{\code{p_size}}{font size for package name}
     \item{\code{examples}}{Run examples?}
     \item{\code{run_dont_run}}{Run examples that are surrounded in \\dontrun?}
-    \item{\code{seed}}{Seed used to initialize so that random examples are
-reproducible.}
+    \item{\code{seed}}{Seed used to initialize random number generation in order to
+make article output reproducible. An integer scalar or \code{NULL} for no seed.}
     \item{\code{lazy}}{If \code{TRUE}, will only rebuild articles and reference pages
 if the source is newer than the destination.}
     \item{\code{preview}}{If \code{TRUE}, or \code{is.na(preview) && interactive()}, will preview
