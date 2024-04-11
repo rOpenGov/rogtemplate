@@ -67,6 +67,7 @@ rog_add_template_pkgdown <- function() {
   template <- list(
     url = paste0("https://ropengov.github.io/", pkgname, "/"),
     template = list(
+      bootstrap = 5,
       package = "rogtemplate",
       path = NULL,
       opengraph = list(
