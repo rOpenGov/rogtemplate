@@ -74,6 +74,7 @@ lines:
 ``` yaml
 
 template:
+  bootstrap: 5
   package: rogtemplate
 ```
 
