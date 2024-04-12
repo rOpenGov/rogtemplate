@@ -41,7 +41,7 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
   if (missing(pkgname)) pkgname <- package_name()
 
   enddir <- dirname(filename)
-  if(!dir.exists(enddir)) dir.create(enddir, recursive = TRUE)
+  if (!dir.exists(enddir)) dir.create(enddir, recursive = TRUE)
 
   # Load B612
 
