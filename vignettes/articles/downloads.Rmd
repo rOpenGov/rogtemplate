@@ -179,6 +179,9 @@ avg_daily <- dwn %>%
   group_by(package) %>%
   summarise(avg = round(mean(count, na.rm = TRUE), 1))
 
+avg_daily_all <- dwn %>%
+  summarise(avg = round(mean(count, na.rm = TRUE), 1))
+
 # Une todo y da nombres
 end <-
   fechas %>%
@@ -235,7 +238,7 @@ reactable(
     "daily avg." = colDef(
       format = colFormat(separators = TRUE),
       footer = function(values) {
-        p <- round(mean(values), 2)
+        p <- round(avg_daily_all$avg, 2)
         prettyNum(p, big.mark = ".", decimal.mark = ",")
       }
     ),
@@ -268,14 +271,13 @@ res <- lapply(mypaks, function(x) {
   info <- jsonlite::read_json(tmp)
 
   df_init <- as_tibble(
-    info[c("name", "date_publication", "occurred", "package_size", "version")]
+    info[c("name", "date_publication", "package_size", "version")]
   )
 
 
   df_prep <- df_init %>%
     mutate(
       date_in_cran = as.Date(date_publication),
-      date_in_ppm = as.Date(occurred),
       psize = paste(round(package_size / (1024^2), 2), "Mb"),
       mdown = as.integer(info$downloads)
     ) %>%
@@ -293,8 +295,8 @@ res_all <- bind_rows(res) %>%
   arrange(desc(mdown))
 
 names(res_all) <- c(
-  "package", "Latest Version", "Version in CRAN",
-  "Version in Posit", "Package Size", "Downloads (Last month)"
+  "package", "Latest Version", "Version in CRAN", "Package Size",
+   "Downloads (Last month)"
 )
 
 reactable(
