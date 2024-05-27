@@ -284,7 +284,7 @@ res <- lapply(mypaks, function(x) {
     select(
       package = name,
       lvers = version,
-      date_in_cran, date_in_ppm, , psize, mdown
+      date_in_cran, psize, mdown
     )
 
 
