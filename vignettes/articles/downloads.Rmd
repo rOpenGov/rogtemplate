@@ -296,7 +296,7 @@ res_all <- bind_rows(res) %>%
 
 names(res_all) <- c(
   "package", "Latest Version", "Version in CRAN", "Package Size",
-   "Downloads (Last month)"
+  "Downloads (Last month)"
 )
 
 reactable(
