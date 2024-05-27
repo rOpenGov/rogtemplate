@@ -4,6 +4,12 @@
     <loc>https://ropengov.github.io/rogtemplate/404.html</loc>
   </url>
   <url>
+    <loc>https://ropengov.github.io/rogtemplate/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>https://ropengov.github.io/rogtemplate/LICENSE.html</loc>
+  </url>
+  <url>
     <loc>https://ropengov.github.io/rogtemplate/articles/bullets.html</loc>
   </url>
   <url>
@@ -31,19 +37,10 @@
     <loc>https://ropengov.github.io/rogtemplate/index.html</loc>
   </url>
   <url>
-    <loc>https://ropengov.github.io/rogtemplate/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/LICENSE.html</loc>
-  </url>
-  <url>
     <loc>https://ropengov.github.io/rogtemplate/news/index.html</loc>
   </url>
   <url>
     <loc>https://ropengov.github.io/rogtemplate/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/reference/rogtemplate-package.html</loc>
   </url>
   <url>
     <loc>https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.html</loc>
@@ -65,5 +62,8 @@
   </url>
   <url>
     <loc>https://ropengov.github.io/rogtemplate/reference/rog_pals.html</loc>
+  </url>
+  <url>
+    <loc>https://ropengov.github.io/rogtemplate/reference/rogtemplate-package.html</loc>
   </url>
 </urlset>
