@@ -1,69 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/404.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/articles/bullets.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/articles/code.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/articles/downloads.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/articles/ggplot2-example.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/articles/headings.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/articles/precompute.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/index.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/reference/rogtemplate-package.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/reference/rog_badge_ropengov.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/reference/rog_build.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/reference/rog_load_font.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/reference/rog_logo.html</loc>
-  </url>
-  <url>
-    <loc>https://ropengov.github.io/rogtemplate/reference/rog_pals.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://ropengov.github.io/rogtemplate/404.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/articles/bullets.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/articles/code.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/articles/downloads.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/articles/ggplot2-example.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/articles/headings.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/articles/index.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/articles/precompute.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/authors.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/index.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/LICENSE-text.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/LICENSE.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/news/index.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/reference/index.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/reference/rogtemplate-package.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/reference/rog_badge_ropengov.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/reference/rog_build.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/reference/rog_load_font.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/reference/rog_logo.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/reference/rog_pals.html</loc></url>
 </urlset>
+
