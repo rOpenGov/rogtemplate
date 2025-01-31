@@ -116,13 +116,17 @@ ggplot(dwn_m, aes(x = m)) +
   scale_fill_manual(values = rog_qualitative_pal(length(fact),
     rev = TRUE, alpha = 0.75
   )) +
+  guides(fill = guide_legend(ncol = 2)) +
   scale_y_continuous(labels = scales::label_comma()) +
   labs(
     fill = "package",
     x = "",
     y = "# monthly downloads"
   ) +
-  theme(axis.title = element_text(size = 8))
+  theme(
+    axis.title = element_text(size = 8),
+    legend.text = element_text(size = rel(0.6))
+  )
 ```
 
 ### Weekly downloads
@@ -139,7 +143,10 @@ dwn_w$package <- factor(dwn_w$package, levels = unique(rev(fact)))
 ggplot(dwn_w, aes(x = m)) +
   geom_area(aes(y = downloads), fill = rog_orange_pal(1, alpha = 0.75)) +
   geom_smooth(aes(y = downloads), color = rog_dark_pal(1), se = FALSE) +
-  facet_wrap(vars(package), scales = "free_y", ncol = 3) +
+  facet_wrap(vars(package),
+    scales = "free_y", ncol = 3,
+    axes = "all_x"
+  ) +
   scale_x_date(
     date_breaks = "3 months",
     labels = scales::label_date("%Y-%m")
