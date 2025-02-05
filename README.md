@@ -110,19 +110,19 @@ specification. Contributions of any kind are welcome!
 <tr>
 <td align="center">
 <a href="https://github.com/dieghernan">
-<img src="https://avatars.githubusercontent.com/u/25656809?v=4" width="100px;" alt=""/>
+<img src="https://avatars.githubusercontent.com/u/25656809?v=4" width="100px;" class="border border-dark rounded-circle" alt=""/>
 </a><br>
 <a href="https://github.com/rOpenGov/rogtemplate/commits?author=dieghernan">dieghernan</a>
 </td>
 <td align="center">
 <a href="https://github.com/stephbuon">
-<img src="https://avatars.githubusercontent.com/u/52008049?v=4" width="100px;" alt=""/>
+<img src="https://avatars.githubusercontent.com/u/52008049?v=4" width="100px;" class="border border-dark rounded-circle" alt=""/>
 </a><br>
 <a href="https://github.com/rOpenGov/rogtemplate/commits?author=stephbuon">stephbuon</a>
 </td>
 <td align="center">
 <a href="https://github.com/maelle">
-<img src="https://avatars.githubusercontent.com/u/8360597?v=4" width="100px;" alt=""/>
+<img src="https://avatars.githubusercontent.com/u/8360597?v=4" width="100px;" class="border border-dark rounded-circle" alt=""/>
 </a><br>
 <a href="https://github.com/rOpenGov/rogtemplate/commits?author=maelle">maelle</a>
 </td>
@@ -135,13 +135,13 @@ specification. Contributions of any kind are welcome!
 <tr>
 <td align="center">
 <a href="https://github.com/pitkant">
-<img src="https://avatars.githubusercontent.com/u/69813611?u=824c10fc689a7f3589c9640bb7edf23513a12e42&v=4" width="100px;" alt=""/>
+<img src="https://avatars.githubusercontent.com/u/69813611?u=824c10fc689a7f3589c9640bb7edf23513a12e42&v=4" width="100px;" class="border border-dark rounded-circle" alt=""/>
 </a><br>
 <a href="https://github.com/rOpenGov/rogtemplate/issues?q=is%3Aissue+author%3Apitkant">pitkant</a>
 </td>
 <td align="center">
 <a href="https://github.com/muuankarski">
-<img src="https://avatars.githubusercontent.com/u/1525240?v=4" width="100px;" alt=""/>
+<img src="https://avatars.githubusercontent.com/u/1525240?v=4" width="100px;" class="border border-dark rounded-circle" alt=""/>
 </a><br>
 <a href="https://github.com/rOpenGov/rogtemplate/issues?q=is%3Aissue+author%3Amuuankarski">muuankarski</a>
 </td>
