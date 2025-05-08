@@ -8,7 +8,7 @@ articles:
   articles/ggplot2-example: ggplot2-example.html
   headings: headings.html
   precompute: precompute.html
-last_built: 2025-05-01T10:44Z
+last_built: 2025-05-08T10:44Z
 urls:
   reference: https://ropengov.github.io/rogtemplate/reference
   article: https://ropengov.github.io/rogtemplate/articles
