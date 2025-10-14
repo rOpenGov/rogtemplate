@@ -74,7 +74,6 @@ fechas <- lapply(unique(dwn$package), first_date_on_cran) %>%
   bind_rows()
 
 
-
 dwn <- dwn %>%
   left_join(fechas %>% select(package, d_cran = date)) %>%
   filter(date >= d_cran) %>%

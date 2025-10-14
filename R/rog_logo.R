@@ -105,9 +105,6 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
 }
 
 
-
-
-
 #' Get package name
 #' @noRd
 package_name <- function() {
@@ -139,7 +136,6 @@ rog_load_font <- function() {
     pattern = "ttf$", recursive = TRUE,
     full.names = TRUE
   )
-
 
 
   sysfonts::font_add(family,

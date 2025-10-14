@@ -32,7 +32,6 @@ rog_add_template_pkgdown <- function() {
   desc_path <- file.path(normalizePath("."), "DESCRIPTION")
 
 
-
   pkg <- desc::desc_normalize(desc_path)
 
   urls <- pkg$get_urls()
@@ -113,8 +112,6 @@ rog_add_template_pkgdown <- function() {
     template_blank$template$params <- NULL
     newfile <- template_blank
   }
-
-
 
 
   dir <- dirname(path)
