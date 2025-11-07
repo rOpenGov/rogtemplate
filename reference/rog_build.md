@@ -95,6 +95,11 @@ rog_build(pkg = ".", ...)
   :   If `TRUE`, will install the package in a temporary library so it
       is available for vignettes.
 
+  `quiet`
+
+  :   If `FALSE`, generate build messages for build functions that take
+      `quiet` arguments.
+
 ## Details
 
 This function would call also
