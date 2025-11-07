@@ -17,6 +17,12 @@ jobs:
         with:
           use-public-rspm: true
 
+      - name: Install Air
+        uses: posit-dev/setup-air@v1
+
+      - name: Format with Air
+        run: air format .
+
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
