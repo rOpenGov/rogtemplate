@@ -40,9 +40,13 @@ rog_badge_ropengov <- function(install = TRUE) {
     # nocov end
   } else {
     message(
-      "Badge URL is ", "\n",
+      "Badge URL is ",
+      "\n",
       "[![rOG-badge](",
-      badge, ")](", href, ")"
+      badge,
+      ")](",
+      href,
+      ")"
     )
   }
 }

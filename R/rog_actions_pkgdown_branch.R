@@ -23,12 +23,10 @@ rog_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
   usethis::use_build_ignore(".github")
   usethis::use_build_ignore("._pkgdown.yml")
 
-
   # Check gitignore
   usethis::use_git_ignore("*.html", directory = ".github")
   usethis::use_git_ignore("R-version", directory = ".github")
   usethis::use_git_ignore("*.Rds", directory = ".github")
-
 
   # Get action file
   filepath <-

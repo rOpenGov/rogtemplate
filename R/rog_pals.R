@@ -93,7 +93,9 @@ rog_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
     colors <- paste(colors, alpha, sep = "")
   }
 
-  if (rev) colors <- rev(colors)
+  if (rev) {
+    colors <- rev(colors)
+  }
 
   if (alpha == 1) {
     return(colors)

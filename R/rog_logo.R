@@ -32,16 +32,23 @@
 #' logo
 #'
 #' plot(logo)
-rog_logo <- function(pkgname, filename = "man/figures/logo.png",
-                     p_x = 1,
-                     p_y = 1,
-                     p_size = 202.6 * nchar(pkgname)**-1.008,
-                     overwrite = FALSE,
-                     favicons = TRUE) {
-  if (missing(pkgname)) pkgname <- package_name()
+rog_logo <- function(
+  pkgname,
+  filename = "man/figures/logo.png",
+  p_x = 1,
+  p_y = 1,
+  p_size = 202.6 * nchar(pkgname)**-1.008,
+  overwrite = FALSE,
+  favicons = TRUE
+) {
+  if (missing(pkgname)) {
+    pkgname <- package_name()
+  }
 
   enddir <- dirname(filename)
-  if (!dir.exists(enddir)) dir.create(enddir, recursive = TRUE)
+  if (!dir.exists(enddir)) {
+    dir.create(enddir, recursive = TRUE)
+  }
 
   # Load B612
 
@@ -50,7 +57,9 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
   # Remove old logos: png and svg
   if (isTRUE(overwrite)) {
     oldlogo <- file.path("man", "figures", "logo.png")
-    if (file.exists(oldlogo)) file.remove(oldlogo)
+    if (file.exists(oldlogo)) {
+      file.remove(oldlogo)
+    }
 
     oldlogo <- file.path("man", "figures", "logo.svg")
     if (file.exists(oldlogo)) file.remove(oldlogo)
@@ -62,18 +71,21 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
   }
 
   # Subplot
-  img <- magick::image_read(system.file("assets/partof.png",
+  img <- magick::image_read(system.file(
+    "assets/partof.png",
     package = "rogtemplate"
   ))
   g <- grid::rasterGrob(img, interpolate = TRUE)
 
   p <- ggplot2::ggplot() +
-    ggplot2::annotation_custom(g,
-      xmin = -Inf, xmax = Inf,
-      ymin = -Inf, ymax = Inf
+    ggplot2::annotation_custom(
+      g,
+      xmin = -Inf,
+      xmax = Inf,
+      ymin = -Inf,
+      ymax = Inf
     ) +
     ggplot2::theme_void()
-
 
   # Create plot
   suppressWarnings(
@@ -96,7 +108,6 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
 
   message("Logo created on ", filename)
 
-
   # Favicons
 
   if (isTRUE(favicons) && filename == "man/figures/logo.png") {
@@ -110,7 +121,9 @@ rog_logo <- function(pkgname, filename = "man/figures/logo.png",
 package_name <- function() {
   desc_path <- file.path(normalizePath("."), "DESCRIPTION")
 
-  if (!file.exists(desc_path)) stop("No DESCRIPTION file found ", call. = FALSE)
+  if (!file.exists(desc_path)) {
+    stop("No DESCRIPTION file found ", call. = FALSE)
+  }
 
   # Read package name
 
@@ -132,19 +145,20 @@ package_name <- function() {
 #' rog_load_font()
 rog_load_font <- function() {
   family <- "B612 Mono"
-  fonts <- list.files(system.file("fonts", package = "rogtemplate"),
-    pattern = "ttf$", recursive = TRUE,
+  fonts <- list.files(
+    system.file("fonts", package = "rogtemplate"),
+    pattern = "ttf$",
+    recursive = TRUE,
     full.names = TRUE
   )
 
-
-  sysfonts::font_add(family,
+  sysfonts::font_add(
+    family,
     regular = as.character(fonts[4]),
     bold = as.character(fonts[1]),
     italic = as.character(fonts[3]),
     bolditalic = as.character(fonts[2])
   )
-
 
   showtext::showtext_auto()
 

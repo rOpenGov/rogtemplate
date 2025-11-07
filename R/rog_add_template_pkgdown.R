@@ -27,10 +27,8 @@ rog_add_template_pkgdown <- function() {
   pkgurl <- paste0("https://ropengov.github.io/", pkgname, "/")
   repo <- paste0("https://github.com/rOpenGov/", pkgname)
 
-
   # Add auto linking to description
   desc_path <- file.path(normalizePath("."), "DESCRIPTION")
-
 
   pkg <- desc::desc_normalize(desc_path)
 
@@ -38,14 +36,17 @@ rog_add_template_pkgdown <- function() {
   issues <- paste0(repo, "/issues")
 
   # Add url if no present
-  if (isFALSE(tolower(pkgurl) %in% tolower(urls))) urls <- c(urls, pkgurl)
+  if (isFALSE(tolower(pkgurl) %in% tolower(urls))) {
+    urls <- c(urls, pkgurl)
+  }
 
   # Add repo if no present
 
-  if (isFALSE(tolower(repo) %in% tolower(urls))) urls <- c(urls, repo)
+  if (isFALSE(tolower(repo) %in% tolower(urls))) {
+    urls <- c(urls, repo)
+  }
 
   pkg$set_urls(urls)
-
 
   pkg$set("BugReports", issues)
   pkg$set("X-schema.org-isPartOf", "http://ropengov.org/")
@@ -70,21 +71,20 @@ rog_add_template_pkgdown <- function() {
       package = "rogtemplate",
       path = NULL,
       opengraph = list(
-        twitter =
-          list(site = "@rOpenGov")
+        twitter = list(site = "@rOpenGov")
       ),
-      params =
-        list(bootswatch = NULL)
+      params = list(bootswatch = NULL)
     )
   )
-
 
   # Detect _pkgdown.yml
 
   file_exist <- FALSE
   path <- "_pkgdown.yml"
 
-  if (file.exists(path)) file_exist <- TRUE
+  if (file.exists(path)) {
+    file_exist <- TRUE
+  }
 
   if (!file_exist) {
     path <- file.path("pkgdown", "_pkgdown.yml")
@@ -113,10 +113,11 @@ rog_add_template_pkgdown <- function() {
     newfile <- template_blank
   }
 
-
   dir <- dirname(path)
 
-  if (!dir.exists(dir)) dir.create(dir)
+  if (!dir.exists(dir)) {
+    dir.create(dir)
+  }
 
   yaml::write_yaml(newfile, file = path)
 
