@@ -34,7 +34,8 @@ Other extras:
 ## Examples
 
 ``` r
-if (FALSE) { # \dontrun{
+# \dontrun{
 rog_add_template_pkgdown()
-} # }
+#> Error: No DESCRIPTION file found 
+# }
 ```
