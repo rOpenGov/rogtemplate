@@ -30,7 +30,19 @@ library(tidyverse)
 library(rogtemplate)
 
 Sys.setenv("R_CRAN_WEB" = "https://cloud.r-project.org")
-crandb <- unique(tools::CRAN_package_db()$Package)
+
+# Search in CRAN
+cran_all <- tools::CRAN_package_db() %>%
+  as_tibble()
+
+# URL or Bug
+cranpaks <- cran_all %>%
+  filter(str_detect(tolower(URL), "ropengov") | str_detect(tolower(BugReports), "ropengov")) %>%
+  pull(Package)
+
+
+# Direct search
+crandb <- unique(cran_all$Package)
 
 mypaks <- jsonlite::read_json(
   "https://api.github.com/orgs/ropengov/repos?per_page=100"
@@ -41,7 +53,12 @@ mypaks <- jsonlite::read_json(
   sort()
 
 # Packages in CRAN
-mypaks <- mypaks[mypaks %in% crandb]
+mypaks <- c(mypaks[mypaks %in% crandb], cranpaks) %>%
+  unique() %>%
+  sort()
+
+# fmi package in CRAN is not the one we have in here
+mypaks <- mypaks[mypaks != "fmi"]
 
 dwn <- lapply(mypaks, cranlogs::cran_downloads, from = "2016-01-01")
 
@@ -72,6 +89,7 @@ first_date_on_cran <- function(pkg) {
 
 fechas <- lapply(unique(dwn$package), first_date_on_cran) %>%
   bind_rows()
+
 
 
 dwn <- dwn %>%
