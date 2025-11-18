@@ -20,10 +20,10 @@ footer:
     left: [developed_by, partof]
     right: built_with
   components:
-    partof: '<br>Part of <a href="http://ropengov.org/"><img src="https://raw.githubusercontent.com/rOpenGov/homepage/master/static/images/logo2020_black_orange.svg" height="20" class="d-inline-block mx-1 rog-logo" alt="rOpenGov R packages for open government data analytics"></a>'
+    partof: '<br>Part of <a href="http://ropengov.org/"><img src="https://ropengov.github.io/rogtemplate/logo2020_white_orange.svg" height="20" class="d-inline-block mx-1 rog-logo" alt="rOpenGov R packages for open government data analytics"></a>'
 
 home:
   links:
-  - text: 'Part of <img src="https://raw.githubusercontent.com/rOpenGov/homepage/master/static/images/logo2020_black_orange.svg" height="20" class="d-inline-block mx-1 rog-logo">'
+  - text: 'Part of <img src="https://ropengov.github.io/rogtemplate/logo2020_black_orange.svg" height="20" class="d-inline-block mx-1 rog-logo">'
     href: https://ropengov.org/
 
