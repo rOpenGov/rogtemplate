@@ -80,18 +80,3 @@ We provide also some additional extra functions for creating badges and
 logos, see
 [Extras](https://ropengov.github.io/rogtemplate/reference/index.html)
 for more info.
-
-## Contributors
-
-All contributions to this project are gratefully acknowledged using the
-[`allcontributors` package](https://github.com/ropensci/allcontributors)
-following the [allcontributors](https://allcontributors.org)
-specification. Contributions of any kind are welcome!
-
-### Code
-
-[TABLE]
-
-### Issues
-
-[TABLE]
