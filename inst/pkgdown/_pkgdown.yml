@@ -8,7 +8,7 @@ template:
   math-rendering: katex
   bslib:
     base_font: "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'"
-    code_font: "Roboto Mono"
+    code_font: ["Fira Code", "monospace"]
     preset: bootstrap
   opengraph:
     twitter:
