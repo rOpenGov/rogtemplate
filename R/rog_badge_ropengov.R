@@ -36,13 +36,13 @@ rog_badge_ropengov <- function(install = TRUE) {
 
   if (install) {
     # nocov start
-    usethis::use_badge("rOG-badge", href = href, src = badge)
+    usethis::use_badge("rOpenGov package", href = href, src = badge)
     # nocov end
   } else {
     message(
       "Badge URL is ",
       "\n",
-      "[![rOG-badge](",
+      "[![rOpenGov package](",
       badge,
       ")](",
       href,
