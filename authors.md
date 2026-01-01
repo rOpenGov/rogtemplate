@@ -13,14 +13,14 @@
 Source:
 [`DESCRIPTION`](https://github.com/rOpenGov/rogtemplate/blob/main/DESCRIPTION)
 
-Hernangómez D (2025). *rogtemplate: 'pkgdown' Template for 'rOpenGov'
+Hernangómez D (2026). *rogtemplate: 'pkgdown' Template for 'rOpenGov'
 Packages*. R package version 0.0.2.9100,
 <https://ropengov.github.io/rogtemplate/>.
 
     @Manual{,
       title = {rogtemplate: 'pkgdown' Template for 'rOpenGov' Packages},
       author = {Diego Hernangómez},
-      year = {2025},
+      year = {2026},
       note = {R package version 0.0.2.9100},
       url = {https://ropengov.github.io/rogtemplate/},
     }
