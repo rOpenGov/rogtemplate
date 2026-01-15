@@ -18,7 +18,8 @@ A markdown badge or a message with the markdown code to be pasted.
 Add an rOpenGov badge pointing to \url{https://ropengov.org/} on your \code{README}
 file:
 
-\ifelse{html}{\href{https://ropengov.org/}{\figure{ropengov-badge.svg}{options: alt='rOpenGov'}}}{**rOpenGov**}
+\ifelse{html}{\href{https://ropengov.org/}{\figure{ropengov-badge.svg}{
+options: alt='rOpenGov'}}}{**rOpenGov**}
 }
 \examples{
 

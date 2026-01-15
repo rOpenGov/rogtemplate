@@ -126,5 +126,5 @@ rog_add_template_pkgdown <- function() {
 
   message("rogtemplate added to ", path)
 
-  return(invisible())
+  invisible()
 }

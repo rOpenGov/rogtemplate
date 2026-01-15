@@ -164,5 +164,5 @@ rog_load_font <- function() {
 
   message(paste(family, "font loaded"))
 
-  return(family)
+  family
 }

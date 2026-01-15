@@ -3,10 +3,14 @@
 on:
   push:
     branches: [main, master]
-    tags: ['*']
-  workflow_dispatch:
+    tags: ["*"]
 
 name: rogtemplate-gh-pages
+permissions: write-all
+# This will cancel running jobs once a new run is triggered
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
 
 jobs:
   rogtemplate-gh-pages:
@@ -14,7 +18,7 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - uses: r-lib/actions/setup-pandoc@v2
 
@@ -37,17 +41,14 @@ jobs:
             file.exists(file.path("man", "figures", "logo.png")))) {
             rogtemplate::rog_logo()
           } else {
-
             message("The package already has a logo")
           }
 
           rogtemplate::rog_add_template_pkgdown()
-
         shell: Rscript {0}
 
       - name: Deploy package
         run: |
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          Rscript -e 'pkgdown::deploy_to_branch(new_process = FALSE)'
-
+          Rscript -e 'pkgdown::deploy_to_branch(clean = TRUE, run_dont_run = TRUE)'

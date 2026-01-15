@@ -36,7 +36,7 @@ rog_orange_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
     return(ramp(n))
   }
   col_end <- adjustcolor(ramp(n), alpha.f = alpha)
-  return(col_end)
+  col_end
 }
 
 #' @rdname rog_pals
@@ -53,7 +53,7 @@ rog_dark_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
     return(ramp(n))
   }
   col_end <- adjustcolor(ramp(n), alpha.f = alpha)
-  return(col_end)
+  col_end
 }
 
 #' @rdname rog_pals
@@ -70,7 +70,7 @@ rog_gradient_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
     return(ramp(n))
   }
   col_end <- adjustcolor(ramp(n), alpha.f = alpha)
-  return(col_end)
+  col_end
 }
 
 #' @rdname rog_pals
@@ -88,7 +88,7 @@ rog_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
   cols <- cols[seq_len(n)]
   cols[cols > 1] <- cols[cols > 1] - 1
   colors <- hsv(cols, sat, val)
-  if (substr(color, 1, 1) == "#" && nchar(color) == 9) {
+  if (startsWith(color, "#") && nchar(color) == 9) {
     alpha <- substr(color, 8, 9)
     colors <- paste(colors, alpha, sep = "")
   }
@@ -103,5 +103,5 @@ rog_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
 
   colors <- adjustcolor(colors, alpha.f = alpha)
 
-  return(colors)
+  colors
 }

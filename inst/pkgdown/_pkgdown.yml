@@ -7,12 +7,10 @@ template:
   theme: tango
   math-rendering: katex
   bslib:
-    base_font: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica
-      Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI
-      Symbol','Noto Color Emoji'
+    base_font: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'
     code_font:
-      - Fira Code
-      - monospace
+    - Fira Code
+    - monospace
     preset: bootstrap
   opengraph:
     twitter:
@@ -22,19 +20,12 @@ template:
 footer:
   structure:
     left:
-      - developed_by
-      - partof
+    - developed_by
+    - partof
     right: built_with
   components:
-    partof: <br>Part of <a href="http://ropengov.org/"><img
-      src="https://ropengov.github.io/rogtemplate/logo2020_white_orange.svg"
-      height="20" class="d-inline-block mx-1 rog-logo" alt="rOpenGov R packages
-      for open government data analytics"></a>
+    partof: <br>Part of <a href="http://ropengov.org/"><img src="https://ropengov.github.io/rogtemplate/logo2020_white_orange.svg" height="20" class="d-inline-block mx-1 rog-logo" alt="rOpenGov R packages for open government data analytics"></a>
 home:
   links:
-    - text: Part of <img
-        src="https://ropengov.github.io/rogtemplate/logo2020_black_orange.svg"
-        height="20" class="d-inline-block mx-1 rog-logo" alt="rOpenGov R
-        packages for open government data analytics">
-      href: https://ropengov.org/
-
+  - text: Part of <img src="https://ropengov.github.io/rogtemplate/logo2020_black_orange.svg" height="20" class="d-inline-block mx-1 rog-logo" alt="rOpenGov R packages for open government data analytics">
+    href: https://ropengov.org/

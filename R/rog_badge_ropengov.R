@@ -6,7 +6,8 @@
 #' Add an rOpenGov badge pointing to <https://ropengov.org/> on your `README`
 #' file:
 #'
-#' \ifelse{html}{\href{https://ropengov.org/}{\figure{ropengov-badge.svg}{options: alt='rOpenGov'}}}{**rOpenGov**}
+#' \ifelse{html}{\href{https://ropengov.org/}{\figure{ropengov-badge.svg}{
+#' options: alt='rOpenGov'}}}{**rOpenGov**}
 #'
 #' @export
 #'

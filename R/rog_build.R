@@ -30,6 +30,6 @@ rog_build <- function(pkg = ".", ...) {
   rogtemplate::rog_add_template_pkgdown()
 
   pkgdown::build_site(pkg = ".", ...)
-  return(invisible())
+  invisible()
   # nocov end
 }

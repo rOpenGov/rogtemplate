@@ -40,5 +40,5 @@ rog_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
     message("File not updated")
   }
 
-  return(invisible())
+  invisible()
 }
