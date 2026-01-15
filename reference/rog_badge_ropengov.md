@@ -3,7 +3,7 @@
 Add an rOpenGov badge pointing to <https://ropengov.org/> on your
 `README` file:
 
-[![rOpenGov](figures/ropengov-badge.svg)](https://ropengov.org/)
+[![ options: alt=](figures/ropengov-badge.svg)](https://ropengov.org/)
 
 ## Usage
 
