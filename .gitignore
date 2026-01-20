@@ -29,3 +29,5 @@ cran-comments.md
 .Rdata
 inst/doc
 Rplots.pdf
+/.quarto/
+**/*.quarto_ipynb
