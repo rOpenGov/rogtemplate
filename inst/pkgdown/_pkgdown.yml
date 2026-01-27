@@ -6,36 +6,50 @@ template:
   bootstrap: 5
   theme: tango
   math-rendering: katex
-  bslib:
-    base_font:
-      [
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        "Helvetica Neue",
-        Arial,
-        sans-serif,
-        "Apple Color Emoji",
-        "Segoe UI Emoji",
-        "Segoe UI Symbol",
-        "Noto Color Emoji"
-      ]
-    code_font:
-      [
-        SFMono-Regular,
-        Menlo,
-        Monaco,
-        Consolas,
-        "Liberation Mono",
-        "Courier New",
-        monospace
-      ]
-    preset: bootstrap
+  light-switch: true
   opengraph:
     twitter:
       site: "@rOpenGov"
       card: summary_large_image
+  bslib:
+    brand:
+      color:
+        palette:
+          blue: "#007bff"
+          indigo: "#6610f2"
+          purple: "#6f42c1"
+          pink: "#e83e8c"
+          red: "#dc3545"
+          orange: "#ff6600"
+          yellow: "#ffc107"
+          green: "#28a745"
+          teal: "#20c997"
+          cyan: "#17a2b8"
+          white: "#fff"
+          gray: "#6c757d"
+          gray-dark: "#343a40"
+        foreground: "#212529"
+        background: white
+        primary: blue
+        secondary: gray
+        success: green
+        info: teal
+        warning: orange
+        danger: red
+        light: "#f8f9fa"
+        dark: gray-dark
+      typography:
+        fonts:
+        - family: B612 Mono
+          source: google
+      defaults:
+        bootstrap:
+          defaults:
+            navbar-bg: "#212529"
+            navbar-light-bg: "#212529"
+            navbar-dark-bg: "#212529"
+            navbar-light-color: "#ffffff"
+            navbar-dark-color: "#ffffff"
 
 footer:
   structure:
@@ -53,8 +67,6 @@ footer:
 home:
   links:
   - text: >
-      Part of <img
-      src="https://ropengov.github.io/rogtemplate/logo2020_black_orange.svg"
-      height="20" class="d-inline-block mx-1 rog-logo" alt="rOpenGov R package
-      for open government data analytics">
+      Part of <span class="mini_logo">r<img src="rog_logo.svg" height="20"
+      alt="rOpenGov logo">penGov</span></a>
     href: https://ropengov.org/

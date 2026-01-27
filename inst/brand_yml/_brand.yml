@@ -1,0 +1,54 @@
+meta:
+  name: rogtemplate
+  description: >
+    Private template for use by core rOpenGov packages.
+  links:
+    home: https://ropengov.org/
+    github: https://github.com/rOpenGov/
+
+logo:
+  images:
+    icon: ./assets/favicon.png
+    header: ./assets/logo.png
+  small: header
+  medium: header
+
+color:
+  palette:
+    blue: "#007bff"
+    indigo: "#6610f2"
+    purple: "#6f42c1"
+    pink: "#e83e8c"
+    red: "#dc3545"
+    orange: "#ff6600"
+    yellow: "#ffc107"
+    green: "#28a745"
+    teal: "#20c997"
+    cyan: "#17a2b8"
+    white: "#fff"
+    gray: "#6c757d"
+    gray-dark: "#343a40"
+  foreground: "#212529"
+  background: white
+  primary: blue
+  secondary: gray
+  success: green
+  info: teal
+  warning: orange
+  danger: red
+  light: "#f8f9fa"
+  dark: gray-dark
+
+typography:
+  fonts:
+  - family: B612 Mono
+    source: google
+
+defaults:
+  bootstrap:
+    defaults:
+      navbar-bg: "#212529"
+      navbar-light-bg: "#212529"
+      navbar-dark-bg: "#212529"
+      navbar-light-color: "#ffffff"
+      navbar-dark-color: "#ffffff"

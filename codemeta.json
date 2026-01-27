@@ -135,6 +135,18 @@
     },
     "2": {
       "@type": "SoftwareApplication",
+      "identifier": "brand.yml",
+      "name": "brand.yml",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=brand.yml"
+    },
+    "3": {
+      "@type": "SoftwareApplication",
       "identifier": "desc",
       "name": "desc",
       "version": ">= 1.3.0",
@@ -146,7 +158,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=desc"
     },
-    "3": {
+    "4": {
       "@type": "SoftwareApplication",
       "identifier": "ggplot2",
       "name": "ggplot2",
@@ -159,12 +171,12 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=ggplot2"
     },
-    "4": {
+    "5": {
       "@type": "SoftwareApplication",
       "identifier": "grid",
       "name": "grid"
     },
-    "5": {
+    "6": {
       "@type": "SoftwareApplication",
       "identifier": "hexSticker",
       "name": "hexSticker",
@@ -177,7 +189,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=hexSticker"
     },
-    "6": {
+    "7": {
       "@type": "SoftwareApplication",
       "identifier": "magick",
       "name": "magick",
@@ -190,7 +202,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=magick"
     },
-    "7": {
+    "8": {
       "@type": "SoftwareApplication",
       "identifier": "pkgdown",
       "name": "pkgdown",
@@ -203,7 +215,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=pkgdown"
     },
-    "8": {
+    "9": {
       "@type": "SoftwareApplication",
       "identifier": "showtext",
       "name": "showtext",
@@ -216,7 +228,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=showtext"
     },
-    "9": {
+    "10": {
       "@type": "SoftwareApplication",
       "identifier": "sysfonts",
       "name": "sysfonts",
@@ -229,7 +241,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=sysfonts"
     },
-    "10": {
+    "11": {
       "@type": "SoftwareApplication",
       "identifier": "usethis",
       "name": "usethis",
@@ -242,7 +254,7 @@
       },
       "sameAs": "https://CRAN.R-project.org/package=usethis"
     },
-    "11": {
+    "12": {
       "@type": "SoftwareApplication",
       "identifier": "yaml",
       "name": "yaml",
@@ -259,7 +271,7 @@
   },
   "isPartOf": "http://ropengov.org/",
   "keywords": ["ropengov", "template", "r", "r-package", "github-actions", "pkgdown", "pkgdown-template"],
-  "fileSize": "660.4KB",
+  "fileSize": "696.812KB",
   "releaseNotes": "https://github.com/rOpenGov/rogtemplate/blob/main/NEWS.md",
   "readme": "https://github.com/rOpenGov/rogtemplate/blob/main/README.md",
   "contIntegration": "https://github.com/rOpenGov/rogtemplate/actions",
