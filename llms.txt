@@ -142,5 +142,7 @@ for more info.
 - [ggplot2
   example](https://ropengov.github.io/rogtemplate/articles/ggplot2-example.md):
 - [Headings](https://ropengov.github.io/rogtemplate/articles/headings.md):
+- [Testing syntax
+  highlighter](https://ropengov.github.io/rogtemplate/articles/highlight_test.md):
 - [Example of a precomputed
   vignette](https://ropengov.github.io/rogtemplate/articles/precompute.md):
