@@ -209,6 +209,16 @@ footer .pkgdown-footer-left {
 	border-radius: 0;
 }
 
+.algolia-autocomplete .aa-dropdown-menu {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+[data-bs-theme="dark"] {
+	.algolia-autocomplete .aa-dropdown-menu {
+		color: var(--bs-white);
+	}
+}
+
 /* Highlighter based in my theme */
 
 pre {
