@@ -18,7 +18,8 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 
-[![rOpenGov package](https://ropengov.github.io/rogtemplate//reference/figures/ropengov-badge.svg)](https://ropengov.org/)
+[![rOpenGov
+package](https://ropengov.github.io/rogtemplate//reference/figures/ropengov-badge.svg)](https://ropengov.org/)
 [![R build
 status](https://github.com/ropengov/rogtemplate/workflows/R-CMD-check/badge.svg)](https://github.com/rOpenGov/rogtemplate/actions)
 [![r-universe](https://ropengov.r-universe.dev/badges/rogtemplate)](https://ropengov.r-universe.dev/rogtemplate)
@@ -101,4 +102,3 @@ you chose to deploy in that way) and deploy the website via
 We provide also some additional extra functions for creating badges and logos,
 see [Extras](https://ropengov.github.io/rogtemplate/reference/index.html) for
 more info.
-

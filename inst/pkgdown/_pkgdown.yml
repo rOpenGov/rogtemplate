@@ -4,7 +4,6 @@ navbar:
 
 template:
   bootstrap: 5
-  theme: tango
   math-rendering: katex
   light-switch: true
   opengraph:
@@ -42,6 +41,7 @@ template:
         fonts:
         - family: B612 Mono
           source: google
+          weight: [400, 700]
       defaults:
         bootstrap:
           defaults:
@@ -67,6 +67,6 @@ footer:
 home:
   links:
   - text: >
-      Part of <span class="mini_logo">r<img src="rog_logo.svg" height="20"
+      Part of<span class="mini_logo"> r<img src="rog_logo.svg" height="20"
       alt="rOpenGov logo">penGov</span></a>
     href: https://ropengov.org/

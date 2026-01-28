@@ -162,6 +162,10 @@ footer .pkgdown-footer-left {
 
 .mini_logo {
 	font-family: "B612 Mono", monospace;
+	text-decoration: none;
+	color: var(--bs-body-color);
+	display: inline-block;
+	margin-left: 0.25rem;
 }
 
 /* Clipboard button */

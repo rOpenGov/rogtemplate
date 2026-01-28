@@ -43,6 +43,7 @@ typography:
   fonts:
   - family: B612 Mono
     source: google
+    weight: [400, 700]
 
 defaults:
   bootstrap:
