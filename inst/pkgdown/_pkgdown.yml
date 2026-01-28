@@ -67,6 +67,6 @@ footer:
 home:
   links:
   - text: >
-      Part of<span class="mini_logo"> r<img src="rog_logo.svg" height="20"
+      Part of<span class="mini_logo ms-2">r<img src="rog_logo.svg" height="20"
       alt="rOpenGov logo">penGov</span></a>
     href: https://ropengov.org/
