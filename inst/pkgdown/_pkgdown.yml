@@ -4,7 +4,7 @@ navbar:
 
 template:
   bootstrap: 5
-  math-rendering: katex
+  theme: tango
   light-switch: true
   opengraph:
     twitter:
@@ -32,7 +32,7 @@ template:
         primary: blue
         secondary: gray
         success: green
-        info: teal
+        info: cyan
         warning: orange
         danger: red
         light: "#f8f9fa"
@@ -45,11 +45,8 @@ template:
       defaults:
         bootstrap:
           defaults:
-            navbar-bg: "#212529"
-            navbar-light-bg: "#212529"
-            navbar-dark-bg: "#212529"
+            navbar-light-bg: "#343a40"
             navbar-light-color: "#ffffff"
-            navbar-dark-color: "#ffffff"
 
 footer:
   structure:
