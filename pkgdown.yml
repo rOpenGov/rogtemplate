@@ -9,7 +9,7 @@ articles:
   headings: headings.html
   articles/highlight_test: highlight_test.html
   precompute: precompute.html
-last_built: 2026-01-29T00:50Z
+last_built: 2026-01-29T02:09Z
 urls:
   reference: https://ropengov.github.io/rogtemplate/reference
   article: https://ropengov.github.io/rogtemplate/articles

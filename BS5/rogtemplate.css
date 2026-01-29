@@ -21,7 +21,6 @@ main img {
 /* ---Navbar tweaks--- */
 .navbar-brand {
 	font-family: "B612 Mono", monospace;
-	letter-spacing: 2px;
 	font-size: 1.5rem;
 	color: var(--bs-white);
 }
