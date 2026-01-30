@@ -21,6 +21,7 @@ articles:
   navbar:
   contents:
   - articles/downloads
+
 - title: Testing
   navbar: Tests
   desc: >
@@ -31,3 +32,14 @@ articles:
   contents:
   - starts_with("test")
   - starts_with("articles/test")
+
+navbar:
+  components:
+    articles:
+      text: Articles
+      menu:
+      - text: Downloads of rOpenGov packages
+        href: articles/downloads.html
+      - text: '---'
+      - text: More articles...
+        href: articles/index.html
