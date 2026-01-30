@@ -325,6 +325,9 @@ pre {
 /* Dark reactable */
 
 [data-bs-theme="dark"] {
+	.reactable.html-widget {
+		filter: none !important;
+	}
 
 	.Reactable {
 		background-color: var(--bs-body-bg);
