@@ -2,14 +2,19 @@ pandoc: 3.1.11
 pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
-  bullets: bullets.html
-  code: code.html
   articles/downloads: downloads.html
-  articles/ggplot2-example: ggplot2-example.html
-  headings: headings.html
-  articles/highlight_test: highlight_test.html
-  precompute: precompute.html
-last_built: 2026-01-29T22:44Z
+  test/ggplot2: test/ggplot2.html
+  test/highlight: test/highlight.html
+  test/long-toc: test/long-toc.html
+  test/quarto-features: test/quarto-features.html
+  test/reactable: test/reactable.html
+  test/rendering: test/rendering.html
+  test/short: test/short.html
+  test/test-bullets: test/test-bullets.html
+  test-precompute: test-precompute.html
+  test/test-quarto: test/test-quarto.html
+  test/widgets: test/widgets.html
+last_built: 2026-01-30T19:50Z
 urls:
   reference: https://ropengov.github.io/rogtemplate/reference
   article: https://ropengov.github.io/rogtemplate/articles
