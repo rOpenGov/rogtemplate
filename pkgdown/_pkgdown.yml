@@ -15,3 +15,19 @@ reference:
   contents: has_concept("rog_plot")
 - title: About the package
   contents: rogtemplate
+
+articles:
+- title: Articles
+  navbar:
+  contents:
+  - articles/downloads
+- title: Testing
+  navbar: Tests
+  desc: >
+    These articles are used to test various <a
+    href="https://CRAN.R-project.org/package=pkgdown"
+    class="external-link"><span class="pkg">pkgdown</span></a> features that can
+    not easily be tested automatically.
+  contents:
+  - starts_with("test")
+  - starts_with("articles/test")
