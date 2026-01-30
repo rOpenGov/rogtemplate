@@ -70,6 +70,8 @@ rog_add_template_pkgdown <- function() {
       bootstrap = 5,
       package = "rogtemplate",
       path = NULL,
+      bootswatch = NULL,
+      bslib = NULL,
       opengraph = list(
         twitter = list(site = "@rOpenGov")
       ),
