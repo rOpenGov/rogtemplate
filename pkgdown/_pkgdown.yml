@@ -16,14 +16,34 @@ reference:
 - title: About the package
   contents: rogtemplate
 
+navbar:
+  structure:
+    left: [intro, reference, articles, news]
+    right: [search, packages, github, lightswitch]
+  components:
+    packages:
+      text: "Packages"
+      menu:
+      - text: "eurostat"
+        href: https://ropengov.github.io/eurostat/
+      - text: "giscoR"
+        href: https://ropengov.github.io/giscoR/
+      - text: "pxweb"
+        href: https://ropengov.github.io/pxweb/
+
 articles:
 - title: Articles
   navbar:
   contents:
   - articles/downloads
 
+- title: Menu
+  navbar: Menu bar
+  desc: Testing a menu bar in the navbar
+  contents:
+  - starts_with("menu")
+ 
 - title: Testing
-  navbar: Tests
   desc: >
     These articles are used to test various <a
     href="https://CRAN.R-project.org/package=pkgdown"
@@ -33,13 +53,3 @@ articles:
   - starts_with("test")
   - starts_with("articles/test")
 
-navbar:
-  components:
-    articles:
-      text: Articles
-      menu:
-      - text: Downloads of rOpenGov packages
-        href: articles/downloads.html
-      - text: '---'
-      - text: More articles...
-        href: articles/index.html
