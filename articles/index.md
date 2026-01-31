@@ -5,6 +5,13 @@
 - [Downloads of rOpenGov
   packages](https://ropengov.github.io/rogtemplate/articles/downloads.md):
 
+### Menu
+
+Testing a menu bar in the navbar
+
+- [Bullets](https://ropengov.github.io/rogtemplate/articles/menu/bullets.md):
+- [Code](https://ropengov.github.io/rogtemplate/articles/menu/code.md):
+
 ### Testing
 
 These articles are used to test various
@@ -23,6 +30,12 @@ not easily be tested automatically.
 - [quarto
   features](https://ropengov.github.io/rogtemplate/articles/test/quarto-features.md):
 
+- [quarto
+  vignettes](https://ropengov.github.io/rogtemplate/articles/test/quarto.md):
+
+  Learn how quarto vignettes work with pkgdown, including currently
+  supported features and known limitations.
+
 - [reactable
   example](https://ropengov.github.io/rogtemplate/articles/test/reactable.md):
 
@@ -32,16 +45,8 @@ not easily be tested automatically.
 - [A short
   page](https://ropengov.github.io/rogtemplate/articles/test/short.md):
 
-- [Bullets](https://ropengov.github.io/rogtemplate/articles/test/test-bullets.md):
-
 - [Example of a precomputed
   vignette](https://ropengov.github.io/rogtemplate/articles/test-precompute.md):
-
-- [quarto
-  vignettes](https://ropengov.github.io/rogtemplate/articles/test/test-quarto.md):
-
-  Learn how quarto vignettes work with pkgdown, including currently
-  supported features and known limitations.
 
 - [HTML
   widgets](https://ropengov.github.io/rogtemplate/articles/test/widgets.md):

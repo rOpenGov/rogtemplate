@@ -72,7 +72,7 @@ plot(1:3)
 ```
 
 ![A plot of the numbers 1, 2, and
-3](test-quarto_files/figure-html/unnamed-chunk-1-1.png)
+3](quarto_files/figure-html/unnamed-chunk-1-1.png)
 
 ### Figures
 

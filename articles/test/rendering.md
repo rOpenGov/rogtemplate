@@ -55,6 +55,12 @@ $$f(x) = \frac{1}{\sqrt{2\pi\sigma^{2}}}e^{- \frac{(x - \mu^{2})}{2\sigma^{2}}}$
 
 Inline equations: $y = x^{2}$
 
+## Search
+
+This text should be marked as highlighted by search.
+
+This text too.
+
 ## Code
 
 ### Line width
