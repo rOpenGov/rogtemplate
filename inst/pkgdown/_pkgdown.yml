@@ -4,8 +4,7 @@ navbar:
 
 template:
   bootstrap: 5
-  theme: github-light
-  theme-dark: github-dark
+  theme: tango
   light-switch: true
   opengraph:
     twitter:
