@@ -11,7 +11,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/rOpenGov/rogtemplate/blob/refactor-css/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/rOpenGov/rogtemplate/blob/main/DESCRIPTION)
 
 Hernangómez D (2026). *rogtemplate: 'pkgdown' Template for 'rOpenGov'
 Packages*. R package version 0.0.2.9100,
