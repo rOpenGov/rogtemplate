@@ -5,7 +5,6 @@ Some filler text.
 Some filler text.
 
 ``` r
-
 ruler <- function(width = getOption("width")) {
   x <- seq_len(width)
   y <- rep("-", length(x))

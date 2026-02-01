@@ -18,6 +18,9 @@ These articles are used to test various
 [pkgdown](https://CRAN.R-project.org/package=pkgdown) features that can
 not easily be tested automatically.
 
+- [usdoj: For Accessing U.S. Department of Justice (DOJ) Open
+  Data](https://ropengov.github.io/rogtemplate/articles/test/blog-article.md):
+
 - [ggplot2
   example](https://ropengov.github.io/rogtemplate/articles/test/ggplot2.md):
 
