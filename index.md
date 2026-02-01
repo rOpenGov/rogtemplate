@@ -32,11 +32,10 @@ install.packages("rogtemplate",
 )
 ```
 
-You can use also the **remotes** package:
+You can use also the **pak** package:
 
 ``` r
-library(remotes)
-install_github("ropengov/rogtemplate", dependencies = TRUE)
+pak::pak("ropengov/rogtemplate")
 ```
 
 You can use
