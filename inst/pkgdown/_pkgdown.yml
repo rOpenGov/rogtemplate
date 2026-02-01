@@ -4,7 +4,8 @@ navbar:
 
 template:
   bootstrap: 5
-  theme: tango
+  theme: github-light
+  theme-dark: github-dark
   light-switch: true
   opengraph:
     twitter:
@@ -82,6 +83,7 @@ template:
             dropdown-dark-border-color: rgba(255, 255, 255, .1)
             dropdown-dark-divider-bg: rgba(255, 255, 255, .1)
             blockquote-border-color: transparent
+            code-color: "#e83e8c"
 
 footer:
   structure:
