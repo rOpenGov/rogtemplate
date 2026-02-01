@@ -195,13 +195,10 @@ footer .pkgdown-footer-left {
 
 /* ---Code--- */
 code a:any-link {
-  text-decoration: underline;
-  text-decoration-color: var(--brand-code);
   background-color: transparent !important;
 }
 
 a > code {
-  text-decoration: underline;
   color: var(--brand-code);
 }
 
@@ -219,6 +216,11 @@ code {
 }
 
 /* Highlighter based in tango for dark theme */
+pre code a {
+  text-decoration: underline;
+  text-decoration-color: var(--brand-code);
+}
+
 pre {
   border: none;
 }
