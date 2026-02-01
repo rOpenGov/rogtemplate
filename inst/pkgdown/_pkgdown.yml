@@ -75,10 +75,10 @@ template:
             link-decoration: none
             pkgdown-footer-bg: "#343a40"
             pkgdown-footer-color: rgba(255, 255, 255, 0.5)
-            dropdown-bg: "343a40"
+            dropdown-bg: "#343a40"
             dropdown-border-color: rgba(255, 255, 255, .1)
             dropdown-divider-bg: rgba(255, 255, 255, .1)
-            dropdown-dark-bg: "343a40"
+            dropdown-dark-bg: "#343a40"
             dropdown-dark-border-color: rgba(255, 255, 255, .1)
             dropdown-dark-divider-bg: rgba(255, 255, 255, .1)
 

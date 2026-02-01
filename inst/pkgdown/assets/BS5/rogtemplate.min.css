@@ -5,6 +5,15 @@
   --bs-body-bg: hsla(210, 10%, 25%, 1);
 }
 
+.dropdown-menu {
+  --bs-dropdown-bg: var(--brand-gray_dark);
+  --bs-dropdown-link-active-bg: var(--bs-dropdown-bg);
+  --bs-dropdown-link-color: var(--bs-navbar-color);
+  --bs-dropdown-link-hover-color: rgba(255, 255, 255, 0.75);
+  --bs-dropdown-link-hover-bg: var(--bs-dropdown-bg);
+  --bs-dropdown-header-color: var(--bs-dropdown-link-hover-color);
+}
+
 /* ---Images and captions figure spacing--- */
 main img {
   margin-left: auto;
@@ -54,10 +63,6 @@ main img {
 #navbar .dropdown-menu .dropdown-item .fa {
   opacity: 1;
   color: inherit;
-}
-
-.navbar-toggler {
-  border: none;
 }
 
 /* --- Search ---*/
