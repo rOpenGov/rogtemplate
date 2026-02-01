@@ -27,6 +27,7 @@ template:
           white: "#fff"
           gray: "#6c757d"
           gray-dark: "#343a40"
+          code: "#e83e8c"
         foreground: "#212529"
         background: white
         primary: blue
@@ -42,11 +43,44 @@ template:
         - family: B612 Mono
           source: google
           weight: [400, 700]
+        link:
+          decoration: "none"
       defaults:
         bootstrap:
           defaults:
             navbar-light-bg: "#343a40"
-            navbar-light-color: "#ffffff"
+            navbar-light-color: rgba(255, 255, 255, .5)
+            navbar-light-toggler-border-color: rgba(255, 255, 255, .1)
+            navbar-light-toggler-icon-bg: >
+              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 0.5)'
+              stroke-linecap='round' stroke-miterlimit='10' stroke-width='2'
+              d='M4 7h22M4 15h22M4 23h22'/></svg>")
+            navbar-light-brand-color: "#ffffff"
+            navbar-light-brand-hover-color: "#ffffff"
+            navbar-light-hover-color: rgba(255,255,255,.75)
+            navbar-light-active-color: "#ffffff"
+            navbar-dark-bg: "#343a40"
+            navbar-dark-color: rgba(255, 255, 255, .5)
+            navbar-dark-toggler-border-color: rgba(255, 255, 255, .1)
+            navbar-dark-toggler-icon-bg: >
+              url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
+              viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 0.5)'
+              stroke-linecap='round' stroke-miterlimit='10' stroke-width='2'
+              d='M4 7h22M4 15h22M4 23h22'/></svg>")
+            navbar-dark-brand-color: "#ffffff"
+            navbar-dark-brand-hover-color: "#ffffff"
+            navbar-dark-hover-color: rgba(255,255,255,.75)
+            navbar-dark-active-color: "#ffffff"
+            link-decoration: none
+            pkgdown-footer-bg: "#343a40"
+            pkgdown-footer-color: rgba(255, 255, 255, 0.5)
+            dropdown-bg: "343a40"
+            dropdown-border-color: rgba(255, 255, 255, .1)
+            dropdown-divider-bg: rgba(255, 255, 255, .1)
+            dropdown-dark-bg: "343a40"
+            dropdown-dark-border-color: rgba(255, 255, 255, .1)
+            dropdown-dark-divider-bg: rgba(255, 255, 255, .1)
 
 footer:
   structure:
