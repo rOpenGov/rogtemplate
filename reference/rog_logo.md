@@ -70,7 +70,7 @@ Other extras:
 tmp <- tempfile(fileext = ".png")
 rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
 #> B612 Mono font loaded
-#> Logo created on /tmp/Rtmpsag4Aa/file1f2a695bdc1d.png
+#> Logo created on /tmp/Rtmp8rgiSy/file1f9328da665a.png
 
 # Display
 logo <- magick::image_read(tmp)

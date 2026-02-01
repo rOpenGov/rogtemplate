@@ -156,9 +156,13 @@ footer .pkgdown-footer-left {
 
 /* ---Misc--- */
 
+/* Render author and date consistenly between Rmd and quarto files */
 .author,
 .date {
-	color: var(--bs-secondary);
+  color: var(--bs-secondary);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  margin-bottom: 0.5rem;
 }
 
 /* Logos */
