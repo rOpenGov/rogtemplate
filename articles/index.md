@@ -9,8 +9,10 @@
 
 Testing a menu bar in the navbar
 
-- [Bullets](https://ropengov.github.io/rogtemplate/articles/menu/bullets.md):
-- [Code](https://ropengov.github.io/rogtemplate/articles/menu/code.md):
+- [ggplot2
+  example](https://ropengov.github.io/rogtemplate/articles/menu/ggplot2.md):
+- [Testing syntax
+  highlighter](https://ropengov.github.io/rogtemplate/articles/menu/highlight.md):
 
 ### Testing
 
@@ -21,11 +23,9 @@ not easily be tested automatically.
 - [usdoj: For Accessing U.S. Department of Justice (DOJ) Open
   Data](https://ropengov.github.io/rogtemplate/articles/test/blog-article.md):
 
-- [ggplot2
-  example](https://ropengov.github.io/rogtemplate/articles/test/ggplot2.md):
+- [Bullets](https://ropengov.github.io/rogtemplate/articles/test/bullets.md):
 
-- [Testing syntax
-  highlighter](https://ropengov.github.io/rogtemplate/articles/test/highlight.md):
+- [Code](https://ropengov.github.io/rogtemplate/articles/test/code.md):
 
 - [Long
   TOC](https://ropengov.github.io/rogtemplate/articles/test/long-toc.md):
