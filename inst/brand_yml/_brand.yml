@@ -86,3 +86,4 @@ defaults:
       dropdown-dark-divider-bg: rgba(255, 255, 255, .1)
       blockquote-border-color: transparent
       code-color: "#e83e8c"
+      code-color-dark: "#e83e8c"

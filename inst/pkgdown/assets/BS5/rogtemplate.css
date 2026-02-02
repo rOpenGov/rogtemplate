@@ -199,12 +199,6 @@ footer .pkgdown-footer-left {
   border-color: var(--bs-warning);
 }
 
-@media (max-width: 575.98px) {
-  .btn-copy-ex {
-    right: 5px;
-  }
-}
-
 .pkg {
   font-weight: bold;
 }
@@ -224,6 +218,16 @@ code {
   font-size: 87.5%;
   word-wrap: break-word;
   background-color: var(--body-bg) !important;
+}
+
+@media (max-width: 575.98px) {
+  div > pre {
+    margin-left: calc(var(--bs-gutter-x) * -0.5);
+    margin-right: calc(var(--bs-gutter-x) * -0.5);
+    border-radius: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 /* Highlighter based in tango for dark theme */
