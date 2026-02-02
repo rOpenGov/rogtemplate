@@ -199,6 +199,12 @@ footer .pkgdown-footer-left {
   border-color: var(--bs-warning);
 }
 
+@media (max-width: 575.98px) {
+  .btn-copy-ex {
+    right: 5px;
+  }
+}
+
 .pkg {
   font-weight: bold;
 }
