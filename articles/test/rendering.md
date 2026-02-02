@@ -106,6 +106,55 @@ Non-R code in `\preformatted{}`
 
     yaml: [a, b, c]
 
+### `pre` blocks
+
+Testing margins and copy buttons on small screens.
+
+``` r
+txt <- "Not wrapped; check the copy button behavior."
+```
+
+Wrapped in a `<section>` (e.g. `section > div > pre`)
+
+``` r
+txt <- "Wrapped in section"
+```
+
+> This is a blockquote with enough text to test the width of the code
+> block and verify whether it aligns with the paragraph width.
+>
+> ``` r
+> txt <- "Wrapped in blockquote; margins are preserved."
+> ```
+>
+> Continue…
+
+- This list item includes enough text to test the width of the code
+  block and check whether it matches the paragraph width.
+
+  ``` r
+  txt <- "Wrapped in li; margins are preserved."
+  ```
+
+- Another bullet.
+
+  1.  Nested list.
+
+  2.  Second level item with enough text to test the width of the code
+      block and confirm alignment with the paragraph.
+
+      ``` r
+      txt <- "Wrapped in li; margins are preserved."
+      ```
+
+  3.  Nested list continues.
+
+`<pre>` block inside a `<details>` element.
+
+``` r
+txt <- "Wrapped in details"
+```
+
 ### Crayon
 
 ``` r
