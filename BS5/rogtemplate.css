@@ -224,8 +224,7 @@ code {
   /* See https://github.com/r-lib/pkgdown/pull/2970 */
 
   /* Need to override pkgdown */
-  li > div > .btn-copy-ex,
-  li > div > .btn-copy-ex {
+  .btn-copy-ex {
     right: 5px;
   }
 
