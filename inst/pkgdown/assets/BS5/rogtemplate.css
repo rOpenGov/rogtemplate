@@ -65,6 +65,11 @@ main img {
   color: inherit;
 }
 
+/* --- Dividers in menu --- */
+.navbar-nav .nav-item.dropdown ul li:first-child hr {
+  display: none;
+}
+
 /* --- Search ---*/
 .algolia-autocomplete .aa-dropdown-menu {
   color: var(--bs-body-color);
