@@ -33,11 +33,11 @@ navbar:
 
 articles:
 - title: Articles
-  navbar:
+  navbar: Dashboards
   contents:
   - articles/downloads
 
-- title: Menu
+- title: Testing - Menu
   navbar: Menu bar
   desc: Testing a menu bar in the navbar
   contents:
