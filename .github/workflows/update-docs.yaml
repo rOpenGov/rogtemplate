@@ -77,6 +77,28 @@ jobs:
 
     - uses: r-lib/actions/check-r-package@v2
 
+  build-pkgdown:
+    needs: update-docs
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@v6
+
+    - uses: r-lib/actions/setup-pandoc@v2
+
+    - uses: r-lib/actions/setup-r@v2
+      with:
+        use-public-rspm: true
+
+    - uses: r-lib/actions/setup-r-dependencies@v2
+      with:
+        extra-packages: |
+          local::.
+          ropengov/rogtemplate
+
+        needs: website
+
     - name: Build logo if not present and prepare template
       run: |
         # Check that logo is not present
