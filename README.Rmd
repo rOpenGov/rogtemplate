@@ -4,7 +4,8 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
+```{r}
+#| include: false
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -52,7 +53,8 @@ from the `gh-pages` branch.
 You can install **rogtemplate** using the
 [r-universe](https://ropengov.r-universe.dev/rogtemplate):
 
-```{r, eval=FALSE}
+```{r}
+#| eval: false
 install.packages("rogtemplate",
   repos = c("https://ropengov.r-universe.dev", "https://cloud.r-project.org")
 )
@@ -60,7 +62,8 @@ install.packages("rogtemplate",
 
 You can use also the **pak** package:
 
-```{r, eval=FALSE}
+```{r}
+#| eval: false
 pak::pak("ropengov/rogtemplate")
 ```
 
@@ -69,7 +72,8 @@ before but the deployment would be still performed by a GitHub action.
 
 For building locally your package into your `docs` folder use:
 
-```{r, eval=FALSE}
+```{r}
+#| eval: false
 rogtemplate::rog_build()
 
 # or you can use also
