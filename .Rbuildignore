@@ -42,4 +42,3 @@
 ^vignettes/articles/\.quarto$
 ^vignettes/articles/*_files$
 ^\.quarto$
-^\./vignettes/test-precompute\.Rmd\.orig$
