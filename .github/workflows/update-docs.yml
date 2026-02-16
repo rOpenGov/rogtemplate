@@ -29,9 +29,7 @@ jobs:
           local::.
           any::rcmdcheck
           ropengov/rogtemplate
-          any::pkgdown
           dieghernan/pkgdev
-        needs: website
 
     - name: Install optipng
       run: |
@@ -77,8 +75,6 @@ jobs:
 
     - uses: r-lib/actions/check-r-package@v2
 
-  build-pkgdown:
-    needs: update-docs
     runs-on: ubuntu-latest
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
@@ -97,7 +93,6 @@ jobs:
           local::.
           ropengov/rogtemplate
 
-        needs: website
 
     - name: Build logo if not present and prepare template
       run: |
@@ -109,11 +104,9 @@ jobs:
           message("The package already has a logo")
         }
 
-        rogtemplate::rog_add_template_pkgdown()
       shell: Rscript {0}
 
     - name: Deploy package
       run: |
         git config --local user.name "github-actions[bot]"
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        Rscript -e 'pkgdown::deploy_to_branch(new_process = TRUE, run_dont_run = TRUE, lazy = TRUE)'
