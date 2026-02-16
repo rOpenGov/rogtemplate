@@ -42,3 +42,5 @@
 ^vignettes/articles/\.quarto$
 ^vignettes/articles/*_files$
 ^\.quarto$
+^vignettes/_quarto\.yaml$
+^vignettes/_quarto\.yml$
