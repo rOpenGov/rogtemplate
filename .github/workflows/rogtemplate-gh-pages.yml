@@ -2,10 +2,14 @@
 # Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
 on:
   push:
-    branches: [main, master]
+    branches: [main, master, release]
     tags: ["*"]
   schedule:
   - cron: "01 00 * * 0"
+  workflow_run:
+    workflows: [update-docs]
+    types: completed
+    branches: [main, master]
   workflow_dispatch:
 
 
@@ -19,6 +23,9 @@ concurrency:
 jobs:
   rogtemplate-gh-pages:
     runs-on: ubuntu-latest
+    if: >
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
@@ -35,7 +42,9 @@ jobs:
         extra-packages: |
           local::.
           ropengov/rogtemplate
-
+          any::devtools
+          any::reactable
+          any::pkgdown
         needs: website
 
     - name: Build logo if not present and prepare template
@@ -55,4 +64,4 @@ jobs:
       run: |
         git config --local user.name "github-actions[bot]"
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        Rscript -e 'pkgdown::deploy_to_branch(new_process = TRUE, run_dont_run = TRUE, lazy = TRUE)'
+        Rscript -e 'pkgdown::deploy_to_branch(clean = TRUE, run_dont_run = TRUE)'
