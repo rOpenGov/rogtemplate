@@ -82,12 +82,17 @@ for more info.
 
 # Package index
 
-## All functions
+## Main functions
 
 - [`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md)
   :
 
   Creates a GitHub action that deploys on `gh-pages` branch
+
+- [`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)
+  : Build your pkgdown website locally
+
+## Extras
 
 - [`rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md)
   :
@@ -98,9 +103,6 @@ for more info.
   :
 
   Add a rOpenGov badge to your `README` file
-
-- [`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)
-  : Build your pkgdown website locally
 
 - [`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md)
   : Load rogtemplate fonts
@@ -114,9 +116,41 @@ for more info.
   [`rog_qualitative_pal()`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
   : rOpenGov color palettes
 
+## Palettes
+
+- [`rog_orange_pal()`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
+  [`rog_dark_pal()`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
+  [`rog_gradient_pal()`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
+  [`rog_qualitative_pal()`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
+  : rOpenGov color palettes
+
+## About the package
+
+- [`rogtemplate`](https://ropengov.github.io/rogtemplate/reference/rogtemplate-package.md)
+  [`rogtemplate-package`](https://ropengov.github.io/rogtemplate/reference/rogtemplate-package.md)
+  : rogtemplate: 'pkgdown' Template for 'rOpenGov' Packages
+
 # Articles
 
-### All vignettes
+### Articles
+
+- [Downloads of rOpenGov
+  packages](https://ropengov.github.io/rogtemplate/articles/downloads.md):
+
+### Testing - Menu
+
+Testing a menu bar in the navbar
+
+- [ggplot2
+  example](https://ropengov.github.io/rogtemplate/articles/menu/ggplot2.md):
+- [Testing syntax
+  highlighter](https://ropengov.github.io/rogtemplate/articles/menu/highlight.md):
+
+### Testing
+
+These articles are used to test various
+[pkgdown](https://CRAN.R-project.org/package=pkgdown) features that can
+not easily be tested automatically.
 
 - [usdoj: For Accessing U.S. Department of Justice (DOJ) Open
   Data](https://ropengov.github.io/rogtemplate/articles/test/blog-article.md):
@@ -124,15 +158,6 @@ for more info.
 - [Bullets](https://ropengov.github.io/rogtemplate/articles/test/bullets.md):
 
 - [Code](https://ropengov.github.io/rogtemplate/articles/test/code.md):
-
-- [Downloads of rOpenGov
-  packages](https://ropengov.github.io/rogtemplate/articles/downloads.md):
-
-- [ggplot2
-  example](https://ropengov.github.io/rogtemplate/articles/menu/ggplot2.md):
-
-- [Testing syntax
-  highlighter](https://ropengov.github.io/rogtemplate/articles/menu/highlight.md):
 
 - [Long
   TOC](https://ropengov.github.io/rogtemplate/articles/test/long-toc.md):

@@ -1,6 +1,24 @@
 # Articles
 
-### All vignettes
+### Articles
+
+- [Downloads of rOpenGov
+  packages](https://ropengov.github.io/rogtemplate/articles/downloads.md):
+
+### Testing - Menu
+
+Testing a menu bar in the navbar
+
+- [ggplot2
+  example](https://ropengov.github.io/rogtemplate/articles/menu/ggplot2.md):
+- [Testing syntax
+  highlighter](https://ropengov.github.io/rogtemplate/articles/menu/highlight.md):
+
+### Testing
+
+These articles are used to test various
+[pkgdown](https://CRAN.R-project.org/package=pkgdown) features that can
+not easily be tested automatically.
 
 - [usdoj: For Accessing U.S. Department of Justice (DOJ) Open
   Data](https://ropengov.github.io/rogtemplate/articles/test/blog-article.md):
@@ -8,15 +26,6 @@
 - [Bullets](https://ropengov.github.io/rogtemplate/articles/test/bullets.md):
 
 - [Code](https://ropengov.github.io/rogtemplate/articles/test/code.md):
-
-- [Downloads of rOpenGov
-  packages](https://ropengov.github.io/rogtemplate/articles/downloads.md):
-
-- [ggplot2
-  example](https://ropengov.github.io/rogtemplate/articles/menu/ggplot2.md):
-
-- [Testing syntax
-  highlighter](https://ropengov.github.io/rogtemplate/articles/menu/highlight.md):
 
 - [Long
   TOC](https://ropengov.github.io/rogtemplate/articles/test/long-toc.md):
