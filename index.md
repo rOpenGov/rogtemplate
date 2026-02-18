@@ -15,7 +15,7 @@ control but it is not automatic.
 ### Option A: Deploy using GitHub Actions
 
 It is not necessary to install **rogtemplate** itself. First copy [this
-file](https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yml)
+file](https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml)
 into your `.github/workflows/` folder.
 
 Next go to *YOUR_GITHUB_REPO\>Settings\>GitHub Pages* and deploy your
@@ -56,7 +56,7 @@ pkgdown::build_site()
 
 Note that
 [`rogtemplate::rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md)
-creates a `_pkgdown.yml` file (or modify an existing one) with the
+creates a `_pkgdown.yaml` file (or modify an existing one) with the
 following lines:
 
 ``` yaml
