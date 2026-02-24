@@ -1,6 +1,6 @@
 # Downloads of rOpenGov packages
 
-*Updated: 22 Feb 2026*
+*Updated: 24 Feb 2026*
 
 ## On CRAN
 
