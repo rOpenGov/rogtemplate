@@ -81,7 +81,7 @@ template:
             dropdown-dark-bg: "#343a40"
             dropdown-dark-border-color: rgba(255, 255, 255, .1)
             dropdown-dark-divider-bg: rgba(255, 255, 255, .1)
-            blockquote-border-color: transparent
+            blockquote-border-color: rgba(255, 102, 0, .3)
             code-color: "#e83e8c"
             code-color-dark: "#e83e8c"
 
