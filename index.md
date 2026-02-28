@@ -1,5 +1,5 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- index.md is generated from index.Rmd. Please edit that file -->
 
 # rogtemplate <a href='https://ropengov.github.io/rogtemplate/'><img src="man/figures/logo.png" align="right" height="139"/></a>
 
@@ -71,12 +71,22 @@ Note that `rogtemplate::rog_add_template_pkgdown()` creates a
 `_pkgdown.yaml` file (or modify an existing one) with the following
 lines:
 
+<div class="code-with-filename">
+
+<div class="code-with-filename-file">
+
+<pre><strong>.pkgdown.yaml</strong></pre>
+
 ``` yaml
 
 template:
   bootstrap: 5
   package: rogtemplate
 ```
+
+</div>
+
+</div>
 
 These lines tells **pkgdown** to use **rogtemplate**.
 
