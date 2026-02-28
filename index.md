@@ -59,6 +59,8 @@ Note that
 creates a `_pkgdown.yaml` file (or modify an existing one) with the
 following lines:
 
+    .pkgdown.yaml
+
 ``` yaml
 template:
   bootstrap: 5
