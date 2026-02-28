@@ -1,4 +1,6 @@
 on:
+  push:
+    branches: [main, master]
   workflow_dispatch:
 
 
@@ -25,6 +27,7 @@ jobs:
 
     - uses: r-lib/actions/setup-r-dependencies@v2
       with:
+        install-quarto: true
         extra-packages: |
           local::.
           any::rcmdcheck
@@ -61,8 +64,9 @@ jobs:
 
     - name: Update docs
       run: |
-        
-        pkgdev::update_docs(opt_dir = c("man/figures", "img", "vignettes"))
+        source("data-raw/compress_css.R")
+
+        pkgdev::update_docs()
 
       shell: Rscript {0}
 
