@@ -85,12 +85,20 @@ pkgdown::build_site()
 Note that `rogtemplate::rog_add_template_pkgdown()` creates a `_pkgdown.yaml`
 file (or modify an existing one) with the following lines:
 
+:::: code-with-filename
+::: code-with-filename-file
+```{=html}
+<pre><strong>.pkgdown.yaml</strong></pre>
+```
+
 ``` yaml
 
 template:
   bootstrap: 5
   package: rogtemplate
 ```
+:::
+::::
 
 These lines tells **pkgdown** to use **rogtemplate**.
 
