@@ -202,7 +202,7 @@ footer .pkgdown-footer-left {
 blockquote,
 .blockquote {
   margin: 0 0 1rem;
-  padding: .625rem 1.25rem;
+  padding: 0.625rem 1.25rem;
   margin-bottom: 1rem;
   font-size: 1.25rem;
 }
@@ -227,6 +227,14 @@ blockquote,
 }
 
 /* ---Code--- */
+.code-with-filename .code-with-filename-file pre {
+  margin-bottom: 0;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  border-radius: 0;
+  background-color: RGBA(var(--bs-body-color-rgb), 0.1);
+}
+
 code a:any-link {
   text-decoration: underline;
   background-color: transparent !important;
