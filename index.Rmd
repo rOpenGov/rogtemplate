@@ -92,7 +92,6 @@ file (or modify an existing one) with the following lines:
 ```
 
 ``` yaml
-
 template:
   bootstrap: 5
   package: rogtemplate

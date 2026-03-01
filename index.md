@@ -78,7 +78,6 @@ lines:
 <pre><strong>.pkgdown.yaml</strong></pre>
 
 ``` yaml
-
 template:
   bootstrap: 5
   package: rogtemplate
