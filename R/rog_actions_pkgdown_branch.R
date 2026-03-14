@@ -26,7 +26,10 @@ rog_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
   usethis::use_git_ignore("*.Rds", directory = ".github")
 
   # Get action file
-  filepath <- system.file("yaml/rogtemplate-gh-pages.yaml", package = "rogtemplate")
+  filepath <- system.file(
+    "yaml/rogtemplate-gh-pages.yaml",
+    package = "rogtemplate"
+  )
 
   # Copy
   result <- file.copy(filepath, destdir, overwrite = overwrite)
