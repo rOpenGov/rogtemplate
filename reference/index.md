@@ -2,6 +2,11 @@
 
 ## Main functions
 
+- [`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md)
+  :
+
+  Creates a GitHub action that deploys on `gh-pages` branch
+
 - [`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)
   : Build your pkgdown website locally
 
