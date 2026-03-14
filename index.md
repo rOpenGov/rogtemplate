@@ -38,10 +38,9 @@ You can use also the **pak** package:
 pak::pak("ropengov/rogtemplate")
 ```
 
-You can use
-[`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md)
-for setting up the action described before but the deployment would be
-still performed by a GitHub action.
+You can use `rog_actions_pkgdown_branch()` for setting up the action
+described before but the deployment would be still performed by a GitHub
+action.
 
 For building locally your package into your `docs` folder use:
 
