@@ -186,8 +186,7 @@ references:
   authors:
   - family-names: Qiu
     given-names: Yixuan
-  - family-names: details.
-    given-names: authors/contributors of the included software. See file AUTHORS for
+    email: yixuan.qiu@cos.name
   year: '2026'
   doi: 10.32614/CRAN.package.showtext
   version: '>= 0.9.4'
