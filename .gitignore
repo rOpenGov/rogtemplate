@@ -34,3 +34,4 @@ Rplots.pdf
 index_files/
 *index.html
 pkgdown/*_files
+*.rmarkdown
