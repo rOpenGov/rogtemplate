@@ -10,7 +10,7 @@ rog_build(pkg = ".", ...)
 \item{pkg}{Path to package.}
 
 \item{...}{
-  Arguments passed on to \code{\link[=rog_logo]{rog_logo}}, \code{\link[pkgdown:build_site]{pkgdown::build_site}}
+  Arguments passed on to \code{\link{rog_logo}}, \code{\link[pkgdown:build_site]{pkgdown::build_site}}
   \describe{
     \item{\code{overwrite}}{Should the current logo be overwritten? When \code{TRUE} it
 would run \code{\link[usethis:use_logo]{usethis::use_logo()}}.}

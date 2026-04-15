@@ -14,10 +14,10 @@ Load the current font in use for rOpenGov,
 rog_load_font()
 }
 \seealso{
-Other extras: 
-\code{\link{rog_add_template_pkgdown}()},
-\code{\link{rog_badge_ropengov}()},
-\code{\link{rog_logo}()},
+Other extras:
+\code{\link[=rog_add_template_pkgdown]{rog_add_template_pkgdown()}},
+\code{\link[=rog_badge_ropengov]{rog_badge_ropengov()}},
+\code{\link[=rog_logo]{rog_logo()}},
 \code{\link{rog_pals}}
 }
 \concept{extras}

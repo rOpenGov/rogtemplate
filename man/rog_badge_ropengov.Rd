@@ -26,12 +26,12 @@ options: alt='rOpenGov'}}}{**rOpenGov**}
 rog_badge_ropengov(install = FALSE)
 }
 \seealso{
-\code{\link[usethis:badges]{usethis::use_badge()}}
+\code{\link[usethis:use_badge]{usethis::use_badge()}}
 
-Other extras: 
-\code{\link{rog_add_template_pkgdown}()},
-\code{\link{rog_load_font}()},
-\code{\link{rog_logo}()},
+Other extras:
+\code{\link[=rog_add_template_pkgdown]{rog_add_template_pkgdown()}},
+\code{\link[=rog_load_font]{rog_load_font()}},
+\code{\link[=rog_logo]{rog_logo()}},
 \code{\link{rog_pals}}
 }
 \concept{extras}

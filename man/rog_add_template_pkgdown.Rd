@@ -28,12 +28,12 @@ rog_add_template_pkgdown()
 \seealso{
 \code{vignette("pkgdown", package = "pkgdown")},
 \code{vignette("linking", package = "pkgdown")},
-\code{\link[usethis:tidyverse]{usethis::use_tidy_description()}}.
+\code{\link[usethis:use_tidy_description]{usethis::use_tidy_description()}}.
 
-Other extras: 
-\code{\link{rog_badge_ropengov}()},
-\code{\link{rog_load_font}()},
-\code{\link{rog_logo}()},
+Other extras:
+\code{\link[=rog_badge_ropengov]{rog_badge_ropengov()}},
+\code{\link[=rog_load_font]{rog_load_font()}},
+\code{\link[=rog_logo]{rog_logo()}},
 \code{\link{rog_pals}}
 }
 \concept{extras}

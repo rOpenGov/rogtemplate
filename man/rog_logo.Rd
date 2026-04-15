@@ -52,10 +52,10 @@ plot(logo)
 \code{\link[hexSticker:sticker]{hexSticker::sticker()}}, \code{\link[usethis:use_logo]{usethis::use_logo()}},
 \code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}}.
 
-Other extras: 
-\code{\link{rog_add_template_pkgdown}()},
-\code{\link{rog_badge_ropengov}()},
-\code{\link{rog_load_font}()},
+Other extras:
+\code{\link[=rog_add_template_pkgdown]{rog_add_template_pkgdown()}},
+\code{\link[=rog_badge_ropengov]{rog_badge_ropengov()}},
+\code{\link[=rog_load_font]{rog_load_font()}},
 \code{\link{rog_pals}}
 }
 \concept{extras}
