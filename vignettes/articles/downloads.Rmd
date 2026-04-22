@@ -66,7 +66,6 @@ mypaks <- c(mypaks[mypaks %in% crandb], cranpaks) |>
 mypaks <- mypaks[mypaks != "fmi"]
 
 dwn <- lapply(mypaks, cranlogs::cran_downloads, from = "2016-01-01")
-
 dwn <- dwn |>
   bind_rows() |>
   as_tibble()
@@ -89,7 +88,7 @@ first_date_on_cran <- function(pkg) {
     as.Date()
 
   df <- tibble(package = pkg, date = d, lv = lv)
-  df
+  return(df)
 }
 
 fechas <- lapply(unique(dwn$package), first_date_on_cran) |>
@@ -97,10 +96,7 @@ fechas <- lapply(unique(dwn$package), first_date_on_cran) |>
 
 
 dwn <- dwn |>
-  left_join(
-    fechas |>
-      select(package, d_cran = date)
-  ) |>
+  left_join(fechas |> select(package, d_cran = date)) |>
   filter(date >= d_cran) |>
   select(-d_cran) |>
   tidyr::replace_na(list(count = 0)) |>
@@ -123,7 +119,6 @@ fact <- dwn_m |>
   arrange(precedence) |>
   pull(package) |>
   unique()
-
 
 dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
 ```
@@ -317,6 +312,7 @@ res <- lapply(mypaks, function(x) {
   api_res <- suppressWarnings(try(download.file(
     paste0("https://packagemanager.posit.co/__api__/repos/1/packages/", x),
     tmp,
+    mode = "wb",
     quiet = TRUE
   ), silent = TRUE))
 
