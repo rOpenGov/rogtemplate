@@ -36,7 +36,8 @@ Suggests:
     styler,
     testthat (>= 3.0.0)
 VignetteBuilder: 
-    quarto
+    quarto,
+    knitr
 Config/Needs/website: cranlogs, tidyverse, jsonlite, lubridate, reactable,
     pkgsearch, htmltools, diffviewer
 Config/roxygen2/markdown: TRUE
