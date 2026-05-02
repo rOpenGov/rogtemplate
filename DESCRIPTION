@@ -36,14 +36,13 @@ Suggests:
     styler,
     testthat (>= 3.0.0)
 VignetteBuilder: 
-    knitr,
     quarto
 Config/Needs/website: cranlogs, tidyverse, jsonlite, lubridate, reactable,
     pkgsearch, htmltools, diffviewer
+Config/roxygen2/markdown: TRUE
 Config/roxygen2/version: 8.0.0.9000
 Config/testthat/edition: 3
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
 X-schema.org-isPartOf: http://ropengov.org/
 X-schema.org-keywords: ropengov, template, r, r-package, github-actions,
     pkgdown, pkgdown-template
