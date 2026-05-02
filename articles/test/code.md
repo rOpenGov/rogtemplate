@@ -5,6 +5,7 @@ Some filler text.
 Some filler text.
 
 ``` r
+
 ruler <- function(width = getOption("width")) {
   x <- seq_len(width)
   y <- rep("-", length(x))
@@ -24,6 +25,7 @@ ruler()
 Some random code
 
 ``` r
+
 render_rmarkdown <- function(pkg, input, output, ..., copy_images = TRUE, quiet = TRUE) {
   input_path <- path_abs(input, pkg$src_path)
   output_path <- path_abs(output, pkg$dst_path)

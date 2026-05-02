@@ -36,6 +36,7 @@ Other extras:
 ## Examples
 
 ``` r
+
 rog_badge_ropengov(install = FALSE)
 #> Badge URL is 
 #> [![rOpenGov package](https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge.svg)](https://ropengov.org/)

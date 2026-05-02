@@ -27,6 +27,7 @@ You can install **rogtemplate** using the
 [r-universe](https://ropengov.r-universe.dev/rogtemplate):
 
 ``` r
+
 install.packages("rogtemplate",
   repos = c("https://ropengov.r-universe.dev", "https://cloud.r-project.org")
 )
@@ -35,6 +36,7 @@ install.packages("rogtemplate",
 You can use also the **pak** package:
 
 ``` r
+
 pak::pak("ropengov/rogtemplate")
 ```
 
@@ -46,6 +48,7 @@ still performed by a GitHub action.
 For building locally your package into your `docs` folder use:
 
 ``` r
+
 rogtemplate::rog_build()
 
 # or you can use also

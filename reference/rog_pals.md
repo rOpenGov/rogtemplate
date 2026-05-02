@@ -53,6 +53,7 @@ Other extras:
 ## Examples
 
 ``` r
+
 scales::show_col(rog_orange_pal(9))
 
 

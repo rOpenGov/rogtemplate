@@ -30,6 +30,7 @@ fields for the body text, date, title, url, the name of the
 corresponding division, to name just a few.
 
 ``` r
+
 library(usmap)
 library(lubridate)
 library(tidyverse)
@@ -87,6 +88,7 @@ from rOpenGov’s r-universe. For this tutorial we will also use the
 tidyverse and tidytext libraries.
 
 ``` r
+
 library(usdoj)
 library(usmap)
 library(tidyverse)
@@ -102,6 +104,7 @@ records. usdoj automatically flattens nested fields. The resulting data
 frame is easily text mined.
 
 ``` r
+
 press_releases <- doj_press_releases(n_results = 700)
 ```
 
@@ -109,6 +112,7 @@ We will also save the date range present in the data for use in our
 visualization (later on).
 
 ``` r
+
 earliest_date <- ymd(min(press_releases$date))
 earliest_date <- paste0(month(earliest_date, label = TRUE), " ", day(earliest_date), ", ", year(earliest_date))
 
@@ -117,6 +121,7 @@ latest_date <- paste0(month(latest_date, label = TRUE), " ", day(latest_date), "
 ```
 
 ``` r
+
 write_csv(press_releases, "intro_pt_2.csv")
 press_releases <- read_csv("intro_pt_2.csv", show_col_types = FALSE)
 ```
@@ -128,6 +133,7 @@ relate to USAOs across multiple states or may implicate multiple
 offices.
 
 ``` r
+
 head(press_releases$name, 10)
 ```
 
@@ -147,6 +153,7 @@ dense blocks of natural language text into a structure that is more
 easily quantifiable.
 
 ``` r
+
 tail(press_releases$body, 2)
 ```
 
@@ -157,6 +164,7 @@ field and filtering for just press releases that contain USAO as a
 division.
 
 ``` r
+
 state_names <- paste(statepop$full, collapse = "|USAO - ")
 
 press_releases$name <-  str_extract(press_releases$name, paste0("USAO - ", state_names))
@@ -169,6 +177,7 @@ The following code tokenizes the body text, a process through which
 dense paragraphs are separated into one-word-per-row.
 
 ``` r
+
 tokenized_press_releases <- usao_press_releases %>%
   select(body, name) %>%
   unnest_tokens(word, body)
@@ -179,6 +188,7 @@ frequently in the data set and, for our purposes, they don’t reveal much
 meaningful information.
 
 ``` r
+
 cleaned_tokenized_press_releases <- tokenized_press_releases %>%
   slice(which(!str_detect(word, "[[:digit:]]")))
 ```
@@ -191,12 +201,14 @@ reflecting the overall count). To remove typos and other such errors, we
 will also remove words that have been stated less than 5 times.
 
 ``` r
+
 counted_tokenized_press_releases <- cleaned_tokenized_press_releases %>%
   count(name, word) %>%
   filter(n > 5)
 ```
 
 ``` r
+
 head(counted_tokenized_press_releases)
 ```
 
@@ -205,6 +217,7 @@ We will now gather the overall word count per “name” grouping and use
 and not the others.
 
 ``` r
+
 total_words_per_group <- counted_tokenized_press_releases %>%
   group_by(name) %>%
   summarize(total = sum(n)) %>%
@@ -221,6 +234,7 @@ grouping and not another. In the following code we take the top 10 words
 per name grouping and plot them based on their TF-IDF scores.
 
 ``` r
+
 top_usao_press_releases <- usao_press_releases_tf_idf %>%
   group_by(name) %>%
   arrange(desc(tf_idf)) %>%

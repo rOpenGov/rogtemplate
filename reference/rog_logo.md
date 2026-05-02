@@ -67,10 +67,11 @@ Other extras:
 ## Examples
 
 ``` r
+
 tmp <- tempfile(fileext = ".png")
 rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
 #> B612 Mono font loaded
-#> Logo created on /tmp/Rtmpg0WAU1/file1cab6ce33fe3.png
+#> Logo created on /tmp/RtmpUOiOT9/file1d9621d4413c.png
 
 # Display
 logo <- magick::image_read(tmp)
