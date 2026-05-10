@@ -88,23 +88,21 @@ rog_logo <- function(
     ggplot2::theme_void()
 
   # Create plot
-  suppressWarnings(
-    hexSticker::sticker(
-      p,
-      package = pkgname,
-      s_width = 1,
-      s_y = 0.45,
-      s_x = 1,
-      h_fill = "#343a40",
-      h_color = "#ff6600",
-      p_family = family,
-      p_x = p_x,
-      p_y = p_y,
-      p_size = p_size,
-      p_color = "#ffffff",
-      filename = filename
-    )
-  )
+  suppressWarnings(hexSticker::sticker(
+    p,
+    package = pkgname,
+    s_width = 1,
+    s_y = 0.45,
+    s_x = 1,
+    h_fill = "#343a40",
+    h_color = "#ff6600",
+    p_family = family,
+    p_x = p_x,
+    p_y = p_y,
+    p_size = p_size,
+    p_color = "#ffffff",
+    filename = filename
+  ))
 
   message("Logo created on ", filename)
 

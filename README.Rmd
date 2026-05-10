@@ -85,7 +85,6 @@ pkgdown::build_site()
 Note that `rogtemplate::rog_add_template_pkgdown()` creates a `_pkgdown.yaml`
 file (or modify an existing one) with the following lines:
 
-
 ``` yaml
 
 template:

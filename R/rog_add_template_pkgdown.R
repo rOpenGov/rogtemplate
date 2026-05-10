@@ -72,9 +72,7 @@ rog_add_template_pkgdown <- function() {
       path = NULL,
       bootswatch = NULL,
       bslib = NULL,
-      opengraph = list(
-        twitter = list(site = "@rOpenGov")
-      ),
+      opengraph = list(twitter = list(site = "@rOpenGov")),
       params = list(bootswatch = NULL)
     )
   )
