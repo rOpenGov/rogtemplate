@@ -1,7 +1,10 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url><loc>https://ropengov.github.io/rogtemplate/404.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/CONTRIBUTING.html</loc></url>
 <url><loc>https://ropengov.github.io/rogtemplate/LICENSE-text.html</loc></url>
 <url><loc>https://ropengov.github.io/rogtemplate/LICENSE.html</loc></url>
+<url><loc>https://ropengov.github.io/rogtemplate/SUPPORT.html</loc></url>
 <url><loc>https://ropengov.github.io/rogtemplate/articles/downloads.html</loc></url>
 <url><loc>https://ropengov.github.io/rogtemplate/articles/index.html</loc></url>
 <url><loc>https://ropengov.github.io/rogtemplate/articles/menu/ggplot2.html</loc></url>

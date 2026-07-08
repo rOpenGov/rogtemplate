@@ -1,5 +1,5 @@
 pandoc: 3.8.3
-pkgdown: 2.2.0
+pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
   test/blog-article: test/blog-article.html
@@ -16,7 +16,7 @@ articles:
   test/short: test/short.html
   test-precompute: test-precompute.html
   test/widgets: test/widgets.html
-last_built: 2026-07-05T04:15Z
+last_built: 2026-07-08T16:47Z
 urls:
   reference: https://ropengov.github.io/rogtemplate/reference
   article: https://ropengov.github.io/rogtemplate/articles
