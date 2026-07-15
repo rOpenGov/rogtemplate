@@ -49,7 +49,7 @@ rog_add_template_pkgdown <- function() {
   pkg$set_urls(urls)
 
   pkg$set("BugReports", issues)
-  pkg$set("X-schema.org-isPartOf", "http://ropengov.org/")
+  pkg$set("X-schema.org-isPartOf", "https://ropengov.org/")
 
   # Add keywords
   key <- pkg$get("X-schema.org-keywords")
