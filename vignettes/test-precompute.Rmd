@@ -1,15 +1,15 @@
 ---
-title: "Example of a precomputed vignette"
+title: "Precomputed vignette example"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Example of a precomputed vignette}
+  %\VignetteIndexEntry{Precomputed vignette example}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
 
 
-This is an example of a precomputed vignette:
+This vignette tests a precomputed vignette workflow.
 
 
 ``` r
@@ -20,11 +20,11 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
 ```
 
 <div class="figure">
-<img src="./plot-1.png" alt="A plot with a long caption here" width="100%" />
-<p class="caption">A plot with a long caption here</p>
+<img src="./plot-1.png" alt="A density raster plot." width="100%" />
+<p class="caption">A density raster plot.</p>
 </div>
 
-See here some text:
+The following placeholder text keeps the vignette long enough to test layout.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur massa
 risus, eu tincidunt magna finibus id. Donec quis tincidunt est, sed commodo leo.

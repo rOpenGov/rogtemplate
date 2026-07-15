@@ -1,20 +1,22 @@
-#' Configure `rogtemplate` for your pkgdown site
+#' Configure rogtemplate for your pkgdown site
 #'
-#' Add the corresponding configuration to your `_pkgdown.yml`. If it is not
-#' present, it would create a file on `pkgdown/_pkgdown.yml`. It would also
-#' add the corresponding lines to your .Rbuildignore.
+#' Add the rOpenGov template configuration to your `_pkgdown.yml`. If no
+#' configuration file exists, create one at `pkgdown/_pkgdown.yml`. Also add the
+#' corresponding paths to `.Rbuildignore`.
 #'
-#' It also adds the corresponding urls to the `_pkgdown.yml` file and the
-#' DESCRIPTION file if not present:
-#' * https://ropengov.github.io/pkgname/
-#' * https://github.com/ropengov/pkgname
+#' The function also adds these package URLs to `_pkgdown.yml` and DESCRIPTION
+#' if they are not already present:
+#' - https://ropengov.github.io/pkgname/
+#' - https://github.com/ropengov/pkgname
 #'
-#' @family extras
-#'
-#' @seealso `vignette("pkgdown", package = "pkgdown")`,
-#' `vignette("linking", package = "pkgdown")`,
-#' [usethis::use_tidy_description()].
-#'
+#' @returns The function is called for its side effects and returns
+#'   `invisible(NULL)`.
+#' @family site
+#' @seealso \CRANpkg{pkgdown} vignettes:
+#'   `vignette("pkgdown", package = "pkgdown")` and
+#'   `vignette("linking", package = "pkgdown")`,
+#'   \CRANpkg{usethis}'s [usethis::use_tidy_description()].
+#' @encoding UTF-8
 #' @export
 #' @examples
 #' \dontrun{
@@ -27,7 +29,7 @@ rog_add_template_pkgdown <- function() {
   pkgurl <- paste0("https://ropengov.github.io/", pkgname, "/")
   repo <- paste0("https://github.com/rOpenGov/", pkgname)
 
-  # Add auto linking to description
+  # Prepare DESCRIPTION for automatic links in pkgdown.
   desc_path <- file.path(normalizePath("."), "DESCRIPTION")
 
   pkg <- desc::desc_normalize(desc_path)
@@ -35,13 +37,12 @@ rog_add_template_pkgdown <- function() {
   urls <- pkg$get_urls()
   issues <- paste0(repo, "/issues")
 
-  # Add url if no present
+  # Add the package site URL if it is not already present.
   if (isFALSE(tolower(pkgurl) %in% tolower(urls))) {
     urls <- c(urls, pkgurl)
   }
 
-  # Add repo if no present
-
+  # Add the package repository URL if it is not already present.
   if (isFALSE(tolower(repo) %in% tolower(urls))) {
     urls <- c(urls, repo)
   }
@@ -51,7 +52,7 @@ rog_add_template_pkgdown <- function() {
   pkg$set("BugReports", issues)
   pkg$set("X-schema.org-isPartOf", "https://ropengov.org/")
 
-  # Add keywords
+  # Ensure that schema.org keywords include rOpenGov.
   key <- pkg$get("X-schema.org-keywords")
   key <- unique(c("ropengov", unlist(strsplit(key, ","))))
   key <- key[!is.na(key)]
@@ -63,7 +64,7 @@ rog_add_template_pkgdown <- function() {
 
   usethis::use_tidy_description()
 
-  # template
+  # Define the pkgdown template configuration.
   template <- list(
     url = paste0("https://ropengov.github.io/", pkgname, "/"),
     template = list(
@@ -77,7 +78,7 @@ rog_add_template_pkgdown <- function() {
     )
   )
 
-  # Detect _pkgdown.yml
+  # Prefer the root pkgdown file, then fall back to pkgdown/_pkgdown.yml.
 
   file_exist <- FALSE
   path <- "_pkgdown.yml"
@@ -124,7 +125,7 @@ rog_add_template_pkgdown <- function() {
   usethis::use_build_ignore("pkgdown")
   usethis::use_build_ignore("_pkgdown.yml")
 
-  message("rogtemplate added to ", path)
+  message("rogtemplate added to ", path, ".")
 
   invisible()
 }

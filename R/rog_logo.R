@@ -1,32 +1,29 @@
-#' Creates a logo for your rOpenGov package
+#' Create a logo for your rOpenGov package
 #'
+#' Creates a logo automatically with \CRANpkg{hexSticker}'s
+#' [hexSticker::sticker()]. Optionally, create favicons with
+#' \CRANpkg{pkgdown}'s [pkgdown::build_favicons()].
 #'
-#' Creates a logo automatically with [hexSticker::sticker()].
-#' Optionally, create also favicons with [pkgdown::build_favicons()].
-#'
-#' @param pkgname Name of the package. If not present it would be autodetected
-#'   by the function.
-#'
+#' @param pkgname Name of the package. If not supplied, the name is detected
+#'   from DESCRIPTION.
 #' @param overwrite Should the current logo be overwritten? When `TRUE` it
-#'   would run [usethis::use_logo()].
-#'
-#' @param favicons Logical, do you want to create favicons with
-#' [pkgdown::build_favicons()]?
-#'
+#'   runs \CRANpkg{usethis}'s [usethis::use_logo()].
+#' @param favicons Should favicons be created with \CRANpkg{pkgdown}'s
+#'   [pkgdown::build_favicons()]?
 #' @inheritParams hexSticker::sticker
-#'
-#'
-#' @family extras
-#' @seealso [hexSticker::sticker()], [usethis::use_logo()],
-#' [pkgdown::build_favicons()].
-#'
+#' @returns The function is called for its side effects and returns `NULL`
+#'   invisibly.
+#' @family assets
+#' @seealso \CRANpkg{hexSticker}'s [hexSticker::sticker()],
+#'   \CRANpkg{usethis}'s [usethis::use_logo()] and \CRANpkg{pkgdown}'s
+#'   [pkgdown::build_favicons()].
+#' @encoding UTF-8
 #' @export
 #' @examples
-#'
 #' tmp <- tempfile(fileext = ".png")
 #' rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
 #'
-#' # Display
+#' # Display the logo.
 #' logo <- magick::image_read(tmp)
 #'
 #' logo
@@ -50,11 +47,11 @@ rog_logo <- function(
     dir.create(enddir, recursive = TRUE)
   }
 
-  # Load B612
+  # Load the rOpenGov font.
 
   family <- rog_load_font()
 
-  # Remove old logos: png and svg
+  # Remove old PNG and SVG logos before creating a new one.
   if (isTRUE(overwrite)) {
     oldlogo <- file.path("man", "figures", "logo.png")
     if (file.exists(oldlogo)) {
@@ -67,10 +64,10 @@ rog_logo <- function(
 
   if (isFALSE(overwrite) && file.exists(filename)) {
     filename <- tempfile(fileext = ".png")
-    message("Old logo detected. Use overwrite = TRUE")
+    message("Old logo detected. Use overwrite = TRUE.")
   }
 
-  # Subplot
+  # Build the logo background from the rOpenGov asset.
   img <- magick::image_read(system.file(
     "assets/partof.png",
     package = "rogtemplate"
@@ -87,7 +84,7 @@ rog_logo <- function(
     ) +
     ggplot2::theme_void()
 
-  # Create plot
+  # Create the hex logo.
   suppressWarnings(hexSticker::sticker(
     p,
     package = pkgname,
@@ -104,9 +101,9 @@ rog_logo <- function(
     filename = filename
   ))
 
-  message("Logo created on ", filename)
+  message("Logo created at ", filename, ".")
 
-  # Favicons
+  # Create favicons for pkgdown when the default logo path is used.
 
   if (isTRUE(favicons) && filename == "man/figures/logo.png") {
     pkgdown::build_favicons(overwrite = TRUE)
@@ -120,10 +117,10 @@ package_name <- function() {
   desc_path <- file.path(normalizePath("."), "DESCRIPTION")
 
   if (!file.exists(desc_path)) {
-    stop("No DESCRIPTION file found ", call. = FALSE)
+    stop("No DESCRIPTION file found.", call. = FALSE)
   }
 
-  # Read package name
+  # Read the package name from DESCRIPTION.
 
   packagename <- read.dcf(desc_path, "Package")
 
@@ -133,11 +130,12 @@ package_name <- function() {
 
 #' Load rogtemplate fonts
 #'
-#' Load the current font in use for rOpenGov,
-#' [B612 Mono](https://fonts.google.com/specimen/B612+Mono)
+#' Load the current rOpenGov font,
+#' [B612 Mono](https://fonts.google.com/specimen/B612+Mono).
 #'
-#' @family extras
-#'
+#' @returns The font family name, `"B612 Mono"`.
+#' @family assets
+#' @encoding UTF-8
 #' @export
 #' @examples
 #' rog_load_font()
@@ -160,7 +158,7 @@ rog_load_font <- function() {
 
   showtext::showtext_auto()
 
-  message(paste(family, "font loaded"))
+  message(family, " font loaded.")
 
   family
 }

@@ -1,6 +1,6 @@
 ---
-title: quarto features
-subtitle: Using this for shortcodes
+title: Quarto features
+subtitle: Use shortcodes
 output: html
 knitr:
   opts_chunk:
@@ -25,7 +25,7 @@ penguins |>                                      # <1>
   )                                              # <2>
 ```
 
-1.  Take `penguins`, and then,
+1.  Take `penguins` and then
 2.  add new columns for the bill ratio and bill area.
 
 ## Code filename
@@ -36,7 +36,7 @@ plt.plot([1,23,2,4])
 plt.show()
 ```
 
-## Callout Blocks
+## Callout blocks
 
 ```{=html}
 <div class="callout callout-style-default callout-note callout-titled">
@@ -47,8 +47,8 @@ plt.show()
 <div class="callout-body-container callout-body">
 ```
 
-Note that there are five types of callouts, including: `note`,`tip`, `warning`,
-`caution` and `important`.
+There are five callout types: `note`, `tip`, `warning`, `caution` and
+`important`.
 
 ```{=html}
 </div>
@@ -81,8 +81,8 @@ warning.
 <div class="callout-body-container callout-body">
 ```
 
-The callout heading is provided by the callout type, with the expected heading
-(i.e., Note, Warning, Important, Tip, or Caution).
+The callout type provides the expected heading, such as Note, Warning,
+Important, Tip or Caution.
 
 ```{=html}
 </div>
@@ -147,7 +147,7 @@ A simple callout.
 <div class="callout-body-container callout-body">
 ```
 
-No icon
+No icon.
 
 ```{=html}
 </div>
@@ -228,11 +228,11 @@ Here is a footnote reference,[^1] and another.[^2]
     The whole paragraph can be indented, or just the first line. In this way,
     multi-paragraph footnotes work like multi-paragraph list items.
 
-This paragraph won't be part of the note, because it isn't indented.
+This paragraph will not be part of the note because it is not indented.
 
 Here is an inline note.[^3]
 
-[^3]: Inlines notes are easier to write, since you don't have to pick an
+[^3]: Inline notes are easier to write because you do not have to pick an
     identifier and move down to type the note.
 
 ## Equations
@@ -300,10 +300,10 @@ The output of that inline code cell is {{< contents a-span >}}. Etc.
 ::: {#fig-placeholder}
 {{< placeholder 1000 200>}}
 
-This is a placeholder
+This is a placeholder.
 :::
 
-Cute puppies (@fig-pitbull and @fig-shar-pei) and placeholder
+Cute puppies (@fig-pitbull and @fig-shar-pei) and a placeholder
 (@fig-placeholder).
 ::::
 
@@ -312,9 +312,9 @@ Cute puppies (@fig-pitbull and @fig-shar-pei) and placeholder
 ::: {#fig-cern}
 {{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
 
-The video "CERN: The Journey of Discovery"
+The video "CERN: The Journey of Discovery".
 :::
 
-In @fig-cern...
+See @fig-cern.
 
 ## References

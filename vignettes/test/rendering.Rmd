@@ -1,5 +1,5 @@
 ---
-title: "Output Rendering"
+title: "Output rendering"
 subtitle: "Subtitle is skipped from the TOC"
 author: "Author is skipped from the TOC"
 date: "Date is skipped from the TOC"
@@ -10,18 +10,18 @@ date: "Date is skipped from the TOC"
 knitr::opts_chunk$set(collapse = TRUE, comment = "#>")
 ```
 
-This vignette tests pkgdown output rendering for several use cases.
+This vignette tests **pkgdown** output rendering for several use cases.
 
 ## Footnotes
 
-Yay[^1]
+Footnotes render correctly.[^1]
 
-[^1]: Including **footnotes**! 😁
+[^1]: Including **footnotes**.
 
 ## Figures
 
 ```{r}
-#| fig.alt: Test plot
+#| fig.alt: Line plot from 1 to 10.
 plot(1:10)
 ```
 
@@ -32,7 +32,7 @@ x <- readLines("test.txt")
 x
 ```
 
-![bacon](bacon.jpg)
+![Bacon placeholder image](bacon.jpg)
 
 ## Details tag
 
@@ -124,13 +124,13 @@ R code in `r` block:
 mean(a + 1)
 ```
 
-Yaml
+YAML
 
 ``` yaml
 yaml: [a, 1]
 ```
 
-### Shouldn't be highlighted
+### Should not be highlighted
 
 Non-R code in `\preformatted{}`
 
@@ -206,14 +206,14 @@ message(cli::col_green("This is green"))
 warning(cli::style_bold("This is bold"))
 ```
 
-Some text
+Text before an erroring chunk.
 
 ```{r}
 #| error: TRUE
 stop(cli::style_italic("This is italic"))
 ```
 
-Some more text
+Text after an erroring chunk.
 
 ## Quoted text
 
@@ -221,7 +221,7 @@ Some more text
 
 <figure>
 
-> A Boostrap 5 blockquote with footer.
+> A Bootstrap 5 blockquote with footer.
 
 ```{=html}
 <figcaption class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite>
@@ -237,7 +237,7 @@ Some more text
 
 ## This section is unnumbered {.unnumbered}
 
-There should however be no bug here!
+There should be no bug here.
 
 ## Tabsets
 
@@ -245,36 +245,36 @@ There should however be no bug here!
 
 #### Tab 1
 
-blablablabla
+Placeholder tab content.
 
 ``` r
 1 + 1
 ```
 
-Should be "cool" heading below
+The "cool" heading should appear below.
 
 ##### cool
 
-Stuff
+Placeholder heading content.
 
 #### Tab 2
 
-blop
+More placeholder tab content.
 
 ### Tabset without pills {.tabset}
 
 #### Tab 1
 
-something nice
+Some placeholder content.
 
 ```{r}
-#| fig.alt: Another test plot
+#| fig.alt: Line plot from 1 to 42.
 plot(1:42)
 ```
 
 #### Tab 2 {.active}
 
-This tab should be active
+This tab should be active.
 
 ### Fading tabset {.tabset .tabset-fade}
 
@@ -288,7 +288,7 @@ Bonjour!
 
 #### German
 
-Guten tag.
+Guten Tag.
 
 ## Deep headings
 

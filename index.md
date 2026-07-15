@@ -14,30 +14,31 @@ status](https://github.com/ropengov/rogtemplate/workflows/R-CMD-check/badge.svg)
 
 <!-- badges: end -->
 
-This package is a **pkgdown** template adapted to
-[rOpenGov](https://ropengov.org/) site.
+**rogtemplate** is a private **pkgdown** template for core
+[rOpenGov](https://ropengov.org/) package sites. It provides site setup
+helpers, package asset helpers and rOpenGov color palettes.
 
-This is a private template for use by core rOpenGov packages. Please
-don’t use it for your own code.
+Please do not use it for your own code.
 
 ## Using rogtemplate
 
-It is possible to deploy your **pkgdown** site along with
-**rogtemplate** via CI (GitHub Actions) or locally, that provides more
-control but it is not automatic.
+You can deploy your **pkgdown** site with **rogtemplate** through a
+GitHub Action or build it locally. The GitHub Action is automatic after
+setup. A local build gives you more control.
 
-### Option A: Deploy using GitHub Actions
+### Option A: Deploy with a GitHub Action
 
-It is not necessary to install **rogtemplate** itself. First copy [this
+You do not need to install **rogtemplate** itself. First copy [this
+workflow
 file](https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml)
-into your `.github/workflows/` folder.
+to your `.github/workflows/` folder.
 
-Next go to *YOUR_GITHUB_REPO\>Settings\>GitHub Pages* and deploy your
+Then go to *YOUR_GITHUB_REPO \> Settings \> Pages* and deploy your
 website from the `gh-pages` branch.
 
-### Option B: Deploy installing rogtemplate
+### Option B: Build after installing rogtemplate
 
-You can install **rogtemplate** using the
+You can install **rogtemplate** from
 [r-universe](https://ropengov.r-universe.dev/rogtemplate):
 
 ``` r
@@ -46,36 +47,34 @@ install.packages("rogtemplate",
 )
 ```
 
-You can use also the **pak** package:
+You can also use the **pak** package:
 
 ``` r
 pak::pak("ropengov/rogtemplate")
 ```
 
-You can use `rog_actions_pkgdown_branch()` for setting up the action
-described before but the deployment would be still performed by a GitHub
-action.
+Use `rog_actions_pkgdown_branch()` to set up the workflow described
+above. The deployment is still performed by a GitHub Action.
 
-For building locally your package into your `docs` folder use:
+To build your package locally into the `docs` folder, use:
 
 ``` r
 rogtemplate::rog_build()
 
-# or you can use also
+# or use
 
 rogtemplate::rog_add_template_pkgdown()
 pkgdown::build_site()
 ```
 
-Note that `rogtemplate::rog_add_template_pkgdown()` creates a
-`_pkgdown.yaml` file (or modify an existing one) with the following
-lines:
+`rogtemplate::rog_add_template_pkgdown()` creates a `_pkgdown.yml` file
+or modifies an existing one, with these lines:
 
 <div class="code-with-filename">
 
 <div class="code-with-filename-file">
 
-<pre><strong>.pkgdown.yaml</strong></pre>
+<pre><strong>_pkgdown.yml</strong></pre>
 
 ``` yaml
 template:
@@ -87,17 +86,17 @@ template:
 
 </div>
 
-These lines tells **pkgdown** to use **rogtemplate**.
+These lines tell **pkgdown** to use **rogtemplate**.
 
 ## Commit to GitHub and deploy
 
-Last step is commit to GitHub, wait until the GitHub action ends (in the
-case you chose to deploy in that way) and deploy the website via
-*YOUR_GITHUB_REPO\>Settings\>GitHub Pages*.
+The last step is to commit to GitHub. If you use the GitHub Action
+workflow, wait until it finishes, then deploy the website from
+*YOUR_GITHUB_REPO \> Settings \> Pages*.
 
-## Extras
+## Package assets and palettes
 
-We provide also some additional extra functions for creating badges and
-logos, see
-[Extras](https://ropengov.github.io/rogtemplate/reference/index.html)
-for more info.
+**rogtemplate** also provides package asset helpers for badges, logos
+and fonts, plus rOpenGov color palettes. See the [reference
+index](https://ropengov.github.io/rogtemplate/reference/index.html) for
+details.

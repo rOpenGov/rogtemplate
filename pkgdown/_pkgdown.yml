@@ -7,14 +7,25 @@ template:
       site: '@rOpenGov'
 
 reference:
-- title: Main functions
-  contents: -has_concept("extras")
-- title: Extras
-  contents: has_concept("extras")
+- title: Site setup
+  desc: Configure package sites with the rOpenGov pkgdown template.
+  contents:
+  - rog_actions_pkgdown_branch
+  - rog_add_template_pkgdown
+  - rog_build
+- title: Package assets
+  desc: Add rOpenGov badges, logos and fonts to package sites and README files.
+  contents:
+  - rog_badge_ropengov
+  - rog_logo
+  - rog_load_font
 - title: Palettes
-  contents: has_concept("rog_plot")
+  desc: Use the rOpenGov color palettes in plots.
+  contents:
+  - rog_pals
 - title: About the package
-  contents: rogtemplate
+  contents:
+  - rogtemplate-package
 
 navbar:
   structure:
@@ -32,23 +43,29 @@ navbar:
         href: https://ropengov.github.io/pxweb/
 
 articles:
-- title: Articles
+- title: Dashboards
+  desc: Example dashboards used by the rOpenGov template site.
   navbar: Dashboards
   contents:
   - articles/downloads
 
-- title: Testing - Menu
+- title: Menu bar
   navbar: Menu bar
-  desc: Testing a menu bar in the navbar
+  desc: Articles used to test nested article navigation.
   contents:
   - starts_with("menu")
+
+- title: Precompute
+  desc: Examples for precomputed vignettes.
+  contents:
+  - test-precompute
  
-- title: Testing
+- title: Testing articles
   desc: >
     These articles are used to test various <a
     href="https://CRAN.R-project.org/package=pkgdown"
     class="external-link"><span class="pkg">pkgdown</span></a> features that can
-    not easily be tested automatically.
+    be difficult to test automatically.
   contents:
   - starts_with("test")
   - starts_with("articles/test")

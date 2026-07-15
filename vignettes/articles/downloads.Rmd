@@ -123,7 +123,7 @@ fact <- dwn_m |>
 dwn_m$package <- factor(dwn_m$package, levels = unique(fact))
 ```
 
-### Historic
+### Monthly downloads
 
 ```{r}
 #| echo: false
@@ -195,7 +195,7 @@ ggplot(dwn_w, aes(x = m)) +
   )
 ```
 
-### Download data
+### Download table
 
 ```{r}
 #| label: datos
@@ -231,7 +231,7 @@ avg_daily_all <- avg_daily |>
   ungroup() |>
   summarise(avg = round(sum(avg, na.rm = TRUE), 1))
 
-# Une todo y da nombres
+# Combine summaries and assign display names.
 end <-
   fechas |>
   left_join(avg_daily) |>
@@ -301,8 +301,8 @@ reactable(
 
 ## On Posit Package Manager
 
-Downloads and data available of [rOpenGov](https://ropengov.org/) packages from
-[Posit Package Manager](https://packagemanager.posit.co/client/#/).
+Downloads and package metadata for [rOpenGov](https://ropengov.org/) packages
+from [Posit Package Manager](https://packagemanager.posit.co/client/#/).
 
 ```{r}
 #| label: data-posit

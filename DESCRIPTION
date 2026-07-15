@@ -1,5 +1,5 @@
 Package: rogtemplate
-Title: 'pkgdown' Template for 'rOpenGov' Packages
+Title: 'pkgdown' Template for 'rOpenGov' Package Sites
 Version: 0.0.2.9100
 Authors@R: c(
     person("Diego", "Hernangómez", , "diego.hernangomezherrero@gmail.com", role = c("aut", "cre", "cph"),
@@ -7,8 +7,9 @@ Authors@R: c(
     person("Steph", "Buongiorno", , "steph.buon@gmail.com", role = "ctb",
            comment = c(ORCID = "0000-0002-6965-0787"))
   )
-Description: This is a private template for use by core rOpenGov packages.
-    Please don’t use for your own code.
+Description: A private pkgdown template for core rOpenGov packages. It
+    provides site setup helpers, package asset helpers and rOpenGov color
+    palettes. Please do not use it for your own code.
 License: MIT + file LICENSE
 URL: https://ropengov.github.io/rogtemplate/,
     https://github.com/rOpenGov/rogtemplate

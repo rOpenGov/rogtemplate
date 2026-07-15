@@ -1,27 +1,24 @@
-#' Build your pkgdown website locally
+#' Build your pkgdown site locally
 #'
-#' A wrapper of [`pkgdown::build_site()`]
+#' A wrapper around \CRANpkg{pkgdown}'s [`pkgdown::build_site()`].
 #'
 #' @details
-#' This function would call also [rog_add_template_pkgdown()] and
-#'  [rog_logo()].
+#' This function also calls [rog_add_template_pkgdown()] and [rog_logo()].
 #'
-#'
-#' @seealso [`pkgdown::build_site()`], [rog_add_template_pkgdown()].
-#'
+#' @inheritParams rog_actions_pkgdown_branch
+#' @param ... Arguments passed to [rog_logo()] and \CRANpkg{pkgdown}'s
+#'   [`pkgdown::build_site()`]. Common arguments for [rog_logo()] include
+#'   `overwrite`, `favicons`, `p_x`, `p_y` and `p_size`.
+#' @returns The function is called for its side effects and returns
+#'   `invisible(NULL)`.
+#' @family site
+#' @seealso \CRANpkg{pkgdown}'s [pkgdown::build_site()] and
+#'   [rog_add_template_pkgdown()].
+#' @encoding UTF-8
 #' @export
-#'
-#' @inheritParams pkgdown::build_site
-#'
-#' @inheritDotParams rog_logo -pkgname -filename
-#'
-#' @inheritDotParams pkgdown::build_site -override
-#'
-#'
-#'
 rog_build <- function(pkg = ".", ...) {
   # nocov start
-  # Check .Rbuildignore
+  # Keep generated site assets out of the package build.
 
   usethis::use_build_ignore(".github")
   usethis::use_build_ignore("._pkgdown.yml")

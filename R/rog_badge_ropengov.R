@@ -1,33 +1,25 @@
-#' Add a rOpenGov badge to your `README` file
+#' Add an rOpenGov badge to your README
 #'
-#'
-#' @description
-#'
-#' Add an rOpenGov badge pointing to <https://ropengov.org/> on your `README`
-#' file:
+#' Add an rOpenGov badge pointing to <https://ropengov.org/> to your README:
 #'
 #' \ifelse{html}{\href{https://ropengov.org/}{\figure{ropengov-badge.svg}{
 #' options: alt='rOpenGov'}}}{**rOpenGov**}
 #'
+#' @param install `TRUE` or `FALSE`. If `TRUE`, the badge is installed on your
+#'   `README.md` or `README.Rmd`. If `FALSE`, a message with the R Markdown code
+#'   is displayed.
+#' @returns The function is called for its side effects and returns `NULL`
+#'   invisibly.
+#' @family assets
+#' @seealso \CRANpkg{usethis}'s [usethis::use_badge()].
+#' @encoding UTF-8
 #' @export
-#'
-#' @return A markdown badge or a message with the markdown code to be pasted.
-#'
-#' @seealso [`usethis::use_badge()`]
-#'
-#' @param install TRUE/FALSE. On TRUE the badge would be installed on your
-#' README.md/.Rmd. On FALSE a message with the Rmarkdown code would be
-#' displayed.
-#'
-#' @family extras
-#'
 #' @examples
-#'
 #' rog_badge_ropengov(install = FALSE)
 rog_badge_ropengov <- function(install = TRUE) {
   stopifnot(is.logical(install))
 
-  # Add pkg
+  # Point to the shared rOpenGov badge asset.
   badge <- paste0(
     "https://ropengov.github.io/rogtemplate/reference/figures/",
     "ropengov-badge.svg"
@@ -41,7 +33,7 @@ rog_badge_ropengov <- function(install = TRUE) {
     # nocov end
   } else {
     message(
-      "Badge URL is ",
+      "Badge Markdown is ",
       "\n",
       "[![rOpenGov package](",
       badge,

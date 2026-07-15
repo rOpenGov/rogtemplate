@@ -19,9 +19,9 @@
     "familyName": "Hernangómez",
     "givenName": "Diego"
   },
-  "description": "This is a private template for use by core rOpenGov packages. Please don’t use for your own code.",
+  "description": "A private pkgdown template for core rOpenGov packages. It provides site setup helpers, package asset helpers and rOpenGov color palettes. Please do not use it for your own code.",
   "license": "https://spdx.org/licenses/MIT",
-  "name": "rogtemplate: 'pkgdown' Template for 'rOpenGov' Packages",
+  "name": "rogtemplate: 'pkgdown' Template for 'rOpenGov' Package Sites",
   "programmingLanguage": {
     "type": "ComputerLanguage",
     "name": "R",

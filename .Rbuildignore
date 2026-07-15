@@ -45,6 +45,7 @@
 ^vignettes/_quarto\.yaml$
 ^vignettes/_quarto\.yml$
 ^index\.qmd$
+^index\.Rmd$
 ^index_files$
 ^index\.html$
 ^index\.md$
@@ -52,3 +53,4 @@
 ^\.positai$
 ^\.claude$
 ^\.gitattributes$
+^AGENTS\.md$

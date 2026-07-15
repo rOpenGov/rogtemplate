@@ -1,23 +1,16 @@
 #' rOpenGov color palettes
 #'
-#' Color palettes based on the color scheme of rOpenGov
-#'
-#' @family rog_plot
-#' @family extras
-#'
-#' @rdname rog_pals
-#' @name rog_pals
-#'
-#' @return Color palettes
-#'
-#' @export
+#' Color palettes based on the rOpenGov color scheme.
 #'
 #' @inheritParams grDevices::hcl.pals
-#'
-#' @seealso [grDevices::hcl.colors()]
-#'
+#' @returns Color palettes.
+#' @rdname rog_pals
+#' @name rog_pals
+#' @family palettes
+#' @seealso \pkg{grDevices}' [grDevices::hcl.colors()].
+#' @encoding UTF-8
+#' @export
 #' @examples
-#'
 #' scales::show_col(rog_orange_pal(9))
 #'
 #' scales::show_col(rog_dark_pal(9))
@@ -40,7 +33,7 @@ rog_orange_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 }
 
 #' @rdname rog_pals
-#'
+#' @encoding UTF-8
 #' @export
 rog_dark_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c("#343a40", "#e8ebed")
@@ -57,7 +50,7 @@ rog_dark_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 }
 
 #' @rdname rog_pals
-#'
+#' @encoding UTF-8
 #' @export
 rog_gradient_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c("#343a40", "#9A5020", "#CD5B10", "#ff6600")
@@ -74,7 +67,7 @@ rog_gradient_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 }
 
 #' @rdname rog_pals
-#'
+#' @encoding UTF-8
 #' @export
 rog_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
   color <- "#ff6600"
