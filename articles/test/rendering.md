@@ -1,10 +1,10 @@
-# Output Rendering
+# Output rendering
 
-This vignette tests pkgdown output rendering for several use cases.
+This vignette tests **pkgdown** output rendering for several use cases.
 
 ## Footnotes
 
-Yay[^1]
+Footnotes render correctly.[^1]
 
 ## Figures
 
@@ -13,7 +13,8 @@ Yay[^1]
 plot(1:10)
 ```
 
-![Test plot](rendering_files/figure-html/unnamed-chunk-2-1.png)
+![Line plot from 1 to
+10.](rendering_files/figure-html/unnamed-chunk-2-1.png)
 
 ## External files
 
@@ -24,9 +25,9 @@ x
 #> [1] "a" "b" "c" "d"
 ```
 
-![bacon](bacon.jpg)
+![Bacon placeholder image](bacon.jpg)
 
-bacon
+Bacon placeholder image
 
 ## Details tag
 
@@ -118,13 +119,13 @@ R code in `r` block:
 mean(a + 1)
 ```
 
-Yaml
+YAML
 
 ``` yaml
 yaml: [a, 1]
 ```
 
-### Shouldn’t be highlighted
+### Should not be highlighted
 
 Non-R code in `\preformatted{}`
 
@@ -202,7 +203,7 @@ warning(cli::style_bold("This is bold"))
 #> Warning: This is bold
 ```
 
-Some text
+Text before an erroring chunk.
 
 ``` r
 
@@ -211,13 +212,13 @@ stop(cli::style_italic("This is italic"))
 #> ! This is italic
 ```
 
-Some more text
+Text after an erroring chunk.
 
 ## Quoted text
 
 > Single-line quote about something miscellaneous.
 
-> A Boostrap 5 blockquote with footer.
+> A Bootstrap 5 blockquote with footer.
 
 Someone famous in Source Title
 
@@ -228,7 +229,7 @@ Flush
 
 ## This section is unnumbered
 
-There should however be no bug here!
+There should be no bug here.
 
 ## Tabsets
 
@@ -237,36 +238,37 @@ There should however be no bug here!
 - Tab 1
 - Tab 2
 
-blablablabla
+Placeholder tab content.
 
 ``` r
 
 1 + 1
 ```
 
-Should be “cool” heading below
+The “cool” heading should appear below.
 
 ##### cool
 
-Stuff
+Placeholder heading content.
 
-blop
+More placeholder tab content.
 
 ### Tabset without pills
 
 - Tab 1
 - Tab 2
 
-something nice
+Some placeholder content.
 
 ``` r
 
 plot(1:42)
 ```
 
-![Another test plot](rendering_files/figure-html/unnamed-chunk-8-1.png)
+![Line plot from 1 to
+42.](rendering_files/figure-html/unnamed-chunk-8-1.png)
 
-This tab should be active
+This tab should be active.
 
 ### Fading tabset
 
@@ -278,7 +280,7 @@ Hello!
 
 Bonjour!
 
-Guten tag.
+Guten Tag.
 
 ## Deep headings
 
@@ -295,4 +297,4 @@ making the page scroll horizontally:
 
 Ccccccccccccaaaaaaaaaaaaaaatttttttttttttttttssssssssssssssss
 
-[^1]: Including **footnotes**! 😁
+[^1]: Including **footnotes**.

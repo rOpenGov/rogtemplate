@@ -1,7 +1,7 @@
 # Load rogtemplate fonts
 
-Load the current font in use for rOpenGov, [B612
-Mono](https://fonts.google.com/specimen/B612+Mono)
+Load the current rOpenGov font, [B612
+Mono](https://fonts.google.com/specimen/B612+Mono).
 
 ## Usage
 
@@ -9,18 +9,20 @@ Mono](https://fonts.google.com/specimen/B612+Mono)
 rog_load_font()
 ```
 
+## Value
+
+The font family name, `"B612 Mono"`.
+
 ## See also
 
-Other extras:
-[`rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md),
+package asset helpers:
 [`rog_badge_ropengov()`](https://ropengov.github.io/rogtemplate/reference/rog_badge_ropengov.md),
-[`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md),
-[`rog_pals`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
+[`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md)
 
 ## Examples
 
 ``` r
 rog_load_font()
-#> B612 Mono font loaded
+#> B612 Mono font loaded.
 #> [1] "B612 Mono"
 ```

@@ -1,7 +1,8 @@
-# rogtemplate: 'pkgdown' Template for 'rOpenGov' Packages
+# rogtemplate: 'pkgdown' Template for 'rOpenGov' Package Sites
 
-This is a private template for use by core rOpenGov packages. Please
-don’t use for your own code.
+A private pkgdown template for core rOpenGov packages. It provides site
+setup helpers, package asset helpers and rOpenGov color palettes. Please
+do not use it for your own code.
 
 ## See also
 

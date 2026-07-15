@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>usdoj: For Accessing U.S. Department of Justice (DOJ) Open Data • rogtemplate</title>
+<title>usdoj: access U.S. Department of Justice open data • rogtemplate</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../../favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="../../favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
@@ -19,7 +19,7 @@
 <link href="../../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../../deps/headroom-0.11.0/headroom.min.js"></script><script src="../../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../../deps/search-1.0.0/fuse.min.js"></script><script src="../../deps/search-1.0.0/mark.min.js"></script><script src="blog-article_files/libs/quarto-html/popper.min.js"></script><script src="blog-article_files/libs/quarto-html/tippy.umd.min.js"></script><link href="blog-article_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="blog-article_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<!-- pkgdown --><script src="../../pkgdown.js"></script><meta property="og:title" content="usdoj: For Accessing U.S. Department of Justice (DOJ) Open Data">
+<!-- pkgdown --><script src="../../pkgdown.js"></script><meta property="og:title" content="usdoj: access U.S. Department of Justice open data">
 <meta property="og:image" content="https://ropengov.github.io/rogtemplate/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@rOpenGov">
@@ -53,7 +53,7 @@
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Menu bar</h6></li>
     <li><a class="dropdown-item" href="../../articles/menu/ggplot2.html">ggplot2 example</a></li>
-    <li><a class="dropdown-item" href="../../articles/menu/highlight.html">Testing syntax highlighter</a></li>
+    <li><a class="dropdown-item" href="../../articles/menu/highlight.html">Test syntax highlighting</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="../../articles/index.html">More articles...</a></li>
   </ul>
@@ -89,7 +89,7 @@
 </nav><div class="container template-quarto">
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
-      <img src="../../logo.png" class="logo" alt=""><h1>usdoj: For Accessing U.S. Department of Justice (DOJ) Open Data</h1>
+      <img src="../../logo.png" class="logo" alt=""><h1>usdoj: access U.S. Department of Justice open data</h1>
 
       <p class="author">Steph Buongiorno, Ph.D.</p>
       <p class="date">2023-04-01</p>
@@ -104,11 +104,11 @@
 
 
     <blockquote>
-<p>rogtemplate testing of blog post render. Taken from <a href="https://ropengov.org/2023/04/usdoj-cran-release/" class="external-link uri">https://ropengov.org/2023/04/usdoj-cran-release/</a></p>
+<p><strong>rogtemplate</strong> test fixture for blog post rendering. Taken from <a href="https://ropengov.org/2023/04/usdoj-cran-release/" class="external-link uri">https://ropengov.org/2023/04/usdoj-cran-release/</a></p>
 </blockquote>
-<p>usdoj, a package for fetching data from the United States (US) Department of Justice (DOJ) API, was released as part of the rOpenGov project. usdoj provides easy access to US DOJ press releases, blog entries, and speeches. Optional parameters allow users to specify the number of results starting from the earliest or latest entries, and whether these results contain keywords. Data is cleaned for analysis and returned in a data frame.</p>
-<p>US DOJ press releases, blog posts, and speeches are an official media through which the United States government publicizes front line information about law, enforcement, and crime that may be of interest to members of the public, researchers and analysts, and members of other government branches. They include coverage for divisions such as the Federal Bureau of Investigation (FBI), the Offices of the United States Attorneys (USAO), the National Security Division (NSD), the Civil Division, the Tax Division, the Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF), the Drug Enforcement Administration (DEA), and more. New media are published on a regular basis</p>
-<p>usdoj makes this media accessible in an analysis-ready format through three functions that search for and return relevant results: <code>doj_press_releases()</code>, <code>doj_blog_posts()</code>, and <code>doj_speeches()</code>. Data is cleaned and structured before it is returned as a data frame with fields for the body text, date, title, url, the name of the corresponding division, to name just a few.</p>
+<p><strong>usdoj</strong>, a package for fetching data from the United States (U.S.) Department of Justice (DOJ) API, was released as part of the rOpenGov project. <strong>usdoj</strong> provides easy access to U.S. DOJ press releases, blog entries and speeches. Optional parameters allow users to specify the number of results, whether to start from the earliest or latest entries and whether the results contain keywords. Data is cleaned for analysis and returned in a data frame.</p>
+<p>U.S. DOJ press releases, blog posts and speeches are official media through which the United States government publicizes front-line information about law enforcement and crime that may be of interest to members of the public, researchers, analysts and members of other government branches. They include coverage for divisions such as the Federal Bureau of Investigation (FBI), the Offices of the United States Attorneys (USAO), the National Security Division (NSD), the Civil Division, the Tax Division, the Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF), the Drug Enforcement Administration (DEA) and more. New media are published on a regular basis.</p>
+<p><strong>usdoj</strong> makes this media accessible in an analysis-ready format through three functions that search for and return relevant results: <code>doj_press_releases()</code>, <code>doj_blog_posts()</code> and <code>doj_speeches()</code>. Data is cleaned and structured before it is returned as a data frame with fields for body text, date, title, URL and the name of the corresponding division, among other fields.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://usmap.dev" class="external-link">usmap</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org" class="external-link">lubridate</a></span><span class="op">)</span></span>
@@ -149,19 +149,19 @@
 <figure><a href="./unnamed-chunk-1-1.png"><img src="./unnamed-chunk-1-1.png" alt="A graph containing barcharts for each US state, visualizing the TF-IDF Scores by USAO Grouping" width="800"></a>
 </figure>
 </div>
-<section class="level2"><h2 id="demonstration-text-mining-united-states-department-of-justice-open-data">Demonstration: Text Mining United States Department of Justice Open Data<a class="anchor" aria-label="anchor" href="#demonstration-text-mining-united-states-department-of-justice-open-data"></a>
+<section class="level2"><h2 id="demonstration-text-mining-u-s--department-of-justice-open-data">Demonstration: text mining U.S. Department of Justice open data<a class="anchor" aria-label="anchor" href="#demonstration-text-mining-u-s--department-of-justice-open-data"></a>
 </h2>
-<p>The data returned by usdoj is in a format that can easily undergo additional processing for analysis. The purpose of this section is to show one way of doing this while walking through the steps for performing a TF-IDF (term frequency-inverse document frequency) analysis in order to see which words are characteristic to certain divisions, and not others.</p>
-<section class="level4"><h4 id="installing-and-loading-libraries">Installing and Loading Libraries<a class="anchor" aria-label="anchor" href="#installing-and-loading-libraries"></a>
+<p>The data returned by <strong>usdoj</strong> is in a format that can easily undergo additional processing for analysis. This section shows one way to perform a TF-IDF (term frequency-inverse document frequency) analysis to see which words are characteristic of certain divisions and not others.</p>
+<section class="level4"><h4 id="install-and-load-libraries">Install and load libraries<a class="anchor" aria-label="anchor" href="#install-and-load-libraries"></a>
 </h4>
-<p>usdoj can be installed from CRAN (using <code>install.packages("usdoj")</code>) or from rOpenGov’s r-universe. For this tutorial we will also use the tidyverse and tidytext libraries.</p>
+<p><strong>usdoj</strong> can be installed from CRAN with <code>install.packages("usdoj")</code> or from rOpenGov’s r-universe. For this tutorial we will also use the <strong>tidyverse</strong> and <strong>tidytext</strong> packages.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ropengov/usdoj" class="external-link">usdoj</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://usmap.dev" class="external-link">usmap</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://juliasilge.github.io/tidytext/" class="external-link">tidytext</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://lubridate.tidyverse.org" class="external-link">lubridate</a></span><span class="op">)</span></span></code></pre></div>
-<p>We will start by collecting US DOJ press releases with the corresponding function, <code>doj_press_releases()</code>. By default, the most recently published records are returned. Passing <code>search_direction = "ASC"</code> to the function will instead return data starting at the earliest published records. usdoj automatically flattens nested fields. The resulting data frame is easily text mined.</p>
+<p>We will start by collecting U.S. DOJ press releases with the corresponding function, <code>doj_press_releases()</code>. By default, the most recently published records are returned. Passing <code>search_direction = "ASC"</code> to the function will instead return data starting at the earliest published records. <strong>usdoj</strong> automatically flattens nested fields. The resulting data frame is easily text mined.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">press_releases</span> <span class="op">&lt;-</span> <span class="fu">doj_press_releases</span><span class="op">(</span>n_results <span class="op">=</span> <span class="fl">700</span><span class="op">)</span></span></code></pre></div>
 <p>We will also save the date range present in the data for use in our visualization (later on).</p>
@@ -190,7 +190,7 @@
 <p>In this demonstration we will process the text body, transforming the dense blocks of natural language text into a structure that is more easily quantifiable.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">tail</a></span><span class="op">(</span><span class="va">press_releases</span><span class="op">$</span><span class="va">body</span>, <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<p>For this demonstration, we will just compare the words relating to United States Attorney Offices (USAOs) across different states. We will do this by removing mentions of the other divisions from the “name” field and filtering for just press releases that contain USAO as a division.</p>
+<p>For this demonstration, we will compare words related to United States Attorney Offices (USAOs) across different states. We will do this by removing mentions of other divisions from the “name” field and filtering for press releases that contain USAO as a division.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">state_names</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="va">statepop</span><span class="op">$</span><span class="va">full</span>, collapse <span class="op">=</span> <span class="st">"|USAO - "</span><span class="op">)</span></span>
 <span></span>
@@ -203,11 +203,11 @@
 <code class="sourceCode R"><span><span class="va">tokenized_press_releases</span> <span class="op">&lt;-</span> <span class="va">usao_press_releases</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html" class="external-link">select</a></span><span class="op">(</span><span class="va">body</span>, <span class="va">name</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu">unnest_tokens</span><span class="op">(</span><span class="va">word</span>, <span class="va">body</span><span class="op">)</span></span></code></pre></div>
-<p>For this demonstration we will remove digits because they occur frequently in the data set and, for our purposes, they don’t reveal much meaningful information.</p>
+<p>For this demonstration, we will remove digits because they occur frequently in the data set and, for our purposes, they do not reveal much meaningful information.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">cleaned_tokenized_press_releases</span> <span class="op">&lt;-</span> <span class="va">tokenized_press_releases</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html" class="external-link">slice</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://stringr.tidyverse.org/reference/str_detect.html" class="external-link">str_detect</a></span><span class="op">(</span><span class="va">word</span>, <span class="st">"[[:digit:]]"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p>In preparation of performing a TF-IDF analysis, we will count the number of times a word appears in each unique “name” grouping. In other words, if the same word appears in “Civil Division” and “Antitrust Division,” then the count will be “one” for each division (as opposed to “two,” reflecting the overall count). To remove typos and other such errors, we will also remove words that have been stated less than 5 times.</p>
+<p>In preparation for performing a TF-IDF analysis, we will count the number of times a word appears in each unique “name” grouping. In other words, if the same word appears in “Civil Division” and “Antitrust Division”, then the count will be “one” for each division, as opposed to “two” reflecting the overall count. To remove typos and other such errors, we will also remove words that have been stated less than 5 times.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">counted_tokenized_press_releases</span> <span class="op">&lt;-</span> <span class="va">cleaned_tokenized_press_releases</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html" class="external-link">count</a></span><span class="op">(</span><span class="va">name</span>, <span class="va">word</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span></span>

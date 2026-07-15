@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>pkgdown Template for rOpenGov Packages • rogtemplate</title>
+<title>pkgdown Template for rOpenGov Package Sites • rogtemplate</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
 <link rel="icon" type="”image/svg+xml”" href="favicon.svg">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -17,9 +17,9 @@
 <script src="deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="deps/B612_Mono-0.4.10/font.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
-<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="pkgdown Template for rOpenGov Packages">
-<meta name="description" content="This is a private template for use by core rOpenGov packages. Please don’t use for your own code.">
-<meta property="og:description" content="This is a private template for use by core rOpenGov packages. Please don’t use for your own code.">
+<script src="deps/headroom-0.11.0/headroom.min.js"></script><script src="deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="deps/search-1.0.0/fuse.min.js"></script><script src="deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="pkgdown.js"></script><meta property="og:title" content="pkgdown Template for rOpenGov Package Sites">
+<meta name="description" content="A private pkgdown template for core rOpenGov packages. It provides site setup helpers, package asset helpers and rOpenGov color palettes. Please do not use it for your own code.">
+<meta property="og:description" content="A private pkgdown template for core rOpenGov packages. It provides site setup helpers, package asset helpers and rOpenGov color palettes. Please do not use it for your own code.">
 <meta property="og:image" content="https://ropengov.github.io/rogtemplate/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:creator" content="@rOpenGov">
@@ -53,7 +53,7 @@
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Menu bar</h6></li>
     <li><a class="dropdown-item" href="articles/menu/ggplot2.html">ggplot2 example</a></li>
-    <li><a class="dropdown-item" href="articles/menu/highlight.html">Testing syntax highlighter</a></li>
+    <li><a class="dropdown-item" href="articles/menu/highlight.html">Test syntax highlighting</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="articles/index.html">More articles...</a></li>
   </ul>
@@ -97,59 +97,59 @@
 <!-- badges: start -->
 
 <!-- badges: end -->
-<p>This package is a <strong>pkgdown</strong> template adapted to <a href="https://ropengov.org/" class="external-link">rOpenGov</a> site.</p>
-<p>This is a private template for use by core rOpenGov packages. Please don’t use it for your own code.</p>
+<p><strong>rogtemplate</strong> is a private <strong>pkgdown</strong> template for core <a href="https://ropengov.org/" class="external-link">rOpenGov</a> package sites. It provides site setup helpers, package asset helpers and rOpenGov color palettes.</p>
+<p>Please do not use it for your own code.</p>
 <div class="section level2">
 <h2 id="using-rogtemplate">Using rogtemplate<a class="anchor" aria-label="anchor" href="#using-rogtemplate"></a>
 </h2>
-<p>It is possible to deploy your <strong>pkgdown</strong> site along with <strong>rogtemplate</strong> via CI (GitHub Actions) or locally, that provides more control but it is not automatic.</p>
+<p>You can deploy your <strong>pkgdown</strong> site with <strong>rogtemplate</strong> through a GitHub Action or build it locally. The GitHub Action is automatic after setup. A local build gives you more control.</p>
 <div class="section level3">
-<h3 id="option-a-deploy-using-github-actions">Option A: Deploy using GitHub Actions<a class="anchor" aria-label="anchor" href="#option-a-deploy-using-github-actions"></a>
+<h3 id="option-a-deploy-with-a-github-action">Option A: Deploy with a GitHub Action<a class="anchor" aria-label="anchor" href="#option-a-deploy-with-a-github-action"></a>
 </h3>
-<p>It is not necessary to install <strong>rogtemplate</strong> itself. First copy <a href="https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml" class="external-link">this file</a> into your <code>.github/workflows/</code> folder.</p>
-<p>Next go to <em>YOUR_GITHUB_REPO&gt;Settings&gt;GitHub Pages</em> and deploy your website from the <code>gh-pages</code> branch.</p>
+<p>You do not need to install <strong>rogtemplate</strong> itself. First copy <a href="https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml" class="external-link">this workflow file</a> to your <code>.github/workflows/</code> folder.</p>
+<p>Then go to <em>YOUR_GITHUB_REPO &gt; Settings &gt; Pages</em> and deploy your website from the <code>gh-pages</code> branch.</p>
 </div>
 <div class="section level3">
-<h3 id="option-b-deploy-installing-rogtemplate">Option B: Deploy installing rogtemplate<a class="anchor" aria-label="anchor" href="#option-b-deploy-installing-rogtemplate"></a>
+<h3 id="option-b-build-after-installing-rogtemplate">Option B: Build after installing rogtemplate<a class="anchor" aria-label="anchor" href="#option-b-build-after-installing-rogtemplate"></a>
 </h3>
-<p>You can install <strong>rogtemplate</strong> using the <a href="https://ropengov.r-universe.dev/rogtemplate" class="external-link">r-universe</a>:</p>
+<p>You can install <strong>rogtemplate</strong> from <a href="https://ropengov.r-universe.dev/rogtemplate" class="external-link">r-universe</a>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rogtemplate"</span>,</span>
 <span>  repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://ropengov.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p>You can use also the <strong>pak</strong> package:</p>
+<p>You can also use the <strong>pak</strong> package:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"ropengov/rogtemplate"</span><span class="op">)</span></span></code></pre></div>
-<p>You can use <code><a href="reference/rog_actions_pkgdown_branch.html">rog_actions_pkgdown_branch()</a></code> for setting up the action described before but the deployment would be still performed by a GitHub action.</p>
-<p>For building locally your package into your <code>docs</code> folder use:</p>
+<p>Use <code><a href="reference/rog_actions_pkgdown_branch.html">rog_actions_pkgdown_branch()</a></code> to set up the workflow described above. The deployment is still performed by a GitHub Action.</p>
+<p>To build your package locally into the <code>docs</code> folder, use:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rogtemplate</span><span class="fu">::</span><span class="fu"><a href="reference/rog_build.html">rog_build</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># or you can use also</span></span>
+<span><span class="co"># or use</span></span>
 <span></span>
 <span><span class="fu">rogtemplate</span><span class="fu">::</span><span class="fu"><a href="reference/rog_add_template_pkgdown.html">rog_add_template_pkgdown</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu">pkgdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">build_site</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p>Note that <code><a href="reference/rog_add_template_pkgdown.html">rogtemplate::rog_add_template_pkgdown()</a></code> creates a <code>_pkgdown.yaml</code> file (or modify an existing one) with the following lines:</p>
+<p><code><a href="reference/rog_add_template_pkgdown.html">rogtemplate::rog_add_template_pkgdown()</a></code> creates a <code>_pkgdown.yml</code> file or modifies an existing one, with these lines:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
-<pre><strong>.pkgdown.yaml</strong></pre>
+<pre><strong>_pkgdown.yml</strong></pre>
 <div class="sourceCode" id="cb4"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">template</span><span class="kw">:</span></span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a><span class="at">  </span><span class="fu">bootstrap</span><span class="kw">:</span><span class="at"> </span><span class="dv">5</span></span>
 <span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a><span class="at">  </span><span class="fu">package</span><span class="kw">:</span><span class="at"> rogtemplate</span></span></code></pre></div>
 </div>
 </div>
-<p>These lines tells <strong>pkgdown</strong> to use <strong>rogtemplate</strong>.</p>
+<p>These lines tell <strong>pkgdown</strong> to use <strong>rogtemplate</strong>.</p>
 </div>
 </div>
 <div class="section level2">
 <h2 id="commit-to-github-and-deploy">Commit to GitHub and deploy<a class="anchor" aria-label="anchor" href="#commit-to-github-and-deploy"></a>
 </h2>
-<p>Last step is commit to GitHub, wait until the GitHub action ends (in the case you chose to deploy in that way) and deploy the website via <em>YOUR_GITHUB_REPO&gt;Settings&gt;GitHub Pages</em>.</p>
+<p>The last step is to commit to GitHub. If you use the GitHub Action workflow, wait until it finishes, then deploy the website from <em>YOUR_GITHUB_REPO &gt; Settings &gt; Pages</em>.</p>
 </div>
 <div class="section level2">
-<h2 id="extras">Extras<a class="anchor" aria-label="anchor" href="#extras"></a>
+<h2 id="package-assets-and-palettes">Package assets and palettes<a class="anchor" aria-label="anchor" href="#package-assets-and-palettes"></a>
 </h2>
-<p>We provide also some additional extra functions for creating badges and logos, see <a href="https://ropengov.github.io/rogtemplate/reference/index.html">Extras</a> for more info.</p>
+<p><strong>rogtemplate</strong> also provides package asset helpers for badges, logos and fonts, plus rOpenGov color palettes. See the <a href="https://ropengov.github.io/rogtemplate/reference/index.html">reference index</a> for details.</p>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">

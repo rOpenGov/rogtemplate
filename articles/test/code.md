@@ -22,7 +22,7 @@ ruler()
 #> 12345678901234567890123456789012345678901234567890123456789012345678901234567890
 ```
 
-Some random code
+Some example code.
 
 ``` r
 
@@ -81,11 +81,11 @@ render_rmarkdown <- function(pkg, input, output, ..., copy_images = TRUE, quiet 
     cat_line("Writing ", dst_path(output))
   }
 
-  # Copy over images needed by the document
+  # Copy images needed by the document.
   if (copy_images) {
     ext <- rmarkdown::find_external_resources(input_path)
 
-    # copy web + explicit files beneath vignettes/
+    # Copy web and explicit files beneath vignettes/.
     is_child <- path_has_parent(ext$path, ".")
     ext_path <- ext$path[(ext$web | ext$explicit) & is_child]
 

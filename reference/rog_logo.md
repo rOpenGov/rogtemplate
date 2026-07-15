@@ -1,8 +1,10 @@
-# Creates a logo for your rOpenGov package
+# Create a logo for your rOpenGov package
 
 Creates a logo automatically with
+[hexSticker](https://CRAN.R-project.org/package=hexSticker)'s
 [`hexSticker::sticker()`](https://rdrr.io/pkg/hexSticker/man/sticker.html).
-Optionally, create also favicons with
+Optionally, create favicons with
+[pkgdown](https://CRAN.R-project.org/package=pkgdown)'s
 [`pkgdown::build_favicons()`](https://pkgdown.r-lib.org/reference/build_favicons.html).
 
 ## Usage
@@ -23,8 +25,8 @@ rog_logo(
 
 - pkgname:
 
-  Name of the package. If not present it would be autodetected by the
-  function.
+  Name of the package. If not supplied, the name is detected from
+  DESCRIPTION.
 
 - filename:
 
@@ -44,36 +46,43 @@ rog_logo(
 
 - overwrite:
 
-  Should the current logo be overwritten? When `TRUE` it would run
+  Should the current logo be overwritten? When `TRUE` it runs
+  [usethis](https://CRAN.R-project.org/package=usethis)'s
   [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html).
 
 - favicons:
 
-  Logical, do you want to create favicons with
+  Should favicons be created with
+  [pkgdown](https://CRAN.R-project.org/package=pkgdown)'s
   [`pkgdown::build_favicons()`](https://pkgdown.r-lib.org/reference/build_favicons.html)?
+
+## Value
+
+The function is called for its side effects and returns `NULL`
+invisibly.
 
 ## See also
 
+[hexSticker](https://CRAN.R-project.org/package=hexSticker)'s
 [`hexSticker::sticker()`](https://rdrr.io/pkg/hexSticker/man/sticker.html),
-[`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html),
+[usethis](https://CRAN.R-project.org/package=usethis)'s
+[`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html)
+and [pkgdown](https://CRAN.R-project.org/package=pkgdown)'s
 [`pkgdown::build_favicons()`](https://pkgdown.r-lib.org/reference/build_favicons.html).
 
-Other extras:
-[`rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md),
+package asset helpers:
 [`rog_badge_ropengov()`](https://ropengov.github.io/rogtemplate/reference/rog_badge_ropengov.md),
-[`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md),
-[`rog_pals`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
+[`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md)
 
 ## Examples
 
 ``` r
-
 tmp <- tempfile(fileext = ".png")
 rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
-#> B612 Mono font loaded
-#> Logo created on /tmp/RtmpKXYOxB/file1c422a35420e.png
+#> B612 Mono font loaded.
+#> Logo created at /tmp/RtmpFzsIRK/file1d0a6c891bb4.png.
 
-# Display
+# Display the logo.
 logo <- magick::image_read(tmp)
 
 logo

@@ -1,8 +1,8 @@
-# Configure `rogtemplate` for your pkgdown site
+# Configure rogtemplate for your pkgdown site
 
-Add the corresponding configuration to your `_pkgdown.yml`. If it is not
-present, it would create a file on `pkgdown/_pkgdown.yml`. It would also
-add the corresponding lines to your .Rbuildignore.
+Add the rOpenGov template configuration to your `_pkgdown.yml`. If no
+configuration file exists, create one at `pkgdown/_pkgdown.yml`. Also
+add the corresponding paths to `.Rbuildignore`.
 
 ## Usage
 
@@ -10,10 +10,15 @@ add the corresponding lines to your .Rbuildignore.
 rog_add_template_pkgdown()
 ```
 
+## Value
+
+The function is called for its side effects and returns
+`invisible(NULL)`.
+
 ## Details
 
-It also adds the corresponding urls to the `_pkgdown.yml` file and the
-DESCRIPTION file if not present:
+The function also adds these package URLs to `_pkgdown.yml` and
+DESCRIPTION if they are not already present:
 
 - https://ropengov.github.io/pkgname/
 
@@ -21,21 +26,22 @@ DESCRIPTION file if not present:
 
 ## See also
 
-[`vignette("pkgdown", package = "pkgdown")`](https://pkgdown.r-lib.org/articles/pkgdown.html),
+[pkgdown](https://CRAN.R-project.org/package=pkgdown) vignettes:
+[`vignette("pkgdown", package = "pkgdown")`](https://pkgdown.r-lib.org/articles/pkgdown.html)
+and
 [`vignette("linking", package = "pkgdown")`](https://pkgdown.r-lib.org/articles/linking.html),
+[usethis](https://CRAN.R-project.org/package=usethis)'s
 [`usethis::use_tidy_description()`](https://usethis.r-lib.org/reference/tidyverse.html).
 
-Other extras:
-[`rog_badge_ropengov()`](https://ropengov.github.io/rogtemplate/reference/rog_badge_ropengov.md),
-[`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md),
-[`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md),
-[`rog_pals`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
+site setup helpers:
+[`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md),
+[`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)
 
 ## Examples
 
 ``` r
 # \dontrun{
 rog_add_template_pkgdown()
-#> Error: No DESCRIPTION file found 
+#> Error: No DESCRIPTION file found.
 # }
 ```

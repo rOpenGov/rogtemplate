@@ -47,7 +47,7 @@
     <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Menu bar</h6></li>
     <li><a class="dropdown-item" href="../../articles/menu/ggplot2.html">ggplot2 example</a></li>
-    <li><a class="dropdown-item" href="../../articles/menu/highlight.html">Testing syntax highlighter</a></li>
+    <li><a class="dropdown-item" href="../../articles/menu/highlight.html">Test syntax highlighting</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="../../articles/index.html">More articles...</a></li>
   </ul>
@@ -113,7 +113,7 @@
 <span><span class="fu">ruler</span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8</span></span>
 <span><span class="co">#&gt; 12345678901234567890123456789012345678901234567890123456789012345678901234567890</span></span></code></pre></div>
-<p>Some random code</p>
+<p>Some example code.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">render_rmarkdown</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">pkg</span>, <span class="va">input</span>, <span class="va">output</span>, <span class="va">...</span>, <span class="va">copy_images</span> <span class="op">=</span> <span class="cn">TRUE</span>, <span class="va">quiet</span> <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="va">input_path</span> <span class="op">&lt;-</span> <span class="fu">path_abs</span><span class="op">(</span><span class="va">input</span>, <span class="va">pkg</span><span class="op">$</span><span class="va">src_path</span><span class="op">)</span></span>
@@ -170,11 +170,11 @@
 <span>    <span class="fu">cat_line</span><span class="op">(</span><span class="st">"Writing "</span>, <span class="fu">dst_path</span><span class="op">(</span><span class="va">output</span><span class="op">)</span><span class="op">)</span></span>
 <span>  <span class="op">}</span></span>
 <span></span>
-<span>  <span class="co"># Copy over images needed by the document</span></span>
+<span>  <span class="co"># Copy images needed by the document.</span></span>
 <span>  <span class="kw">if</span> <span class="op">(</span><span class="va">copy_images</span><span class="op">)</span> <span class="op">{</span></span>
 <span>    <span class="va">ext</span> <span class="op">&lt;-</span> <span class="fu">rmarkdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgs.rstudio.com/rmarkdown/reference/find_external_resources.html" class="external-link">find_external_resources</a></span><span class="op">(</span><span class="va">input_path</span><span class="op">)</span></span>
 <span></span>
-<span>    <span class="co"># copy web + explicit files beneath vignettes/</span></span>
+<span>    <span class="co"># Copy web and explicit files beneath vignettes/.</span></span>
 <span>    <span class="va">is_child</span> <span class="op">&lt;-</span> <span class="fu">path_has_parent</span><span class="op">(</span><span class="va">ext</span><span class="op">$</span><span class="va">path</span>, <span class="st">"."</span><span class="op">)</span></span>
 <span>    <span class="va">ext_path</span> <span class="op">&lt;-</span> <span class="va">ext</span><span class="op">$</span><span class="va">path</span><span class="op">[</span><span class="op">(</span><span class="va">ext</span><span class="op">$</span><span class="va">web</span> <span class="op">|</span> <span class="va">ext</span><span class="op">$</span><span class="va">explicit</span><span class="op">)</span> <span class="op">&amp;</span> <span class="va">is_child</span><span class="op">]</span></span>
 <span></span>

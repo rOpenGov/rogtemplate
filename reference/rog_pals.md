@@ -1,6 +1,6 @@
 # rOpenGov color palettes
 
-Color palettes based on the color scheme of rOpenGov
+Color palettes based on the rOpenGov color scheme.
 
 ## Usage
 
@@ -38,22 +38,16 @@ rog_qualitative_pal(n = 6, alpha = 0.9, rev = FALSE)
 
 ## Value
 
-Color palettes
+Color palettes.
 
 ## See also
 
-[`grDevices::hcl.colors()`](https://rdrr.io/r/grDevices/palettes.html)
-
-Other extras:
-[`rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md),
-[`rog_badge_ropengov()`](https://ropengov.github.io/rogtemplate/reference/rog_badge_ropengov.md),
-[`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md),
-[`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md)
+grDevices'
+[`grDevices::hcl.colors()`](https://rdrr.io/r/grDevices/palettes.html).
 
 ## Examples
 
 ``` r
-
 scales::show_col(rog_orange_pal(9))
 
 

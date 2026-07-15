@@ -1,9 +1,7 @@
-# Add a rOpenGov badge to your `README` file
+# Add an rOpenGov badge to your README
 
-Add an rOpenGov badge pointing to <https://ropengov.org/> on your
-`README` file:
-
-[![ options: alt=](figures/ropengov-badge.svg)](https://ropengov.org/)
+Add an rOpenGov badge pointing to <https://ropengov.org/> to your
+README:
 
 ## Usage
 
@@ -15,29 +13,32 @@ rog_badge_ropengov(install = TRUE)
 
 - install:
 
-  TRUE/FALSE. On TRUE the badge would be installed on your
-  README.md/.Rmd. On FALSE a message with the Rmarkdown code would be
-  displayed.
+  `TRUE` or `FALSE`. If `TRUE`, the badge is installed on your
+  `README.md` or `README.Rmd`. If `FALSE`, a message with the R Markdown
+  code is displayed.
 
 ## Value
 
-A markdown badge or a message with the markdown code to be pasted.
+The function is called for its side effects and returns `NULL`
+invisibly.
+
+## Details
+
+[![ options: alt=](figures/ropengov-badge.svg)](https://ropengov.org/)
 
 ## See also
 
-[`usethis::use_badge()`](https://usethis.r-lib.org/reference/badges.html)
+[usethis](https://CRAN.R-project.org/package=usethis)'s
+[`usethis::use_badge()`](https://usethis.r-lib.org/reference/badges.html).
 
-Other extras:
-[`rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md),
+package asset helpers:
 [`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md),
-[`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md),
-[`rog_pals`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
+[`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md)
 
 ## Examples
 
 ``` r
-
 rog_badge_ropengov(install = FALSE)
-#> Badge URL is 
+#> Badge Markdown is 
 #> [![rOpenGov package](https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge.svg)](https://ropengov.org/)
 ```

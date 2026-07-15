@@ -1,33 +1,33 @@
-# usdoj: For Accessing U.S. Department of Justice (DOJ) Open Data
+# usdoj: access U.S. Department of Justice open data
 
-> rogtemplate testing of blog post render. Taken from
+> **rogtemplate** test fixture for blog post rendering. Taken from
 > <https://ropengov.org/2023/04/usdoj-cran-release/>
 
-usdoj, a package for fetching data from the United States (US)
+**usdoj**, a package for fetching data from the United States (U.S.)
 Department of Justice (DOJ) API, was released as part of the rOpenGov
-project. usdoj provides easy access to US DOJ press releases, blog
-entries, and speeches. Optional parameters allow users to specify the
-number of results starting from the earliest or latest entries, and
-whether these results contain keywords. Data is cleaned for analysis and
-returned in a data frame.
+project. **usdoj** provides easy access to U.S. DOJ press releases, blog
+entries and speeches. Optional parameters allow users to specify the
+number of results, whether to start from the earliest or latest entries
+and whether the results contain keywords. Data is cleaned for analysis
+and returned in a data frame.
 
-US DOJ press releases, blog posts, and speeches are an official media
-through which the United States government publicizes front line
-information about law, enforcement, and crime that may be of interest to
-members of the public, researchers and analysts, and members of other
+U.S. DOJ press releases, blog posts and speeches are official media
+through which the United States government publicizes front-line
+information about law enforcement and crime that may be of interest to
+members of the public, researchers, analysts and members of other
 government branches. They include coverage for divisions such as the
 Federal Bureau of Investigation (FBI), the Offices of the United States
 Attorneys (USAO), the National Security Division (NSD), the Civil
 Division, the Tax Division, the Bureau of Alcohol, Tobacco, Firearms and
-Explosives (ATF), the Drug Enforcement Administration (DEA), and more.
-New media are published on a regular basis
+Explosives (ATF), the Drug Enforcement Administration (DEA) and more.
+New media are published on a regular basis.
 
-usdoj makes this media accessible in an analysis-ready format through
-three functions that search for and return relevant results:
-`doj_press_releases()`, `doj_blog_posts()`, and `doj_speeches()`. Data
-is cleaned and structured before it is returned as a data frame with
-fields for the body text, date, title, url, the name of the
-corresponding division, to name just a few.
+**usdoj** makes this media accessible in an analysis-ready format
+through three functions that search for and return relevant results:
+`doj_press_releases()`, `doj_blog_posts()` and `doj_speeches()`. Data is
+cleaned and structured before it is returned as a data frame with fields
+for body text, date, title, URL and the name of the corresponding
+division, among other fields.
 
 ``` r
 
@@ -72,20 +72,18 @@ plot_usmap(data = df,
 TF-IDF Scores by USAO
 Grouping](./unnamed-chunk-1-1.png)](https://ropengov.github.io/rogtemplate/articles/test/unnamed-chunk-1-1.png)
 
-## Demonstration: Text Mining United States Department of Justice Open Data
+## Demonstration: text mining U.S. Department of Justice open data
 
-The data returned by usdoj is in a format that can easily undergo
-additional processing for analysis. The purpose of this section is to
-show one way of doing this while walking through the steps for
-performing a TF-IDF (term frequency-inverse document frequency) analysis
-in order to see which words are characteristic to certain divisions, and
-not others.
+The data returned by **usdoj** is in a format that can easily undergo
+additional processing for analysis. This section shows one way to
+perform a TF-IDF (term frequency-inverse document frequency) analysis to
+see which words are characteristic of certain divisions and not others.
 
-#### Installing and Loading Libraries
+#### Install and load libraries
 
-usdoj can be installed from CRAN (using `install.packages("usdoj")`) or
+**usdoj** can be installed from CRAN with `install.packages("usdoj")` or
 from rOpenGov’s r-universe. For this tutorial we will also use the
-tidyverse and tidytext libraries.
+**tidyverse** and **tidytext** packages.
 
 ``` r
 
@@ -96,12 +94,12 @@ library(tidytext)
 library(lubridate)
 ```
 
-We will start by collecting US DOJ press releases with the corresponding
-function, `doj_press_releases()`. By default, the most recently
-published records are returned. Passing `search_direction = "ASC"` to
-the function will instead return data starting at the earliest published
-records. usdoj automatically flattens nested fields. The resulting data
-frame is easily text mined.
+We will start by collecting U.S. DOJ press releases with the
+corresponding function, `doj_press_releases()`. By default, the most
+recently published records are returned. Passing
+`search_direction = "ASC"` to the function will instead return data
+starting at the earliest published records. **usdoj** automatically
+flattens nested fields. The resulting data frame is easily text mined.
 
 ``` r
 
@@ -157,11 +155,10 @@ easily quantifiable.
 tail(press_releases$body, 2)
 ```
 
-For this demonstration, we will just compare the words relating to
-United States Attorney Offices (USAOs) across different states. We will
-do this by removing mentions of the other divisions from the “name”
-field and filtering for just press releases that contain USAO as a
-division.
+For this demonstration, we will compare words related to United States
+Attorney Offices (USAOs) across different states. We will do this by
+removing mentions of other divisions from the “name” field and filtering
+for press releases that contain USAO as a division.
 
 ``` r
 
@@ -183,9 +180,9 @@ tokenized_press_releases <- usao_press_releases %>%
   unnest_tokens(word, body)
 ```
 
-For this demonstration we will remove digits because they occur
-frequently in the data set and, for our purposes, they don’t reveal much
-meaningful information.
+For this demonstration, we will remove digits because they occur
+frequently in the data set and, for our purposes, they do not reveal
+much meaningful information.
 
 ``` r
 
@@ -193,12 +190,13 @@ cleaned_tokenized_press_releases <- tokenized_press_releases %>%
   slice(which(!str_detect(word, "[[:digit:]]")))
 ```
 
-In preparation of performing a TF-IDF analysis, we will count the number
-of times a word appears in each unique “name” grouping. In other words,
-if the same word appears in “Civil Division” and “Antitrust Division,”
-then the count will be “one” for each division (as opposed to “two,”
-reflecting the overall count). To remove typos and other such errors, we
-will also remove words that have been stated less than 5 times.
+In preparation for performing a TF-IDF analysis, we will count the
+number of times a word appears in each unique “name” grouping. In other
+words, if the same word appears in “Civil Division” and “Antitrust
+Division”, then the count will be “one” for each division, as opposed to
+“two” reflecting the overall count. To remove typos and other such
+errors, we will also remove words that have been stated less than 5
+times.
 
 ``` r
 

@@ -1,6 +1,6 @@
-# Example of a precomputed vignette
+# Precomputed vignette example
 
-This is an example of a precomputed vignette:
+This vignette tests a precomputed vignette workflow.
 
 ``` r
 
@@ -10,11 +10,12 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
   geom_raster(aes(fill = density))
 ```
 
-![A plot with a long caption here](plot-1.png)
+![A density raster plot.](plot-1.png)
 
-A plot with a long caption here
+A density raster plot.
 
-See here some text:
+The following placeholder text keeps the vignette long enough to test
+layout.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
 efficitur massa risus, eu tincidunt magna finibus id. Donec quis
