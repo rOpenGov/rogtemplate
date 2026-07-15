@@ -281,9 +281,9 @@
     },
     "SystemRequirements": null
   },
-  "isPartOf": "http://ropengov.org/",
+  "isPartOf": "https://ropengov.org/",
   "keywords": ["ropengov", "template", "r", "r-package", "github-actions", "pkgdown", "pkgdown-template"],
-  "fileSize": "1901.23KB",
+  "fileSize": "1901.232KB",
   "releaseNotes": "https://github.com/rOpenGov/rogtemplate/blob/main/NEWS.md",
   "readme": "https://github.com/rOpenGov/rogtemplate/blob/main/README.md",
   "contIntegration": "https://github.com/rOpenGov/rogtemplate/actions",
