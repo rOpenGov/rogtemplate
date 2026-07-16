@@ -10,8 +10,12 @@ logo:
   images:
     icon: ./assets/favicon.png
     header: ./assets/logo.png
+    header-light: ../pkgdown/assets/logo2020_black_orange.svg
+    header-dark: ../pkgdown/assets/logo2020_white_orange.svg
   small: header
-  medium: header
+  medium:
+    light: header-light
+    dark: header-dark
 
 color:
   palette:
@@ -28,7 +32,12 @@ color:
     white: "#fff"
     gray: "#6c757d"
     gray-dark: "#343a40"
+    logo-gray: "#666666"
+    logo-gray-dark: "#4d4d4d"
+    logo-gray-light: "#b4b4b4"
+    jumbotron-bg: "#e9ecef"
     code: "#e83e8c"
+    code-dark: "#f19ac6"
   foreground: "#212529"
   background: white
   primary: blue
@@ -51,39 +60,38 @@ typography:
 defaults:
   bootstrap:
     defaults:
-      navbar-light-bg: "#343a40"
-      navbar-light-color: rgba(255, 255, 255, .5)
+      navbar-light-bg: $brand-gray_dark
+      navbar-light-color: rgba(255, 255, 255, .75)
       navbar-light-toggler-border-color: rgba(255, 255, 255, .1)
       navbar-light-toggler-icon-bg: >
         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 0.5)'
-        stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4
-        7h22M4 15h22M4 23h22'/></svg>")
-      navbar-light-brand-color: "#ffffff"
-      navbar-light-brand-hover-color: "#ffffff"
+        stroke-linecap='round' stroke-miterlimit='10' stroke-width='2'
+        d='M4 7h22M4 15h22M4 23h22'/></svg>")
+      navbar-light-brand-color: $brand-white
+      navbar-light-brand-hover-color: $brand-white
       navbar-light-hover-color: rgba(255,255,255,.75)
-      navbar-light-active-color: "#ffffff"
-      navbar-dark-bg: "#343a40"
-      navbar-dark-color: rgba(255, 255, 255, .5)
+      navbar-light-active-color: $brand-white
+      navbar-dark-bg: $brand-gray_dark
+      navbar-dark-color: rgba(255, 255, 255, .75)
       navbar-dark-toggler-border-color: rgba(255, 255, 255, .1)
       navbar-dark-toggler-icon-bg: >
         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 0.5)'
-        stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4
-        7h22M4 15h22M4 23h22'/></svg>")
-      navbar-dark-brand-color: "#ffffff"
-      navbar-dark-brand-hover-color: "#ffffff"
+        stroke-linecap='round' stroke-miterlimit='10' stroke-width='2'
+        d='M4 7h22M4 15h22M4 23h22'/></svg>")
+      navbar-dark-brand-color: $brand-white
+      navbar-dark-brand-hover-color: $brand-white
       navbar-dark-hover-color: rgba(255,255,255,.75)
-      navbar-dark-active-color: "#ffffff"
+      navbar-dark-active-color: $brand-white
       link-decoration: none
-      pkgdown-footer-bg: "#343a40"
-      pkgdown-footer-color: rgba(255, 255, 255, 0.5)
-      dropdown-bg: "#343a40"
+      pkgdown-footer-bg: $brand-gray_dark
+      pkgdown-footer-color: rgba(255, 255, 255, 0.75)
+      dropdown-bg: $brand-gray_dark
       dropdown-border-color: rgba(255, 255, 255, .1)
       dropdown-divider-bg: rgba(255, 255, 255, .1)
-      dropdown-dark-bg: "#343a40"
+      dropdown-dark-bg: $brand-gray_dark
       dropdown-dark-border-color: rgba(255, 255, 255, .1)
       dropdown-dark-divider-bg: rgba(255, 255, 255, .1)
-      blockquote-border-color: transparent
-      code-color: "#e83e8c"
-      code-color-dark: "#e83e8c"
+      code-color: $brand-code
+      code-color-dark: $brand-code_dark

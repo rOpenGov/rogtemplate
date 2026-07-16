@@ -6,8 +6,31 @@ contrast_ratio <- function(foreground, background) {
     (min(foreground_luminance, background_luminance) + 0.05)
 }
 
+contrast_ratio_alpha <- function(foreground, background, alpha) {
+  foreground_rgb <- hex_to_rgb(foreground)
+  background_rgb <- hex_to_rgb(background)
+  composite_rgb <- foreground_rgb * alpha + background_rgb * (1 - alpha)
+
+  foreground_luminance <- relative_luminance(composite_rgb)
+  background_luminance <- relative_luminance(background_rgb)
+
+  (max(foreground_luminance, background_luminance) + 0.05) /
+    (min(foreground_luminance, background_luminance) + 0.05)
+}
+
 hex_to_rgb <- function(hex) {
   hex <- sub("^#", "", hex)
+  if (nchar(hex) == 3) {
+    hex <- paste0(
+      substr(hex, 1, 1),
+      substr(hex, 1, 1),
+      substr(hex, 2, 2),
+      substr(hex, 2, 2),
+      substr(hex, 3, 3),
+      substr(hex, 3, 3)
+    )
+  }
+
   strtoi(substring(hex, c(1, 3, 5), c(2, 4, 6)), 16L) / 255
 }
 

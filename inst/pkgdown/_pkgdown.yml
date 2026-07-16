@@ -28,6 +28,10 @@ template:
           white: "#fff"
           gray: "#6c757d"
           gray-dark: "#343a40"
+          logo-gray: "#666666"
+          logo-gray-dark: "#4d4d4d"
+          logo-gray-light: "#b4b4b4"
+          jumbotron-bg: "#e9ecef"
           code: "#e83e8c"
           code-dark: "#f19ac6"
         foreground: "#212529"
@@ -51,7 +55,7 @@ template:
         bootstrap:
           defaults:
             navbar-light-bg: $brand-gray_dark
-            navbar-light-color: rgba(255, 255, 255, .5)
+            navbar-light-color: rgba(255, 255, 255, .75)
             navbar-light-toggler-border-color: rgba(255, 255, 255, .1)
             navbar-light-toggler-icon-bg: >
               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
@@ -63,7 +67,7 @@ template:
             navbar-light-hover-color: rgba(255,255,255,.75)
             navbar-light-active-color: $brand-white
             navbar-dark-bg: $brand-gray_dark
-            navbar-dark-color: rgba(255, 255, 255, .5)
+            navbar-dark-color: rgba(255, 255, 255, .75)
             navbar-dark-toggler-border-color: rgba(255, 255, 255, .1)
             navbar-dark-toggler-icon-bg: >
               url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
@@ -76,7 +80,7 @@ template:
             navbar-dark-active-color: $brand-white
             link-decoration: none
             pkgdown-footer-bg: $brand-gray_dark
-            pkgdown-footer-color: rgba(255, 255, 255, 0.5)
+            pkgdown-footer-color: rgba(255, 255, 255, 0.75)
             dropdown-bg: $brand-gray_dark
             dropdown-border-color: rgba(255, 255, 255, .1)
             dropdown-divider-bg: rgba(255, 255, 255, .1)
