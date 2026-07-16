@@ -91,3 +91,15 @@ test_that("dark mode danger text has AA contrast", {
   expect_equal(danger, "#ee99a1")
   expect_gte(contrast_ratio(danger, "#394046"), 4.5)
 })
+
+test_that("custom CSS does not define bslib brand variables", {
+  css <- paste(
+    readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
+    collapse = "\n"
+  )
+
+  expect_equal(
+    grep("--brand-[[:alnum:]_-]+\\s*:", css, value = TRUE),
+    character()
+  )
+})
