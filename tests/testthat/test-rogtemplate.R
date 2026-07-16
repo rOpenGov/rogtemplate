@@ -36,7 +36,10 @@ test_that("rog_actions_pkgdown_branch writes to pkg", {
       "Package: tmpkg",
       "Title: Temp Package",
       "Version: 0.0.0.9000",
-      "Authors@R: person(\"A\", \"B\", email = \"a@example.com\", role = c(\"aut\", \"cre\"))",
+      paste0(
+        "Authors@R: person(\"A\", \"B\", email = \"a@example.com\", ",
+        "role = c(\"aut\", \"cre\"))"
+      ),
       "Description: Test package.",
       "License: MIT",
       "Encoding: UTF-8"
