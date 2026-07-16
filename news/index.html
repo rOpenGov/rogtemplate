@@ -61,6 +61,11 @@
 <li>Added rOpenGov color palette functions, see <code><a href="../reference/rog_pals.html">rog_orange_pal()</a></code>.</li>
 <li>Adapted to <strong>bslib</strong> &gt;= 0.6.1 and Bootstrap v5.3.1 changes.</li>
 <li>Added dark mode.</li>
+<li>Dark mode CSS now keeps generated styles synchronized and uses an accessible danger text color.</li>
+<li>
+<code><a href="../reference/rog_actions_pkgdown_branch.html">rog_actions_pkgdown_branch()</a></code> now writes project metadata to the requested <code>pkg</code> path and grants the generated pkgdown deployment workflow <code>contents: write</code>.</li>
+<li>
+<code><a href="../reference/rog_build.html">rog_build()</a></code> now respects the requested <code>pkg</code> path and keeps logo-only arguments out of the <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code> call.</li>
 </ul></div>
   </main></div>
 

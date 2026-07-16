@@ -7,3 +7,13 @@
   [`rog_orange_pal()`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md).
 - Adapted to **bslib** \>= 0.6.1 and Bootstrap v5.3.1 changes.
 - Added dark mode.
+- Dark mode CSS now keeps generated styles synchronized and uses an
+  accessible danger text color.
+- [`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md)
+  now writes project metadata to the requested `pkg` path and grants the
+  generated pkgdown deployment workflow `contents: write`.
+- [`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)
+  now respects the requested `pkg` path and keeps logo-only arguments
+  out of the
+  [`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html)
+  call.
