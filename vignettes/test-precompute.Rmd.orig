@@ -1,5 +1,6 @@
 ---
 title: "Precomputed vignette example"
+description: "Test rendering for a vignette with precomputed output."
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Precomputed vignette example}
