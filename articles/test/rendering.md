@@ -4,7 +4,7 @@ This vignette tests **pkgdown** output rendering for several use cases.
 
 ## Footnotes
 
-Footnotes render correctly.[^1]
+This paragraph checks footnote rendering.[^1]
 
 ## Figures
 
@@ -13,8 +13,7 @@ Footnotes render correctly.[^1]
 plot(1:10)
 ```
 
-![Line plot from 1 to
-10.](rendering_files/figure-html/unnamed-chunk-2-1.png)
+![Test plot](rendering_files/figure-html/unnamed-chunk-2-1.png)
 
 ## External files
 
@@ -25,9 +24,9 @@ x
 #> [1] "a" "b" "c" "d"
 ```
 
-![Bacon placeholder image](bacon.jpg)
+![bacon](bacon.jpg)
 
-Bacon placeholder image
+bacon
 
 ## Details tag
 
@@ -125,9 +124,9 @@ YAML
 yaml: [a, 1]
 ```
 
-### Should not be highlighted
+### Shouldn’t be highlighted
 
-Non-R code in `\preformatted{}`
+Non-R code in `\preformatted{}`:
 
     yaml: [a, b, c]
 
@@ -203,7 +202,7 @@ warning(cli::style_bold("This is bold"))
 #> Warning: This is bold
 ```
 
-Text before an erroring chunk.
+Some text
 
 ``` r
 
@@ -212,7 +211,7 @@ stop(cli::style_italic("This is italic"))
 #> ! This is italic
 ```
 
-Text after an erroring chunk.
+Some more text
 
 ## Quoted text
 
@@ -238,35 +237,34 @@ There should be no bug here.
 - Tab 1
 - Tab 2
 
-Placeholder tab content.
+Tab content.
 
 ``` r
 
 1 + 1
 ```
 
-The “cool” heading should appear below.
+The heading below should be “cool”.
 
 ##### cool
 
-Placeholder heading content.
+More tab content.
 
-More placeholder tab content.
+More tab content.
 
 ### Tabset without pills
 
 - Tab 1
 - Tab 2
 
-Some placeholder content.
+More tab content.
 
 ``` r
 
 plot(1:42)
 ```
 
-![Line plot from 1 to
-42.](rendering_files/figure-html/unnamed-chunk-8-1.png)
+![Another test plot](rendering_files/figure-html/unnamed-chunk-8-1.png)
 
 This tab should be active.
 

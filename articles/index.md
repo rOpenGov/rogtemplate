@@ -30,8 +30,6 @@ Examples for precomputed vignettes.
 - [Precomputed vignette
   example](https://ropengov.github.io/rogtemplate/articles/test-precompute.md):
 
-  Test rendering for a vignette with precomputed output.
-
 ### Testing articles
 
 These articles are used to test various
@@ -75,7 +73,7 @@ be difficult to test automatically.
 - [Output
   rendering](https://ropengov.github.io/rogtemplate/articles/test/rendering.md):
 
-  Test pkgdown rendering for common article output features.
+  Check rendered output blocks, metadata display and article layout.
 
 - [A short
   page](https://ropengov.github.io/rogtemplate/articles/test/short.md):
@@ -84,8 +82,6 @@ be difficult to test automatically.
 
 - [Precomputed vignette
   example](https://ropengov.github.io/rogtemplate/articles/test-precompute.md):
-
-  Test rendering for a vignette with precomputed output.
 
 - [HTML
   widgets](https://ropengov.github.io/rogtemplate/articles/test/widgets.md):
