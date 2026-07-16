@@ -2,5 +2,5 @@
 ignore = [
   "implicit_assignment",
   "internal_function",
-  "outdated_suppression",
+  "unreachable_code",
 ]

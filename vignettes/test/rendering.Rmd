@@ -271,8 +271,6 @@ More tab content.
 
 ```{r}
 #| fig.alt: Another test plot
-#| jarl-ignore-chunk:
-#|   - unreachable_code: This is only a test
 plot(1:42)
 ```
 
