@@ -157,6 +157,8 @@ Examples for precomputed vignettes.
 - [Precomputed vignette
   example](https://ropengov.github.io/rogtemplate/articles/test-precompute.md):
 
+  Test rendering for a vignette with precomputed output.
+
 ### Testing articles
 
 These articles are used to test various
@@ -209,6 +211,8 @@ be difficult to test automatically.
 
 - [Precomputed vignette
   example](https://ropengov.github.io/rogtemplate/articles/test-precompute.md):
+
+  Test rendering for a vignette with precomputed output.
 
 - [HTML
   widgets](https://ropengov.github.io/rogtemplate/articles/test/widgets.md):
