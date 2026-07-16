@@ -92,6 +92,16 @@ test_that("dark mode danger text has AA contrast", {
   expect_gte(contrast_ratio(danger, "#394046"), 4.5)
 })
 
+test_that("dark mode code text has AA contrast from bslib brand", {
+  pkgdown <- yaml::read_yaml(rogtemplate_file("pkgdown/_pkgdown.yml"))
+  bootstrap_defaults <- pkgdown$template$bslib$brand$defaults$bootstrap$defaults
+  code <- bootstrap_defaults[["code-color-dark"]]
+
+  expect_equal(code, "#f19ac6")
+  expect_gte(contrast_ratio(code, "#394046"), 4.5)
+  expect_gte(contrast_ratio(code, "#343a40"), 4.5)
+})
+
 test_that("custom CSS does not define bslib brand variables", {
   css <- paste(
     readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
