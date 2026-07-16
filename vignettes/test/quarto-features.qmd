@@ -1,7 +1,8 @@
 ---
 title: Quarto features
-description: "Test pkgdown rendering for representative Quarto features."
-subtitle: Use shortcodes
+description: >
+  Check Quarto-specific article features such as citations and shortcodes.
+subtitle: Using this for shortcodes
 output: html
 knitr:
   opts_chunk:
@@ -26,7 +27,7 @@ penguins |>                                      # <1>
   )                                              # <2>
 ```
 
-1.  Take `penguins` and then
+1.  Take `penguins`, then,
 2.  add new columns for the bill ratio and bill area.
 
 ## Code filename
@@ -48,8 +49,7 @@ plt.show()
 <div class="callout-body-container callout-body">
 ```
 
-There are five callout types: `note`, `tip`, `warning`, `caution` and
-`important`.
+Callout types include `note`, `tip`, `warning`, `caution` and `important`.
 
 ```{=html}
 </div>
@@ -82,8 +82,8 @@ warning.
 <div class="callout-body-container callout-body">
 ```
 
-The callout type provides the expected heading, such as Note, Warning,
-Important, Tip or Caution.
+The callout heading is provided by the callout type, with the expected heading,
+such as Note, Warning, Important, Tip or Caution.
 
 ```{=html}
 </div>
@@ -188,7 +188,7 @@ diffviewer::visual_diff(path1, path2)
 
     Continued (indent 4 spaces)
 
-Another example
+Another example.
 
 1.  ordered list
 
@@ -200,12 +200,12 @@ Another example
 
     A.  sub-sub-item 1
 
-A task list
+A task list.
 
 -   [ ] Task 1
 -   [x] Task 2
 
-A definition
+A definition.
 
 term
 
@@ -222,25 +222,25 @@ Here is a footnote reference,[^1] and another.[^2]
     Subsequent paragraphs are indented to show that they belong to the previous
     footnote.
 
-    ```
+    ```         
     { some.code }
     ```
 
     The whole paragraph can be indented, or just the first line. In this way,
     multi-paragraph footnotes work like multi-paragraph list items.
 
-This paragraph will not be part of the note because it is not indented.
+This paragraph won't be part of the note, because it isn't indented.
 
 Here is an inline note.[^3]
 
-[^3]: Inline notes are easier to write because you do not have to pick an
+[^3]: Inline notes are easier to write, since you do not have to pick an
     identifier and move down to type the note.
 
 ## Equations
 
-inline math: $E = mc^{2}$
+Inline math: $E = mc^{2}$.
 
-display math:
+Display math:
 
 $$E = mc^{2}$$
 
@@ -256,9 +256,9 @@ $$E = mc^{2}$$
 
 [This text is highlighted]{.mark}
 
-endash: --
+Endash: --
 
-emdash: ---
+Emdash: ---
 
 ## Shortcodes
 
@@ -289,7 +289,7 @@ plot(c(1, 2, 3))
 
 We will define some values here. [`{r} "some code"`]{#a-span}
 
-The output of that inline code cell is {{< contents a-span >}}. Etc.
+The output of that inline code cell is {{< contents a-span >}}.
 
 ## Figures
 

@@ -54,3 +54,6 @@
 ^\.claude$
 ^\.gitattributes$
 ^AGENTS\.md$
+^dev$
+^vignettes/precompute-quarto\.qmd\.orig$
+^vignettes/*_files$

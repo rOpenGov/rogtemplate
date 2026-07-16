@@ -49,24 +49,21 @@ articles:
   contents:
   - articles/downloads
 
-- title: Menu bar
+- title: Precomputed articles
+  navbar: Precomputed
+  desc: >
+    Articles used to check precomputed R Markdown and Quarto output.
+  contents:
+  - starts_with("precompute")
+- title: Menu examples
   navbar: Menu bar
-  desc: Articles used to test nested article navigation.
+  desc: >
+    Articles used to test dropdown menus in the article navbar.
   contents:
   - starts_with("menu")
-
-- title: Precompute
-  desc: Examples for precomputed vignettes.
-  contents:
-  - test-precompute
- 
-- title: Testing articles
+- title: Feature tests
   desc: >
-    These articles are used to test various <a
-    href="https://CRAN.R-project.org/package=pkgdown"
-    class="external-link"><span class="pkg">pkgdown</span></a> features that can
-    be difficult to test automatically.
+    These articles are used to test **pkgdown** features that cannot easily be
+    tested automatically.
   contents:
   - starts_with("test")
-  - starts_with("articles/test")
-

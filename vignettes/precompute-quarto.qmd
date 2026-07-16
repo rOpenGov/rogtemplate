@@ -1,16 +1,16 @@
 ---
-title: "Precomputed vignette example"
-description: "Test rendering for a vignette with precomputed output."
-output: rmarkdown::html_vignette
+title: "Precomputed Quarto vignette"
+description: >
+  Check how pkgdown handles a precomputed Quarto vignette.
 vignette: >
-  %\VignetteIndexEntry{Precomputed vignette example}
-  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Precomputed Quarto vignette}
+  %\VignetteEngine{quarto::html}
   %\VignetteEncoding{UTF-8}
 ---
 
 
 
-This vignette tests a precomputed vignette workflow.
+This is an example of a precomputed Quarto vignette.
 
 
 ``` r
@@ -21,11 +21,11 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
 ```
 
 <div class="figure">
-<img src="./plot-1.png" alt="A density raster plot." width="100%" />
-<p class="caption">A density raster plot.</p>
+<img src="./plot_quarto-1.png" alt="Waiting time and eruption duration density." width="100%" />
+<p class="caption">Waiting time and eruption duration density.</p>
 </div>
 
-The following placeholder text keeps the vignette long enough to test layout.
+The remaining text is filler content used to test long article rendering.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer efficitur massa
 risus, eu tincidunt magna finibus id. Donec quis tincidunt est, sed commodo leo.

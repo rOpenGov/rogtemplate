@@ -1,6 +1,7 @@
 ---
 title: "HTML widgets"
-description: "Test spacing and rendering for HTML widgets."
+description: >
+  Check HTML widget rendering and layout inside pkgdown articles.
 ---
 
 ```{r}
@@ -13,7 +14,7 @@ knitr::opts_chunk$set(
 
 ## Widgets
 
-Test spacing above the widget.
+Test spacing above widget.
 
 ```{r}
 #| echo: false
@@ -25,4 +26,4 @@ writeLines(letters[-(10:11)], path2)
 diffviewer::visual_diff(path1, path2)
 ```
 
-Test spacing below the widget.
+Test spacing below widget.

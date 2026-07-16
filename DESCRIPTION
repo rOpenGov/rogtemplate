@@ -20,6 +20,7 @@ Imports:
     brand.yml,
     desc (>= 1.3.0),
     ggplot2 (>= 3.3.5),
+    grDevices,
     grid,
     hexSticker (>= 0.4.9),
     magick (>= 2.7.3),
@@ -27,20 +28,25 @@ Imports:
     showtext (>= 0.9.4),
     sysfonts (>= 0.8.5),
     usethis (>= 2.0.0),
+    utils,
     yaml (>= 2.2.1)
 Suggests: 
+    cli,
     knitr,
+    MASS,
     quarto,
-    remotes,
     rmarkdown,
     sass,
     scales,
     styler,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    tibble,
+    tidyr,
+    tools
 VignetteBuilder: 
     knitr
 Config/Needs/website: cranlogs, tidyverse, jsonlite, lubridate, reactable,
-    pkgsearch, htmltools, diffviewer
+    pkgsearch, htmltools, diffviewer, dplyr
 Config/roxygen2/markdown: TRUE
 Config/roxygen2/version: 8.0.0
 Config/testthat/edition: 3

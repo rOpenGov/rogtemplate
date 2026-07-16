@@ -66,8 +66,8 @@ defaults:
       navbar-light-toggler-icon-bg: >
         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 0.5)'
-        stroke-linecap='round' stroke-miterlimit='10' stroke-width='2'
-        d='M4 7h22M4 15h22M4 23h22'/></svg>")
+        stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4
+        7h22M4 15h22M4 23h22'/></svg>")
       navbar-light-brand-color: $brand-white
       navbar-light-brand-hover-color: $brand-white
       navbar-light-hover-color: rgba(255,255,255,.75)
@@ -78,8 +78,8 @@ defaults:
       navbar-dark-toggler-icon-bg: >
         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 30 30'><path stroke='rgba(255, 255, 255, 0.5)'
-        stroke-linecap='round' stroke-miterlimit='10' stroke-width='2'
-        d='M4 7h22M4 15h22M4 23h22'/></svg>")
+        stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4
+        7h22M4 15h22M4 23h22'/></svg>")
       navbar-dark-brand-color: $brand-white
       navbar-dark-brand-hover-color: $brand-white
       navbar-dark-hover-color: rgba(255,255,255,.75)
