@@ -263,6 +263,11 @@ code {
   background-color: var(--bs-body-bg) !important;
 }
 
+pre code,
+pre code span {
+  background-color: transparent !important;
+}
+
 @media (max-width: 575.98px) {
   /* See https://github.com/r-lib/pkgdown/pull/2970 */
 

@@ -183,6 +183,16 @@ test_that("custom CSS does not define bslib brand variables", {
   )
 })
 
+test_that("code blocks do not inherit inline code backgrounds", {
+  css <- paste(
+    readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
+    collapse = "\n"
+  )
+
+  expect_match(css, "pre code,\\s*pre code span")
+  expect_match(css, "background-color: transparent !important;")
+})
+
 test_that("pkgdown bootstrap defaults use brand palette variables", {
   brand <- yaml::read_yaml(rogtemplate_file("brand_yml/_brand.yml"))
   bootstrap_defaults <- brand$defaults$bootstrap$defaults
