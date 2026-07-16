@@ -1,28 +1,8 @@
 # Code
 
-Some filler text.
+This article checks how code blocks render in the template.
 
-Some filler text.
-
-``` r
-
-ruler <- function(width = getOption("width")) {
-  x <- seq_len(width)
-  y <- rep("-", length(x))
-
-  y[x %% 5 == 0] <- "+"
-  y[x %% 10 == 0] <- as.character((x[x %% 10 == 0] %/% 10) %% 10)
-
-  cat(y, "\n", sep = "")
-  cat(x %% 10, "\n", sep = "")
-}
-
-ruler()
-#> ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-#> 12345678901234567890123456789012345678901234567890123456789012345678901234567890
-```
-
-Some example code.
+The following code block is used as a long syntax highlighting fixture.
 
 ``` r
 
@@ -85,13 +65,13 @@ render_rmarkdown <- function(pkg, input, output, ..., copy_images = TRUE, quiet 
   if (copy_images) {
     ext <- rmarkdown::find_external_resources(input_path)
 
-    # Copy web and explicit files beneath vignettes/.
+    # Copy web resources and explicit files beneath vignettes/.
     is_child <- path_has_parent(ext$path, ".")
     ext_path <- ext$path[(ext$web | ext$explicit) & is_child]
 
     src <- path(path_dir(input_path), ext_path)
     dst <- path(path_dir(output_path), ext_path)
-    # Make sure destination paths exist before copying files there
+    # Make sure destination paths exist before copying files there.
     dir_create(unique(path_dir(dst)))
     file_copy(src, dst, overwrite = TRUE)
   }

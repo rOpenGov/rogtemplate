@@ -9,68 +9,63 @@ Example dashboards used by the rOpenGov template site.
 
   Explore CRAN download trends for rOpenGov packages.
 
-### Menu bar
+### Precomputed articles
 
-Articles used to test nested article navigation.
+Articles used to check precomputed R Markdown and Quarto output.
+
+- [Precomputed Quarto
+  vignette](https://ropengov.github.io/rogtemplate/articles/precompute-quarto.md):
+
+  Check how pkgdown handles a precomputed Quarto vignette.
+
+- [Precomputed R Markdown
+  vignette](https://ropengov.github.io/rogtemplate/articles/precompute.md):
+
+  Check how pkgdown handles a precomputed R Markdown vignette.
+
+### Menu examples
+
+Articles used to test dropdown menus in the article navbar.
 
 - [ggplot2
   example](https://ropengov.github.io/rogtemplate/articles/menu/ggplot2.md):
 
-  Check how pkgdown renders a simple ggplot2 figure.
+  Check how pkgdown renders ggplot2 figures in article pages.
 
-- [Test syntax
-  highlighting](https://ropengov.github.io/rogtemplate/articles/menu/highlight.md):
+- [Testing syntax
+  highlighter](https://ropengov.github.io/rogtemplate/articles/menu/highlight.md):
 
-  Check syntax highlighting across representative R code examples.
+  Check how pkgdown highlights R code blocks and inline syntax.
 
-### Precompute
+### Feature tests
 
-Examples for precomputed vignettes.
-
-- [Precomputed vignette
-  example](https://ropengov.github.io/rogtemplate/articles/test-precompute.md):
-
-  Test rendering for a vignette with precomputed output.
-
-### Testing articles
-
-These articles are used to test various
-[pkgdown](https://CRAN.R-project.org/package=pkgdown) features that can
-be difficult to test automatically.
-
-- [usdoj: access U.S. Department of Justice open
-  data](https://ropengov.github.io/rogtemplate/articles/test/blog-article.md):
-
-  Test blog article rendering with a realistic rOpenGov post.
+These articles are used to test **pkgdown** features that cannot easily
+be tested automatically.
 
 - [Bullets](https://ropengov.github.io/rogtemplate/articles/test/bullets.md):
 
-  Test list spacing and bullet rendering in pkgdown articles.
+  Check list rendering, spacing and nested bullet styles.
 
 - [Code](https://ropengov.github.io/rogtemplate/articles/test/code.md):
 
-  Test code block rendering and long line handling.
+  Check code blocks, copy buttons and package code rendering.
 
 - [Long table of
   contents](https://ropengov.github.io/rogtemplate/articles/test/long-toc.md):
 
-  Test navigation and rendering with a long table of contents.
+  Check navigation and layout behavior for long article tables of
+  contents.
 
 - [Quarto
   features](https://ropengov.github.io/rogtemplate/articles/test/quarto-features.md):
 
-  Test pkgdown rendering for representative Quarto features.
+  Check Quarto-specific article features such as citations and
+  shortcodes.
 
-- [Quarto
-  vignettes](https://ropengov.github.io/rogtemplate/articles/test/quarto.md):
-
-  Learn how Quarto vignettes work with pkgdown, including currently
-  supported features and known limitations.
-
-- [reactable
+- [Reactable
   example](https://ropengov.github.io/rogtemplate/articles/test/reactable.md):
 
-  Check rendering for an interactive reactable table.
+  Check reactable widgets and table styling inside pkgdown articles.
 
 - [Output
   rendering](https://ropengov.github.io/rogtemplate/articles/test/rendering.md):
@@ -80,14 +75,15 @@ be difficult to test automatically.
 - [A short
   page](https://ropengov.github.io/rogtemplate/articles/test/short.md):
 
-  Test footer placement on a short article page.
+  Check footer placement on short article pages.
 
-- [Precomputed vignette
-  example](https://ropengov.github.io/rogtemplate/articles/test-precompute.md):
+- [Quarto
+  vignettes](https://ropengov.github.io/rogtemplate/articles/test-quarto.md):
 
-  Test rendering for a vignette with precomputed output.
+  Learn how **pkgdown** works with Quarto vignettes, including currently
+  supported features and known limitations.
 
 - [HTML
   widgets](https://ropengov.github.io/rogtemplate/articles/test/widgets.md):
 
-  Test spacing and rendering for HTML widgets.
+  Check HTML widget rendering and layout inside pkgdown articles.

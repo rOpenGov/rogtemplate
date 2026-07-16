@@ -58,9 +58,13 @@
     <li><h6 class="dropdown-header" data-toc-skip>Dashboards</h6></li>
     <li><a class="dropdown-item" href="../../articles/downloads.html">Downloads of rOpenGov packages</a></li>
     <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Precomputed</h6></li>
+    <li><a class="dropdown-item" href="../../articles/precompute-quarto.html">Precomputed Quarto vignette</a></li>
+    <li><a class="dropdown-item" href="../../articles/precompute.html">Precomputed R Markdown vignette</a></li>
+    <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Menu bar</h6></li>
     <li><a class="dropdown-item" href="../../articles/menu/ggplot2.html">ggplot2 example</a></li>
-    <li><a class="dropdown-item" href="../../articles/menu/highlight.html">Test syntax highlighting</a></li>
+    <li><a class="dropdown-item" href="../../articles/menu/highlight.html">Testing syntax highlighter</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="../../articles/index.html">More articles...</a></li>
   </ul>
@@ -97,7 +101,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../../logo.png" class="logo" alt=""><h1>Quarto features</h1>
-      <p class="subtitle">Use shortcodes</p>
+      <p class="subtitle">Using this for shortcodes</p>
 
 
 
@@ -128,7 +132,7 @@
 <dl class="code-annotation-container-grid">
 <dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-1" data-code-lines="3" data-code-annotation="1">Take <code>penguins</code> and then</span>
+<span data-code-cell="annotated-cell-1" data-code-lines="3" data-code-annotation="1">Take <code>penguins</code>, then,</span>
 </dd>
 <dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
 <dd>
@@ -152,7 +156,7 @@
 <div class="callout-title-container flex-fill">Note</div>
 </div>
 <div class="callout-body-container callout-body">
-<p>There are five callout types: <code>note</code>, <code>tip</code>, <code>warning</code>, <code>caution</code> and <code>important</code>.</p>
+<p>Callout types include <code>note</code>, <code>tip</code>, <code>warning</code>, <code>caution</code> and <code>important</code>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-warning callout-titled">
@@ -170,7 +174,7 @@
 <div class="callout-title-container flex-fill">Important</div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The callout type provides the expected heading, such as Note, Warning, Important, Tip or Caution.</p>
+<p>The callout heading is provided by the callout type, with the expected heading, such as Note, Warning, Important, Tip or Caution.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -230,8 +234,8 @@
 </h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="visual_diff html-widget html-fill-item" id="htmlwidget-08674f1593045ccb65d3" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-08674f1593045ccb65d3">{"x":{"old":"a\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz\n","new":"a\nb\nc\nd\ne\nf\ng\nh\ni\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz\n","filename":"a.txt","typediff":"text"},"evals":[],"jsHooks":[]}</script>
+<div class="visual_diff html-widget html-fill-item" id="htmlwidget-53a172f54ba0d9a2bd9e" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-53a172f54ba0d9a2bd9e">{"x":{"old":"a\nb\nc\nd\ne\nf\ng\nh\ni\nj\nk\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz\n","new":"a\nb\nc\nd\ne\nf\ng\nh\ni\nl\nm\nn\no\np\nq\nr\ns\nt\nu\nv\nw\nx\ny\nz\n","filename":"a.txt","typediff":"text"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section><section class="level2"><h2 id="keyboard">Keyboard<a class="anchor" aria-label="anchor" href="#keyboard"></a>
@@ -247,7 +251,7 @@
 <p>Continued (indent 4 spaces)</p>
 </li>
 </ul>
-<p>Another example</p>
+<p>Another example.</p>
 <ol type="1">
 <li><p>ordered list</p></li>
 <li>
@@ -258,12 +262,12 @@
 </ol>
 </li>
 </ol>
-<p>A task list</p>
+<p>A task list.</p>
 <ul class="task-list">
 <li><label><input type="checkbox">Task 1</label></li>
 <li><label><input type="checkbox" checked>Task 2</label></li>
 </ul>
-<p>A definition</p>
+<p>A definition.</p>
 <dl>
 <dt>term</dt>
 <dd>
@@ -275,12 +279,12 @@
 &lt;p&gt;Subsequent paragraphs are indented to show that they belong to the previous footnote.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;&lt;span&gt;&lt;span class="op"&gt;{&lt;/span&gt; &lt;span class="va"&gt;some.code&lt;/span&gt; &lt;span class="op"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The whole paragraph can be indented, or just the first line. In this way, multi-paragraph footnotes work like multi-paragraph list items.&lt;/p&gt;'><sup>2</sup></a></p>
-<p>This paragraph will not be part of the note because it is not indented.</p>
-<p>Here is an inline note.<a class="footnote-ref" role="doc-noteref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;Inline notes are easier to write because you do not have to pick an identifier and move down to type the note.&lt;/p&gt;"><sup>3</sup></a></p>
+<p>This paragraph won’t be part of the note, because it isn’t indented.</p>
+<p>Here is an inline note.<a class="footnote-ref" role="doc-noteref" tabindex="0" data-bs-toggle="popover" data-bs-content="&lt;p&gt;Inline notes are easier to write, since you do not have to pick an identifier and move down to type the note.&lt;/p&gt;"><sup>3</sup></a></p>
 </section><section class="level2"><h2 id="equations">Equations<a class="anchor" aria-label="anchor" href="#equations"></a>
 </h2>
-<p>inline math: <span class="math inline">E = mc^{2}</span></p>
-<p>display math:</p>
+<p>Inline math: <span class="math inline">E = mc^{2}</span>.</p>
+<p>Display math:</p>
 <p><span class="math display">E = mc^{2}</span></p>
 </section><section class="level2"><h2 id="other-blocks">Other blocks<a class="anchor" aria-label="anchor" href="#other-blocks"></a>
 </h2>
@@ -290,11 +294,11 @@
 <p><span class="smallcaps">This text is smallcaps</span></p>
 <p><u>This text is underlined</u></p>
 <p><mark>This text is highlighted</mark></p>
-<p>endash: –</p>
-<p>emdash: —</p>
+<p>Endash: –</p>
+<p>Emdash: —</p>
 </section><section class="level2"><h2 id="shortcodes">Shortcodes<a class="anchor" aria-label="anchor" href="#shortcodes"></a>
 </h2>
-<p>The subtitle of this document is as follows: Use shortcodes</p>
+<p>The subtitle of this document is as follows: Using this for shortcodes</p>
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAADICAYAAADGFbfiAAAIcklEQVR4nO3csZYM6xrH4XIBuAAyESIJIhJEJGQkIyMhIiIiIiIhMwkZCRESIiQkiES4AFyAU/92vq2mTvXM7HfRM2et50l099RUfz1rr/fXX/XM3vLp06efHQD8SwICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQICQImAAFAiIACUCAgAJQLCpvH9+/fu48eP3datW7s9e/b0j/yvV69edW/evOlvdd3Jkye7nTt39remffjwoXv+/Hl/q+uOHDky95x/Ul7Do0ePZv9mbfv375/9O8+XL19mx0eOPXjwYH9r2vDY3bt3d0ePHu1vwcYREDaNM2fOzAJx4MCB7sGDB/0jK12+fLl7+PBhf+u3K1eudGfPnu1vrTR17KlTp7obN270t/6O27dvd7du3epvrTRvjffu3euuX7/e3/pt3hrzWvKahhKbO3fudNu2bevvweIJCJtCG6Zt9zEOSAZzBvTS0lJ39erV2Tv8HJ/Bev/+/dkwbdq5MowzvCP3c2yGcx7/04brSyyy60gM87zZVY3X+OzZs+7cuXOztWSNicC1a9e65eXl7sKFC93Fixf7o37JeRLX7Dru3r07O3d7jUv98+XnARtBQNhwuTRz4sSJ2SWZDPnxDiSxOHz4cLdjx47uyZMn/SO/5PFDhw51e/funQ3oZt++fbMQvXz5sr/3W47dsmVL9+LFi/7en5W1vH79evYahnIZLa8toUi8mjz2+fPn2RoTj+b48ePd169fZ2tsjyc0CU4eSzya06dPz55z/DgsioCw4fLu+v3797NhmuE/DkiGZ4Zo3qnn3f1QHs/X2xBtA3tp4p15e4f/+PHj2S5nLBE4f/78LFTDYR+5fJTBXrlktGvXrhWvKcFMEBOb7CiG2s4ij+frMf7+JrHNurLWBAoWTUDYUOOBOTUs2+Wh7DKGl4Fi/LXx+YbWM3Db+YbHtEtISxNRWkuilChmLVlTtPONL1XF+Gvj+0OrxRIWQUDYMHknngGYYLThOhWQDP0M/xaJoew+sgtpu5MWgKljVxvGTQZ+LiP9+PFjtqvJbiNr/Pbt2+zyWe7/G1l31t/WF22Nec0Jy1Bb49J/o9Duz1vz1M8LFkVA2DAZjO3SVRvMUwOxXevv/1vt7600HrBtOFcDEu24pX6I51JXAjA17NeSGCU+P3/+XBGf1daY78mOpf0M2lrmrXnq5wWLIiBsiHapaTxEpwZiC8jbt2//GcLNeMCuNpzHx64m0cjuIc+X334arme92jnG8VltjdmV5fOR9jNYa81TPy9YFAFh4TIk8848w7l9ztBkuObD8DyeD7Pzb/vwe2rgthC1zyzy/fOG81rDeKgdG1PnWktbV9aUtQ0lKonL8LJW0563rXF8f2i8W4FFExAWrg3FtbTB2KIwficf7WttyI8/Exlqx06dZyyBy6WnxG78a8JraYHIziWXrsba65+KQlt/+1qePzuSqRCtdh5YBAFhU5m6JLPabxvl8Xy9/++4v/drdzNv4GYwZ0Dnw/HscuZpoUk0cukst6eCNGUYj7yG7LKm5HXm85X8SvFQ223l8Xw95v39StvlrCeI8DcICJtKBus4INGGaAZrG8oJRwIyjkU+M8lff+fYFooWlqlzD+W4nDPHZTBHnnv4W1nztHi0P2Jc7dgcl+OzxhaKXJLKc2fnk+9vhkHLLqvJ68lvh717966/B4snIGwq8wKSnUN2EBm22Q1k2ObddwZoLhO1UES7tJNjc3knMoATnOHAnpLvy/cnFu2cuZ/Hjx07NvtDwik5d4Z/5LjsQMaG/7PEhCq/Lrx9+/bZ60ls8npynoRruKPIa03EEtDswPLZ0PLycvf06dPZ965nZwR/g4CwqcwLSOQdey7xZDcQGaQZtlNBSHAuXbr0z7HZFdy8eXPFYB7L+bMzSHTGnynk8Xw9zzd1jux6crlrNePzJhaJYv7CPbLGBCI7qrGpYxOO4flg0QSE/yt5N55hGu3d/Gqye4j1HLtR2hoTwuxEVpPXnp/Beo6Fv01AACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAEgEBoERAACgREABKBASAkv8AzWamUw5ZWW4AAAAASUVORK5CYII="></p>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
 <section class="level3"><h3 id="a-section">A section<a class="anchor" aria-label="anchor" href="#a-section"></a>
@@ -315,7 +319,7 @@
 </section></section><section class="level3"><h3 id="another-example">Another example<a class="anchor" aria-label="anchor" href="#another-example"></a>
 </h3>
 <p>We will define some values here. </p>
-<p>The output of that inline code cell is <span id="a-span">some code</span>. Etc.</p>
+<p>The output of that inline code cell is <span id="a-span">some code</span>.</p>
 </section></section><section class="level2"><h2 id="figures">Figures<a class="anchor" aria-label="anchor" href="#figures"></a>
 </h2>
 <div id="fig-puppies" class="quarto-layout-panel">

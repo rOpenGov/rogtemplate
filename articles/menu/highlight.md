@@ -1,4 +1,4 @@
-# Test syntax highlighting
+# Testing syntax highlighter
 
 Test how **pkgdown** highlights R code:
 
@@ -58,7 +58,7 @@ testmap <- ne_countries(50,
   select(ISO_3166_3 = adm0_a3) |>
   full_join(df_org)
 
-# Add tiny countries.
+# Add tiny countries too.
 tiny <- ne_countries(50,
   "tiny_countries",
   returnclass = "sf"
@@ -81,7 +81,7 @@ tiny$C <- coalesce(tiny$C, tiny$C_sov)
 testmap_rob <- st_transform(testmap, "+proj=robin")
 tiny_rob <- st_transform(tiny, "+proj=robin")
 
-# Create the bounding box.
+# Compute the bounding box.
 bbox <- st_linestring(rbind(
   c(-180, 90),
   c(180, 90),
@@ -118,8 +118,7 @@ plot(
   add = TRUE
 )
 
-# Finally, add tiny countries.
-# All countries.
+# Add all tiny countries.
 plot(
   st_geometry(tiny_rob),
   col = "#000000",
@@ -127,7 +126,7 @@ plot(
   add = TRUE,
   pch = 21
 )
-# Dependencies.
+# Add dependent tiny countries.
 plot(
   st_geometry(tiny_rob |>
     filter(!is.na(C)) |>
@@ -137,7 +136,7 @@ plot(
   pch = 21,
   add = TRUE
 )
-# Independent countries.
+# Add independent tiny countries.
 plot(
   st_geometry(tiny_rob |>
     filter(!is.na(C)) |>

@@ -2,6 +2,6 @@
 
 ## Widgets
 
-Test spacing above the widget.
+Test spacing above widget.
 
-Test spacing below the widget.
+Test spacing below widget.

@@ -1,6 +1,6 @@
-# Precomputed vignette example
+# Precomputed R Markdown vignette
 
-This vignette tests a precomputed vignette workflow.
+This is an example of a precomputed R Markdown vignette.
 
 ``` r
 
@@ -10,12 +10,12 @@ ggplot(faithfuld, aes(waiting, eruptions)) +
   geom_raster(aes(fill = density))
 ```
 
-![A density raster plot.](plot-1.png)
+![Waiting time and eruption duration density.](plot-1.png)
 
-A density raster plot.
+Waiting time and eruption duration density.
 
-The following placeholder text keeps the vignette long enough to test
-layout.
+The remaining text is filler content used to test long article
+rendering.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
 efficitur massa risus, eu tincidunt magna finibus id. Donec quis

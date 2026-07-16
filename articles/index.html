@@ -22,9 +22,13 @@
     <li><h6 class="dropdown-header" data-toc-skip>Dashboards</h6></li>
     <li><a class="dropdown-item" href="../articles/downloads.html">Downloads of rOpenGov packages</a></li>
     <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Precomputed</h6></li>
+    <li><a class="dropdown-item" href="../articles/precompute-quarto.html">Precomputed Quarto vignette</a></li>
+    <li><a class="dropdown-item" href="../articles/precompute.html">Precomputed R Markdown vignette</a></li>
+    <li><hr class="dropdown-divider"></li>
     <li><h6 class="dropdown-header" data-toc-skip>Menu bar</h6></li>
     <li><a class="dropdown-item" href="../articles/menu/ggplot2.html">ggplot2 example</a></li>
-    <li><a class="dropdown-item" href="../articles/menu/highlight.html">Test syntax highlighting</a></li>
+    <li><a class="dropdown-item" href="../articles/menu/highlight.html">Testing syntax highlighter</a></li>
     <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="../articles/index.html">More articles...</a></li>
   </ul></li>
@@ -62,47 +66,45 @@
         <dd><p>Explore CRAN download trends for rOpenGov packages.</p>
       </dd></dl></div>
     <div class="section ">
-      <h3>Menu bar</h3>
-      <div class="section-desc"><p>Articles used to test nested article navigation.</p></div>
+      <h3>Precomputed articles</h3>
+      <div class="section-desc"><p>Articles used to check precomputed R Markdown and Quarto output.</p></div>
+
+      <dl><dt><a href="precompute-quarto.html">Precomputed Quarto vignette</a></dt>
+        <dd><p>Check how pkgdown handles a precomputed Quarto vignette.</p>
+        </dd><dt><a href="precompute.html">Precomputed R Markdown vignette</a></dt>
+        <dd><p>Check how pkgdown handles a precomputed R Markdown vignette.</p>
+      </dd></dl></div>
+    <div class="section ">
+      <h3>Menu examples</h3>
+      <div class="section-desc"><p>Articles used to test dropdown menus in the article navbar.</p></div>
 
       <dl><dt><a href="menu/ggplot2.html">ggplot2 example</a></dt>
-        <dd><p>Check how pkgdown renders a simple ggplot2 figure.</p>
-        </dd><dt><a href="menu/highlight.html">Test syntax highlighting</a></dt>
-        <dd><p>Check syntax highlighting across representative R code examples.</p>
+        <dd><p>Check how pkgdown renders ggplot2 figures in article pages.</p>
+        </dd><dt><a href="menu/highlight.html">Testing syntax highlighter</a></dt>
+        <dd><p>Check how pkgdown highlights R code blocks and inline syntax.</p>
       </dd></dl></div>
     <div class="section ">
-      <h3>Precompute</h3>
-      <div class="section-desc"><p>Examples for precomputed vignettes.</p></div>
+      <h3>Feature tests</h3>
+      <div class="section-desc"><p>These articles are used to test <strong>pkgdown</strong> features that cannot easily be tested automatically.</p></div>
 
-      <dl><dt><a href="test-precompute.html">Precomputed vignette example</a></dt>
-        <dd><p>Test rendering for a vignette with precomputed output.</p>
-      </dd></dl></div>
-    <div class="section ">
-      <h3>Testing articles</h3>
-      <div class="section-desc"><p>These articles are used to test various <a href="https://CRAN.R-project.org/package=pkgdown" class="external-link"><span class="pkg">pkgdown</span></a> features that can be difficult to test automatically.</p></div>
-
-      <dl><dt><a href="test/blog-article.html">usdoj: access U.S. Department of Justice open data</a></dt>
-        <dd><p>Test blog article rendering with a realistic rOpenGov post.</p>
-        </dd><dt><a href="test/bullets.html">Bullets</a></dt>
-        <dd><p>Test list spacing and bullet rendering in pkgdown articles.</p>
+      <dl><dt><a href="test/bullets.html">Bullets</a></dt>
+        <dd><p>Check list rendering, spacing and nested bullet styles.</p>
         </dd><dt><a href="test/code.html">Code</a></dt>
-        <dd><p>Test code block rendering and long line handling.</p>
+        <dd><p>Check code blocks, copy buttons and package code rendering.</p>
         </dd><dt><a href="test/long-toc.html">Long table of contents</a></dt>
-        <dd><p>Test navigation and rendering with a long table of contents.</p>
+        <dd><p>Check navigation and layout behavior for long article tables of contents.</p>
         </dd><dt><a href="test/quarto-features.html">Quarto features</a></dt>
-        <dd><p>Test pkgdown rendering for representative Quarto features.</p>
-        </dd><dt><a href="test/quarto.html">Quarto vignettes</a></dt>
-        <dd><p>Learn how Quarto vignettes work with pkgdown, including currently supported features and known limitations.</p>
-        </dd><dt><a href="test/reactable.html">reactable example</a></dt>
-        <dd><p>Check rendering for an interactive reactable table.</p>
+        <dd><p>Check Quarto-specific article features such as citations and shortcodes.</p>
+        </dd><dt><a href="test/reactable.html">Reactable example</a></dt>
+        <dd><p>Check reactable widgets and table styling inside pkgdown articles.</p>
         </dd><dt><a href="test/rendering.html">Output rendering</a></dt>
         <dd><p>Check rendered output blocks, metadata display and article layout.</p>
         </dd><dt><a href="test/short.html">A short page</a></dt>
-        <dd><p>Test footer placement on a short article page.</p>
-        </dd><dt><a href="test-precompute.html">Precomputed vignette example</a></dt>
-        <dd><p>Test rendering for a vignette with precomputed output.</p>
+        <dd><p>Check footer placement on short article pages.</p>
+        </dd><dt><a href="test-quarto.html">Quarto vignettes</a></dt>
+        <dd><p>Learn how <strong>pkgdown</strong> works with Quarto vignettes, including currently supported features and known limitations.</p>
         </dd><dt><a href="test/widgets.html">HTML widgets</a></dt>
-        <dd><p>Test spacing and rendering for HTML widgets.</p>
+        <dd><p>Check HTML widget rendering and layout inside pkgdown articles.</p>
       </dd></dl></div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside></div>
