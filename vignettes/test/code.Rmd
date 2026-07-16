@@ -1,5 +1,6 @@
 ---
 title: "Code"
+description: "Test code block rendering and long line handling."
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Code}

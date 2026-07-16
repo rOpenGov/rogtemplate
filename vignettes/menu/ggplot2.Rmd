@@ -1,5 +1,6 @@
 ---
 title: "ggplot2 example"
+description: "Check how pkgdown renders a simple ggplot2 figure."
 ---
 
 ```{r}

@@ -1,5 +1,6 @@
 ---
 title: Quarto features
+description: "Test pkgdown rendering for representative Quarto features."
 subtitle: Use shortcodes
 output: html
 knitr:

@@ -1,5 +1,6 @@
 ---
 title: "A short page"
+description: "Test footer placement on a short article page."
 ---
 
 The footer should hug the bottom of the viewport.

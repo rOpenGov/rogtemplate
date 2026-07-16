@@ -1,5 +1,6 @@
 ---
 title: "Bullets"
+description: "Test list spacing and bullet rendering in pkgdown articles."
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Bullets}

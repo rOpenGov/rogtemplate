@@ -1,5 +1,6 @@
 ---
 title: "Downloads of rOpenGov packages"
+description: "Explore CRAN download trends for rOpenGov packages."
 ---
 
 *Updated: `r format(Sys.Date(),"%d %b %Y")`*

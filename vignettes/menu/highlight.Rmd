@@ -1,5 +1,6 @@
 ---
 title: "Test syntax highlighting"
+description: "Check syntax highlighting across representative R code examples."
 ---
 
 ```{r}

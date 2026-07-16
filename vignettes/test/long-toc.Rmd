@@ -1,5 +1,6 @@
 ---
 title: "Long table of contents"
+description: "Test navigation and rendering with a long table of contents."
 ---
 
 ```{r}

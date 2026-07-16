@@ -1,5 +1,6 @@
 ---
 title: "usdoj: access U.S. Department of Justice open data"
+description: "Test blog article rendering with a realistic rOpenGov post."
 slug: "usdoj-cran-release"
 author: "Steph Buongiorno, Ph.D."
 date: "2023-04-01"
