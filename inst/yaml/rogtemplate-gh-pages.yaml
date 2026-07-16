@@ -8,6 +8,9 @@ on:
 
 name: rogtemplate-gh-pages
 
+permissions:
+  contents: write
+
 jobs:
   rogtemplate-gh-pages:
     runs-on: ubuntu-latest
@@ -33,8 +36,7 @@ jobs:
       - name: Build logo if not present and prepare template
         run: |
           # Check that logo is not present
-          if (isFALSE(file.exists(file.path("man", "figures", "logo.png")) ||
-            file.exists(file.path("man", "figures", "logo.png")))) {
+          if (isFALSE(file.exists(file.path("man", "figures", "logo.png")))) {
             rogtemplate::rog_logo()
           } else {
 

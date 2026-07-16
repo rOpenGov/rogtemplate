@@ -33,6 +33,7 @@ Suggests:
     quarto,
     remotes,
     rmarkdown,
+    sass,
     scales,
     styler,
     testthat (>= 3.0.0)

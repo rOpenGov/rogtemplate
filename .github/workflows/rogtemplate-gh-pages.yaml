@@ -14,7 +14,8 @@ on:
 
 
 name: rogtemplate-gh-pages
-permissions: write-all
+permissions:
+  contents: write
 # This will cancel running jobs once a new run is triggered
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref }}
@@ -50,8 +51,7 @@ jobs:
     - name: Build logo if not present and prepare template
       run: |
         # Check that logo is not present
-        if (isFALSE(file.exists(file.path("man", "figures", "logo.png")) ||
-          file.exists(file.path("man", "figures", "logo.png")))) {
+        if (isFALSE(file.exists(file.path("man", "figures", "logo.png")))) {
           rogtemplate::rog_logo()
         } else {
           message("The package already has a logo")

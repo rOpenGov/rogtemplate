@@ -12,9 +12,11 @@
 #' @encoding UTF-8
 #' @export
 rog_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
+  usethis::local_project(pkg, force = TRUE)
+
   # Ensure that the GitHub Actions workflow directory exists.
 
-  destdir <- file.path(pkg, ".github", "workflows")
+  destdir <- file.path(".github", "workflows")
   checkdir <- dir.exists(destdir)
   if (isFALSE(checkdir)) {
     dir.create(destdir, recursive = TRUE)

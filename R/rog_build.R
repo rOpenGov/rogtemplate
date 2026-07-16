@@ -18,15 +18,21 @@
 #' @export
 rog_build <- function(pkg = ".", ...) {
   # nocov start
+  usethis::local_project(pkg, force = TRUE)
+  dots <- list(...)
+  logo_arg <- names(dots) %in% names(formals(rog_logo))
+  logo_dots <- dots[logo_arg]
+  build_dots <- dots[!logo_arg]
+
   # Keep generated site assets out of the package build.
 
   usethis::use_build_ignore(".github")
   usethis::use_build_ignore("._pkgdown.yml")
 
-  rogtemplate::rog_logo(...)
+  do.call(rogtemplate::rog_logo, logo_dots)
   rogtemplate::rog_add_template_pkgdown()
 
-  pkgdown::build_site(pkg = ".", ...)
+  do.call(pkgdown::build_site, c(list(pkg = "."), build_dots))
   invisible()
   # nocov end
 }
