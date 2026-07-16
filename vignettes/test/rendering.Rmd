@@ -1,9 +1,10 @@
 ---
 title: "Output rendering"
-description: "Test pkgdown rendering for common article output features."
-subtitle: "Subtitle is skipped from the TOC"
-author: "Author is skipped from the TOC"
-date: "Date is skipped from the TOC"
+description: >
+  Check rendered output blocks, metadata display and article layout.
+subtitle: "Subtitle is skipped from the table of contents"
+author: "Author is skipped from the table of contents"
+date: "Date is skipped from the table of contents"
 ---
 
 ```{r}
@@ -15,14 +16,14 @@ This vignette tests **pkgdown** output rendering for several use cases.
 
 ## Footnotes
 
-Footnotes render correctly.[^1]
+This paragraph checks footnote rendering.[^1]
 
 [^1]: Including **footnotes**.
 
 ## Figures
 
 ```{r}
-#| fig.alt: Line plot from 1 to 10.
+#| fig.alt: Test plot
 plot(1:10)
 ```
 
@@ -33,7 +34,7 @@ x <- readLines("test.txt")
 x
 ```
 
-![Bacon placeholder image](bacon.jpg)
+![bacon](bacon.jpg)
 
 ## Details tag
 
@@ -62,7 +63,7 @@ Second paragraph
 ## Tables
 
 | col 1 | col 2 | col 3 | col 4 |
-|:--------------------|:-------------------|:------------------:|:------------------:|
+|:---|:---|:--:|:--:|
 | Brightness | Total brightness, total reflectance, spectral intensity | $$y = x^2$$ | test |
 
 ## Math
@@ -109,13 +110,13 @@ cat(rep("xy", 100), sep = "")
 
 Valid R code in `\preformatted{}`:
 
-```
+```         
 mean(a + 1)
 ```
 
 R code in `R` block:
 
-```R
+``` r
 mean(a + 1)
 ```
 
@@ -131,11 +132,11 @@ YAML
 yaml: [a, 1]
 ```
 
-### Should not be highlighted
+### Shouldn't be highlighted
 
-Non-R code in `\preformatted{}`
+Non-R code in `\preformatted{}`:
 
-```
+```         
 yaml: [a, b, c]
 ```
 
@@ -207,14 +208,14 @@ message(cli::col_green("This is green"))
 warning(cli::style_bold("This is bold"))
 ```
 
-Text before an erroring chunk.
+Some text
 
 ```{r}
 #| error: TRUE
 stop(cli::style_italic("This is italic"))
 ```
 
-Text after an erroring chunk.
+Some more text
 
 ## Quoted text
 
@@ -246,30 +247,32 @@ There should be no bug here.
 
 #### Tab 1
 
-Placeholder tab content.
+Tab content.
 
 ``` r
 1 + 1
 ```
 
-The "cool" heading should appear below.
+The heading below should be "cool".
 
 ##### cool
 
-Placeholder heading content.
+More tab content.
 
 #### Tab 2
 
-More placeholder tab content.
+More tab content.
 
 ### Tabset without pills {.tabset}
 
 #### Tab 1
 
-Some placeholder content.
+More tab content.
 
 ```{r}
-#| fig.alt: Line plot from 1 to 42.
+#| fig.alt: Another test plot
+#| jarl-ignore-chunk:
+#|   - unreachable_code: This is only a test
 plot(1:42)
 ```
 
