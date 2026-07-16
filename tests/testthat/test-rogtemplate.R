@@ -8,14 +8,14 @@ test_that("Test package", {
 })
 
 test_that("template home link does not include a closing anchor", {
-  pkgdown <- yaml::read_yaml(test_path("../../inst/pkgdown/_pkgdown.yml"))
+  pkgdown <- yaml::read_yaml(rogtemplate_file("pkgdown/_pkgdown.yml"))
   link_text <- pkgdown$home$links[[1]]$text
 
   expect_false(grepl("</a>", link_text, fixed = TRUE))
 })
 
 test_that("pkgdown workflow has deploy permissions and logo check", {
-  workflow_path <- test_path("../../inst/yaml/rogtemplate-gh-pages.yaml")
+  workflow_path <- rogtemplate_file("yaml/rogtemplate-gh-pages.yaml")
   workflow <- yaml::read_yaml(workflow_path)
   workflow_text <- paste(readLines(workflow_path), collapse = "\n")
   logo_check <- gregexpr(
@@ -64,8 +64,8 @@ test_that("rog_actions_pkgdown_branch writes to pkg", {
 test_that("minified CSS is generated from the source CSS", {
   skip_if_not_installed("sass")
 
-  source_path <- test_path("../../inst/pkgdown/assets/BS5/rogtemplate.css")
-  min_path <- test_path("../../inst/pkgdown/assets/BS5/rogtemplate.min.css")
+  source_path <- rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")
+  min_path <- rogtemplate_file("pkgdown/assets/BS5/rogtemplate.min.css")
   expected <- sass::sass(
     readLines(source_path),
     cache = NULL,
@@ -79,7 +79,7 @@ test_that("minified CSS is generated from the source CSS", {
 
 test_that("dark mode danger text has AA contrast", {
   css <- paste(
-    readLines(test_path("../../inst/pkgdown/assets/BS5/rogtemplate.css")),
+    readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
     collapse = "\n"
   )
   danger <- sub(

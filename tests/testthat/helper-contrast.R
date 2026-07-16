@@ -20,3 +20,7 @@ relative_luminance <- function(rgb) {
 
   sum(c(0.2126, 0.7152, 0.0722) * linear_rgb)
 }
+
+rogtemplate_file <- function(...) {
+  system.file(..., package = "rogtemplate", mustWork = TRUE)
+}
