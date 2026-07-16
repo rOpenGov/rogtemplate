@@ -21,6 +21,12 @@ relative_luminance <- function(rgb) {
   sum(c(0.2126, 0.7152, 0.0722) * linear_rgb)
 }
 
+yiq_brightness <- function(hex) {
+  rgb <- hex_to_rgb(hex) * 255
+
+  sum(c(299, 587, 114) * rgb) / 1000
+}
+
 rogtemplate_file <- function(...) {
   system.file(..., package = "rogtemplate", mustWork = TRUE)
 }

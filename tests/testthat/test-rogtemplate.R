@@ -94,12 +94,16 @@ test_that("dark mode danger text has AA contrast", {
 
 test_that("dark mode code text has AA contrast from bslib brand", {
   pkgdown <- yaml::read_yaml(rogtemplate_file("pkgdown/_pkgdown.yml"))
+  palette <- pkgdown$template$bslib$brand$color$palette
   bootstrap_defaults <- pkgdown$template$bslib$brand$defaults$bootstrap$defaults
-  code <- bootstrap_defaults[["code-color-dark"]]
+  code <- palette[["code-dark"]]
 
   expect_equal(code, "#f19ac6")
+  expect_equal(bootstrap_defaults[["code-color"]], "$brand-code")
+  expect_equal(bootstrap_defaults[["code-color-dark"]], "$brand-code_dark")
   expect_gte(contrast_ratio(code, "#394046"), 4.5)
   expect_gte(contrast_ratio(code, "#343a40"), 4.5)
+  expect_gt(yiq_brightness(code), 128)
 })
 
 test_that("custom CSS does not define bslib brand variables", {
@@ -112,4 +116,17 @@ test_that("custom CSS does not define bslib brand variables", {
     grep("--brand-[[:alnum:]_-]+\\s*:", css, value = TRUE),
     character()
   )
+})
+
+test_that("pkgdown bootstrap defaults use brand palette variables", {
+  pkgdown <- yaml::read_yaml(rogtemplate_file("pkgdown/_pkgdown.yml"))
+  bootstrap_defaults <- pkgdown$template$bslib$brand$defaults$bootstrap$defaults
+
+  expect_equal(bootstrap_defaults[["navbar-light-bg"]], "$brand-gray_dark")
+  expect_equal(bootstrap_defaults[["navbar-dark-bg"]], "$brand-gray_dark")
+  expect_equal(bootstrap_defaults[["pkgdown-footer-bg"]], "$brand-gray_dark")
+  expect_equal(bootstrap_defaults[["dropdown-bg"]], "$brand-gray_dark")
+  expect_equal(bootstrap_defaults[["dropdown-dark-bg"]], "$brand-gray_dark")
+  expect_equal(bootstrap_defaults[["navbar-light-brand-color"]], "$brand-white")
+  expect_equal(bootstrap_defaults[["navbar-dark-brand-color"]], "$brand-white")
 })
