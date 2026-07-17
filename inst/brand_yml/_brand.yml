@@ -70,7 +70,8 @@ defaults:
         7h22M4 15h22M4 23h22'/></svg>")
       navbar-light-brand-color: $brand-white
       navbar-light-brand-hover-color: $brand-white
-      navbar-light-hover-color: rgba(255,255,255,.75)
+      navbar-brand-font-size: 1.5rem
+      navbar-light-hover-color: $brand-white
       navbar-light-active-color: $brand-white
       navbar-dark-bg: $brand-gray_dark
       navbar-dark-color: rgba(255, 255, 255, .75)
@@ -82,16 +83,33 @@ defaults:
         7h22M4 15h22M4 23h22'/></svg>")
       navbar-dark-brand-color: $brand-white
       navbar-dark-brand-hover-color: $brand-white
-      navbar-dark-hover-color: rgba(255,255,255,.75)
+      navbar-dark-hover-color: $brand-white
       navbar-dark-active-color: $brand-white
       link-decoration: none
+      blockquote-font-size: 1.25rem
+      body-bg-dark: "#262b30"
+      danger-text-emphasis-dark: "#ee99a1"
       pkgdown-footer-bg: $brand-gray_dark
       pkgdown-footer-color: rgba(255, 255, 255, 0.75)
       dropdown-bg: $brand-gray_dark
+      dropdown-link-active-bg: rgba(255, 102, 0, .05)
+      dropdown-link-active-color: $brand-white
+      dropdown-link-color: rgba(255, 255, 255, .75)
+      dropdown-link-hover-color: $brand-white
+      dropdown-link-hover-bg: rgba(255, 102, 0, .05)
+      dropdown-header-color: $brand-white
       dropdown-border-color: rgba(255, 255, 255, .1)
       dropdown-divider-bg: rgba(255, 255, 255, .1)
       dropdown-dark-bg: $brand-gray_dark
+      dropdown-dark-link-active-bg: rgba(255, 102, 0, .05)
+      dropdown-dark-link-active-color: $brand-white
+      dropdown-dark-link-color: rgba(255, 255, 255, .75)
+      dropdown-dark-link-hover-color: $brand-white
+      dropdown-dark-link-hover-bg: rgba(255, 102, 0, .05)
+      dropdown-dark-header-color: $brand-white
       dropdown-dark-border-color: rgba(255, 255, 255, .1)
       dropdown-dark-divider-bg: rgba(255, 255, 255, .1)
+      code-font-size: 0.875em
+      code-bg: transparent
       code-color: $brand-code
       code-color-dark: $brand-code_dark

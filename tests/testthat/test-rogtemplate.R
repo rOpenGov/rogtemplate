@@ -78,20 +78,10 @@ test_that("minified CSS is generated from the source CSS", {
 })
 
 test_that("dark mode danger text has AA contrast", {
-  css <- paste(
-    readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
-    collapse = "\n"
-  )
-  body_bg <- sub(
-    ".*--bs-body-bg: (#[[:xdigit:]]{6});.*",
-    "\\1",
-    css
-  )
-  danger <- sub(
-    ".*--bs-danger-text-emphasis: (#[[:xdigit:]]{6});.*",
-    "\\1",
-    css
-  )
+  brand <- yaml::read_yaml(rogtemplate_file("brand_yml/_brand.yml"))
+  bootstrap_defaults <- brand$defaults$bootstrap$defaults
+  body_bg <- bootstrap_defaults[["body-bg-dark"]]
+  danger <- bootstrap_defaults[["danger-text-emphasis-dark"]]
 
   expect_equal(body_bg, "#262b30")
   expect_equal(danger, "#ee99a1")
@@ -105,6 +95,8 @@ test_that("dark mode code text has AA contrast from bslib brand", {
   code <- palette[["code-dark"]]
 
   expect_equal(code, "#f19ac6")
+  expect_equal(bootstrap_defaults[["code-font-size"]], "0.875em")
+  expect_equal(bootstrap_defaults[["code-bg"]], "transparent")
   expect_equal(bootstrap_defaults[["code-color"]], "$brand-code")
   expect_equal(bootstrap_defaults[["code-color-dark"]], "$brand-code_dark")
   expect_gte(contrast_ratio(code, "#262b30"), 4.5)
@@ -181,16 +173,44 @@ test_that("custom CSS does not define bslib brand variables", {
     grep("--brand-[[:alnum:]_-]+\\s*:", css, value = TRUE),
     character()
   )
+  expect_false(grepl("--bs-body-bg\\s*:", css))
+  expect_false(grepl("--bs-danger-text-emphasis\\s*:", css))
+  expect_false(grepl("--bs-dropdown-[[:alnum:]_-]+\\s*:", css))
+  expect_false(grepl("font-size: 1\\.5rem;", css))
+  expect_false(grepl("font-size: 1\\.25rem;", css))
+  expect_match(css, "font-size: var\\(--bs-blockquote-font-size\\);")
+  expect_false(grepl("#navbar \\.dropdown-menu \\.dropdown-item\\.active", css))
+  expect_match(css, "color: var\\(--bs-navbar-hover-color\\);")
+  expect_match(css, "color: var\\(--bs-navbar-active-color\\);")
+  expect_match(
+    css,
+    "background-color: RGBA\\(var\\(--bs-warning-rgb\\), 0\\.05\\);"
+  )
 })
 
-test_that("code blocks do not inherit inline code backgrounds", {
+test_that("inline code styling is delegated to bslib variables", {
   css <- paste(
     readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
     collapse = "\n"
   )
 
-  expect_match(css, "pre code,\\s*pre code span")
-  expect_match(css, "background-color: transparent !important;")
+  expect_false(grepl("code\\s*\\{[^}]*--bs-code-bg", css))
+  expect_false(grepl("code\\s*\\{[^}]*--bs-code-font-size", css))
+  expect_false(grepl("pre code,\\s*pre code span", css))
+})
+
+test_that("dark alert syntax background is neutralized", {
+  css <- paste(
+    readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
+    collapse = "\n"
+  )
+
+  expect_match(css, "pre code span\\.al /\\* Alert \\*/ \\{")
+  expect_match(css, "background-color: transparent;")
+  expect_false(grepl(
+    "pre code span\\s*\\{[^}]*background-color: transparent",
+    css
+  ))
 })
 
 test_that("pkgdown bootstrap defaults use brand palette variables", {
@@ -202,10 +222,64 @@ test_that("pkgdown bootstrap defaults use brand palette variables", {
   expect_equal(bootstrap_defaults[["pkgdown-footer-bg"]], "$brand-gray_dark")
   expect_equal(bootstrap_defaults[["dropdown-bg"]], "$brand-gray_dark")
   expect_equal(bootstrap_defaults[["dropdown-dark-bg"]], "$brand-gray_dark")
+  expect_equal(bootstrap_defaults[["navbar-brand-font-size"]], "1.5rem")
+  expect_equal(bootstrap_defaults[["blockquote-font-size"]], "1.25rem")
+  expect_equal(bootstrap_defaults[["body-bg-dark"]], "#262b30")
+  expect_equal(bootstrap_defaults[["danger-text-emphasis-dark"]], "#ee99a1")
+  expect_equal(
+    bootstrap_defaults[["dropdown-link-active-bg"]],
+    "rgba(255, 102, 0, .05)"
+  )
+  expect_equal(
+    bootstrap_defaults[["dropdown-link-active-color"]],
+    "$brand-white"
+  )
+  expect_equal(
+    bootstrap_defaults[["dropdown-link-color"]],
+    "rgba(255, 255, 255, .75)"
+  )
+  expect_equal(
+    bootstrap_defaults[["dropdown-link-hover-color"]],
+    "$brand-white"
+  )
+  expect_equal(
+    bootstrap_defaults[["dropdown-link-hover-bg"]],
+    "rgba(255, 102, 0, .05)"
+  )
+  expect_equal(
+    bootstrap_defaults[["dropdown-header-color"]],
+    "$brand-white"
+  )
+  expect_equal(
+    bootstrap_defaults[["dropdown-dark-link-active-bg"]],
+    "rgba(255, 102, 0, .05)"
+  )
+  expect_equal(
+    bootstrap_defaults[["dropdown-dark-link-active-color"]],
+    "$brand-white"
+  )
+  expect_equal(
+    bootstrap_defaults[["dropdown-dark-link-color"]],
+    "rgba(255, 255, 255, .75)"
+  )
+  expect_equal(
+    bootstrap_defaults[["dropdown-dark-link-hover-color"]],
+    "$brand-white"
+  )
+  expect_equal(
+    bootstrap_defaults[["dropdown-dark-link-hover-bg"]],
+    "rgba(255, 102, 0, .05)"
+  )
+  expect_equal(
+    bootstrap_defaults[["dropdown-dark-header-color"]],
+    "$brand-white"
+  )
   expect_equal(
     bootstrap_defaults[["navbar-light-color"]],
     "rgba(255, 255, 255, .75)"
   )
+  expect_equal(bootstrap_defaults[["navbar-light-hover-color"]], "$brand-white")
+  expect_equal(bootstrap_defaults[["navbar-dark-hover-color"]], "$brand-white")
   expect_equal(
     bootstrap_defaults[["navbar-dark-color"]],
     "rgba(255, 255, 255, .75)"
