@@ -3,6 +3,7 @@ test_that("Test package", {
   expect_message(rog_badge_ropengov(install = FALSE))
 
   tmp <- tempfile(fileext = ".png")
+  on.exit(unlink(tmp), add = TRUE)
   expect_message(rog_logo("test", tmp, overwrite = FALSE, favicons = FALSE))
   expect_true(file.exists(tmp))
 })
@@ -30,6 +31,7 @@ test_that("pkgdown workflow has deploy permissions and logo check", {
 
 test_that("rog_actions_pkgdown_branch writes to pkg", {
   pkg <- tempfile("pkg")
+  on.exit(unlink(pkg, recursive = TRUE), add = TRUE)
   dir.create(pkg)
   writeLines(
     c(

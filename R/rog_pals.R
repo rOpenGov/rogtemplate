@@ -10,7 +10,7 @@
 #' @seealso \pkg{grDevices}' [grDevices::hcl.colors()].
 #' @encoding UTF-8
 #' @export
-#' @examples
+#' @examplesIf requireNamespace("scales", quietly = TRUE)
 #' scales::show_col(rog_orange_pal(9))
 #'
 #' scales::show_col(rog_dark_pal(9))

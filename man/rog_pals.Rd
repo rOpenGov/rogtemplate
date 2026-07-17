@@ -38,6 +38,7 @@ Color palettes.
 Color palettes based on the rOpenGov color scheme.
 }
 \examples{
+\dontshow{if (requireNamespace("scales", quietly = TRUE)) withAutoprint(\{ # examplesIf}
 scales::show_col(rog_orange_pal(9))
 
 scales::show_col(rog_dark_pal(9))
@@ -45,6 +46,7 @@ scales::show_col(rog_dark_pal(9))
 scales::show_col(rog_gradient_pal(9))
 
 scales::show_col(rog_qualitative_pal(9))
+\dontshow{\}) # examplesIf}
 }
 \seealso{
 \pkg{grDevices}' \code{\link[grDevices:hcl.colors]{grDevices::hcl.colors()}}.
