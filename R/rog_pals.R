@@ -2,7 +2,10 @@
 #'
 #' Color palettes based on the rOpenGov color scheme.
 #'
-#' @inheritParams grDevices::hcl.pals
+#' @param n Number of colors to generate.
+#' @param alpha Alpha transparency for the generated colors. Use `1` for fully
+#'   opaque colors.
+#' @param rev Should the palette order be reversed?
 #' @returns Color palettes.
 #' @rdname rog_pals
 #' @name rog_pals

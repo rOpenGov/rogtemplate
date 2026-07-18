@@ -21,7 +21,7 @@ The function also adds these package URLs to \verb{_pkgdown.yml} and DESCRIPTION
 if they are not already present:
 \itemize{
 \item https://ropengov.github.io/pkgname/
-\item https://github.com/ropengov/pkgname
+\item https://github.com/rOpenGov/pkgname
 }
 }
 \examples{

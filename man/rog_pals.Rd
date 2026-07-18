@@ -18,18 +18,12 @@ rog_gradient_pal(n = 4, alpha = 0.9, rev = FALSE)
 rog_qualitative_pal(n = 6, alpha = 0.9, rev = FALSE)
 }
 \arguments{
-\item{n}{the number of colors (\eqn{\ge 1}) to be in the
-    palette.}
+\item{n}{Number of colors to generate.}
 
-\item{alpha}{an alpha-transparency level in the range [0,1]
-    (0 means transparent and 1 means opaque), see argument
-    \code{alpha} in \code{\link[grDevices]{hsv}} and \code{\link[grDevices]{hcl}}, respectively.\cr
-    A \code{\link{missing}}, i.e., not explicitly specified
-    \code{alpha} is equivalent to \code{alpha = NULL}, which does \emph{not}
-    add opacity codes (\code{"FF"}) to the individual color hex codes.}
+\item{alpha}{Alpha transparency for the generated colors. Use \code{1} for fully
+opaque colors.}
 
-\item{rev}{logical indicating whether the ordering of the colors should
-    be reversed.}
+\item{rev}{Should the palette order be reversed?}
 }
 \value{
 Color palettes.
