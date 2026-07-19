@@ -18,23 +18,16 @@ rog_qualitative_pal(n = 6, alpha = 0.9, rev = FALSE)
 
 - n:
 
-  the number of colors (\\\ge 1\\) to be in the palette.
+  Number of colors to generate.
 
 - alpha:
 
-  an alpha-transparency level in the range \[0,1\] (0 means transparent
-  and 1 means opaque), see argument `alpha` in
-  [`hsv`](https://rdrr.io/r/grDevices/hsv.html) and
-  [`hcl`](https://rdrr.io/r/grDevices/hcl.html), respectively.  
-  A [`missing`](https://rdrr.io/r/base/missing.html), i.e., not
-  explicitly specified `alpha` is equivalent to `alpha = NULL`, which
-  does *not* add opacity codes (`"FF"`) to the individual color hex
-  codes.
+  Alpha transparency for the generated colors. Use `1` for fully opaque
+  colors.
 
 - rev:
 
-  logical indicating whether the ordering of the colors should be
-  reversed.
+  Should the palette order be reversed?
 
 ## Value
 

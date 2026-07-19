@@ -1,6 +1,6 @@
 # Changelog
 
-## rogtemplate 0.0.2.9000
+## rogtemplate 0.0.2.9100
 
 - Added a `NEWS.md` file to track package changes.
 - Added rOpenGov color palette functions, see

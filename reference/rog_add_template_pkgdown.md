@@ -22,7 +22,7 @@ DESCRIPTION if they are not already present:
 
 - https://ropengov.github.io/pkgname/
 
-- https://github.com/ropengov/pkgname
+- https://github.com/rOpenGov/pkgname
 
 ## See also
 

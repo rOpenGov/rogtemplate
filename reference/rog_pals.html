@@ -80,22 +80,16 @@
 
 
 <dl><dt id="arg-n">n<a class="anchor" aria-label="anchor" href="#arg-n"></a></dt>
-<dd><p>the number of colors (\(\ge 1\)) to be in the
-    palette.</p></dd>
+<dd><p>Number of colors to generate.</p></dd>
 
 
 <dt id="arg-alpha">alpha<a class="anchor" aria-label="anchor" href="#arg-alpha"></a></dt>
-<dd><p>an alpha-transparency level in the range [0,1]
-    (0 means transparent and 1 means opaque), see argument
-    <code>alpha</code> in <code><a href="https://rdrr.io/r/grDevices/hsv.html" class="external-link">hsv</a></code> and <code><a href="https://rdrr.io/r/grDevices/hcl.html" class="external-link">hcl</a></code>, respectively.<br>
-    A <code><a href="https://rdrr.io/r/base/missing.html" class="external-link">missing</a></code>, i.e., not explicitly specified
-    <code>alpha</code> is equivalent to <code>alpha = NULL</code>, which does <em>not</em>
-    add opacity codes (<code>"FF"</code>) to the individual color hex codes.</p></dd>
+<dd><p>Alpha transparency for the generated colors. Use <code>1</code> for fully
+opaque colors.</p></dd>
 
 
 <dt id="arg-rev">rev<a class="anchor" aria-label="anchor" href="#arg-rev"></a></dt>
-<dd><p>logical indicating whether the ordering of the colors should
-    be reversed.</p></dd>
+<dd><p>Should the palette order be reversed?</p></dd>
 
 </dl></div>
     <div class="section level2">

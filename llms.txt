@@ -19,8 +19,8 @@ workflow
 file](https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml)
 to your `.github/workflows/` folder.
 
-Then go to *YOUR_GITHUB_REPO \> Settings \> Pages* and deploy your
-website from the `gh-pages` branch.
+Then go to *YOUR_GITHUB_REPO \> Settings \> Pages* and configure GitHub
+Pages to publish from the `gh-pages` branch.
 
 ### Option B: Build after installing rogtemplate
 
@@ -75,7 +75,7 @@ These lines tell **pkgdown** to use **rogtemplate**.
 ## Commit to GitHub and deploy
 
 The last step is to commit to GitHub. If you use the GitHub Action
-workflow, wait until it finishes, then deploy the website from
+workflow, wait until it finishes, then configure GitHub Pages from
 *YOUR_GITHUB_REPO \> Settings \> Pages*.
 
 ## Package assets and palettes
