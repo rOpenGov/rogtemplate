@@ -12,7 +12,7 @@ test_that("template home link does not include a closing anchor", {
   pkgdown <- yaml::read_yaml(rogtemplate_file("pkgdown/_pkgdown.yml"))
   link_text <- pkgdown$home$links[[1]]$text
 
-  expect_false(grepl("</a>", link_text, fixed = TRUE))
+  expect_no_match(link_text, "</a>", fixed = TRUE)
 })
 
 test_that("pkgdown workflow has deploy permissions and logo check", {
@@ -26,7 +26,7 @@ test_that("pkgdown workflow has deploy permissions and logo check", {
   )[[1]]
 
   expect_equal(workflow$permissions$contents, "write")
-  expect_equal(length(logo_check), 1)
+  expect_length(logo_check, 1)
 })
 
 test_that("rog_actions_pkgdown_branch writes to pkg", {
@@ -60,7 +60,7 @@ test_that("rog_actions_pkgdown_branch writes to pkg", {
   build_ignore <- readLines(file.path(pkg, ".Rbuildignore"))
 
   expect_true(file.exists(workflow_path))
-  expect_true(any(grepl("github", build_ignore)))
+  expect_true(any(grepl("github", build_ignore, fixed = TRUE)))
 })
 
 test_that("minified CSS is generated from the source CSS", {
@@ -175,13 +175,13 @@ test_that("custom CSS does not define bslib brand variables", {
     grep("--brand-[[:alnum:]_-]+\\s*:", css, value = TRUE),
     character()
   )
-  expect_false(grepl("--bs-body-bg\\s*:", css))
-  expect_false(grepl("--bs-danger-text-emphasis\\s*:", css))
-  expect_false(grepl("--bs-dropdown-[[:alnum:]_-]+\\s*:", css))
-  expect_false(grepl("font-size: 1\\.5rem;", css))
-  expect_false(grepl("font-size: 1\\.25rem;", css))
+  expect_no_match(css, "--bs-body-bg\\s*:")
+  expect_no_match(css, "--bs-danger-text-emphasis\\s*:")
+  expect_no_match(css, "--bs-dropdown-[[:alnum:]_-]+\\s*:")
+  expect_no_match(css, "font-size: 1\\.5rem;")
+  expect_no_match(css, "font-size: 1\\.25rem;")
   expect_match(css, "font-size: var\\(--bs-blockquote-font-size\\);")
-  expect_false(grepl("#navbar \\.dropdown-menu \\.dropdown-item\\.active", css))
+  expect_no_match(css, "#navbar \\.dropdown-menu \\.dropdown-item\\.active")
   expect_match(css, "color: var\\(--bs-navbar-hover-color\\);")
   expect_match(css, "color: var\\(--bs-navbar-active-color\\);")
   expect_match(
@@ -196,9 +196,9 @@ test_that("inline code styling is delegated to bslib variables", {
     collapse = "\n"
   )
 
-  expect_false(grepl("code\\s*\\{[^}]*--bs-code-bg", css))
-  expect_false(grepl("code\\s*\\{[^}]*--bs-code-font-size", css))
-  expect_false(grepl("pre code,\\s*pre code span", css))
+  expect_no_match(css, "code\\s*\\{[^}]*--bs-code-bg")
+  expect_no_match(css, "code\\s*\\{[^}]*--bs-code-font-size")
+  expect_no_match(css, "pre code,\\s*pre code span")
 })
 
 test_that("dark alert syntax background is neutralized", {
@@ -209,10 +209,7 @@ test_that("dark alert syntax background is neutralized", {
 
   expect_match(css, "pre code span\\.al /\\* Alert \\*/ \\{")
   expect_match(css, "background-color: transparent;")
-  expect_false(grepl(
-    "pre code span\\s*\\{[^}]*background-color: transparent",
-    css
-  ))
+  expect_no_match(css, "pre code span\\s*\\{[^}]*background-color: transparent")
 })
 
 test_that("pkgdown bootstrap defaults use brand palette variables", {
