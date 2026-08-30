@@ -9,22 +9,21 @@ template:
 reference:
 - title: Site setup
   desc: Configure package sites with the rOpenGov pkgdown template.
-  contents:
-  - rog_actions_pkgdown_branch
-  - rog_add_template_pkgdown
-  - rog_build
+- contents:
+  - has_concept("site")
+
 - title: Package assets
   desc: Add rOpenGov badges, logos and fonts to package sites and README files.
-  contents:
-  - rog_badge_ropengov
-  - rog_logo
-  - rog_load_font
+- contents:
+  - has_concept("assets")
+
 - title: Palettes
   desc: Use the rOpenGov color palettes in plots.
-  contents:
-  - rog_pals
+- contents:
+  - has_concept("palettes")
+
 - title: About the package
-  contents:
+- contents:
   - rogtemplate-package
 
 navbar:
@@ -50,17 +49,19 @@ articles:
   - articles/downloads
 
 - title: Precomputed articles
-  navbar: Precomputed
   desc: >
     Articles used to check precomputed R Markdown and Quarto output.
+  navbar: Precomputed
   contents:
   - starts_with("precompute")
+
 - title: Menu examples
-  navbar: Menu bar
   desc: >
     Articles used to test dropdown menus in the article navbar.
+  navbar: Menu bar
   contents:
   - starts_with("menu")
+
 - title: Feature tests
   desc: >
     These articles are used to test **pkgdown** features that cannot easily be

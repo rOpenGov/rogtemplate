@@ -71,12 +71,12 @@ across the package by:
 
 ---
 
-## How to Use
+## How to use
 
 ### Agents
 
-- `review-comments`: Focused exclusively on `.R` files (roxygen2 blocks and `#`
-  comments)
+- `review-comments`: Focused exclusively on `.R` files (**roxygen2** blocks and
+  `#` comments)
 - `review-docs`: Focused on prose files (vignettes, README, `man/*.Rmd`, NEWS,
   etc.)
 
@@ -99,7 +99,7 @@ tone, and examples.
 
 ---
 
-## Core Principles (Shared by All)
+## Core principles (shared by all)
 
 - **Safety first**: Never modify executable code, function signatures, or
   behavior-affecting roxygen tags.
@@ -107,15 +107,15 @@ tone, and examples.
   - No Oxford comma (serial comma)
   - Maximum 80 characters per line
   - Professional yet approachable tone
-  - Tidyverse style with package-specific exceptions
+  - **tidyverse** style with package-specific exceptions
 - Always start feedback with positive observations when appropriate.
 - Prioritize: **Correctness → Clarity → Style**
 
 ---
 
-## Future Maintenance
+## Future maintenance
 
-### Adding a New Agent or Skill
+### Adding a new agent or skill
 
 1.  Follow the same structure as the existing ones.
 2.  Keep agents lightweight and focused on workflow.
@@ -123,22 +123,24 @@ tone, and examples.
 4.  Use the same classification (`Critical` / `Important` / `Polish`) and output
     format when possible.
 
-### Updating Style Rules
+### Updating style rules
 
 Update the relevant `SKILL.md` file. Both agents reference the skills, so
 changes automatically propagate.
 
 ---
 
-## Related Tools
+## Related tools
 
 These files are designed to work with AI coding tools that support `.agent.md`
-and skill-based prompting (such as Cursor, Continue.dev, or custom LLM
-workflows).
+and skill-based prompting, such as **Cursor**, **Continue.dev** or custom LLM
+workflows.
 
 ---
 
-**Last updated:** April 2026 **Maintained by:** Diego Hernangómez
+**Last updated:** April 2026
+
+**Maintained by:** Diego Hernangómez
 
 ---
 

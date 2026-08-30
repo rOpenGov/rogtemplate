@@ -5,15 +5,14 @@
 #' \ifelse{html}{\href{https://ropengov.org/}{\figure{ropengov-badge.svg}{
 #' options: alt='rOpenGov'}}}{**rOpenGov**}
 #'
-#' @param install `TRUE` or `FALSE`. If `TRUE`, the badge is installed on your
-#'   `README.md` or `README.Rmd`. If `FALSE`, a message with the R Markdown code
-#'   is displayed.
+#' @param install Whether to install the badge in `README.md` or `README.Rmd`.
+#'   If `FALSE`, display the R Markdown code instead.
 #' @returns The function is called for its side effects and returns `NULL`
 #'   invisibly.
-#' @family assets
 #' @seealso \CRANpkg{usethis}'s [usethis::use_badge()].
-#' @encoding UTF-8
+#' @family assets
 #' @export
+#' @encoding UTF-8
 #' @examples
 #' rog_badge_ropengov(install = FALSE)
 rog_badge_ropengov <- function(install = TRUE) {
@@ -32,14 +31,16 @@ rog_badge_ropengov <- function(install = TRUE) {
     usethis::use_badge("rOpenGov package", href = href, src = badge)
     # nocov end
   } else {
-    message(
-      "Badge Markdown is ",
-      "\n",
+    badge_markdown <- paste0(
       "[![rOpenGov package](",
       badge,
       ")](",
       href,
       ")"
     )
+    cli::cli_inform(c(
+      "i" = "Markdown for the badge:",
+      badge_markdown
+    ))
   }
 }

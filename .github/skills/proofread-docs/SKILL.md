@@ -10,7 +10,7 @@ description: |
 
 You proofread and improve **documentation prose** in:
 
-- `vignettes/` (Quarto or R Markdown)
+- `vignettes/` (**Quarto** or **R Markdown**)
 - `README`, `NEWS.md`, `index.qmd` and other top‑level docs
 - Package website content derived from these files
 
@@ -74,7 +74,8 @@ Apply these rules to all prose:
 - **Function and argument names:**\
   Wrap function names and arguments in backticks: `` `my_fun()` ``, `` `x` ``.
 - **Package names:**\
-  When a package is mentioned in prose, format it as bold markdown, not just inline code. For example: **jsonlite** package.
+  When a package is mentioned in prose, format it as bold Markdown, not just
+  inline code. For example: **jsonlite** package.
 - **Acronyms:**\
   Use standard uppercase for domain acronyms (CRS, EPSG, WKT, etc.).
 - **Duplicate lines and spacing:**\
@@ -102,7 +103,7 @@ top-level heading.
 
 - Keep paragraphs focused on a single idea.
 - Use transitions to connect related paragraphs when needed.
-- Avoid long, dense paragraphs; split when they exceed \~5 sentences.
+- Avoid long, dense paragraphs, splitting them when they exceed \~5 sentences.
 
 You may:
 
@@ -123,7 +124,7 @@ You may:
 
 ## Callouts
 
-For Quarto or R Markdown callouts (e.g., `::: {.callout-note}`):
+For **Quarto** or **R Markdown** callouts (e.g., `::: {.callout-note}`):
 
 - Use them for:
   - Notes
@@ -198,10 +199,10 @@ and suggest harmonization.
 
 When the task includes package documentation completeness:
 
-- Every user-facing function should be exported and have roxygen2
+- Every user-facing function should be exported and have **roxygen2**
   documentation.
-- Internal functions should not have roxygen2 documentation.
-- Wrap roxygen2 comments at 80 characters.
+- Internal functions should not have **roxygen2** documentation.
+- Wrap **roxygen2** comments at 80 characters.
 - Whenever you add a new non-internal documentation topic, also add the topic
   to `_pkgdown.yml`.
 - Use `pkgdown::check_pkgdown()` to check that all topics are included in the

@@ -2,17 +2,17 @@
 #'
 #' Color palettes based on the rOpenGov color scheme.
 #'
+#' @name rog_pals
+#' @rdname rog_pals
 #' @param n Number of colors to generate.
 #' @param alpha Alpha transparency for the generated colors. Use `1` for fully
 #'   opaque colors.
 #' @param rev Should the palette order be reversed?
-#' @returns Color palettes.
-#' @rdname rog_pals
-#' @name rog_pals
+#' @returns A character vector of colors.
+#' @seealso [grDevices::hcl.colors()] for other color palettes.
 #' @family palettes
-#' @seealso \pkg{grDevices}' [grDevices::hcl.colors()].
-#' @encoding UTF-8
 #' @export
+#' @encoding UTF-8
 #' @examplesIf requireNamespace("scales", quietly = TRUE)
 #' scales::show_col(rog_orange_pal(9))
 #'
@@ -36,8 +36,8 @@ rog_orange_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 }
 
 #' @rdname rog_pals
-#' @encoding UTF-8
 #' @export
+#' @encoding UTF-8
 rog_dark_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c("#343a40", "#e8ebed")
   if (rev) {
@@ -53,8 +53,8 @@ rog_dark_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 }
 
 #' @rdname rog_pals
-#' @encoding UTF-8
 #' @export
+#' @encoding UTF-8
 rog_gradient_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c("#343a40", "#9A5020", "#CD5B10", "#ff6600")
   if (rev) {
@@ -70,8 +70,8 @@ rog_gradient_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 }
 
 #' @rdname rog_pals
-#' @encoding UTF-8
 #' @export
+#' @encoding UTF-8
 rog_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
   color <- "#ff6600"
 

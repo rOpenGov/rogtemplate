@@ -12,13 +12,9 @@
 A private pkgdown template for core rOpenGov packages. It provides site setup helpers, package asset helpers and rOpenGov color palettes. Please do not use it for your own code.
 }
 \seealso{
-Useful links:
-\itemize{
-  \item \url{https://ropengov.github.io/rogtemplate/}
-  \item \url{https://github.com/rOpenGov/rogtemplate}
-  \item Report bugs at \url{https://github.com/rOpenGov/rogtemplate/issues}
-}
-
+\code{\link[=rog_add_template_pkgdown]{rog_add_template_pkgdown()}} to configure a site,
+\code{\link[=rog_actions_pkgdown_branch]{rog_actions_pkgdown_branch()}} to configure deployment and \code{\link[=rog_build]{rog_build()}}
+to build the site locally.
 }
 \author{
 \strong{Maintainer}: Diego Hernangómez \email{diego.hernangomezherrero@gmail.com} (\href{https://orcid.org/0000-0001-8457-4658}{ORCID}) [copyright holder]

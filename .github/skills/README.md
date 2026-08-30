@@ -10,8 +10,8 @@ review agents.
 
 ## Current skills
 
-- `proofread-comments` — Review roxygen2 documentation and inline comments in R
-  source files.
+- `proofread-comments` — Review **roxygen2** documentation and inline comments
+  in **R** source files.
 - `proofread-docs` — Review narrative documentation prose in README, vignettes,
   and other top-level docs.
 
@@ -19,7 +19,7 @@ review agents.
 
 - Skill folders are named after the `name:` field in the skill manifest.
 - Each skill folder must contain one `SKILL.md` file.
-- Skill manifests use markdown with a YAML frontmatter section for metadata.
+- Skill manifests use Markdown with a YAML frontmatter section for metadata.
 - Keep skill guidance focused on prose, documentation, and review guidance, not
   code execution.
 - Use `name` and `description` consistently between the folder name and the

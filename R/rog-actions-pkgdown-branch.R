@@ -1,16 +1,15 @@
-#' Create a GitHub Action that deploys a pkgdown site
+#' Deploy a pkgdown site with GitHub Actions
 #'
 #' Create a GitHub Action workflow that builds a \CRANpkg{pkgdown} site from
 #' your package and deploys it to the `gh-pages` branch.
 #'
-#' @param pkg Path to package.
-#' @param overwrite Overwrite the workflow if it already exists.
+#' @param pkg Path to the package.
+#' @param overwrite Whether to overwrite the workflow if it already exists.
 #' @returns The function is called for its side effects and returns
 #'   `invisible(NULL)`.
 #' @family site
-#' @seealso [rog_build()].
-#' @encoding UTF-8
 #' @export
+#' @encoding UTF-8
 rog_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
   usethis::local_project(pkg, force = TRUE)
 
@@ -39,9 +38,19 @@ rog_actions_pkgdown_branch <- function(pkg = ".", overwrite = TRUE) {
   # Copy the workflow into the package.
   result <- file.copy(filepath, destdir, overwrite = overwrite)
   if (result) {
-    message("Workflow added.")
+    cli::cli_inform(c(
+      "v" = paste(
+        "Added workflow to",
+        "{.file {file.path(destdir, basename(filepath))}}."
+      )
+    ))
   } else {
-    message("File not updated.")
+    cli::cli_inform(c(
+      "!" = paste(
+        "Workflow at",
+        "{.file {file.path(destdir, basename(filepath))}} was not updated."
+      )
+    ))
   }
 
   invisible()

@@ -1,7 +1,7 @@
 ---
 title: "Precomputed Quarto vignette"
 description: >
-  Check how pkgdown handles a precomputed Quarto vignette.
+  Check how **pkgdown** handles a precomputed **Quarto** vignette.
 vignette: >
   %\VignetteIndexEntry{Precomputed Quarto vignette}
   %\VignetteEngine{quarto::html}
@@ -10,7 +10,7 @@ vignette: >
 
 
 
-This is an example of a precomputed Quarto vignette.
+This is an example of a precomputed **Quarto** vignette.
 
 
 ``` r

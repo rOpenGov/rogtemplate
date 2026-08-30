@@ -1,7 +1,7 @@
 ---
 title: "Precomputed R Markdown vignette"
 description: >
-  Check how pkgdown handles a precomputed R Markdown vignette.
+  Check how **pkgdown** handles a precomputed **R Markdown** vignette.
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Precomputed R Markdown vignette}
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-This is an example of a precomputed R Markdown vignette.
+This is an example of a precomputed **R Markdown** vignette.
 
 ```{r}
 #| label: plot

@@ -4,21 +4,21 @@
 #' [hexSticker::sticker()]. Optionally, create favicons with
 #' \CRANpkg{pkgdown}'s [pkgdown::build_favicons()].
 #'
+#' @inheritParams hexSticker::sticker
 #' @param pkgname Name of the package. If not supplied, the name is detected
 #'   from DESCRIPTION.
-#' @param overwrite Should the current logo be overwritten? When `TRUE` it
+#' @param overwrite Should the current logo be overwritten? When `TRUE`, it
 #'   runs \CRANpkg{usethis}'s [usethis::use_logo()].
 #' @param favicons Should favicons be created with \CRANpkg{pkgdown}'s
 #'   [pkgdown::build_favicons()]?
-#' @inheritParams hexSticker::sticker
 #' @returns The function is called for its side effects and returns `NULL`
 #'   invisibly.
-#' @family assets
 #' @seealso \CRANpkg{hexSticker}'s [hexSticker::sticker()],
 #'   \CRANpkg{usethis}'s [usethis::use_logo()] and \CRANpkg{pkgdown}'s
 #'   [pkgdown::build_favicons()].
-#' @encoding UTF-8
+#' @family assets
 #' @export
+#' @encoding UTF-8
 #' @examples
 #' tmp <- tempfile(fileext = ".png")
 #' rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
@@ -64,7 +64,13 @@ rog_logo <- function(
 
   if (isFALSE(overwrite) && file.exists(filename)) {
     filename <- tempfile(fileext = ".png")
-    message("Old logo detected. Use overwrite = TRUE.")
+    cli::cli_inform(c(
+      "!" = "Existing logo detected, using a temporary output file.",
+      "i" = paste(
+        "Set {.arg overwrite} to {.code TRUE} to replace the existing",
+        "logo."
+      )
+    ))
   }
 
   # Build the logo background from the rOpenGov asset.
@@ -101,7 +107,9 @@ rog_logo <- function(
     filename = filename
   ))
 
-  message("Logo created at ", filename, ".")
+  cli::cli_inform(c(
+    "v" = "Created logo at {.file {filename}}."
+  ))
 
   # Create favicons for pkgdown when the default logo path is used.
 
@@ -110,14 +118,13 @@ rog_logo <- function(
   }
 }
 
-
 #' Get package name
 #' @noRd
 package_name <- function() {
   desc_path <- file.path(normalizePath("."), "DESCRIPTION")
 
   if (!file.exists(desc_path)) {
-    stop("No DESCRIPTION file found.", call. = FALSE)
+    cli::cli_abort("No {.file DESCRIPTION} file found.", call = NULL)
   }
 
   # Read the package name from DESCRIPTION.
@@ -127,16 +134,15 @@ package_name <- function() {
   packagename
 }
 
-
-#' Load rogtemplate fonts
+#' Load the rogtemplate font
 #'
 #' Load the current rOpenGov font,
 #' [B612 Mono](https://fonts.google.com/specimen/B612+Mono).
 #'
 #' @returns The font family name, `"B612 Mono"`.
 #' @family assets
-#' @encoding UTF-8
 #' @export
+#' @encoding UTF-8
 #' @examples
 #' rog_load_font()
 rog_load_font <- function() {
@@ -158,7 +164,9 @@ rog_load_font <- function() {
 
   showtext::showtext_auto()
 
-  message(family, " font loaded.")
+  cli::cli_inform(c(
+    "v" = "Loaded the {.val {family}} font."
+  ))
 
   family
 }

@@ -1,7 +1,7 @@
 ---
 title: "HTML widgets"
 description: >
-  Check HTML widget rendering and layout inside pkgdown articles.
+  Check HTML widget rendering and layout inside **pkgdown** articles.
 ---
 
 ```{r}

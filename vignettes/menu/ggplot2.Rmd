@@ -1,7 +1,7 @@
 ---
 title: "ggplot2 example"
 description: >
-  Check how pkgdown renders ggplot2 figures in article pages.
+  Check how **pkgdown** renders **ggplot2** figures in article pages.
 ---
 
 ```{r}

@@ -1,7 +1,7 @@
 ---
 title: Quarto features
 description: >
-  Check Quarto-specific article features such as citations and shortcodes.
+  Check **Quarto**-specific article features such as citations and shortcodes.
 subtitle: Using this for shortcodes
 output: html
 knitr:
@@ -65,7 +65,7 @@ Callout types include `note`, `tip`, `warning`, `caution` and `important`.
 <div class="callout-body-container callout-body">
 ```
 
-Callouts provide a simple way to attract attention, for example, to this
+Callouts provide a simple way to draw attention to content, such as this
 warning.
 
 ```{=html}
@@ -82,8 +82,8 @@ warning.
 <div class="callout-body-container callout-body">
 ```
 
-The callout heading is provided by the callout type, with the expected heading,
-such as Note, Warning, Important, Tip or Caution.
+The callout type provides the expected heading, such as Note, Warning,
+Important, Tip or Caution.
 
 ```{=html}
 </div>
@@ -213,7 +213,7 @@ term
 
 ## Footnotes
 
-Here is a footnote reference,[^1] and another.[^2]
+Here is a footnote reference[^1] and another.[^2]
 
 [^1]: Here is the footnote.
 
@@ -256,9 +256,9 @@ $$E = mc^{2}$$
 
 [This text is highlighted]{.mark}
 
-Endash: --
+En dash: --
 
-Emdash: ---
+Em dash: ---
 
 ## Shortcodes
 
@@ -313,7 +313,7 @@ Cute puppies (@fig-pitbull and @fig-shar-pei) and a placeholder
 ::: {#fig-cern}
 {{< video https://www.youtube.com/embed/wo9vZccmqwc >}}
 
-The video "CERN: The Journey of Discovery".
+The video title is *CERN: The Journey of Discovery*.
 :::
 
 See @fig-cern.
