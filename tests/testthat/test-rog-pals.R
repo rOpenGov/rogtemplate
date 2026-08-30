@@ -29,15 +29,32 @@ test_that("qualitative palette generates distinct rOpenGov hues", {
   )
 })
 
-test_that("palette controls apply transparency and reverse the scale", {
-  skip_on_os("mac")
+test_that("all palettes apply transparency and reverse their scales", {
+  palettes <- list(
+    orange = rog_orange_pal,
+    dark = rog_dark_pal,
+    gradient = rog_gradient_pal,
+    qualitative = rog_qualitative_pal
+  )
+
+  opaque <- lapply(palettes, \(palette) palette(4, alpha = 1))
+  transparent <- lapply(palettes, \(palette) palette(4, alpha = 0.5))
+  reversed <- lapply(
+    palettes,
+    \(palette) palette(4, alpha = 1, rev = TRUE)
+  )
 
   expect_equal(
-    rog_orange_pal(4),
-    c("#FF6600E6", "#FF9148E6", "#FFBC90E6", "#FFE7D8E6")
+    lengths(opaque),
+    stats::setNames(rep(4L, length(palettes)), names(palettes))
   )
+  expect_equal(reversed, lapply(opaque, rev))
   expect_equal(
-    rog_orange_pal(4, alpha = 1, rev = TRUE),
-    rev(rog_orange_pal(4, alpha = 1))
+    vapply(
+      transparent,
+      \(colors) all(grepl("^#[[:xdigit:]]{8}$", colors)),
+      logical(1)
+    ),
+    stats::setNames(rep(TRUE, length(palettes)), names(palettes))
   )
 })

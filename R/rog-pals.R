@@ -23,15 +23,16 @@
 #' scales::show_col(rog_qualitative_pal(9))
 rog_orange_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c("#ff6600", "#ffe7d8")
+  ramp <- colorRampPalette(cols)
+  colors <- ramp(n)
   if (rev) {
-    cols <- rev(cols)
+    colors <- rev(colors)
   }
 
-  ramp <- colorRampPalette(cols)
   if (alpha == 1) {
-    return(ramp(n))
+    return(colors)
   }
-  col_end <- adjustcolor(ramp(n), alpha.f = alpha)
+  col_end <- adjustcolor(colors, alpha.f = alpha)
   col_end
 }
 
@@ -40,15 +41,16 @@ rog_orange_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 #' @encoding UTF-8
 rog_dark_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c("#343a40", "#e8ebed")
+  ramp <- colorRampPalette(cols)
+  colors <- ramp(n)
   if (rev) {
-    cols <- rev(cols)
+    colors <- rev(colors)
   }
 
-  ramp <- colorRampPalette(cols)
   if (alpha == 1) {
-    return(ramp(n))
+    return(colors)
   }
-  col_end <- adjustcolor(ramp(n), alpha.f = alpha)
+  col_end <- adjustcolor(colors, alpha.f = alpha)
   col_end
 }
 
@@ -57,15 +59,16 @@ rog_dark_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
 #' @encoding UTF-8
 rog_gradient_pal <- function(n = 4, alpha = 0.9, rev = FALSE) {
   cols <- c("#343a40", "#9A5020", "#CD5B10", "#ff6600")
+  ramp <- colorRampPalette(cols)
+  colors <- ramp(n)
   if (rev) {
-    cols <- rev(cols)
+    colors <- rev(colors)
   }
 
-  ramp <- colorRampPalette(cols)
   if (alpha == 1) {
-    return(ramp(n))
+    return(colors)
   }
-  col_end <- adjustcolor(ramp(n), alpha.f = alpha)
+  col_end <- adjustcolor(colors, alpha.f = alpha)
   col_end
 }
 
@@ -84,10 +87,6 @@ rog_qualitative_pal <- function(n = 6, alpha = 0.9, rev = FALSE) {
   cols <- cols[seq_len(n)]
   cols[cols > 1] <- cols[cols > 1] - 1
   colors <- hsv(cols, sat, val)
-  if (startsWith(color, "#") && nchar(color) == 9) {
-    alpha <- substr(color, 8, 9)
-    colors <- paste(colors, alpha, sep = "")
-  }
 
   if (rev) {
     colors <- rev(colors)

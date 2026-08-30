@@ -69,3 +69,25 @@ test_that("rog_add_template_pkgdown() preserves unrelated site settings", {
   expect_null(config$template$params)
   expect_false(file.exists(file.path("pkgdown", "_pkgdown.yml")))
 })
+
+test_that("rog_add_template_pkgdown() updates a nested pkgdown config", {
+  pkg <- local_test_package("samplepkg")
+  withr::local_dir(pkg)
+  usethis::local_project(pkg, force = TRUE)
+  dir.create("pkgdown")
+  yaml::write_yaml(
+    list(navbar = list(structure = list(left = "reference"))),
+    file.path("pkgdown", "_pkgdown.yml")
+  )
+
+  expect_message(
+    result <- withVisible(rog_add_template_pkgdown()),
+    "Added rogtemplate to"
+  )
+
+  config <- yaml::read_yaml(file.path("pkgdown", "_pkgdown.yml"))
+
+  expect_equal(result, list(value = NULL, visible = FALSE))
+  expect_equal(config$navbar$structure$left, "reference")
+  expect_equal(config$template$package, "rogtemplate")
+})

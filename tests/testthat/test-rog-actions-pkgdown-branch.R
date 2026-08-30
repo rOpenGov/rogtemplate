@@ -39,3 +39,26 @@ test_that("rog_actions_pkgdown_branch() installs a deployable workflow", {
   )
   expect_setequal(git_ignore, c("*.html", "R-version", "*.Rds"))
 })
+
+test_that("rog_actions_pkgdown_branch() preserves an existing workflow", {
+  pkg <- local_test_package()
+  workflow_path <- file.path(
+    pkg,
+    ".github",
+    "workflows",
+    "rogtemplate-gh-pages.yaml"
+  )
+
+  expect_message(rog_actions_pkgdown_branch(pkg), "Added workflow to")
+  writeLines("custom workflow", workflow_path)
+
+  expect_message(
+    result <- withVisible(
+      rog_actions_pkgdown_branch(pkg, overwrite = FALSE)
+    ),
+    "was not updated"
+  )
+
+  expect_equal(result, list(value = NULL, visible = FALSE))
+  expect_equal(readLines(workflow_path), "custom workflow")
+})

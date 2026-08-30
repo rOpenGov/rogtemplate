@@ -114,8 +114,12 @@ rog_logo <- function(
   # Create favicons for pkgdown when the default logo path is used.
 
   if (isTRUE(favicons) && filename == "man/figures/logo.png") {
-    pkgdown::build_favicons(overwrite = TRUE)
+    build_pkgdown_favicons(overwrite = TRUE)
   }
+}
+
+build_pkgdown_favicons <- function(...) {
+  pkgdown::build_favicons(...) # nocov
 }
 
 #' Get package name

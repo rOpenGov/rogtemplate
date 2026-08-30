@@ -15,7 +15,6 @@
 #' @export
 #' @encoding UTF-8
 rog_build <- function(pkg = ".", ...) {
-  # nocov start
   usethis::local_project(pkg, force = TRUE)
   dots <- list(...)
   logo_arg <- names(dots) %in% names(formals(rog_logo))
@@ -32,9 +31,8 @@ rog_build <- function(pkg = ".", ...) {
 
   do.call(build_pkgdown_site, c(list(pkg = "."), build_dots))
   invisible()
-  # nocov end
 }
 
 build_pkgdown_site <- function(...) {
-  pkgdown::build_site(...)
+  pkgdown::build_site(...) # nocov
 }

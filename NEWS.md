@@ -7,3 +7,4 @@
 - Dark mode CSS now keeps generated styles synchronized and uses an accessible danger text color.
 - `rog_actions_pkgdown_branch()` now writes project metadata to the requested `pkg` path and grants the generated **pkgdown** deployment workflow `contents: write`.
 - `rog_build()` now respects the requested `pkg` path and keeps logo-only arguments out of the `pkgdown::build_site()` call.
+- `rog_dark_pal()`, `rog_gradient_pal()` and `rog_orange_pal()` now return exact reversed scales when `rev = TRUE`.
