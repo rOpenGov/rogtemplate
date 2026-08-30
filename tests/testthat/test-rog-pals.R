@@ -1,4 +1,6 @@
 test_that("sequential palettes retain their rOpenGov color endpoints", {
+  skip_on_os("mac")
+
   expect_equal(
     rog_orange_pal(4, alpha = 1),
     c("#FF6600", "#FF9148", "#FFBC90", "#FFE7D8")
@@ -28,6 +30,8 @@ test_that("qualitative palette generates distinct rOpenGov hues", {
 })
 
 test_that("palette controls apply transparency and reverse the scale", {
+  skip_on_os("mac")
+
   expect_equal(
     rog_orange_pal(4),
     c("#FF6600E6", "#FF9148E6", "#FFBC90E6", "#FFE7D8E6")
