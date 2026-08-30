@@ -1,6 +1,6 @@
 # Precomputed R Markdown vignette
 
-This is an example of a precomputed R Markdown vignette.
+This is an example of a precomputed **R Markdown** vignette.
 
 ``` r
 

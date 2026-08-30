@@ -1,4 +1,4 @@
-# Create a GitHub Action that deploys a pkgdown site
+# Deploy a pkgdown site with GitHub Actions
 
 Create a GitHub Action workflow that builds a
 [pkgdown](https://CRAN.R-project.org/package=pkgdown) site from your
@@ -14,11 +14,11 @@ rog_actions_pkgdown_branch(pkg = ".", overwrite = TRUE)
 
 - pkg:
 
-  Path to package.
+  Path to the package.
 
 - overwrite:
 
-  Overwrite the workflow if it already exists.
+  Whether to overwrite the workflow if it already exists.
 
 ## Value
 
@@ -27,8 +27,6 @@ The function is called for its side effects and returns
 
 ## See also
 
-[`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md).
-
-site setup helpers:
+Site setup helpers:
 [`rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md),
 [`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)

@@ -1,6 +1,6 @@
 # Precomputed Quarto vignette
 
-This is an example of a precomputed Quarto vignette.
+This is an example of a precomputed **Quarto** vignette.
 
 ``` r
 

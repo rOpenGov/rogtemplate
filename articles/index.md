@@ -16,12 +16,12 @@ Articles used to check precomputed R Markdown and Quarto output.
 - [Precomputed Quarto
   vignette](https://ropengov.github.io/rogtemplate/articles/precompute-quarto.md):
 
-  Check how pkgdown handles a precomputed Quarto vignette.
+  Check how **pkgdown** handles a precomputed **Quarto** vignette.
 
 - [Precomputed R Markdown
   vignette](https://ropengov.github.io/rogtemplate/articles/precompute.md):
 
-  Check how pkgdown handles a precomputed R Markdown vignette.
+  Check how **pkgdown** handles a precomputed **R Markdown** vignette.
 
 ### Menu examples
 
@@ -30,12 +30,12 @@ Articles used to test dropdown menus in the article navbar.
 - [ggplot2
   example](https://ropengov.github.io/rogtemplate/articles/menu/ggplot2.md):
 
-  Check how pkgdown renders ggplot2 figures in article pages.
+  Check how **pkgdown** renders **ggplot2** figures in article pages.
 
 - [Testing syntax
   highlighter](https://ropengov.github.io/rogtemplate/articles/menu/highlight.md):
 
-  Check how pkgdown highlights R code blocks and inline syntax.
+  Check how **pkgdown** highlights **R** code blocks and inline syntax.
 
 ### Feature tests
 
@@ -59,13 +59,14 @@ be tested automatically.
 - [Quarto
   features](https://ropengov.github.io/rogtemplate/articles/test/quarto-features.md):
 
-  Check Quarto-specific article features such as citations and
+  Check **Quarto**-specific article features such as citations and
   shortcodes.
 
-- [Reactable
+- [reactable
   example](https://ropengov.github.io/rogtemplate/articles/test/reactable.md):
 
-  Check reactable widgets and table styling inside pkgdown articles.
+  Check **reactable** widgets and table styling inside **pkgdown**
+  articles.
 
 - [Output
   rendering](https://ropengov.github.io/rogtemplate/articles/test/rendering.md):
@@ -80,10 +81,10 @@ be tested automatically.
 - [Quarto
   vignettes](https://ropengov.github.io/rogtemplate/articles/test-quarto.md):
 
-  Learn how **pkgdown** works with Quarto vignettes, including currently
-  supported features and known limitations.
+  Learn how **pkgdown** works with **Quarto** vignettes, including
+  currently supported features and known limitations.
 
 - [HTML
   widgets](https://ropengov.github.io/rogtemplate/articles/test/widgets.md):
 
-  Check HTML widget rendering and layout inside pkgdown articles.
+  Check HTML widget rendering and layout inside **pkgdown** articles.

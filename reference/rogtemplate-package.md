@@ -6,13 +6,12 @@ do not use it for your own code.
 
 ## See also
 
-Useful links:
-
-- <https://ropengov.github.io/rogtemplate/>
-
-- <https://github.com/rOpenGov/rogtemplate>
-
-- Report bugs at <https://github.com/rOpenGov/rogtemplate/issues>
+[`rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md)
+to configure a site,
+[`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md)
+to configure deployment and
+[`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)
+to build the site locally.
 
 ## Author
 

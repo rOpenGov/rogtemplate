@@ -106,17 +106,17 @@
 <div class="section level2">
 <h2 id="using-rogtemplate">Using rogtemplate<a class="anchor" aria-label="anchor" href="#using-rogtemplate"></a>
 </h2>
-<p>You can deploy your <strong>pkgdown</strong> site with <strong>rogtemplate</strong> through a GitHub Action or build it locally. The GitHub Action is automatic after setup. A local build gives you more control.</p>
+<p>You can deploy your <strong>pkgdown</strong> site with <strong>rogtemplate</strong> through a <strong>GitHub Actions</strong> workflow or build it locally. The workflow runs automatically after setup. A local build gives you more control.</p>
 <div class="section level3">
 <h3 id="option-a-deploy-with-a-github-action">Option A: Deploy with a GitHub Action<a class="anchor" aria-label="anchor" href="#option-a-deploy-with-a-github-action"></a>
 </h3>
-<p>You do not need to install <strong>rogtemplate</strong> itself. First copy <a href="https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml" class="external-link">this workflow file</a> to your <code>.github/workflows/</code> folder.</p>
-<p>Then go to <em>YOUR_GITHUB_REPO &gt; Settings &gt; Pages</em> and configure GitHub Pages to publish from the <code>gh-pages</code> branch.</p>
+<p>You do not need to install <strong>rogtemplate</strong> itself. First, copy <a href="https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml" class="external-link">this workflow file</a> to your <code>.github/workflows/</code> folder.</p>
+<p>Then go to <em>YOUR_GITHUB_REPO &gt; Settings &gt; Pages</em> and configure <strong>GitHub Pages</strong> to publish from the <code>gh-pages</code> branch.</p>
 </div>
 <div class="section level3">
 <h3 id="option-b-build-after-installing-rogtemplate">Option B: Build after installing rogtemplate<a class="anchor" aria-label="anchor" href="#option-b-build-after-installing-rogtemplate"></a>
 </h3>
-<p>You can install <strong>rogtemplate</strong> from <a href="https://ropengov.r-universe.dev/rogtemplate" class="external-link">r-universe</a>:</p>
+<p>You can install <strong>rogtemplate</strong> from <a href="https://ropengov.r-universe.dev/rogtemplate" class="external-link"><strong>r-universe</strong></a>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"rogtemplate"</span>,</span>
 <span>  repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://ropengov.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span><span class="op">)</span></span>
@@ -124,7 +124,7 @@
 <p>You can also use the <strong>pak</strong> package:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">pak</span><span class="fu">::</span><span class="fu"><a href="https://pak.r-lib.org/reference/pak.html" class="external-link">pak</a></span><span class="op">(</span><span class="st">"ropengov/rogtemplate"</span><span class="op">)</span></span></code></pre></div>
-<p>Use <code><a href="reference/rog_actions_pkgdown_branch.html">rog_actions_pkgdown_branch()</a></code> to set up the workflow described above. The deployment is still performed by a GitHub Action.</p>
+<p>Use <code><a href="reference/rog_actions_pkgdown_branch.html">rog_actions_pkgdown_branch()</a></code> to set up the workflow described above. The deployment is still performed by <strong>GitHub Actions</strong>.</p>
 <p>To build your package locally into the <code>docs</code> folder, use:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rogtemplate</span><span class="fu">::</span><span class="fu"><a href="reference/rog_build.html">rog_build</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -133,7 +133,7 @@
 <span></span>
 <span><span class="fu">rogtemplate</span><span class="fu">::</span><span class="fu"><a href="reference/rog_add_template_pkgdown.html">rog_add_template_pkgdown</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu">pkgdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">build_site</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><code><a href="reference/rog_add_template_pkgdown.html">rogtemplate::rog_add_template_pkgdown()</a></code> creates a <code>_pkgdown.yml</code> file or modifies an existing one, with these lines:</p>
+<p><code><a href="reference/rog_add_template_pkgdown.html">rogtemplate::rog_add_template_pkgdown()</a></code> creates a <code>_pkgdown.yml</code> file with these lines or adds them to an existing file:</p>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>_pkgdown.yml</strong></pre>
@@ -148,7 +148,7 @@
 <div class="section level2">
 <h2 id="commit-to-github-and-deploy">Commit to GitHub and deploy<a class="anchor" aria-label="anchor" href="#commit-to-github-and-deploy"></a>
 </h2>
-<p>The last step is to commit to GitHub. If you use the GitHub Action workflow, wait until it finishes, then configure GitHub Pages from <em>YOUR_GITHUB_REPO &gt; Settings &gt; Pages</em>.</p>
+<p>The last step is to commit to <strong>GitHub</strong>. If you use the <strong>GitHub Actions</strong> workflow, wait until it finishes, then configure <strong>GitHub Pages</strong> from <em>YOUR_GITHUB_REPO &gt; Settings &gt; Pages</em>.</p>
 </div>
 <div class="section level2">
 <h2 id="package-assets-and-palettes">Package assets and palettes<a class="anchor" aria-label="anchor" href="#package-assets-and-palettes"></a>

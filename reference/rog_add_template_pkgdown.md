@@ -1,4 +1,4 @@
-# Configure rogtemplate for your pkgdown site
+# Configure a pkgdown site with rogtemplate
 
 Add the rOpenGov template configuration to your `_pkgdown.yml`. If no
 configuration file exists, create one at `pkgdown/_pkgdown.yml`. Also
@@ -17,23 +17,21 @@ The function is called for its side effects and returns
 
 ## Details
 
-The function also adds these package URLs to `_pkgdown.yml` and
-DESCRIPTION if they are not already present:
-
-- https://ropengov.github.io/pkgname/
-
-- https://github.com/rOpenGov/pkgname
+The function also adds the package website URL
+(`https://ropengov.github.io/pkgname/`) and repository URL
+(`https://github.com/rOpenGov/pkgname`) to `_pkgdown.yml` and
+DESCRIPTION if they are not already present.
 
 ## See also
 
-[pkgdown](https://CRAN.R-project.org/package=pkgdown) vignettes:
+The [pkgdown](https://CRAN.R-project.org/package=pkgdown) vignettes
 [`vignette("pkgdown", package = "pkgdown")`](https://pkgdown.r-lib.org/articles/pkgdown.html)
 and
-[`vignette("linking", package = "pkgdown")`](https://pkgdown.r-lib.org/articles/linking.html),
-[usethis](https://CRAN.R-project.org/package=usethis)'s
+[`vignette("linking", package = "pkgdown")`](https://pkgdown.r-lib.org/articles/linking.html).
+See also [usethis](https://CRAN.R-project.org/package=usethis)'s
 [`usethis::use_tidy_description()`](https://usethis.r-lib.org/reference/tidyverse.html).
 
-site setup helpers:
+Site setup helpers:
 [`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md),
 [`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)
 

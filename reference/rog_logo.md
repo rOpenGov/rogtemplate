@@ -46,7 +46,7 @@ rog_logo(
 
 - overwrite:
 
-  Should the current logo be overwritten? When `TRUE` it runs
+  Should the current logo be overwritten? When `TRUE`, it runs
   [usethis](https://CRAN.R-project.org/package=usethis)'s
   [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html).
 
@@ -70,7 +70,7 @@ invisibly.
 and [pkgdown](https://CRAN.R-project.org/package=pkgdown)'s
 [`pkgdown::build_favicons()`](https://pkgdown.r-lib.org/reference/build_favicons.html).
 
-package asset helpers:
+Package asset helpers:
 [`rog_badge_ropengov()`](https://ropengov.github.io/rogtemplate/reference/rog_badge_ropengov.md),
 [`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md)
 
@@ -79,8 +79,8 @@ package asset helpers:
 ``` r
 tmp <- tempfile(fileext = ".png")
 rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
-#> B612 Mono font loaded.
-#> Logo created at /tmp/Rtmp1EmVNe/file1d6c2d083500.png.
+#> ✔ Loaded the "B612 Mono" font.
+#> ✔ Created logo at /tmp/Rtmpu2X0uJ/file1d622bab41a1.png.
 
 # Display the logo.
 logo <- magick::image_read(tmp)

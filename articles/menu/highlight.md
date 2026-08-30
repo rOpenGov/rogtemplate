@@ -1,6 +1,6 @@
 # Testing syntax highlighter
 
-Test how **pkgdown** highlights R code:
+Test how **pkgdown** highlights **R** code:
 
 ``` r
 
@@ -19,7 +19,10 @@ df <- fromJSON("https://raw.githubusercontent.com/dieghernan/Country-Codes-and-I
 orgsdb <- read.csv("https://raw.githubusercontent.com/dieghernan/Country-Codes-and-International-Organizations/master/outputs/CountrycodesOrgs.csv") |>
   distinct(org_id, org_name)
 
-kable(orgsdb[grep("Common", orgsdb$org_name), ], format = "markdown")
+kable(
+  orgsdb[grep("Common", orgsdb$org_name, fixed = TRUE), ],
+  format = "markdown"
+)
 
 
 ISO_memcol <- function(df,
@@ -109,9 +112,12 @@ plot(
   add = TRUE
 )
 
+testmap_rob_c <- testmap_rob |>
+  filter(!is.na(C)) |>
+  st_geometry()
+
 plot(
-  st_geometry(testmap_rob |>
-    filter(!is.na(C))),
+  testmap_rob_c,
   col = "#346733",
   border = "#FFFFFF",
   lwd = 0.1,
@@ -127,20 +133,26 @@ plot(
   pch = 21
 )
 # Add dependent tiny countries.
+tiny_rob_dependent <- tiny_rob |>
+  filter(!is.na(C)) |>
+  filter(!is.na(ISO_3166_3.sov)) |>
+  st_geometry()
+
 plot(
-  st_geometry(tiny_rob |>
-    filter(!is.na(C)) |>
-    filter(!is.na(ISO_3166_3.sov))),
+  tiny_rob_dependent,
   bg = "#C6DEBD",
   col = "#000000",
   pch = 21,
   add = TRUE
 )
 # Add independent tiny countries.
+tiny_rob_independent <- tiny_rob |>
+  filter(!is.na(C)) |>
+  filter(is.na(ISO_3166_3.sov)) |>
+  st_geometry()
+
 plot(
-  st_geometry(tiny_rob |>
-    filter(!is.na(C)) |>
-    filter(is.na(ISO_3166_3.sov))),
+  tiny_rob_independent,
   bg = "#346733",
   col = "#000000",
   pch = 21,

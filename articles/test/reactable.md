@@ -1,4 +1,4 @@
-# Reactable example
+# reactable example
 
 ``` r
 

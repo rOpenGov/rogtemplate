@@ -31,12 +31,12 @@ rog_qualitative_pal(n = 6, alpha = 0.9, rev = FALSE)
 
 ## Value
 
-Color palettes.
+A character vector of colors.
 
 ## See also
 
-grDevices'
-[`grDevices::hcl.colors()`](https://rdrr.io/r/grDevices/palettes.html).
+[`grDevices::hcl.colors()`](https://rdrr.io/r/grDevices/palettes.html)
+for other color palettes.
 
 ## Examples
 

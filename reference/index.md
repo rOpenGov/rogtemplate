@@ -5,9 +5,9 @@
 Configure package sites with the rOpenGov pkgdown template.
 
 - [`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md)
-  : Create a GitHub Action that deploys a pkgdown site
+  : Deploy a pkgdown site with GitHub Actions
 - [`rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md)
-  : Configure rogtemplate for your pkgdown site
+  : Configure a pkgdown site with rogtemplate
 - [`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)
   : Build your pkgdown site locally
 
@@ -17,10 +17,10 @@ Add rOpenGov badges, logos and fonts to package sites and README files.
 
 - [`rog_badge_ropengov()`](https://ropengov.github.io/rogtemplate/reference/rog_badge_ropengov.md)
   : Add an rOpenGov badge to your README
+- [`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md)
+  : Load the rogtemplate font
 - [`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md)
   : Create a logo for your rOpenGov package
-- [`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md)
-  : Load rogtemplate fonts
 
 ## Palettes
 

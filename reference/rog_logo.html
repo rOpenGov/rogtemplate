@@ -60,7 +60,7 @@ pkgdown's pkgdown::build_favicons()."><meta property="og:image" content="https:/
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Create a logo for your rOpenGov package</h1>
-      <small class="dont-index">Source: <a href="https://github.com/rOpenGov/rogtemplate/blob/main/R/rog_logo.R" class="external-link"><code>R/rog_logo.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/rOpenGov/rogtemplate/blob/main/R/rog-logo.R" class="external-link"><code>R/rog-logo.R</code></a></small>
       <div class="d-none name"><code>rog_logo.Rd</code></div>
     </div>
 
@@ -109,7 +109,7 @@ from DESCRIPTION.</p></dd>
 
 
 <dt id="arg-overwrite">overwrite<a class="anchor" aria-label="anchor" href="#arg-overwrite"></a></dt>
-<dd><p>Should the current logo be overwritten? When <code>TRUE</code> it
+<dd><p>Should the current logo be overwritten? When <code>TRUE</code>, it
 runs <a href="https://CRAN.R-project.org/package=usethis" class="external-link"><span class="pkg">usethis</span></a>'s <code><a href="https://usethis.r-lib.org/reference/use_logo.html" class="external-link">usethis::use_logo()</a></code>.</p></dd>
 
 
@@ -128,7 +128,7 @@ invisibly.</p>
     <div class="dont-index"><p><a href="https://CRAN.R-project.org/package=hexSticker" class="external-link"><span class="pkg">hexSticker</span></a>'s <code><a href="https://rdrr.io/pkg/hexSticker/man/sticker.html" class="external-link">hexSticker::sticker()</a></code>,
 <a href="https://CRAN.R-project.org/package=usethis" class="external-link"><span class="pkg">usethis</span></a>'s <code><a href="https://usethis.r-lib.org/reference/use_logo.html" class="external-link">usethis::use_logo()</a></code> and <a href="https://CRAN.R-project.org/package=pkgdown" class="external-link"><span class="pkg">pkgdown</span></a>'s
 <code><a href="https://pkgdown.r-lib.org/reference/build_favicons.html" class="external-link">pkgdown::build_favicons()</a></code>.</p>
-<p>package asset helpers:
+<p>Package asset helpers:
 <code><a href="rog_badge_ropengov.html">rog_badge_ropengov()</a></code>,
 <code><a href="rog_load_font.html">rog_load_font()</a></code></p></div>
     </div>
@@ -137,8 +137,8 @@ invisibly.</p>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">tmp</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span>fileext <span class="op">=</span> <span class="st">".png"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">rog_logo</span><span class="op">(</span><span class="st">"test a package"</span>, <span class="va">tmp</span>, overwrite <span class="op">=</span> <span class="cn">FALSE</span>, favicons <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> B612 Mono font loaded.</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Logo created at /tmp/Rtmp1EmVNe/file1d6c2d083500.png.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">✔</span> Loaded the <span style="color: #0000BB;">"B612 Mono"</span> font.</span>
+<span class="r-msg co"><span class="r-pr">#&gt;</span> <span style="color: #00BB00;">✔</span> Created logo at <span style="color: #0000BB;">/tmp/Rtmpu2X0uJ/file1d622bab41a1.png</span>.</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Display the logo.</span></span></span>
 <span class="r-in"><span><span class="va">logo</span> <span class="op">&lt;-</span> <span class="fu">magick</span><span class="fu">::</span><span class="fu"><a href="https://docs.ropensci.org/magick/reference/editing.html" class="external-link">image_read</a></span><span class="op">(</span><span class="va">tmp</span><span class="op">)</span></span></span>

@@ -56,7 +56,7 @@
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>Build your pkgdown site locally</h1>
-      <small class="dont-index">Source: <a href="https://github.com/rOpenGov/rogtemplate/blob/main/R/rog_build.R" class="external-link"><code>R/rog_build.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/rOpenGov/rogtemplate/blob/main/R/rog-build.R" class="external-link"><code>R/rog-build.R</code></a></small>
       <div class="d-none name"><code>rog_build.Rd</code></div>
     </div>
 
@@ -74,13 +74,45 @@
 
 
 <dl><dt id="arg-pkg">pkg<a class="anchor" aria-label="anchor" href="#arg-pkg"></a></dt>
-<dd><p>Path to package.</p></dd>
+<dd><p>Path to the package.</p></dd>
 
 
 <dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
-<dd><p>Arguments passed to <code><a href="rog_logo.html">rog_logo()</a></code> and <a href="https://CRAN.R-project.org/package=pkgdown" class="external-link"><span class="pkg">pkgdown</span></a>'s
-<code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code>. Common arguments for <code><a href="rog_logo.html">rog_logo()</a></code> include
-<code>overwrite</code>, <code>favicons</code>, <code>p_x</code>, <code>p_y</code> and <code>p_size</code>.</p></dd>
+<dd><p>Arguments passed on to <code><a href="rog_logo.html">rog_logo</a></code>, <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site</a></code></p><dl><dt><code>overwrite</code></dt>
+<dd><p>Should the current logo be overwritten? When <code>TRUE</code>, it
+runs <a href="https://CRAN.R-project.org/package=usethis" class="external-link"><span class="pkg">usethis</span></a>'s <code><a href="https://usethis.r-lib.org/reference/use_logo.html" class="external-link">usethis::use_logo()</a></code>.</p></dd>
+
+    <dt><code>favicons</code></dt>
+<dd><p>Should favicons be created with <a href="https://CRAN.R-project.org/package=pkgdown" class="external-link"><span class="pkg">pkgdown</span></a>'s
+<code><a href="https://pkgdown.r-lib.org/reference/build_favicons.html" class="external-link">pkgdown::build_favicons()</a></code>?</p></dd>
+
+    <dt><code>p_x</code></dt>
+<dd><p>x position for package name</p></dd>
+
+    <dt><code>p_y</code></dt>
+<dd><p>y position for package name</p></dd>
+
+    <dt><code>p_size</code></dt>
+<dd><p>font size for package name</p></dd>
+
+    <dt><code>examples</code></dt>
+<dd><p>Run examples?</p></dd>
+
+    <dt><code>preview</code></dt>
+<dd><p>If <code>TRUE</code>, or <code>is.na(preview) &amp;&amp; interactive()</code>, will preview
+freshly generated section in browser.</p></dd>
+
+    <dt><code>new_process</code></dt>
+<dd><p>If <code>TRUE</code>, will run <code>build_site()</code> in a separate process.
+This enhances reproducibility by ensuring nothing that you have loaded
+in the current process affects the build process.</p></dd>
+
+    <dt><code>install</code></dt>
+<dd><p>If <code>TRUE</code>, will install the package in a temporary library
+so it is available for vignettes.</p></dd>
+
+
+</dl></dd>
 
 </dl></div>
     <div class="section level2">
@@ -94,9 +126,8 @@
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><a href="https://CRAN.R-project.org/package=pkgdown" class="external-link"><span class="pkg">pkgdown</span></a>'s <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code> and
-<code><a href="rog_add_template_pkgdown.html">rog_add_template_pkgdown()</a></code>.</p>
-<p>site setup helpers:
+    <div class="dont-index"><p><a href="https://CRAN.R-project.org/package=pkgdown" class="external-link"><span class="pkg">pkgdown</span></a>'s <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code>.</p>
+<p>Site setup helpers:
 <code><a href="rog_actions_pkgdown_branch.html">rog_actions_pkgdown_branch()</a></code>,
 <code><a href="rog_add_template_pkgdown.html">rog_add_template_pkgdown()</a></code></p></div>
     </div>

@@ -13,9 +13,8 @@ rog_badge_ropengov(install = TRUE)
 
 - install:
 
-  `TRUE` or `FALSE`. If `TRUE`, the badge is installed on your
-  `README.md` or `README.Rmd`. If `FALSE`, a message with the R Markdown
-  code is displayed.
+  Whether to install the badge in `README.md` or `README.Rmd`. If
+  `FALSE`, display the R Markdown code instead.
 
 ## Value
 
@@ -31,7 +30,7 @@ invisibly.
 [usethis](https://CRAN.R-project.org/package=usethis)'s
 [`usethis::use_badge()`](https://usethis.r-lib.org/reference/badges.html).
 
-package asset helpers:
+Package asset helpers:
 [`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md),
 [`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md)
 
@@ -39,6 +38,7 @@ package asset helpers:
 
 ``` r
 rog_badge_ropengov(install = FALSE)
-#> Badge Markdown is 
-#> [![rOpenGov package](https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge.svg)](https://ropengov.org/)
+#> ℹ Markdown for the badge:
+#> [![rOpenGov
+#> package](https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge.svg)](https://ropengov.org/)
 ```

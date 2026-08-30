@@ -21,5 +21,5 @@ rOpenGov](downloads_files/figure-html/unnamed-chunk-4-1.png)
 ## On Posit Package Manager
 
 Downloads and package metadata for [rOpenGov](https://ropengov.org/)
-packages from [Posit Package
-Manager](https://packagemanager.posit.co/client/#/).
+packages from [**Posit Package
+Manager**](https://packagemanager.posit.co/client/#/).

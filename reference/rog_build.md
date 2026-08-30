@@ -13,17 +13,57 @@ rog_build(pkg = ".", ...)
 
 - pkg:
 
-  Path to package.
+  Path to the package.
 
 - ...:
 
-  Arguments passed to
-  [`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md)
-  and [pkgdown](https://CRAN.R-project.org/package=pkgdown)'s
-  [`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html).
-  Common arguments for
-  [`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md)
-  include `overwrite`, `favicons`, `p_x`, `p_y` and `p_size`.
+  Arguments passed on to
+  [`rog_logo`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md),
+  [`pkgdown::build_site`](https://pkgdown.r-lib.org/reference/build_site.html)
+
+  `overwrite`
+
+  :   Should the current logo be overwritten? When `TRUE`, it runs
+      [usethis](https://CRAN.R-project.org/package=usethis)'s
+      [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html).
+
+  `favicons`
+
+  :   Should favicons be created with
+      [pkgdown](https://CRAN.R-project.org/package=pkgdown)'s
+      [`pkgdown::build_favicons()`](https://pkgdown.r-lib.org/reference/build_favicons.html)?
+
+  `p_x`
+
+  :   x position for package name
+
+  `p_y`
+
+  :   y position for package name
+
+  `p_size`
+
+  :   font size for package name
+
+  `examples`
+
+  :   Run examples?
+
+  `preview`
+
+  :   If `TRUE`, or `is.na(preview) && interactive()`, will preview
+      freshly generated section in browser.
+
+  `new_process`
+
+  :   If `TRUE`, will run `build_site()` in a separate process. This
+      enhances reproducibility by ensuring nothing that you have loaded
+      in the current process affects the build process.
+
+  `install`
+
+  :   If `TRUE`, will install the package in a temporary library so it
+      is available for vignettes.
 
 ## Value
 
@@ -40,10 +80,8 @@ and
 ## See also
 
 [pkgdown](https://CRAN.R-project.org/package=pkgdown)'s
-[`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html)
-and
-[`rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md).
+[`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html).
 
-site setup helpers:
+Site setup helpers:
 [`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md),
 [`rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md)

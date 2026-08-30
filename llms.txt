@@ -9,23 +9,23 @@ Please do not use it for your own code.
 ## Using rogtemplate
 
 You can deploy your **pkgdown** site with **rogtemplate** through a
-GitHub Action or build it locally. The GitHub Action is automatic after
-setup. A local build gives you more control.
+**GitHub Actions** workflow or build it locally. The workflow runs
+automatically after setup. A local build gives you more control.
 
 ### Option A: Deploy with a GitHub Action
 
-You do not need to install **rogtemplate** itself. First copy [this
+You do not need to install **rogtemplate** itself. First, copy [this
 workflow
 file](https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml)
 to your `.github/workflows/` folder.
 
-Then go to *YOUR_GITHUB_REPO \> Settings \> Pages* and configure GitHub
-Pages to publish from the `gh-pages` branch.
+Then go to *YOUR_GITHUB_REPO \> Settings \> Pages* and configure
+**GitHub Pages** to publish from the `gh-pages` branch.
 
 ### Option B: Build after installing rogtemplate
 
 You can install **rogtemplate** from
-[r-universe](https://ropengov.r-universe.dev/rogtemplate):
+[**r-universe**](https://ropengov.r-universe.dev/rogtemplate):
 
 ``` r
 
@@ -44,7 +44,7 @@ pak::pak("ropengov/rogtemplate")
 Use
 [`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md)
 to set up the workflow described above. The deployment is still
-performed by a GitHub Action.
+performed by **GitHub Actions**.
 
 To build your package locally into the `docs` folder, use:
 
@@ -59,8 +59,8 @@ pkgdown::build_site()
 ```
 
 [`rogtemplate::rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md)
-creates a `_pkgdown.yml` file or modifies an existing one, with these
-lines:
+creates a `_pkgdown.yml` file with these lines or adds them to an
+existing file:
 
     _pkgdown.yml
 
@@ -74,9 +74,9 @@ These lines tell **pkgdown** to use **rogtemplate**.
 
 ## Commit to GitHub and deploy
 
-The last step is to commit to GitHub. If you use the GitHub Action
-workflow, wait until it finishes, then configure GitHub Pages from
-*YOUR_GITHUB_REPO \> Settings \> Pages*.
+The last step is to commit to **GitHub**. If you use the **GitHub
+Actions** workflow, wait until it finishes, then configure **GitHub
+Pages** from *YOUR_GITHUB_REPO \> Settings \> Pages*.
 
 ## Package assets and palettes
 
@@ -92,9 +92,9 @@ details.
 Configure package sites with the rOpenGov pkgdown template.
 
 - [`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md)
-  : Create a GitHub Action that deploys a pkgdown site
+  : Deploy a pkgdown site with GitHub Actions
 - [`rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md)
-  : Configure rogtemplate for your pkgdown site
+  : Configure a pkgdown site with rogtemplate
 - [`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)
   : Build your pkgdown site locally
 
@@ -104,10 +104,10 @@ Add rOpenGov badges, logos and fonts to package sites and README files.
 
 - [`rog_badge_ropengov()`](https://ropengov.github.io/rogtemplate/reference/rog_badge_ropengov.md)
   : Add an rOpenGov badge to your README
+- [`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md)
+  : Load the rogtemplate font
 - [`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md)
   : Create a logo for your rOpenGov package
-- [`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md)
-  : Load rogtemplate fonts
 
 ## Palettes
 
@@ -143,12 +143,12 @@ Articles used to check precomputed R Markdown and Quarto output.
 - [Precomputed Quarto
   vignette](https://ropengov.github.io/rogtemplate/articles/precompute-quarto.md):
 
-  Check how pkgdown handles a precomputed Quarto vignette.
+  Check how **pkgdown** handles a precomputed **Quarto** vignette.
 
 - [Precomputed R Markdown
   vignette](https://ropengov.github.io/rogtemplate/articles/precompute.md):
 
-  Check how pkgdown handles a precomputed R Markdown vignette.
+  Check how **pkgdown** handles a precomputed **R Markdown** vignette.
 
 ### Menu examples
 
@@ -157,12 +157,12 @@ Articles used to test dropdown menus in the article navbar.
 - [ggplot2
   example](https://ropengov.github.io/rogtemplate/articles/menu/ggplot2.md):
 
-  Check how pkgdown renders ggplot2 figures in article pages.
+  Check how **pkgdown** renders **ggplot2** figures in article pages.
 
 - [Testing syntax
   highlighter](https://ropengov.github.io/rogtemplate/articles/menu/highlight.md):
 
-  Check how pkgdown highlights R code blocks and inline syntax.
+  Check how **pkgdown** highlights **R** code blocks and inline syntax.
 
 ### Feature tests
 
@@ -186,13 +186,14 @@ be tested automatically.
 - [Quarto
   features](https://ropengov.github.io/rogtemplate/articles/test/quarto-features.md):
 
-  Check Quarto-specific article features such as citations and
+  Check **Quarto**-specific article features such as citations and
   shortcodes.
 
-- [Reactable
+- [reactable
   example](https://ropengov.github.io/rogtemplate/articles/test/reactable.md):
 
-  Check reactable widgets and table styling inside pkgdown articles.
+  Check **reactable** widgets and table styling inside **pkgdown**
+  articles.
 
 - [Output
   rendering](https://ropengov.github.io/rogtemplate/articles/test/rendering.md):
@@ -207,10 +208,10 @@ be tested automatically.
 - [Quarto
   vignettes](https://ropengov.github.io/rogtemplate/articles/test-quarto.md):
 
-  Learn how **pkgdown** works with Quarto vignettes, including currently
-  supported features and known limitations.
+  Learn how **pkgdown** works with **Quarto** vignettes, including
+  currently supported features and known limitations.
 
 - [HTML
   widgets](https://ropengov.github.io/rogtemplate/articles/test/widgets.md):
 
-  Check HTML widget rendering and layout inside pkgdown articles.
+  Check HTML widget rendering and layout inside **pkgdown** articles.

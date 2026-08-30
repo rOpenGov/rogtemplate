@@ -43,13 +43,13 @@ Callout types include `note`, `tip`, `warning`, `caution` and
 
 Warning
 
-Callouts provide a simple way to attract attention, for example, to this
+Callouts provide a simple way to draw attention to content, such as this
 warning.
 
 Important
 
-The callout heading is provided by the callout type, with the expected
-heading, such as Note, Warning, Important, Tip or Caution.
+The callout type provides the expected heading, such as Note, Warning,
+Important, Tip or Caution.
 
 Tip With Title
 
@@ -116,7 +116,7 @@ A definition.
 
 ## Footnotes
 
-Here is a footnote reference,[^1] and another.[^2]
+Here is a footnote reference[^1] and another.[^2]
 
 This paragraph won’t be part of the note, because it isn’t indented.
 
@@ -142,9 +142,9 @@ THIS TEXT IS SMALLCAPS
 
 This text is highlighted
 
-Endash: –
+En dash: –
 
-Emdash: —
+Em dash: —
 
 ## Shortcodes
 
@@ -201,7 +201,7 @@ Figure 1: Cute puppies ([Figure 1 (a)](#fig-pitbull) and [Figure 1
 
 Unable to execute JavaScript.
 
-Figure 2: The video “CERN: The Journey of Discovery”.
+Figure 2: The video title is *CERN: The Journey of Discovery*.
 
 See [Figure 2](#fig-cern).
 
