@@ -18,3 +18,8 @@
   out of the
   [`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html)
   call.
+- [`rog_dark_pal()`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md),
+  [`rog_gradient_pal()`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
+  and
+  [`rog_orange_pal()`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
+  now return exact reversed scales when `rev = TRUE`.
