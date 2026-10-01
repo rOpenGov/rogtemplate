@@ -169,7 +169,9 @@ Here we define a plot.
 
 #### Note the following plot
 
-![](quarto-features_files/figure-html/a-cell-1.png)
+![Scatter chart of values 1 to 3 against their indices 1 to 3. The three
+points lie on an ascending
+diagonal.](quarto-features_files/figure-html/a-cell-1.png)
 
 ### Another example
 

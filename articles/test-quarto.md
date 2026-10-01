@@ -71,8 +71,9 @@ that they work.
 plot(1:3)
 ```
 
-![A plot of the numbers 1, 2, and
-3](test-quarto_files/figure-html/unnamed-chunk-1-1.png)
+![Scatter chart of values 1 to 3 against their indices 1 to 3. The three
+points lie on an ascending
+diagonal.](test-quarto_files/figure-html/unnamed-chunk-1-1.png)
 
 ### Figures
 

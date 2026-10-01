@@ -13,7 +13,9 @@ This paragraph checks footnote rendering.[^1]
 plot(1:10)
 ```
 
-![Test plot](rendering_files/figure-html/unnamed-chunk-2-1.png)
+![Scatter chart of values 1 to 10 against their indices 1 to 10. The ten
+points lie on an ascending
+diagonal.](rendering_files/figure-html/unnamed-chunk-2-1.png)
 
 ## External files
 
@@ -24,9 +26,11 @@ x
 #> [1] "a" "b" "c" "d"
 ```
 
-![bacon](bacon.jpg)
+![Close-up of uncooked bacon slices with alternating bands of meat and
+fat.](bacon.jpg)
 
-bacon
+Close-up of uncooked bacon slices with alternating bands of meat and
+fat.
 
 ## Details tag
 
@@ -264,7 +268,9 @@ More tab content.
 plot(1:42)
 ```
 
-![Another test plot](rendering_files/figure-html/unnamed-chunk-8-1.png)
+![Scatter chart of values 1 to 42 against their indices 1 to 42. The 42
+points lie on an ascending diagonal.
+](rendering_files/figure-html/unnamed-chunk-8-1.png)
 
 This tab should be active.
 
