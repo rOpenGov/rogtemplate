@@ -1,3 +1,18 @@
+test_that("bundled brand applies the rOpenGov website system font stack", {
+  brand <- brand.yml::read_brand_yml(rogtemplate_file("brand_yml/_brand.yml"))
+  theme <- bslib::bs_theme(brand = brand)
+  expected_font <- paste(
+    '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,',
+    '"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",',
+    '"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+  )
+
+  expect_equal(
+    unname(bslib::bs_get_variables(theme, "font-family-base")),
+    expected_font
+  )
+})
+
 test_that("bundled pkgdown home link contains valid inline HTML", {
   config <- yaml::read_yaml(rogtemplate_file("pkgdown/_pkgdown.yml"))
   link_text <- config$home$links[[1]]$text
