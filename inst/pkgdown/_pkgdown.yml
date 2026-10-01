@@ -46,14 +46,21 @@ template:
         dark: gray-dark
       typography:
         fonts:
+        - family: Roboto
+          source: google
         - family: B612 Mono
           source: google
           weight: [400, 700]
+        base:
+          family: Roboto
+          weight: 400
         link:
           decoration: "none"
       defaults:
         bootstrap:
           defaults:
+            base_font: >
+              Roboto, Helvetica, Arial, "Noto Sans", "Liberation Sans", Arial, sans-serif
             navbar-light-bg: $brand-gray_dark
             navbar-light-color: rgba(255, 255, 255, .75)
             navbar-light-toggler-border-color: rgba(255, 255, 255, .1)
