@@ -1,7 +1,7 @@
 
 <!-- index.md is generated from index.Rmd. Please edit that file -->
 
-# rogtemplate <a href='https://ropengov.github.io/rogtemplate/'><img src="man/figures/logo.png" align="right" height="139"/></a>
+# rogtemplate <a href='https://ropengov.github.io/rogtemplate/'><img src="man/figures/logo.png" align="right" height="139" alt="rogtemplate hex logo with the text Part of rOpenGov" /></a>
 
 <!-- badges: start -->
 

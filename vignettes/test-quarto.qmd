@@ -75,7 +75,8 @@ they work.
 ### Code
 
 ```{r}
-#| fig.alt: A plot of the numbers 1, 2, and 3
+#| fig-alt: >
+#|   Scatter chart of values 1 to 3 against their indices 1 to 3. The three points lie on an ascending diagonal.
 1 + 1
 2 + 2
 

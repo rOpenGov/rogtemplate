@@ -32,6 +32,7 @@ Imports:
     utils,
     yaml (>= 2.2.1)
 Suggests: 
+    bslib,
     knitr,
     MASS,
     quarto,

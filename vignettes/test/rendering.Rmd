@@ -23,7 +23,9 @@ This paragraph checks footnote rendering.[^1]
 ## Figures
 
 ```{r}
-#| fig.alt: Test plot
+#| fig.alt: >
+#|   Scatter chart of values 1 to 10 against their indices 1 to 10.
+#|   The ten points lie on an ascending diagonal.
 plot(1:10)
 ```
 
@@ -34,7 +36,7 @@ x <- readLines("test.txt")
 x
 ```
 
-![bacon](bacon.jpg)
+![Close-up of uncooked bacon slices with alternating bands of meat and fat.](bacon.jpg)
 
 ## Details tag
 
@@ -272,7 +274,9 @@ More tab content.
 More tab content.
 
 ```{r}
-#| fig.alt: Another test plot
+#| fig.alt: >
+#|   Scatter chart of values 1 to 42 against their indices 1 to 42.
+#|   The 42 points lie on an ascending diagonal.
 #| jarl-ignore-chunk:
 #|   - unreachable_code: R Markdown chunks execute independently.
 plot(1:42)

@@ -30,6 +30,12 @@ This is an example of a precomputed **Quarto** vignette.
 ```{r}
 #| label: plot_quarto
 #| fig-cap: Waiting time and eruption duration density.
+#| fig-alt: >
+#|   Heatmap of Old Faithful geyser eruptions. Waiting time in minutes is on
+#|   the horizontal axis and eruption duration in minutes on the vertical
+#|   axis. Lighter shading indicates higher density, with clusters near
+#|   55-minute waits and 2-minute eruptions, and 80-minute waits and
+#|   4.5-minute eruptions.
 
 library("ggplot2")
 
