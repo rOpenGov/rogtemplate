@@ -12,12 +12,12 @@ rog_add_template_pkgdown()
 
 ## Value
 
-The function is called for its side effects and returns
-`invisible(NULL)`.
+This function is called for its side effects and returns
+[`NULL`](https://rdrr.io/r/base/NULL.html) invisibly.
 
 ## Details
 
-The function also adds the package website URL
+This function also adds the package website URL
 (`https://ropengov.github.io/pkgname/`) and repository URL
 (`https://github.com/rOpenGov/pkgname`) to `_pkgdown.yml` and
 DESCRIPTION if they are not already present.

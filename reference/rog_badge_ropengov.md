@@ -14,12 +14,14 @@ rog_badge_ropengov(install = TRUE)
 - install:
 
   Whether to install the badge in `README.md` or `README.Rmd`. If
-  `FALSE`, display the R Markdown code instead.
+  `FALSE`, display the Markdown code instead.
 
 ## Value
 
-The function is called for its side effects and returns `NULL`
-invisibly.
+This function is called for its side effects. If `install = TRUE`, it
+invisibly returns a [logical](https://rdrr.io/r/base/logical.html) value
+indicating whether the README changed. Otherwise, it returns
+[`NULL`](https://rdrr.io/r/base/NULL.html) invisibly.
 
 ## Details
 

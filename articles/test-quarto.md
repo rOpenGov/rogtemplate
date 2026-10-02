@@ -57,7 +57,7 @@ that they work.
 
 - SMALL CAPS
 
-- Here is a footnote reference[^1]
+- Here is a footnote reference.[^1]
 
 ### Code
 
@@ -77,13 +77,16 @@ diagonal.](test-quarto_files/figure-html/unnamed-chunk-1-1.png)
 
 ### Figures
 
-![](pitbull.jpg)
+![Black-and-white sketch of a seated pit bull puppy facing forward, with
+its head tilted, floppy ears and large eyes.](pitbull.jpg)
 
-\(a\) A sketch of a pitbull puppy
+\(a\) A sketch of a pit bull puppy
 
-![](shar-pei.jpg)
+![Black-and-white sketch of a seated shar-pei puppy facing forward, with
+deep folds of skin across its forehead, cheeks, chest and
+legs.](shar-pei.jpg)
 
-\(b\) A sketch of a sharpei puppy
+\(b\) A sketch of a shar-pei puppy
 
 Figure 1: Cute puppies
 
@@ -94,7 +97,7 @@ Figure 1: Cute puppies
 \mathrm r \mathrm S \frac{\partial \mathrm C}{\partial \mathrm S}\\ =
 \mathrm r \mathrm C \tag{1}
 
-### Cross references
+### Cross-references
 
 See [Figure 1](#fig-puppies) for two cute puppies.
 
@@ -110,7 +113,7 @@ Tabsets
 
 Citations
 
-Task/to do lists
+Task lists
 
 Figures
 

@@ -59,6 +59,10 @@
     <li><a class="dropdown-item" href="articles/menu/ggplot2.html">ggplot2 example</a></li>
     <li><a class="dropdown-item" href="articles/menu/highlight.html">Testing syntax highlighter</a></li>
     <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Quarto</h6></li>
+    <li><a class="dropdown-item" href="articles/test-quarto.html">Quarto vignettes</a></li>
+    <li><a class="dropdown-item" href="articles/test/quarto-features.html">Quarto features</a></li>
+    <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="articles/index.html">More articles...</a></li>
   </ul>
 </li>
@@ -108,13 +112,13 @@
 </h2>
 <p>You can deploy your <strong>pkgdown</strong> site with <strong>rogtemplate</strong> through a <strong>GitHub Actions</strong> workflow or build it locally. The workflow runs automatically after setup. A local build gives you more control.</p>
 <div class="section level3">
-<h3 id="option-a-deploy-with-a-github-action">Option A: Deploy with a GitHub Action<a class="anchor" aria-label="anchor" href="#option-a-deploy-with-a-github-action"></a>
+<h3 id="option-a-deploy-with-a-github-action">Option A: deploy with a GitHub Action<a class="anchor" aria-label="anchor" href="#option-a-deploy-with-a-github-action"></a>
 </h3>
 <p>You do not need to install <strong>rogtemplate</strong> itself. First, copy <a href="https://github.com/rOpenGov/rogtemplate/blob/main/inst/yaml/rogtemplate-gh-pages.yaml" class="external-link">this workflow file</a> to your <code>.github/workflows/</code> folder.</p>
 <p>Then go to <em>YOUR_GITHUB_REPO &gt; Settings &gt; Pages</em> and configure <strong>GitHub Pages</strong> to publish from the <code>gh-pages</code> branch.</p>
 </div>
 <div class="section level3">
-<h3 id="option-b-build-after-installing-rogtemplate">Option B: Build after installing rogtemplate<a class="anchor" aria-label="anchor" href="#option-b-build-after-installing-rogtemplate"></a>
+<h3 id="option-b-build-after-installing-rogtemplate">Option B: build after installing rogtemplate<a class="anchor" aria-label="anchor" href="#option-b-build-after-installing-rogtemplate"></a>
 </h3>
 <p>You can install <strong>rogtemplate</strong> from <a href="https://ropengov.r-universe.dev/rogtemplate" class="external-link"><strong>r-universe</strong></a>:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
@@ -129,7 +133,7 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">rogtemplate</span><span class="fu">::</span><span class="fu"><a href="reference/rog_build.html">rog_build</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
-<span><span class="co"># or use</span></span>
+<span><span class="co"># Or use:</span></span>
 <span></span>
 <span><span class="fu">rogtemplate</span><span class="fu">::</span><span class="fu"><a href="reference/rog_add_template_pkgdown.html">rog_add_template_pkgdown</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="fu">pkgdown</span><span class="fu">::</span><span class="fu"><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">build_site</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
@@ -148,7 +152,7 @@
 <div class="section level2">
 <h2 id="commit-to-github-and-deploy">Commit to GitHub and deploy<a class="anchor" aria-label="anchor" href="#commit-to-github-and-deploy"></a>
 </h2>
-<p>The last step is to commit to <strong>GitHub</strong>. If you use the <strong>GitHub Actions</strong> workflow, wait until it finishes, then configure <strong>GitHub Pages</strong> from <em>YOUR_GITHUB_REPO &gt; Settings &gt; Pages</em>.</p>
+<p>Commit your changes and push them to <strong>GitHub</strong>. If you use the <strong>GitHub Actions</strong> workflow, wait until it finishes. You can check the <strong>GitHub Pages</strong> settings under <em>YOUR_GITHUB_REPO &gt; Settings &gt; Pages</em>.</p>
 </div>
 <div class="section level2">
 <h2 id="package-assets-and-palettes">Package assets and palettes<a class="anchor" aria-label="anchor" href="#package-assets-and-palettes"></a>
@@ -204,7 +208,7 @@
 <li><a href="https://ropengov.org/" class="external-link"><img src="https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge.svg" alt="rOpenGov package"></a></li>
 <li><a href="https://github.com/rOpenGov/rogtemplate/actions" class="external-link"><img src="https://github.com/ropengov/rogtemplate/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 <li><a href="https://ropengov.r-universe.dev/rogtemplate" class="external-link"><img src="https://ropengov.r-universe.dev/badges/rogtemplate" alt="r-universe"></a></li>
-<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg" alt="lifecycle"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#experimental" class="external-link"><img src="https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg" alt="Lifecycle: experimental"></a></li>
 </ul>
 </div>
 

@@ -27,16 +27,20 @@ rog_qualitative_pal(n = 6, alpha = 0.9, rev = FALSE)
 
 - rev:
 
-  Should the palette order be reversed?
+  Whether to reverse the palette order.
 
 ## Value
 
-A character vector of colors.
+A [character](https://rdrr.io/r/base/character.html) vector of colors.
 
 ## See also
 
+grDevices's
 [`grDevices::hcl.colors()`](https://rdrr.io/r/grDevices/palettes.html)
-for other color palettes.
+for other color palettes and
+[scales](https://CRAN.R-project.org/package=scales)'s
+[`scales::show_col()`](https://scales.r-lib.org/reference/show_col.html)
+to preview colors.
 
 ## Examples
 

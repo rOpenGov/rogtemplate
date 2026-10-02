@@ -22,10 +22,14 @@ rog_actions_pkgdown_branch(pkg = ".", overwrite = TRUE)
 
 ## Value
 
-The function is called for its side effects and returns
-`invisible(NULL)`.
+This function is called for its side effects and returns
+[`NULL`](https://rdrr.io/r/base/NULL.html) invisibly.
 
 ## See also
+
+[usethis](https://CRAN.R-project.org/package=usethis)'s
+[`usethis::use_github_action()`](https://usethis.r-lib.org/reference/use_github_action.html)
+for creating workflows from other templates.
 
 Site setup helpers:
 [`rog_add_template_pkgdown()`](https://ropengov.github.io/rogtemplate/reference/rog_add_template_pkgdown.md),

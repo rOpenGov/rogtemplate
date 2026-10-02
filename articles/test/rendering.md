@@ -38,9 +38,9 @@ This should only be shown when required
 
 Multiple paragraphs
 
-First paragraph
+First paragraph.
 
-Second paragraph
+Second paragraph.
 
 Some **R** code
 
@@ -60,7 +60,7 @@ Some **R** code
 
 f(x) = \dfrac{1}{\sqrt{2\pi\sigma^2}} e^{-\frac{(x-\mu^2)}{2\sigma^2}}
 
-Inline equations: y=x^2
+Inline equation: y=x^2.
 
 ## Search
 
@@ -108,14 +108,14 @@ Valid **R** code in `\preformatted{}`:
 
     mean(a + 1)
 
-**R** code in `R` block:
+**R** code in an `R` block:
 
 ``` r
 
 mean(a + 1)
 ```
 
-**R** code in `r` block:
+**R** code in an `r` block:
 
 ``` r
 
@@ -143,7 +143,7 @@ Testing margins and copy buttons on small screens.
 txt <- "Not wrapped; check the copy button behavior."
 ```
 
-Wrapped in a `<section>` (e.g. `section > div > pre`)
+Wrapped in a `<section>` (e.g., `section > div > pre`).
 
 ``` r
 
@@ -172,7 +172,7 @@ txt <- "Wrapped in section"
 
   1.  Nested list.
 
-  2.  Second level item with enough text to test the width of the code
+  2.  Second-level item with enough text to test the width of the code
       block and confirm alignment with the paragraph.
 
       ``` r
@@ -193,29 +193,29 @@ txt <- "Wrapped in details"
 
 ``` r
 
-cat(cli::col_red("This is red"), "\n")
-#> This is red
-cat(cli::col_blue("This is blue\n"), "\n")
-#> This is blue
+cat(cli::col_red("This is red."), "\n")
+#> This is red.
+cat(cli::col_blue("This is blue.\n"), "\n")
+#> This is blue.
 #> 
 
-message(cli::col_green("This is green"))
-#> This is green
+message(cli::col_green("This is green."))
+#> This is green.
 
-warning(cli::style_bold("This is bold"))
-#> Warning: This is bold
+warning(cli::style_bold("This is bold."))
+#> Warning: This is bold.
 ```
 
-Some text
+Some text.
 
 ``` r
 
-stop(cli::style_italic("This is italic"), call. = FALSE)
+stop(cli::style_italic("This is italic."), call. = FALSE)
 #> Error:
-#> ! This is italic
+#> ! This is italic.
 ```
 
-Some more text
+Some more text.
 
 ## Quoted text
 
@@ -248,9 +248,9 @@ Tab content.
 1 + 1
 ```
 
-The heading below should be “cool”.
+The heading below should be “Cool”.
 
-##### cool
+##### Cool
 
 More tab content.
 

@@ -1,6 +1,6 @@
 # Create a logo for your rOpenGov package
 
-Creates a logo automatically with
+Create a logo automatically with
 [hexSticker](https://CRAN.R-project.org/package=hexSticker)'s
 [`hexSticker::sticker()`](https://rdrr.io/pkg/hexSticker/man/sticker.html).
 Optionally, create favicons with
@@ -46,23 +46,25 @@ rog_logo(
 
 - overwrite:
 
-  Should the current logo be overwritten? When `TRUE`, it runs
-  [usethis](https://CRAN.R-project.org/package=usethis)'s
-  [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html).
+  Whether to overwrite the current logo. If `FALSE` and `filename`
+  already exists, save the new logo to a temporary file instead.
 
 - favicons:
 
-  Should favicons be created with
+  Whether to create favicons with
   [pkgdown](https://CRAN.R-project.org/package=pkgdown)'s
-  [`pkgdown::build_favicons()`](https://pkgdown.r-lib.org/reference/build_favicons.html)?
+  [`pkgdown::build_favicons()`](https://pkgdown.r-lib.org/reference/build_favicons.html)
+  when `filename` is `"man/figures/logo.png"`.
 
 ## Value
 
-The function is called for its side effects and returns `NULL`
-invisibly.
+This function is called for its side effects and returns
+[`NULL`](https://rdrr.io/r/base/NULL.html) invisibly.
 
 ## See also
 
+[`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)
+to create the logo as part of a local site build.
 [hexSticker](https://CRAN.R-project.org/package=hexSticker)'s
 [`hexSticker::sticker()`](https://rdrr.io/pkg/hexSticker/man/sticker.html),
 [usethis](https://CRAN.R-project.org/package=usethis)'s
@@ -80,7 +82,7 @@ Package asset helpers:
 tmp <- tempfile(fileext = ".png")
 rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
 #> ✔ Loaded the "B612 Mono" font.
-#> ✔ Created logo at /tmp/RtmpJ0oHRd/file1ce2791f26c4.png.
+#> ✔ Created logo at /tmp/RtmpsiKbxY/file1d3e1c02abef.png.
 
 # Display the logo.
 logo <- magick::image_read(tmp)

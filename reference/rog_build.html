@@ -30,6 +30,10 @@
     <li><a class="dropdown-item" href="../articles/menu/ggplot2.html">ggplot2 example</a></li>
     <li><a class="dropdown-item" href="../articles/menu/highlight.html">Testing syntax highlighter</a></li>
     <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Quarto</h6></li>
+    <li><a class="dropdown-item" href="../articles/test-quarto.html">Quarto vignettes</a></li>
+    <li><a class="dropdown-item" href="../articles/test/quarto-features.html">Quarto features</a></li>
+    <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="../articles/index.html">More articles...</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -79,12 +83,12 @@
 
 <dt id="arg--">...<a class="anchor" aria-label="anchor" href="#arg--"></a></dt>
 <dd><p>Arguments passed on to <code><a href="rog_logo.html">rog_logo</a></code>, <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site</a></code></p><dl><dt><code>overwrite</code></dt>
-<dd><p>Should the current logo be overwritten? When <code>TRUE</code>, it
-runs <a href="https://CRAN.R-project.org/package=usethis" class="external-link"><span class="pkg">usethis</span></a>'s <code><a href="https://usethis.r-lib.org/reference/use_logo.html" class="external-link">usethis::use_logo()</a></code>.</p></dd>
+<dd><p>Whether to overwrite the current logo. If <code>FALSE</code> and
+<code>filename</code> already exists, save the new logo to a temporary file instead.</p></dd>
 
     <dt><code>favicons</code></dt>
-<dd><p>Should favicons be created with <a href="https://CRAN.R-project.org/package=pkgdown" class="external-link"><span class="pkg">pkgdown</span></a>'s
-<code><a href="https://pkgdown.r-lib.org/reference/build_favicons.html" class="external-link">pkgdown::build_favicons()</a></code>?</p></dd>
+<dd><p>Whether to create favicons with <a href="https://CRAN.R-project.org/package=pkgdown" class="external-link"><span class="pkg">pkgdown</span></a>'s
+<code><a href="https://pkgdown.r-lib.org/reference/build_favicons.html" class="external-link">pkgdown::build_favicons()</a></code> when <code>filename</code> is <code>"man/figures/logo.png"</code>.</p></dd>
 
     <dt><code>p_x</code></dt>
 <dd><p>x position for package name</p></dd>
@@ -117,8 +121,8 @@ so it is available for vignettes.</p></dd>
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>The function is called for its side effects and returns
-<code>invisible(NULL)</code>.</p>
+    <p>This function is called for its side effects and returns
+<code><a href="https://rdrr.io/r/base/NULL.html" class="external-link">NULL</a></code> invisibly.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
@@ -126,7 +130,8 @@ so it is available for vignettes.</p></dd>
     </div>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
-    <div class="dont-index"><p><a href="https://CRAN.R-project.org/package=pkgdown" class="external-link"><span class="pkg">pkgdown</span></a>'s <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code>.</p>
+    <div class="dont-index"><p><code><a href="rog_logo.html">rog_logo()</a></code> for logo and favicon options, and
+<a href="https://CRAN.R-project.org/package=pkgdown" class="external-link"><span class="pkg">pkgdown</span></a>'s <code><a href="https://pkgdown.r-lib.org/reference/build_site.html" class="external-link">pkgdown::build_site()</a></code> for site build options.</p>
 <p>Site setup helpers:
 <code><a href="rog_actions_pkgdown_branch.html">rog_actions_pkgdown_branch()</a></code>,
 <code><a href="rog_add_template_pkgdown.html">rog_add_template_pkgdown()</a></code></p></div>

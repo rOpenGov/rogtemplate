@@ -30,6 +30,10 @@
     <li><a class="dropdown-item" href="../articles/menu/ggplot2.html">ggplot2 example</a></li>
     <li><a class="dropdown-item" href="../articles/menu/highlight.html">Testing syntax highlighter</a></li>
     <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Quarto</h6></li>
+    <li><a class="dropdown-item" href="../articles/test-quarto.html">Quarto vignettes</a></li>
+    <li><a class="dropdown-item" href="../articles/test/quarto-features.html">Quarto features</a></li>
+    <li><hr class="dropdown-divider"></li>
     <li><a class="dropdown-item" href="../articles/index.html">More articles...</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
@@ -75,13 +79,14 @@
 
 <dl><dt id="arg-install">install<a class="anchor" aria-label="anchor" href="#arg-install"></a></dt>
 <dd><p>Whether to install the badge in <code>README.md</code> or <code>README.Rmd</code>.
-If <code>FALSE</code>, display the R Markdown code instead.</p></dd>
+If <code>FALSE</code>, display the Markdown code instead.</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>The function is called for its side effects and returns <code>NULL</code>
-invisibly.</p>
+    <p>This function is called for its side effects. If <code>install = TRUE</code>,
+it invisibly returns a <a href="https://rdrr.io/r/base/logical.html" class="external-link">logical</a> value indicating whether
+the README changed. Otherwise, it returns <code><a href="https://rdrr.io/r/base/NULL.html" class="external-link">NULL</a></code> invisibly.</p>
     </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>

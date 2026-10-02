@@ -23,15 +23,15 @@ rog_build(pkg = ".", ...)
 
   `overwrite`
 
-  :   Should the current logo be overwritten? When `TRUE`, it runs
-      [usethis](https://CRAN.R-project.org/package=usethis)'s
-      [`usethis::use_logo()`](https://usethis.r-lib.org/reference/use_logo.html).
+  :   Whether to overwrite the current logo. If `FALSE` and `filename`
+      already exists, save the new logo to a temporary file instead.
 
   `favicons`
 
-  :   Should favicons be created with
+  :   Whether to create favicons with
       [pkgdown](https://CRAN.R-project.org/package=pkgdown)'s
-      [`pkgdown::build_favicons()`](https://pkgdown.r-lib.org/reference/build_favicons.html)?
+      [`pkgdown::build_favicons()`](https://pkgdown.r-lib.org/reference/build_favicons.html)
+      when `filename` is `"man/figures/logo.png"`.
 
   `p_x`
 
@@ -67,8 +67,8 @@ rog_build(pkg = ".", ...)
 
 ## Value
 
-The function is called for its side effects and returns
-`invisible(NULL)`.
+This function is called for its side effects and returns
+[`NULL`](https://rdrr.io/r/base/NULL.html) invisibly.
 
 ## Details
 
@@ -79,8 +79,11 @@ and
 
 ## See also
 
+[`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md)
+for logo and favicon options, and
 [pkgdown](https://CRAN.R-project.org/package=pkgdown)'s
-[`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html).
+[`pkgdown::build_site()`](https://pkgdown.r-lib.org/reference/build_site.html)
+for site build options.
 
 Site setup helpers:
 [`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md),

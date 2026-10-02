@@ -1,8 +1,9 @@
 # Package index
 
-## Site setup
+## Site setup helpers
 
-Configure package sites with the rOpenGov pkgdown template.
+Configure the rOpenGov **pkgdown** template, build a site locally or
+deploy it with GitHub Actions.
 
 - [`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md)
   : Deploy a pkgdown site with GitHub Actions
@@ -11,9 +12,10 @@ Configure package sites with the rOpenGov pkgdown template.
 - [`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)
   : Build your pkgdown site locally
 
-## Package assets
+## Package asset helpers
 
-Add rOpenGov badges, logos and fonts to package sites and README files.
+Create package logos and favicons, add an rOpenGov badge to a README or
+load the rOpenGov font.
 
 - [`rog_badge_ropengov()`](https://ropengov.github.io/rogtemplate/reference/rog_badge_ropengov.md)
   : Add an rOpenGov badge to your README
@@ -22,9 +24,9 @@ Add rOpenGov badges, logos and fonts to package sites and README files.
 - [`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md)
   : Create a logo for your rOpenGov package
 
-## Palettes
+## rOpenGov color palettes
 
-Use the rOpenGov color palettes in plots.
+Generate sequential, gradient and qualitative palettes for plots.
 
 - [`rog_orange_pal()`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
   [`rog_dark_pal()`](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
@@ -33,6 +35,8 @@ Use the rOpenGov color palettes in plots.
   : rOpenGov color palettes
 
 ## About the package
+
+Package overview, authors and project links.
 
 - [`rogtemplate`](https://ropengov.github.io/rogtemplate/reference/rogtemplate-package.md)
   [`rogtemplate-package`](https://ropengov.github.io/rogtemplate/reference/rogtemplate-package.md)

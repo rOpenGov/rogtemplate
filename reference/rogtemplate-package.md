@@ -11,7 +11,15 @@ to configure a site,
 [`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md)
 to configure deployment and
 [`rog_build()`](https://ropengov.github.io/rogtemplate/reference/rog_build.md)
-to build the site locally.
+to build the site locally. Use
+[`rog_logo()`](https://ropengov.github.io/rogtemplate/reference/rog_logo.md)
+and
+[`rog_badge_ropengov()`](https://ropengov.github.io/rogtemplate/reference/rog_badge_ropengov.md)
+for package assets,
+[`rog_load_font()`](https://ropengov.github.io/rogtemplate/reference/rog_load_font.md)
+for the package font and
+[rog_pals](https://ropengov.github.io/rogtemplate/reference/rog_pals.md)
+for color palettes.
 
 ## Author
 
