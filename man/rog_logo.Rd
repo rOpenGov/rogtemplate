@@ -27,18 +27,18 @@ from DESCRIPTION.}
 
 \item{p_size}{font size for package name}
 
-\item{overwrite}{Should the current logo be overwritten? When \code{TRUE}, it
-runs \CRANpkg{usethis}'s \code{\link[usethis:use_logo]{usethis::use_logo()}}.}
+\item{overwrite}{Whether to overwrite the current logo. If \code{FALSE} and
+\code{filename} already exists, save the new logo to a temporary file instead.}
 
-\item{favicons}{Should favicons be created with \CRANpkg{pkgdown}'s
-\code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}}?}
+\item{favicons}{Whether to create favicons with \CRANpkg{pkgdown}'s
+\code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}} when \code{filename} is \code{"man/figures/logo.png"}.}
 }
 \value{
-The function is called for its side effects and returns \code{NULL}
-invisibly.
+This function is called for its side effects and returns
+\code{\link[base:NULL]{NULL}} invisibly.
 }
 \description{
-Creates a logo automatically with \CRANpkg{hexSticker}'s
+Create a logo automatically with \CRANpkg{hexSticker}'s
 \code{\link[hexSticker:sticker]{hexSticker::sticker()}}. Optionally, create favicons with
 \CRANpkg{pkgdown}'s \code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}}.
 }
@@ -54,6 +54,7 @@ logo
 plot(logo)
 }
 \seealso{
+\code{\link[=rog_build]{rog_build()}} to create the logo as part of a local site build.
 \CRANpkg{hexSticker}'s \code{\link[hexSticker:sticker]{hexSticker::sticker()}},
 \CRANpkg{usethis}'s \code{\link[usethis:use_logo]{usethis::use_logo()}} and \CRANpkg{pkgdown}'s
 \code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}}.

@@ -1,4 +1,4 @@
-# Compress with sass
+# Compress the CSS with sass.
 library(sass)
 
 lns <- readLines("inst/pkgdown/assets/BS5/rogtemplate.css")
@@ -10,4 +10,4 @@ sass(
   options = sass_options(output_style = "compressed")
 )
 
-message("OK, compressed")
+message("CSS compressed.")

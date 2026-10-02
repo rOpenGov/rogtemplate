@@ -4,13 +4,12 @@
 #' configuration file exists, create one at `pkgdown/_pkgdown.yml`. Also add the
 #' corresponding paths to `.Rbuildignore`.
 #'
-#' The function also adds the package website URL
+#' This function also adds the package website URL
 #' (`https://ropengov.github.io/pkgname/`) and repository URL
 #' (`https://github.com/rOpenGov/pkgname`) to `_pkgdown.yml` and DESCRIPTION if
 #' they are not already present.
 #'
-#' @returns The function is called for its side effects and returns
-#'   `invisible(NULL)`.
+#' @inherit rog_actions_pkgdown_branch return
 #' @seealso The \CRANpkg{pkgdown} vignettes
 #'   `vignette("pkgdown", package = "pkgdown")` and
 #'   `vignette("linking", package = "pkgdown")`. See also

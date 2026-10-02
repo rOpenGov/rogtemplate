@@ -34,11 +34,11 @@ library(rogtemplate)
 
 Sys.setenv("R_CRAN_WEB" = "https://cloud.r-project.org")
 
-# Search in CRAN
+# Search on CRAN.
 cran_all <- tools::CRAN_package_db() |>
   as_tibble()
 
-# URL or Bug
+# Match package URLs or bug report URLs.
 cranpaks <- cran_all |>
   filter(
     str_detect(tolower(URL), "ropengov") |
@@ -47,7 +47,7 @@ cranpaks <- cran_all |>
   pull(Package)
 
 
-# Direct search
+# Search by package name.
 crandb <- unique(cran_all$Package)
 
 mypaks <- jsonlite::read_json(
@@ -58,12 +58,12 @@ mypaks <- jsonlite::read_json(
   unique() |>
   sort()
 
-# Packages in CRAN
+# Packages on CRAN.
 mypaks <- c(mypaks[mypaks %in% crandb], cranpaks) |>
   unique() |>
   sort()
 
-# fmi package in CRAN is not the one we have in here
+# The fmi package on CRAN is not the rOpenGov package.
 mypaks <- mypaks[mypaks != "fmi"]
 
 dwn <- lapply(mypaks, cranlogs::cran_downloads, from = "2016-01-01")
@@ -71,7 +71,7 @@ dwn <- dwn |>
   bind_rows() |>
   as_tibble()
 
-# First date on CRAN
+# First release date on CRAN.
 
 first_date_on_cran <- function(pkg) {
   all <- pkgsearch::cran_package_history(pkg)
@@ -105,7 +105,7 @@ dwn <- dwn |>
   tidyr::replace_na(list(count = 0)) |>
   filter(date < Sys.Date())
 
-# By month
+# Group by month.
 library(lubridate)
 
 
@@ -115,7 +115,7 @@ dwn_m <- dwn |>
   summarise(downloads = sum(count))
 
 
-# factors by avg. monthly downloads
+# Order factors by average monthly downloads.
 fact <- dwn_m |>
   group_by(package) |>
   summarise(precedence = mean(downloads, na.rm = TRUE)) |>
@@ -171,7 +171,7 @@ ggplot(dwn_m, aes(x = m)) +
 #|   Each panel has its own vertical scale and a curve summarizing its trend,
 #|   allowing patterns within packages to be compared.
 
-# Not this week
+# Exclude the current week.
 thisw <- lubridate::ceiling_date(Sys.Date(), "week")
 
 dwn_w <- dwn |>
@@ -281,7 +281,7 @@ reactable(
   columns = list(
     package = colDef(
       cell = function(value) {
-        # Render as a link
+        # Render as a link.
         url <- paste0("https://CRAN.R-project.org/package=", value)
         badge <- paste0("https://badges.cranchecks.info/worst/", value, ".svg")
         link <- htmltools::a(href = url, target = "_blank", as.character(value))
@@ -383,7 +383,7 @@ reactable(
   columns = list(
     package = colDef(
       cell = function(value) {
-        # Render as a link
+        # Render as a link.
         url <- paste0(
           "https://packagemanager.posit.co/client/#/repos/",
           "cran/packages/", value, "/overview?search=", value,

@@ -7,22 +7,28 @@ template:
       site: '@rOpenGov'
 
 reference:
-- title: Site setup
-  desc: Configure package sites with the rOpenGov pkgdown template.
+- title: Site setup helpers
+  desc: >
+    Configure the rOpenGov **pkgdown** template, build a site locally or
+    deploy it with GitHub Actions.
 - contents:
   - has_concept("site")
 
-- title: Package assets
-  desc: Add rOpenGov badges, logos and fonts to package sites and README files.
+- title: Package asset helpers
+  desc: >
+    Create package logos and favicons, add an rOpenGov badge to a README
+    or load the rOpenGov font.
 - contents:
   - has_concept("assets")
 
-- title: Palettes
-  desc: Use the rOpenGov color palettes in plots.
+- title: rOpenGov color palettes
+  desc: >
+    Generate sequential, gradient and qualitative palettes for plots.
 - contents:
   - has_concept("palettes")
 
 - title: About the package
+  desc: Package overview, authors and project links.
 - contents:
   - rogtemplate-package
 
@@ -43,7 +49,7 @@ navbar:
 
 articles:
 - title: Dashboards
-  desc: Example dashboards used by the rOpenGov template site.
+  desc: Explore rOpenGov package downloads and dashboard rendering.
   navbar: Dashboards
   contents:
   - articles/downloads
@@ -60,11 +66,25 @@ articles:
     Articles used to test dropdown menus in the article navbar.
   navbar: Menu bar
   contents:
-  - starts_with("menu")
+  - starts_with("menu/")
 
-- title: Feature tests
+- title: Quarto examples
   desc: >
-    These articles are used to test **pkgdown** features that cannot easily be
-    tested automatically.
+    Check Quarto article rendering, cross-references, citations and shortcodes.
+  navbar: Quarto
   contents:
-  - starts_with("test")
+  - test-quarto
+  - test/quarto-features
+
+- title: R Markdown feature tests
+  desc: >
+    Check code rendering, layouts, tables and HTML widgets in **pkgdown**.
+    These articles are available from the articles index.
+  contents:
+  - test/rendering
+  - test/code
+  - test/bullets
+  - test/short
+  - test/long-toc
+  - test/reactable
+  - test/widgets

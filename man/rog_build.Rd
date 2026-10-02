@@ -13,10 +13,10 @@ rog_build(pkg = ".", ...)
 \item{...}{
   Arguments passed on to \code{\link{rog_logo}}, \code{\link[pkgdown:build_site]{pkgdown::build_site}}
   \describe{
-    \item{\code{overwrite}}{Should the current logo be overwritten? When \code{TRUE}, it
-runs \CRANpkg{usethis}'s \code{\link[usethis:use_logo]{usethis::use_logo()}}.}
-    \item{\code{favicons}}{Should favicons be created with \CRANpkg{pkgdown}'s
-\code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}}?}
+    \item{\code{overwrite}}{Whether to overwrite the current logo. If \code{FALSE} and
+\code{filename} already exists, save the new logo to a temporary file instead.}
+    \item{\code{favicons}}{Whether to create favicons with \CRANpkg{pkgdown}'s
+\code{\link[pkgdown:build_favicons]{pkgdown::build_favicons()}} when \code{filename} is \code{"man/figures/logo.png"}.}
     \item{\code{p_x}}{x position for package name}
     \item{\code{p_y}}{y position for package name}
     \item{\code{p_size}}{font size for package name}
@@ -31,8 +31,8 @@ so it is available for vignettes.}
   }}
 }
 \value{
-The function is called for its side effects and returns
-\code{invisible(NULL)}.
+This function is called for its side effects and returns
+\code{\link[base:NULL]{NULL}} invisibly.
 }
 \description{
 A wrapper around \CRANpkg{pkgdown}'s \code{\link[pkgdown:build_site]{pkgdown::build_site()}}.
@@ -41,7 +41,8 @@ A wrapper around \CRANpkg{pkgdown}'s \code{\link[pkgdown:build_site]{pkgdown::bu
 This function also calls \code{\link[=rog_add_template_pkgdown]{rog_add_template_pkgdown()}} and \code{\link[=rog_logo]{rog_logo()}}.
 }
 \seealso{
-\CRANpkg{pkgdown}'s \code{\link[pkgdown:build_site]{pkgdown::build_site()}}.
+\code{\link[=rog_logo]{rog_logo()}} for logo and favicon options, and
+\CRANpkg{pkgdown}'s \code{\link[pkgdown:build_site]{pkgdown::build_site()}} for site build options.
 
 Site setup helpers:
 \code{\link[=rog_actions_pkgdown_branch]{rog_actions_pkgdown_branch()}},

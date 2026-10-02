@@ -14,7 +14,9 @@ A private pkgdown template for core rOpenGov packages. It provides site setup he
 \seealso{
 \code{\link[=rog_add_template_pkgdown]{rog_add_template_pkgdown()}} to configure a site,
 \code{\link[=rog_actions_pkgdown_branch]{rog_actions_pkgdown_branch()}} to configure deployment and \code{\link[=rog_build]{rog_build()}}
-to build the site locally.
+to build the site locally. Use \code{\link[=rog_logo]{rog_logo()}} and \code{\link[=rog_badge_ropengov]{rog_badge_ropengov()}}
+for package assets, \code{\link[=rog_load_font]{rog_load_font()}} for the package font and
+\link{rog_pals} for color palettes.
 }
 \author{
 \strong{Maintainer}: Diego Hernangómez \email{diego.hernangomezherrero@gmail.com} (\href{https://orcid.org/0000-0001-8457-4658}{ORCID}) [copyright holder]

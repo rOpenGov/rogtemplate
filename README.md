@@ -28,7 +28,7 @@ You can deploy your **pkgdown** site with **rogtemplate** through a
 **GitHub Actions** workflow or build it locally. The workflow runs
 automatically after setup. A local build gives you more control.
 
-### Option A: Deploy with a GitHub Action
+### Option A: deploy with a GitHub Action
 
 You do not need to install **rogtemplate** itself. First, copy [this
 workflow
@@ -38,7 +38,7 @@ to your `.github/workflows/` folder.
 Then go to *YOUR_GITHUB_REPO \> Settings \> Pages* and configure
 **GitHub Pages** to publish from the `gh-pages` branch.
 
-### Option B: Build after installing rogtemplate
+### Option B: build after installing rogtemplate
 
 You can install **rogtemplate** from
 [**r-universe**](https://ropengov.r-universe.dev/rogtemplate):
@@ -63,7 +63,7 @@ To build your package locally into the `docs` folder, use:
 ``` r
 rogtemplate::rog_build()
 
-# or use
+# Or use:
 
 rogtemplate::rog_add_template_pkgdown()
 pkgdown::build_site()
@@ -82,9 +82,9 @@ These lines tell **pkgdown** to use **rogtemplate**.
 
 ## Commit to GitHub and deploy
 
-The last step is to commit to **GitHub**. If you use the **GitHub
-Actions** workflow, wait until it finishes, then configure **GitHub
-Pages** from *YOUR_GITHUB_REPO \> Settings \> Pages*.
+Commit your changes and push them to **GitHub**. If you use the **GitHub
+Actions** workflow, wait until it finishes. You can check the **GitHub Pages**
+settings under *YOUR_GITHUB_REPO \> Settings \> Pages*.
 
 ## Package assets and palettes
 

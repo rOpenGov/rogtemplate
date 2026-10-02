@@ -23,10 +23,10 @@ rog_qualitative_pal(n = 6, alpha = 0.9, rev = FALSE)
 \item{alpha}{Alpha transparency for the generated colors. Use \code{1} for fully
 opaque colors.}
 
-\item{rev}{Should the palette order be reversed?}
+\item{rev}{Whether to reverse the palette order.}
 }
 \value{
-A character vector of colors.
+A \link[base:character]{character} vector of colors.
 }
 \description{
 Color palettes based on the rOpenGov color scheme.
@@ -43,6 +43,7 @@ scales::show_col(rog_qualitative_pal(9))
 \dontshow{\}) # examplesIf}
 }
 \seealso{
-\code{\link[grDevices:hcl.colors]{grDevices::hcl.colors()}} for other color palettes.
+\pkg{grDevices}'s \code{\link[grDevices:hcl.colors]{grDevices::hcl.colors()}} for other color
+palettes and \CRANpkg{scales}'s \code{\link[scales:show_col]{scales::show_col()}} to preview colors.
 }
 \concept{palettes}

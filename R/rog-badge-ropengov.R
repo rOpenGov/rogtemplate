@@ -6,9 +6,10 @@
 #' options: alt='rOpenGov'}}}{**rOpenGov**}
 #'
 #' @param install Whether to install the badge in `README.md` or `README.Rmd`.
-#'   If `FALSE`, display the R Markdown code instead.
-#' @returns The function is called for its side effects and returns `NULL`
-#'   invisibly.
+#'   If `FALSE`, display the Markdown code instead.
+#' @returns This function is called for its side effects. If `install = TRUE`,
+#'   it invisibly returns a [logical][base::logical] value indicating whether
+#'   the README changed. Otherwise, it returns [`NULL`][base::NULL] invisibly.
 #' @seealso \CRANpkg{usethis}'s [usethis::use_badge()].
 #' @family assets
 #' @export

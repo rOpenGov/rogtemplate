@@ -1,19 +1,19 @@
 #' Create a logo for your rOpenGov package
 #'
-#' Creates a logo automatically with \CRANpkg{hexSticker}'s
+#' Create a logo automatically with \CRANpkg{hexSticker}'s
 #' [hexSticker::sticker()]. Optionally, create favicons with
 #' \CRANpkg{pkgdown}'s [pkgdown::build_favicons()].
 #'
 #' @inheritParams hexSticker::sticker
 #' @param pkgname Name of the package. If not supplied, the name is detected
 #'   from DESCRIPTION.
-#' @param overwrite Should the current logo be overwritten? When `TRUE`, it
-#'   runs \CRANpkg{usethis}'s [usethis::use_logo()].
-#' @param favicons Should favicons be created with \CRANpkg{pkgdown}'s
-#'   [pkgdown::build_favicons()]?
-#' @returns The function is called for its side effects and returns `NULL`
-#'   invisibly.
-#' @seealso \CRANpkg{hexSticker}'s [hexSticker::sticker()],
+#' @param overwrite Whether to overwrite the current logo. If `FALSE` and
+#'   `filename` already exists, save the new logo to a temporary file instead.
+#' @param favicons Whether to create favicons with \CRANpkg{pkgdown}'s
+#'   [pkgdown::build_favicons()] when `filename` is `"man/figures/logo.png"`.
+#' @inherit rog_actions_pkgdown_branch return
+#' @seealso [rog_build()] to create the logo as part of a local site build.
+#'   \CRANpkg{hexSticker}'s [hexSticker::sticker()],
 #'   \CRANpkg{usethis}'s [usethis::use_logo()] and \CRANpkg{pkgdown}'s
 #'   [pkgdown::build_favicons()].
 #' @family assets
@@ -143,7 +143,11 @@ package_name <- function() {
 #' Load the current rOpenGov font,
 #' [B612 Mono](https://fonts.google.com/specimen/B612+Mono).
 #'
-#' @returns The font family name, `"B612 Mono"`.
+#' @returns A [character][base::character] string containing the font family
+#'   name, `"B612 Mono"`.
+#' @seealso \CRANpkg{sysfonts}'s [sysfonts::font_add()] for registering fonts
+#'   and \CRANpkg{showtext}'s [showtext::showtext_auto()] for rendering them
+#'   in plots.
 #' @family assets
 #' @export
 #' @encoding UTF-8

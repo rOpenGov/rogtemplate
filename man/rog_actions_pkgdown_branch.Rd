@@ -13,14 +13,17 @@ rog_actions_pkgdown_branch(pkg = ".", overwrite = TRUE)
 \item{overwrite}{Whether to overwrite the workflow if it already exists.}
 }
 \value{
-The function is called for its side effects and returns
-\code{invisible(NULL)}.
+This function is called for its side effects and returns
+\code{\link[base:NULL]{NULL}} invisibly.
 }
 \description{
 Create a GitHub Action workflow that builds a \CRANpkg{pkgdown} site from
 your package and deploys it to the \code{gh-pages} branch.
 }
 \seealso{
+\CRANpkg{usethis}'s \code{\link[usethis:use_github_action]{usethis::use_github_action()}} for creating
+workflows from other templates.
+
 Site setup helpers:
 \code{\link[=rog_add_template_pkgdown]{rog_add_template_pkgdown()}},
 \code{\link[=rog_build]{rog_build()}}

@@ -8,7 +8,8 @@
 rog_load_font()
 }
 \value{
-The font family name, \code{"B612 Mono"}.
+A \link[base:character]{character} string containing the font family
+name, \code{"B612 Mono"}.
 }
 \description{
 Load the current rOpenGov font,
@@ -18,6 +19,10 @@ Load the current rOpenGov font,
 rog_load_font()
 }
 \seealso{
+\CRANpkg{sysfonts}'s \code{\link[sysfonts:font_add]{sysfonts::font_add()}} for registering fonts
+and \CRANpkg{showtext}'s \code{\link[showtext:showtext_auto]{showtext::showtext_auto()}} for rendering them
+in plots.
+
 Package asset helpers:
 \code{\link[=rog_badge_ropengov]{rog_badge_ropengov()}},
 \code{\link[=rog_logo]{rog_logo()}}

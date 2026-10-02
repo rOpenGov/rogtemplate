@@ -5,12 +5,12 @@
 #' @details
 #' This function also calls [rog_add_template_pkgdown()] and [rog_logo()].
 #'
-#' @inheritParams rog_actions_pkgdown_branch
+#' @inheritParams rog_actions_pkgdown_branch pkg
 #' @inheritDotParams rog_logo overwrite favicons p_x p_y p_size
 #' @inheritDotParams pkgdown::build_site examples preview new_process install
-#' @returns The function is called for its side effects and returns
-#'   `invisible(NULL)`.
-#' @seealso \CRANpkg{pkgdown}'s [pkgdown::build_site()].
+#' @inherit rog_actions_pkgdown_branch return
+#' @seealso [rog_logo()] for logo and favicon options, and
+#'   \CRANpkg{pkgdown}'s [pkgdown::build_site()] for site build options.
 #' @family site
 #' @export
 #' @encoding UTF-8

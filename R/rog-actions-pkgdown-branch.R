@@ -5,8 +5,10 @@
 #'
 #' @param pkg Path to the package.
 #' @param overwrite Whether to overwrite the workflow if it already exists.
-#' @returns The function is called for its side effects and returns
-#'   `invisible(NULL)`.
+#' @returns This function is called for its side effects and returns
+#'   [`NULL`][base::NULL] invisibly.
+#' @seealso \CRANpkg{usethis}'s [usethis::use_github_action()] for creating
+#'   workflows from other templates.
 #' @family site
 #' @export
 #' @encoding UTF-8

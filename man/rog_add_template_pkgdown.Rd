@@ -8,8 +8,8 @@
 rog_add_template_pkgdown()
 }
 \value{
-The function is called for its side effects and returns
-\code{invisible(NULL)}.
+This function is called for its side effects and returns
+\code{\link[base:NULL]{NULL}} invisibly.
 }
 \description{
 Add the rOpenGov template configuration to your \verb{_pkgdown.yml}. If no
@@ -17,7 +17,7 @@ configuration file exists, create one at \verb{pkgdown/_pkgdown.yml}. Also add t
 corresponding paths to \code{.Rbuildignore}.
 }
 \details{
-The function also adds the package website URL
+This function also adds the package website URL
 (\verb{https://ropengov.github.io/pkgname/}) and repository URL
 (\verb{https://github.com/rOpenGov/pkgname}) to \verb{_pkgdown.yml} and DESCRIPTION if
 they are not already present.

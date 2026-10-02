@@ -9,11 +9,12 @@ rog_badge_ropengov(install = TRUE)
 }
 \arguments{
 \item{install}{Whether to install the badge in \code{README.md} or \code{README.Rmd}.
-If \code{FALSE}, display the R Markdown code instead.}
+If \code{FALSE}, display the Markdown code instead.}
 }
 \value{
-The function is called for its side effects and returns \code{NULL}
-invisibly.
+This function is called for its side effects. If \code{install = TRUE},
+it invisibly returns a \link[base:logical]{logical} value indicating whether
+the README changed. Otherwise, it returns \code{\link[base:NULL]{NULL}} invisibly.
 }
 \description{
 Add an rOpenGov badge pointing to \url{https://ropengov.org/} to your README:

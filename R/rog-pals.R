@@ -2,15 +2,16 @@
 #'
 #' Color palettes based on the rOpenGov color scheme.
 #'
-#' @name rog_pals
-#' @rdname rog_pals
 #' @param n Number of colors to generate.
 #' @param alpha Alpha transparency for the generated colors. Use `1` for fully
 #'   opaque colors.
-#' @param rev Should the palette order be reversed?
-#' @returns A character vector of colors.
-#' @seealso [grDevices::hcl.colors()] for other color palettes.
+#' @param rev Whether to reverse the palette order.
+#' @returns A [character][base::character] vector of colors.
+#' @seealso \pkg{grDevices}'s [grDevices::hcl.colors()] for other color
+#'   palettes and \CRANpkg{scales}'s [scales::show_col()] to preview colors.
 #' @family palettes
+#' @name rog_pals
+#' @rdname rog_pals
 #' @export
 #' @encoding UTF-8
 #' @examplesIf requireNamespace("scales", quietly = TRUE)

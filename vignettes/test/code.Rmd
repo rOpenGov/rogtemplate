@@ -27,7 +27,7 @@ render_rmarkdown <- function(pkg, input, output, ..., copy_images = TRUE, quiet 
   output_path <- path_abs(output, pkg$dst_path)
 
   if (!file_exists(input_path)) {
-    stop("Can't find ", src_path(input), call. = FALSE)
+    stop("Can't find ", src_path(input), ".", call. = FALSE)
   }
 
   cat_line("Reading ", src_path(input))

@@ -41,6 +41,9 @@ repository (see the `install-quarto` parameter for more details).
 
 ## Limitations
 
+<!-- FIXME: This section says callouts are unsupported, but the to-do list
+marks them as complete. Clarify the supported callout types and conditions. -->
+
 -   Callouts are not currently supported
     (<https://github.com/quarto-dev/quarto-cli/issues/9963>).
 
@@ -68,7 +71,7 @@ they work.
 
 -   [Small caps]{.smallcaps}
 
--   Here is a footnote reference[^1]
+-   Here is a footnote reference.[^1]
 
 [^1]: And here is the footnote.
 
@@ -86,9 +89,9 @@ plot(1:3)
 ### Figures
 
 ::: {#fig-puppies layout-ncol="2"}
-![A sketch of a pitbull puppy](pitbull.jpg){#fig-pitbull}
+![A sketch of a pit bull puppy](pitbull.jpg){#fig-pitbull fig-alt="Black-and-white sketch of a seated pit bull puppy facing forward, with its head tilted, floppy ears and large eyes."}
 
-![A sketch of a sharpei puppy](shar-pei.jpg){#fig-shar-pei}
+![A sketch of a shar-pei puppy](shar-pei.jpg){#fig-shar-pei fig-alt="Black-and-white sketch of a seated shar-pei puppy facing forward, with deep folds of skin across its forehead, cheeks, chest and legs."}
 
 Cute puppies
 :::
@@ -102,7 +105,7 @@ $$
   \mathrm r \mathrm C
 $$ {#eq-black-scholes}
 
-### Cross references
+### Cross-references
 
 See @fig-puppies for two cute puppies.
 
@@ -114,7 +117,7 @@ the behavior of financial derivatives, most commonly options.
 -   [ ] Code annotations
 -   [ ] Tabsets
 -   [x] Citations
--   [x] Task/to do lists
+-   [x] Task lists
 -   [x] Figures
 -   [x] Equations
 -   [x] Cross-references
