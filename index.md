@@ -10,7 +10,8 @@ package](https://ropengov.github.io/rogtemplate/reference/figures/ropengov-badge
 [![R build
 status](https://github.com/ropengov/rogtemplate/workflows/R-CMD-check/badge.svg)](https://github.com/rOpenGov/rogtemplate/actions)
 [![r-universe](https://ropengov.r-universe.dev/badges/rogtemplate)](https://ropengov.r-universe.dev/rogtemplate)
-[![Lifecycle: experimental](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+[![Lifecycle:
+experimental](https://lifecycle.r-lib.org/articles/figures/lifecycle-experimental.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 
 <!-- badges: end -->
 
@@ -91,8 +92,8 @@ These lines tell **pkgdown** to use **rogtemplate**.
 ## Commit to GitHub and deploy
 
 Commit your changes and push them to **GitHub**. If you use the **GitHub
-Actions** workflow, wait until it finishes. You can check the **GitHub Pages**
-settings under *YOUR_GITHUB_REPO \> Settings \> Pages*.
+Actions** workflow, wait until it finishes. You can check the **GitHub
+Pages** settings under *YOUR_GITHUB_REPO \> Settings \> Pages*.
 
 ## Package assets and palettes
 
