@@ -16,7 +16,7 @@ articles:
   test/short: test/short.html
   test-quarto: test-quarto.html
   test/widgets: test/widgets.html
-last_built: 2026-10-11T05:35Z
+last_built: 2026-10-12T18:00Z
 urls:
   reference: https://ropengov.github.io/rogtemplate/reference
   article: https://ropengov.github.io/rogtemplate/articles
