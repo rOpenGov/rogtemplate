@@ -60,3 +60,43 @@ test_that("dark alert syntax has a transparent background", {
   expect_match(css, "background-color: transparent;")
   expect_no_match(css, "pre code span\\s*\\{[^}]*background-color: transparent")
 })
+
+test_that("copy button interaction colors meet text contrast requirements", {
+  css <- paste(
+    readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
+    collapse = "\n"
+  )
+  rule <- regmatches(
+    css,
+    regexpr("\\.btn-copy-ex:hover,[^}]+\\}", css)
+  )
+
+  expect_match(rule, "\\.btn-copy-ex:focus")
+  expect_match(rule, "color: var\\(--bs-gray-900\\);")
+  expect_match(rule, "background-color: var\\(--bs-warning\\);")
+
+  config <- yaml::read_yaml(rogtemplate_file("pkgdown/_pkgdown.yml"))
+  palette <- config$template$bslib$brand$color$palette
+  expect_gte(contrast_ratio("#212529", palette$orange), 4.5)
+})
+
+test_that("callout masks have no embedded colors and use theme colors", {
+  css <- paste(
+    readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
+    collapse = "\n"
+  )
+  masks <- regmatches(css, gregexpr("  mask-image: [^\n]+", css))[[1]]
+  webkit_masks <- regmatches(
+    css,
+    gregexpr("  -webkit-mask-image: [^\n]+", css)
+  )[[1]]
+
+  expect_length(masks, 6L)
+  expect_equal(sub("-webkit-", "", webkit_masks, fixed = TRUE), masks)
+  expect_no_match(paste(masks, collapse = "\n"), "rgb\\(|style=")
+  expect_match(css, "background-color: currentColor;")
+  expect_match(css, "mask-size: contain;")
+  for (type in c("primary", "success", "warning", "danger")) {
+    expect_match(css, paste0("color: var\\(--bs-", type, "-text-emphasis\\);"))
+  }
+})
