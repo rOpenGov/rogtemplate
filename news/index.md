@@ -8,6 +8,8 @@
 - **rogtemplate** now supports **bslib** \>= 0.6.1 and **Bootstrap**
   v5.3.1.
 - Added dark mode.
+- Copy buttons now use dark text on hover and focus for better contrast,
+  and Quarto callout icons adapt to the site theme and brand colors.
 - Dark mode CSS now keeps generated styles synchronized and uses an
   accessible danger text color.
 - [`rog_actions_pkgdown_branch()`](https://ropengov.github.io/rogtemplate/reference/rog_actions_pkgdown_branch.md)
