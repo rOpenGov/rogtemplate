@@ -85,14 +85,16 @@ test_that("callout masks have no embedded colors and use theme colors", {
     readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
     collapse = "\n"
   )
-  masks <- regmatches(css, gregexpr("  mask-image: [^\n]+", css))[[1]]
-  webkit_masks <- regmatches(
+  masks <- regmatches(
     css,
-    gregexpr("  -webkit-mask-image: [^\n]+", css)
+    gregexpr("  --rogtemplate-callout-mask: [^\n]+", css)
   )[[1]]
-
   expect_length(masks, 6L)
-  expect_equal(sub("-webkit-", "", webkit_masks, fixed = TRUE), masks)
+  expect_match(
+    css,
+    "-webkit-mask-image: var\\(--rogtemplate-callout-mask\\);"
+  )
+  expect_match(css, "  mask-image: var\\(--rogtemplate-callout-mask\\);")
   expect_no_match(paste(masks, collapse = "\n"), "rgb\\(|style=")
   expect_match(css, "background-color: currentColor;")
   expect_match(css, "mask-size: contain;")
