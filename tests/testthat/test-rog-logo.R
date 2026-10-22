@@ -77,14 +77,15 @@ test_that("rog_logo() replaces old logo assets", {
   expect_false(file.exists(svg_path))
 })
 
-test_that("rog_logo() builds favicons for the default logo", {
+test_that("rog_logo() builds state$favicons for the default logo", {
+  state <- new.env(parent = emptyenv())
   pkg <- withr::local_tempdir()
   withr::local_dir(pkg)
-  favicons <- NULL
+  state$favicons <- NULL
 
   local_mocked_bindings(
     build_pkgdown_favicons = function(...) {
-      favicons <<- list(...)
+      state$favicons <- list(...)
     }
   )
 
@@ -93,7 +94,7 @@ test_that("rog_logo() builds favicons for the default logo", {
     "Created logo at"
   )
 
-  expect_equal(favicons, list(overwrite = TRUE))
+  expect_equal(state$favicons, list(overwrite = TRUE))
 })
 
 test_that("rog_load_font() loads the bundled rOpenGov font", {
