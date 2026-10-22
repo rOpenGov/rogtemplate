@@ -277,8 +277,6 @@ More tab content.
 #| fig.alt: >
 #|   Scatter chart of values 1 to 42 against their indices 1 to 42.
 #|   The 42 points lie on an ascending diagonal.
-#| jarl-ignore-chunk:
-#|   - unreachable_code: R Markdown chunks execute independently.
 plot(1:42)
 ```
 
