@@ -92,8 +92,13 @@ Dark
 
 ``` r
 
-pkgdown:::ruler()
+positions <- seq_len(getOption("width"))
+marks <- rep("-", length(positions))
+marks[positions %% 5 == 0] <- "+"
+marks[positions %% 10 == 0] <- (positions[positions %% 10 == 0] %/% 10) %% 10
+cat(marks, "\n", sep = "")
 #> ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
+cat(positions %% 10, "\n", sep = "")
 #> 12345678901234567890123456789012345678901234567890123456789012345678901234567890
 
 cat(rep("x ", 100), sep = "")
@@ -269,8 +274,8 @@ plot(1:42)
 ```
 
 ![Scatter chart of values 1 to 42 against their indices 1 to 42. The 42
-points lie on an ascending diagonal.
-](rendering_files/figure-html/unnamed-chunk-8-1.png)
+points lie on an ascending
+diagonal.](rendering_files/figure-html/unnamed-chunk-8-1.png)
 
 This tab should be active.
 
