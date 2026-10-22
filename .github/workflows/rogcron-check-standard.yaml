@@ -44,6 +44,11 @@ jobs:
         http-user-agent: ${{ matrix.config.http-user-agent }}
         use-public-rspm: true
 
+    - name: Install XQuartz
+      if: runner.os == 'macOS'
+      # gdtools binaries require /opt/X11/lib/libXrender.1.dylib.
+      run: brew install --cask xquartz
+
     - uses: r-lib/actions/setup-r-dependencies@v2
       with:
         extra-packages: |
