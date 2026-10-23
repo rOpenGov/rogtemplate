@@ -56,7 +56,7 @@ test_that("dark alert syntax has a transparent background", {
     collapse = "\n"
   )
 
-  expect_match(css, "pre code span\\.al /\\* Alert \\*/ \\{")
+  expect_match(css, "pre code :is(span, a).al /* Alert */ {", fixed = TRUE)
   expect_match(css, "background-color: transparent;")
   expect_no_match(css, "pre code span\\s*\\{[^}]*background-color: transparent")
 })
