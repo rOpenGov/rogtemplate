@@ -131,3 +131,27 @@ test_that("light text and Tango colors meet the AA contrast target", {
     4.5
   )
 })
+
+test_that("narrow navbars retain compact title and version sizing", {
+  skip_if_not_installed("sass")
+
+  css <- as.character(sass::sass(
+    readLines(
+      rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css"),
+      warn = FALSE
+    ),
+    cache = NULL,
+    options = sass::sass_options(output_style = "expanded")
+  ))
+  narrow <- regmatches(
+    css,
+    regexpr(
+      "@media \\(max-width: 375px\\) \\{[\\s\\S]*?\n\\}",
+      css,
+      perl = TRUE
+    )
+  )
+
+  expect_match(narrow, "\\.navbar-brand\\s*\\{\\s*font-size: 1\\.125rem;")
+  expect_match(narrow, "\\.navbar \\.nav-text\\s*\\{\\s*font-size: 0?\\.65rem;")
+})
