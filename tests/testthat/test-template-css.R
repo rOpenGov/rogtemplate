@@ -56,7 +56,7 @@ test_that("dark alert syntax has a transparent background", {
     collapse = "\n"
   )
 
-  expect_match(css, "pre code span\\.al /\\* Alert \\*/ \\{")
+  expect_match(css, "pre code :is(span, a).al /* Alert */ {", fixed = TRUE)
   expect_match(css, "background-color: transparent;")
   expect_no_match(css, "pre code span\\s*\\{[^}]*background-color: transparent")
 })
@@ -101,4 +101,57 @@ test_that("callout masks have no embedded colors and use theme colors", {
   for (type in c("primary", "success", "warning", "danger")) {
     expect_match(css, paste0("color: var\\(--bs-", type, "-text-emphasis\\);"))
   }
+})
+
+test_that("light text and Tango colors meet the AA contrast target", {
+  config <- yaml::read_yaml(rogtemplate_file("pkgdown/_pkgdown.yml"))
+  brand <- config$template$bslib$brand
+  palette <- brand$color$palette
+  defaults <- brand$defaults$bootstrap$defaults
+  css <- paste(
+    readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
+    collapse = "\n"
+  )
+  tokens <- regmatches(
+    css,
+    gregexpr("--rogtemplate-hl-[a-z]+: #[[:xdigit:]]{6};", css)
+  )[[1]]
+  colors <- sub(".*: (#[[:xdigit:]]{6});", "\\1", tokens)
+
+  expect_length(colors, 3L)
+  for (color in c(palette$code, colors)) {
+    expect_gte(contrast_ratio(color, "#f8f8f8"), 4.5)
+  }
+  expect_gte(
+    contrast_ratio(palette[[brand$typography$link$color]], "#fff"),
+    4.5
+  )
+  expect_gte(
+    contrast_ratio(defaults[["link-color-dark"]], defaults[["body-bg-dark"]]),
+    4.5
+  )
+})
+
+test_that("narrow navbars retain compact title and version sizing", {
+  skip_if_not_installed("sass")
+
+  css <- as.character(sass::sass(
+    readLines(
+      rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css"),
+      warn = FALSE
+    ),
+    cache = NULL,
+    options = sass::sass_options(output_style = "expanded")
+  ))
+  narrow <- regmatches(
+    css,
+    regexpr(
+      "@media \\(max-width: 375px\\) \\{[\\s\\S]*?\n\\}",
+      css,
+      perl = TRUE
+    )
+  )
+
+  expect_match(narrow, "\\.navbar-brand\\s*\\{\\s*font-size: 1\\.125rem;")
+  expect_match(narrow, "\\.navbar \\.nav-text\\s*\\{\\s*font-size: 0?\\.65rem;")
 })

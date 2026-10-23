@@ -1,5 +1,7 @@
 # rogtemplate 0.0.2.9100
 
+- Text links, Tango syntax colors and dark captions now meet accessible contrast targets. Inline links stay underlined, keyboard focus is visible and diffviewer text is readable in both modes. Footer backgrounds span the viewport without page overflow at intermediate widths (#24).
+- Code blocks now keep long lines within their containers and preserve linked syntax colors. Callout animations respect reduced motion preferences, and narrow mobile layouts keep navigation controls on one row without sidebar or footer overflow (#24).
 - Added a `NEWS.md` file to track package changes.
 - Added rOpenGov color palette functions, including `rog_orange_pal()`.
 - **rogtemplate** now supports **bslib** >= 0.6.1 and **Bootstrap** v5.3.1.
