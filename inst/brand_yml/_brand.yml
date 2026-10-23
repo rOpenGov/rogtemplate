@@ -20,6 +20,7 @@ logo:
 color:
   palette:
     blue: "#007bff"
+    link-blue: "#0066cc"
     indigo: "#6610f2"
     purple: "#6f42c1"
     pink: "#e83e8c"
@@ -36,7 +37,7 @@ color:
     logo-gray-dark: "#4d4d4d"
     logo-gray-light: "#b4b4b4"
     jumbotron-bg: "#e9ecef"
-    code: "#e83e8c"
+    code: "#c52d76"
     code-dark: "#f19ac6"
   foreground: "#212529"
   background: white
@@ -61,6 +62,7 @@ typography:
       Symbol", "Noto Color Emoji"
     weight: 400
   link:
+    color: link-blue
     decoration: "none"
 
 defaults:
@@ -91,6 +93,8 @@ defaults:
       navbar-dark-brand-hover-color: $brand-white
       navbar-dark-hover-color: $brand-white
       navbar-dark-active-color: $brand-white
+      link-color-dark: "#66b0ff"
+      link-hover-color-dark: "#8cc4ff"
       link-decoration: none
       blockquote-font-size: 1.25rem
       body-bg-dark: "#262b30"

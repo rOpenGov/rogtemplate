@@ -102,3 +102,32 @@ test_that("callout masks have no embedded colors and use theme colors", {
     expect_match(css, paste0("color: var\\(--bs-", type, "-text-emphasis\\);"))
   }
 })
+
+test_that("light text and Tango colors meet the AA contrast target", {
+  config <- yaml::read_yaml(rogtemplate_file("pkgdown/_pkgdown.yml"))
+  brand <- config$template$bslib$brand
+  palette <- brand$color$palette
+  defaults <- brand$defaults$bootstrap$defaults
+  css <- paste(
+    readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
+    collapse = "\n"
+  )
+  tokens <- regmatches(
+    css,
+    gregexpr("--rogtemplate-hl-[a-z]+: #[[:xdigit:]]{6};", css)
+  )[[1]]
+  colors <- sub(".*: (#[[:xdigit:]]{6});", "\\1", tokens)
+
+  expect_length(colors, 3L)
+  for (color in c(palette$code, colors)) {
+    expect_gte(contrast_ratio(color, "#f8f8f8"), 4.5)
+  }
+  expect_gte(
+    contrast_ratio(palette[[brand$typography$link$color]], "#fff"),
+    4.5
+  )
+  expect_gte(
+    contrast_ratio(defaults[["link-color-dark"]], defaults[["body-bg-dark"]]),
+    4.5
+  )
+})

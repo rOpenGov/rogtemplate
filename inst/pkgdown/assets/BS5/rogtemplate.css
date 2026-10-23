@@ -32,7 +32,7 @@ main img {
 .figcaption,
 figcaption,
 caption {
-  color: var(--bs-secondary);
+  color: var(--bs-secondary-color);
   margin-left: auto;
   margin-right: auto;
   margin-top: 1rem;
@@ -44,7 +44,7 @@ caption {
 /* Render author and date consistently between Rmd and Quarto files */
 .author,
 .date {
-  color: var(--bs-secondary);
+  color: var(--bs-secondary-color);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   margin-bottom: 0.5rem;
@@ -229,10 +229,28 @@ code {
   word-wrap: break-word;
 }
 
-/* Highlighter based on Tango for dark theme */
+/* Tango syntax highlighting with accessible light token colors. */
 pre {
+  --rogtemplate-hl-attribute: #866d00;
+  --rogtemplate-hl-string: #397004;
+  --rogtemplate-hl-operator: #a64a00;
   border: none;
 }
+pre code :is(span, a).at {
+  color: var(--rogtemplate-hl-attribute);
+}
+
+pre code :is(span, a).ch,
+pre code :is(span, a).ss,
+pre code :is(span, a).st,
+pre code :is(span, a).vs {
+  color: var(--rogtemplate-hl-string);
+}
+
+pre code :is(span, a).op {
+  color: var(--rogtemplate-hl-operator);
+}
+
 [data-bs-theme="dark"] {
   pre {
     background-color: var(--brand-gray_dark);
@@ -712,12 +730,15 @@ div.callout-body-container.callout-body .btn-copy-ex {
 /* --- 8. Footer --- */
 
 footer {
-  width: 100vw;
+  --rogtemplate-footer-bg: var(--brand-gray_dark);
+  background-color: var(--rogtemplate-footer-bg);
+  width: auto;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  margin-left: calc(var(--bs-gutter-x) * -0.5);
+  margin-right: calc(var(--bs-gutter-x) * -0.5);
+  /* Paint the full viewport width without expanding the layout box. */
+  box-shadow: 0 0 0 100vmax var(--rogtemplate-footer-bg);
+  clip-path: inset(0 -100vmax);
   margin-bottom: 0;
 }
 
@@ -727,7 +748,7 @@ footer a {
 
 footer a:hover,
 footer a:focus {
-  color: var(--bs-warning);
+  color: color-mix(in srgb, var(--bs-warning) 75%, var(--bs-white));
 }
 
 footer .pkgdown-footer-right {
@@ -788,14 +809,6 @@ footer .pkgdown-footer-left {
   .row > aside {
     width: calc(100% - 1rem);
   }
-
-  footer {
-    width: auto;
-    left: auto;
-    right: auto;
-    margin-left: calc(var(--bs-gutter-x) * -0.5);
-    margin-right: calc(var(--bs-gutter-x) * -0.5);
-  }
 }
 
 /* --- 9. Accessibility and motion --- */
@@ -815,4 +828,38 @@ footer .pkgdown-footer-left {
   .callout .callout-btn-toggle .callout-toggle::before {
     transition: transform 0.2s linear;
   }
+}
+
+/* Keep inline links identifiable without relying on color. */
+main a:not(.anchor, .nav-link, .btn),
+footer a,
+#footer a,
+#copyright a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+:is(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.navbar-toggler:focus-visible {
+  box-shadow: none;
+}
+
+/* diffviewer supplies its own light surfaces in either site theme. */
+:is(.visual_diff, .diffviewer) .d2h-tag {
+  color: #6b5700;
+}
+
+:is(.visual_diff, .diffviewer) .d2h-code-linenumber,
+:is(.visual_diff, .diffviewer) .d2h-code-side-linenumber,
+:is(.visual_diff, .diffviewer) .d2h-info {
+  color: #595959;
+}
+
+/* Override the inline color emitted by diffviewer. */
+:is(.visual_diff, .diffviewer) .link {
+  color: #595959 !important;
 }
