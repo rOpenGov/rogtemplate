@@ -93,3 +93,8 @@ These articles are available from the articles index.
   widgets](https://ropengov.github.io/rogtemplate/articles/test/widgets.md):
 
   Check HTML widget rendering and layout inside **pkgdown** articles.
+
+- [Leaflet
+  example](https://ropengov.github.io/rogtemplate/articles/test/leaflet.md):
+
+  Check **leaflet** widgets styling inside **pkgdown** articles.
