@@ -65,10 +65,10 @@ caption {
 }
 
 /* Reduce image brightness in dark mode */
-[data-bs-theme="dark"] img.r-plt,
-[data-bs-theme="dark"] pre .r-plt.img img,
-[data-bs-theme="dark"] .cell-output-display img,
-[data-bs-theme="dark"] img:not(.logo, .d-inline-block, .round-logo, .rog-logo) {
+[data-bs-theme="dark"] img.r-plt:not(.leaflet img),
+[data-bs-theme="dark"] pre .r-plt.img img:not(.leaflet img),
+[data-bs-theme="dark"] .cell-output-display img:not(.leaflet img),
+[data-bs-theme="dark"] img:not(.logo, .d-inline-block, .round-logo, .rog-logo, .leaflet img) {
   filter: brightness(80%) !important;
 }
 
@@ -871,7 +871,17 @@ footer a,
 	text-decoration: none !important;
 }
 
-/* Preserve image brightness adjustment in dark mode for leaflet. */
+/* Fit fixed-width widgets within narrow content columns. */
+.leaflet.html-widget {
+  max-width: 100%;
+}
+
+/* Dim the map once, including vector layers and controls. */
 [data-bs-theme="dark"] .leaflet.html-widget {
   filter: brightness(80%) !important;
+}
+
+/* Keep pkgdown image inversion out of map tiles and marker icons. */
+[data-bs-theme="dark"] .leaflet.html-widget img {
+  filter: none !important;
 }

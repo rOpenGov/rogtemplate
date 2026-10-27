@@ -155,3 +155,19 @@ test_that("narrow navbars retain compact title and version sizing", {
   expect_match(narrow, "\\.navbar-brand\\s*\\{\\s*font-size: 1\\.125rem;")
   expect_match(narrow, "\\.navbar \\.nav-text\\s*\\{\\s*font-size: 0?\\.65rem;")
 })
+
+test_that("Leaflet widgets fit columns and dim images once", {
+  css <- paste(
+    readLines(rogtemplate_file("pkgdown/assets/BS5/rogtemplate.css")),
+    collapse = "\n"
+  )
+
+  expect_match(css, "\\.leaflet\\.html-widget\\s*\\{\\s*max-width: 100%;")
+  expect_match(css, "img.r-plt:not(.leaflet img)", fixed = TRUE)
+  expect_match(css, ".cell-output-display img:not(.leaflet img)", fixed = TRUE)
+  expect_match(
+    css,
+    "[data-bs-theme=\"dark\"] .leaflet.html-widget",
+    fixed = TRUE
+  )
+})
