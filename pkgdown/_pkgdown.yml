@@ -88,3 +88,4 @@ articles:
   - test/long-toc
   - test/reactable
   - test/widgets
+  - test/leaflet

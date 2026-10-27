@@ -48,7 +48,7 @@ Suggests:
 VignetteBuilder: 
     knitr
 Config/Needs/website: cranlogs, tidyverse, jsonlite, lubridate, reactable,
-    pkgsearch, htmltools, diffviewer, dplyr
+    pkgsearch, htmltools, diffviewer, dplyr, leaflet
 Config/roxygen2/markdown: TRUE
 Config/roxygen2/version: 8.1.1
 Config/testthat/edition: 3
