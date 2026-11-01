@@ -82,16 +82,16 @@ Package asset helpers:
 tmp <- tempfile(fileext = ".png")
 rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
 #> ✔ Loaded the "B612 Mono" font.
-#> ✔ Created logo at /tmp/RtmpECHRbn/file1f621cf36ad0.png.
+#> ✔ Created logo at /tmp/RtmpkFKXiT/file21d3218fd297.png.
 
 # Display the logo.
 logo <- magick::image_read(tmp)
 
 logo
 #> # A tibble: 1 × 7
-#>   format width height colorspace matte filesize density
-#>   <chr>  <int>  <int> <chr>      <lgl>    <int> <chr>  
-#> 1 PNG      518    600 sRGB       TRUE     32133 118x118
+#>   format width height colorspace matte filesize density                         
+#>   <chr>  <int>  <int> <chr>      <lgl>    <int> <chr>                           
+#> 1 PNG      518    600 sRGB       TRUE     32133 +118.10999999999999943x+118.109…
 
 plot(logo)
 ```
