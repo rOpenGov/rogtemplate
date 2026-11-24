@@ -82,7 +82,7 @@ Package asset helpers:
 tmp <- tempfile(fileext = ".png")
 rog_logo("test a package", tmp, overwrite = FALSE, favicons = FALSE)
 #> ✔ Loaded the "B612 Mono" font.
-#> ✔ Created logo at /tmp/RtmpRO3ha2/file1f474f0c3fde.png.
+#> ✔ Created logo at /tmp/RtmpLSLIOm/file1f6e449c54c3.png.
 
 # Display the logo.
 logo <- magick::image_read(tmp)
